@@ -37,11 +37,12 @@ int main() {
 
     // output
     if (score1 + score2 > 50) {
-        // student zaliczyl
+        // student passed
         std::cout << "Student passed. ";
         std::cout << "Total score: " << score1 << " + " << score2 << " = " << score1 + score2 << ". ";
         std::cout << "Grade: " << grade << "\n";
     } else {
+        // student have not passed
         std::cout << "Student has not passed. ";
         std::cout << "Total score: " << score1 << " + " << score2 << " = " << score1 + score2 << ". ";
         std::cout << "Number of points to subtract from the next result: " << absences_to_include_after_2nd_colloq * 5 << "\n";
