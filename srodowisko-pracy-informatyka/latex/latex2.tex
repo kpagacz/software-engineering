@@ -1,0 +1,43 @@
+\documentclass[12 pt, a4paper]{article}
+\author{Konrad Pagacz}
+\usepackage[cp1250]{inputenc}
+\usepackage{polski, amssymb, amsmath, enumerate}
+
+\begin{document}
+\begin{itemize}
+	\item Funkcja $h$ ma postaæ
+	\begin{displaymath}
+	h = f + \bar{g}, \quad f(z) = z + \sum\limits_{n=2}^{\infty}a_n z^n, \quad g(z) = \sum\limits_{n=1}^{\infty}b_n z^n, \quad z \in \Delta .
+	\end{displaymath}
+	\item Za³ó¿my, ¿e ci¹g $\{\varphi_n\}_{n=2,3,...}$ liczb rzeczywistych spe³nia warunek
+	\begin{displaymath}
+	|b_1|+ \sum\limits_{n=2}^{\infty}\varphi_n(|a_n|+|b_n|) \leq 1.
+	\end{displaymath}
+	\item Niech $\{\varphi_n\}_{n=2,3,...}$ bêdzie ci¹giem dodatnlich liczb rzeczywistych. Jeœli $h \in H(\{\varphi\})$, to funkcja $h_0$ postaci
+	\begin{displaymath}
+	h_0(z)=\frac{h(z) - \overline{b_1 h(z)}}{1 - |b_1|^2}, \qquad z \in \Delta \quad (|b_1| < 1),
+	\end{displaymath}
+	nale¿y do klasy $H^0(\{\varphi_n\})$.
+	\item Niech
+	\begin{displaymath}
+	d(\rho)=\frac{2\rho^2 + \varphi_2^2}{3\varphi_2\rho} = \frac{2}{3\varphi_2}\rho + \frac{\varphi_2}{3\rho}, \qquad \rho \in (0, 1).
+	\end{displaymath}
+	Zauwa¿my, ¿e $d(\rho) > 0$ dla $\rho \in (0, 1)$ oraz
+	\begin{displaymath}
+	\lim\limits_{\rho\rightarrow0^+} d(\rho) = +\infty, \qquad \lim\limits_{\rho\rightarrow1^-} d(\rho)=\frac{2+\varphi_2^2}{3\varphi_2} > 0.
+	\end{displaymath}
+	Ponadto mamy
+	\begin{displaymath}
+	d^{\;\prime}(\rho) = \frac{2}{3\varphi_2} - \frac{\varphi_2}{3\rho^2} = \frac{2\rho^2 - \varphi_2^2}{3\varphi_2\rho^2}, \qquad \rho \in (0,1).
+	\end{displaymath}
+	\item Wiadomo, ¿e $\sqrt[4]{2^{9-7}}=2^{\frac{2}{4}}=2^{\frac{1}{2}}=\sqrt{2}.$
+	\item Obliczyæ nastêpuj¹ce ca³ki
+	\begin{enumerate}[1)]
+	\item $\displaystyle\int\limits_{0}^{1} (1 - \sqrt{x})^2 \; dx,$
+	\item $\displaystyle\int_1^3 \frac{dx}{(x^2 + x)(x+2)},$
+	\item $\displaystyle\int_1^e \frac{\ln{x}}{x^3} \; dx,$
+	\item $\displaystyle\int_{-\frac{2}{5}}^\frac{2}{5} \frac{dx}{4+25x^2},$
+	\item $\displaystyle\int_0^\frac{\pi}{2} \sin^3\!{x}\cos^3\!{x} \, dx.$
+	\end{enumerate}
+\end{itemize}
+\end{document}
