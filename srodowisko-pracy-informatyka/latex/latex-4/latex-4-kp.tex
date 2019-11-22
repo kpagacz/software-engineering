@@ -1,0 +1,63 @@
+\documentclass[12 pt, a4paper, leqno]{article}
+\usepackage[cp1250]{inputenc}
+\usepackage{amssymb, amsmath, polski}
+\author{Konrad Pagacz}
+
+\newtheorem{definicja}{Definicja}
+\newtheorem{twierdzenie}{Twierdzenie}
+\newtheorem{wniosek}{Wniosek}
+
+\newcommand{\an}{$(a_n)_{n=1,2,...}$}
+
+\begin{document}
+Przypomnimy pewne znane wiadomoœci dotycz¹ce ci¹gów.
+% definicja 1
+\begin{definicja}\label{ciag_arytmetyczny}
+Ci¹g \an nazywamy \textbf{ci¹giem arytmetycznym}, jeœli istnieje liczba $r \in \mathbb{R}$ taka, ¿e
+\begin{equation*}
+\forall_{n\in\mathbb{N}}\ a_{n+1}-a_n=r.
+\end{equation*}
+Liczb¹ r nazywamy wówczas \textbf{ró¿nic¹} tego ci¹gu.
+\end{definicja}
+
+\textsc{PRZYK£AD.} Ci¹g \an o wyrazach postaci $a_n = n, n=1,2,\ldots,$ jest ci¹giem arytmetycznym o ró¿nicy $r=1.$
+
+% twierdzenie 1
+\begin{twierdzenie}
+Jeœli ci¹g \an jest ci¹giem arytmetycznym o ró¿nicy r, to
+\begin{equation*}
+a_n = a+1 + (n-1)r, \quad n \in \mathbb{N}.
+\end{equation*}
+\end{twierdzenie}
+
+% definicja 2
+\begin{definicja}\label{ciag_geometryczny}
+Ci¹g \an nazywamy \textbf{ci¹giem geometrycznym}, jeœli istnieje liczba $q \in \mathbb{R} (q\neq0)$ taka, ¿e
+\begin{equation*}
+\forall_{n\in\mathbb{N}}\ a_{n+1} = a_nq.
+\end{equation*}
+Lizbê q nazywamy wówczas \textbf{ilorazem} tego ci¹gu.
+\end{definicja}
+
+% twierdzenie 2
+\begin{twierdzenie}
+Jeœli ci¹g \an jest ci¹giem geometrycznym o ilorazie $q$, to
+\begin{equation*}
+a_n = a_1q^{n-1}, \quad n \in \mathbb{N}.
+\end{equation*}
+\end{twierdzenie}
+
+\textsc{PRZYK£AD.} Ci¹g \an o wyrazach postaci $a_n = 3^n, n = 1, 2, \ldots,$ jest ci¹giem geometrycznym o ilorazie $q=3$.
+
+Na mocy Definicji \ref{ciag_arytmetyczny} i \ref{ciag_geometryczny} otrzymujemy
+\begin{wniosek}
+Ka¿dy ci¹g sta³y jest zarówno ci¹giem arytmetycznym, jak i ci¹giem geometrycznym.
+\end{wniosek}
+
+Wiele zadañ dotycz¹cych ci¹gów arytmetycznych i geometrycznych mo¿na znaleŸæ w \cite{kielbasa}. Zagadnienia zwi¹zane z granicami ci¹gów s¹ prezentowane w podrêcznikach do analizy matematycznej, np. w \cite{krasinski}. Zachêcamy do pog³êbiania wiedzy o ci¹gach liczbowych.
+
+\begin{thebibliography}{aa}
+\bibitem{kielbasa} A. Kie³basa, P. £ukasiewicz, \textit{Matura z matematyki 2010 - \ldots}
+\bibitem{krasinski} T. Krasiñski, \textit{Analiza matematyczna, Funkcje jednej zmiennej}
+\end{thebibliography}
+\end{document}
