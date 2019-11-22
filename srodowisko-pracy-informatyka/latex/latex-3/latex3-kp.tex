@@ -1,0 +1,48 @@
+\documentclass[12 pt, reqno]{article}
+
+\author{Konrad Pagacz}
+
+\usepackage[cp1250]{inputenc}
+
+\usepackage{polski, amssymb, amsmath}
+
+\begin{document}
+Przypomnijmy kilka znanych wzorów:
+\begin{equation}
+(a+b)^2=a^2+2ab+b^2 ; \label{plus2} %przyk³adowa etykieta
+\end{equation}
+\begin{equation}
+(a+b+c)^2 = a^2 + b^2 + c^2 + 2ab + 2ac + 2bc ; \label{kwadrat-sumy-trzech}
+\end{equation}
+\begin{equation}
+(a-b)^2=a^2-2ab+b^2 ; \label{minus2}
+\end{equation}
+\begin{equation}
+a^2-b^2=(a+b)(a-b); \label{roznica2}
+\end{equation}
+\begin{equation}
+a^3+b^3=(a+b)(a^2-ab+b^2). \nonumber
+\end{equation}
+
+Ostatni wzór zosta³ zapisany przy u¿yciu œrodowiska \texttt{equation}, ale nie zosta³ opatrzony numerem dziêki zastosowaniu polecenia \verb,\nonumber, (zamiast tego mo¿na zastosowaæ œrodowisko \texttt{equation*}), np.
+\begin{equation*}
+a^3-b^3=(a-b)(a^2+ab+b^2). 
+\end{equation*}
+
+Teraz zaprezentujemy odwo³ania do  numerowanych wzorów. Wymaga to zwykle dwukrotnego przetworzenia tekstu Ÿród³owego.
+
+Na mocy wzoru (\ref{plus2}) mamy
+\[
+(x+3y)^2=x^2+6xy+9y^2,
+\]
+zaœ stosuj¹c \eqref{minus2} dostajemy
+\[
+\left(3p-\frac{q}{2}\right)^2=9p^2-3pq+\frac{q^2}{4}.
+\]
+Wobec \eqref{roznica2} uzyskujemy
+\[
+(x-4)(x+4)=x^2-16.
+\]
+
+\end{document}
+

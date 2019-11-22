@@ -1,0 +1,101 @@
+\documentclass[12 pt, leqno]{article}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb, amsmath}
+
+\author{Konrad Pagacz}
+
+\begin{document}
+\section{Ciągi}
+Jeśli $(a_n)_{n=1,2,...}$ jest ciągiem arytmetycznym, to
+\begin{equation}
+S_n = \sum\limits_{k=1}^{n}a_k=\frac{a_1 + a_n}{2}n \label{suma}
+\end{equation}
+
+Stosując wzór \eqref{suma} otrzymujemy
+\begin{equation}
+1 + 2 + ... + n = \sum\limits_{k=1}^{n}k = \frac{n(n+1)}{2}. \label{suma-od1-don}
+\end{equation}
+W szczególności z \eqref{suma-od1-don} mamy
+\begin{equation*}
+1 + 2 + ... + 100 = \frac{100\cdot 101}{2} = 5050.
+\end{equation*}
+
+Jeśli $(a_n)_{n=1,2,3,...}$ jest ciągiem geometrycznym o ilorazie $q \ (q\neq 0)$, to
+\begin{equation}
+S_n=\sum\limits_{k=1}^{n}a_k=
+\begin{cases}
+a_1\frac{1-q^n}{1-q}, & \textnormal{gdy} \quad q\neq 1, \\
+na_1, & \mbox{gdy} \quad q=1.
+\end{cases} \label{suma-geom}
+\end{equation}
+
+Pyrzkładowo, wobec \eqref{suma-geom} dostajemy
+\begin{equation*}
+\sum\limits_{k=1}^{8}2^k=2+4+8+...+256=2\frac{1-2^8}{1-2}=2(2^8-1)=2\cdot 255=510.
+\end{equation*}
+
+\section{Macierze i układy równań}
+Niech
+\begin{equation}
+A=\left[
+\begin{array}{rrr}
+2	&	1	&	3 \\
+1	&	0	&	-4 \\
+0	&	3	&	1
+\end{array}
+\right]
+\label{macierzA}
+\end{equation}
+
+Macierz $A$ postaci \eqref{macierzA} jest macierzą główną układu równañ liniowych postaci
+\begin{eqnarray*}
+2x+y+3z	&	=	&	6, \\
+x - 4z	&	=	&	-3, \\
+3y + z	&	=	&	4,
+\end{eqnarray*}
+który można zapisać w formie bardziej przejrzystej
+\begin{equation}
+\begin{array}{rrrrrrr}
+2x & + & y & + & 3z & = & 6 , \\
+x &  &  & - & 4z & = & -3 , \\
+ &  & 3y & + & z & = & 4 . 
+\end{array}
+\label{array-form}
+\end{equation}
+
+Zwykle układ równań zapisujemy z użyciem nawiasu klamrowego. Wtedy układ \eqref{array-form} wygląda następująco
+\begin{equation*}
+\left\{
+\begin{array}{rrrrrrr}
+2x & + & y & + & 3z & = & 6 , \\
+x &  &  & - & 4z & = & -3 , \\
+ &  & 3y & + & z & = & 4 
+\end{array}
+\right.
+\end{equation*}
+lub
+\begin{equation*}
+\left.
+\begin{array}{rrrrrrr}
+2x & + & y & + & 3z & = & 6 \\
+x &  &  & - & 4z & = & -3  \\
+ &  & 3y & + & z & = & 4 
+\end{array}
+\right\}.
+\end{equation*}
+
+\section{Pewna funkcja}
+Rozważmy funkcję $g:\mathbb{R}\rightarrow\mathbb{R}$ postaci
+\begin{equation*}
+    g(x)=\left\{
+    \begin{array}{ccc}
+        \frac{x}{x-1} & \mbox{dla} & x < -1,  \\
+        2\sin\!{(\pi x)} & \mbox{dla} &  x \in \langle -1,3), \\
+        \frac{3x+1}{8x} & \mbox{dla} & x \in \langle 3,6 \rangle,  \\
+        4x^3 & \mbox{dla} & x > 6.
+    \end{array}
+    \right.
+\end{equation*}
+\end{document}
