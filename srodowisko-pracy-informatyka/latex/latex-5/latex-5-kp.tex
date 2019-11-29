@@ -1,0 +1,54 @@
+\documentclass[12pt, a4paper]{article}
+
+% polish language
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+
+% packages
+\usepackage{amssymb, amsmath, enumerate, multicol}
+% indent first paragraph
+\usepackage{indentfirst}
+
+
+\begin{document}
+\begin{center}
+\Large{Wybrane zadania z analizy matematycznej}
+\end{center}
+
+Prezentujemy przykładowe zadania z zakresu analizy matematycznej, dotyczące funkcji dwóch zmiennych rzeczywistych. Wiele innych można znaleźć np. w \cite{banas}, \cite{krysicki}.
+
+\begin{enumerate}
+    \item Określić dziedznę nsatępujących funkcji i przedstawić ilustrację graficzną wyznaczonych zbiorów
+        \begin{enumerate} [ {(}a{)} ]
+        \begin{multicols}{2}
+            \item $f(x,y)=\frac{\log\sqrt{9-4x^2-y^2}}{x-2},$
+            \item $f(x,y) = \frac{\arccos{x+y}}{\arcsin{x}}.$
+        \end{multicols}
+        \end{enumerate}
+    \item Zbadać istnienie poniższych granic
+        \begin{enumerate}[ {(}a{)} ]
+        \begin{multicols}{2}
+            \item $\lim\limits_{(x,y)\rightarrow(3,4)}\frac{2-xy}{x^2+y^2},$
+            \item $\lim\limits_{(x,y)\rightarrow(1,0)}\frac{\ln{(x+e^y)}}{\sqrt{x^2+y^2}},$
+            \item $\lim\limits_{(x,y)\rightarrow(1,0)}\left(1+\frac{1}{x}\right)^{\frac{x^2}{x+y}},$
+            \item $\lim\limits_{(x,y)\rightarrow(0,0)}\frac{xy}{2x^2 + y^2}.$
+        \end{multicols}
+        \end{enumerate}
+    \item Zbadać ciągłość funkcji $f$ w punkcie $(0,0)$
+    \begin{equation}
+        f(x,y)=
+
+            \frac{x^3 + y^3}{x^2 + 4y^2},   &\textrm{gdy} & \quad (x,y)\neq(0,0), \\
+            1,  &   \textnormal{gdy}   &  \quad   x=y=0.
+
+    \end{equation*}
+\end{enumerate}
+
+% bibliografia
+\begin{thebibliography}{aa}
+\bibitem{banas}J. Banaś, S. Wędrychowicz, \textit Zbiór zadań z analizy matematycznej
+\bibitem{krysicki}W. Krysicki, L. Włodarski, \textit Analiza matematyczna w zadaniach
+\end{thebibliography}
+
+\end{document}
