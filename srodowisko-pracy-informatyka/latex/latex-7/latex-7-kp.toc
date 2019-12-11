@@ -1,0 +1,5 @@
+\babel@toc {polish}{}
+\beamer@sectionintoc {1}{Krok 1.}{3}{0}{1}
+\beamer@sectionintoc {2}{Teoria \IeC {\'s}lurpa}{4}{0}{2}
+\beamer@sectionintoc {3}{Podstawowe prawa \IeC {\'s}lurpa}{6}{0}{3}
+\beamer@sectionintoc {4}{Przybory \IeC {\'s}lurpa}{7}{0}{4}
