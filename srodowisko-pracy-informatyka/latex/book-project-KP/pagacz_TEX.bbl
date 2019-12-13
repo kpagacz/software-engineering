@@ -1,0 +1,52 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{bohlmann1}{book}{}
+      \name{author}{1}{}{%
+        {{hash=85b539f2ce02cbcadcfdf614a02357f5}{%
+           family={Bohlman},
+           familyi={B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Leipzig}%
+      }
+      \strng{namehash}{85b539f2ce02cbcadcfdf614a02357f5}
+      \strng{fullhash}{85b539f2ce02cbcadcfdf614a02357f5}
+      \strng{bibnamehash}{85b539f2ce02cbcadcfdf614a02357f5}
+      \strng{authorbibnamehash}{85b539f2ce02cbcadcfdf614a02357f5}
+      \strng{authornamehash}{85b539f2ce02cbcadcfdf614a02357f5}
+      \strng{authorfullhash}{85b539f2ce02cbcadcfdf614a02357f5}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Enzyklop{ä}die der Mathematischen Wissenschaften, Bd.1, Teil II}
+      \field{title}{Lebensversicherungsmethodik}
+      \field{year}{1900-1904}
+      \field{pages}{857\bibrangedash 917}
+      \range{pages}{61}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

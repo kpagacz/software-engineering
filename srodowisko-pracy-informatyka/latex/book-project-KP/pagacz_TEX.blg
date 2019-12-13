@@ -1,0 +1,18 @@
+[0] Config.pm:304> INFO - This is Biber 2.13
+[0] Config.pm:307> INFO - Logfile is 'pagacz_TEX.blg'
+[44] biber-MSWIN32:315> INFO - === 
+[72] Biber.pm:375> INFO - Reading 'pagacz_TEX.bcf'
+[226] Biber.pm:905> INFO - Found 1 citekeys in bib section 0
+[250] Biber.pm:4196> INFO - Processing section 0
+[254] Utils.pm:75> INFO - Globbing data source 'pagacz_TEX_bibliography.bib'
+[270] Utils.pm:91> INFO - Globbed data source 'pagacz_TEX_bibliography.bib' to pagacz_TEX_bibliography.bib
+[289] Biber.pm:4373> INFO - Looking for bibtex format file 'pagacz_TEX_bibliography.bib' for section 0
+[295] bibtex.pm:1462> INFO - LaTeX decoding ...
+[302] bibtex.pm:1281> INFO - Found BibTeX data source 'pagacz_TEX_bibliography.bib'
+[310] Utils.pm:300> WARN - year field '1900-1904' in entry 'bohlmann1' is not an integer - this will probably not sort properly.
+[327] UCollate.pm:68> INFO - Overriding locale 'pl-PL' defaults 'variable = shifted' with 'variable = non-ignorable'
+[327] UCollate.pm:68> INFO - Overriding locale 'pl-PL' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[327] Biber.pm:4024> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'pl-PL'
+[329] bbl.pm:648> INFO - Writing 'pagacz_TEX.bbl' with encoding 'UTF-8'
+[330] bbl.pm:751> INFO - Output to pagacz_TEX.bbl
+[331] Biber.pm:110> INFO - WARNINGS: 1
