@@ -46,6 +46,77 @@
       \field{pages}{857\bibrangedash 917}
       \range{pages}{61}
     \endentry
+    \entry{keynes1}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ce5455d74de5aa8766d626a681a61e79}{%
+           family={Keynes},
+           familyi={K\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {Londond}%
+        {New York 1921}%
+      }
+      \strng{namehash}{ce5455d74de5aa8766d626a681a61e79}
+      \strng{fullhash}{ce5455d74de5aa8766d626a681a61e79}
+      \strng{bibnamehash}{ce5455d74de5aa8766d626a681a61e79}
+      \strng{authorbibnamehash}{ce5455d74de5aa8766d626a681a61e79}
+      \strng{authornamehash}{ce5455d74de5aa8766d626a681a61e79}
+      \strng{authorfullhash}{ce5455d74de5aa8766d626a681a61e79}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{II}
+      \field{title}{A Treatise on Probability}
+      \field{year}{1929}
+    \endentry
+    \entry{kolmogoroff1}{book}{}
+      \name{author}{1}{}{%
+        {{hash=baf52add06c0573b51b979375fa664a0}{%
+           family={Kolmogoroff},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{baf52add06c0573b51b979375fa664a0}
+      \strng{fullhash}{baf52add06c0573b51b979375fa664a0}
+      \strng{bibnamehash}{baf52add06c0573b51b979375fa664a0}
+      \strng{authorbibnamehash}{baf52add06c0573b51b979375fa664a0}
+      \strng{authornamehash}{baf52add06c0573b51b979375fa664a0}
+      \strng{authorfullhash}{baf52add06c0573b51b979375fa664a0}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Ergebnisse der Mathematik II.3 (1933)}
+      \field{title}{Grunbegriffe der Wahrscheinlichkeitsrechnung}
+    \endentry
+    \entry{mises1}{book}{}
+      \name{author}{1}{}{%
+        {{hash=26ae8509320e487c6755b16713b0e42b}{%
+           family={Mises},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Wien}%
+      }
+      \strng{namehash}{26ae8509320e487c6755b16713b0e42b}
+      \strng{fullhash}{26ae8509320e487c6755b16713b0e42b}
+      \strng{bibnamehash}{26ae8509320e487c6755b16713b0e42b}
+      \strng{authorbibnamehash}{26ae8509320e487c6755b16713b0e42b}
+      \strng{authornamehash}{26ae8509320e487c6755b16713b0e42b}
+      \strng{authorfullhash}{26ae8509320e487c6755b16713b0e42b}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Wahrscheinlichkeitsrechnung und ihre Anwendung in der Statistik und theoretischen Physik}
+      \field{year}{1931}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

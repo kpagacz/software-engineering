@@ -1,25 +1,158 @@
-\documentclass[12 pt, a4paper]{book}
+\documentclass[12 pt, a4paper, leqno]{book}
 
 % Font and language settings
 \usepackage[T1]{fontenc}
-\usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{polski}
 \usepackage{indentfirst}
 \usepackage{csquotes}
 
-% font types
+% to do package
+\usepackage{todonotes}
 
 % bibliography
 \usepackage{biblatex}
 \addbibresource{pagacz_TEX_bibliography.bib}
 
+% unfortunate section, chapters and part numbering
+\usepackage{titlesec}
+
+\newcommand{\polishordinal}[1]{
+    \ifcase\value{#1}\or 
+    PIERWSZA \or 
+    DRUGA \or 
+    TRZECIA \or 
+    CZWARTA
+    \fi 
+}
+
+\titleclass{\part}{top}
+\titleformat{\part}[display]
+  {\normalfont\centering\bfseries}
+  {\scriptsize{KSIĘGA \polishordinal{part}}}
+  {3pt}
+  {\large\MakeUppercase}
+\titlespacing{\part}{0pt}{-1.5in}{1.2in}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\titleclass{\chapter}{straight}
+\titleformat{\chapter}[display]{\normalfont\centering}{\chaptertitlename\ \thechapter}{15pt}{\bfseries\large}
+\titlespacing{\chapter}{0pt}{0pt}{15pt}
+
+\renewcommand{\thesection}{\arabic{section}}
+\titleclass{\section}{straight}
+\titleformat{\section}{\normalfont\centering\bfseries}{\S\,\thesection.}{5pt}{}
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+% mathematic symbols and equations
+\usepackage{amssymb, amsmath, multicol}
+\numberwithin{equation}{section}
+
+% list environments
+\usepackage{enumitem}
+
+% footnote counter reset every page and the weird footnote formatting
+\usepackage[perpage]{footmisc}
+\renewcommand{\thefootnote}{\textsuperscript{\arabic{footnote}})}
+\makeatletter
+\renewcommand{\@makefnmark}{\normalfont\@thefnmark}
+\renewcommand{\@makefntext}[1]{
+    \noindent\@thefnmark\footnotesize#1
+    }
+\makeatother
+
+
+%%%%%%%%%%%%%
+% main body
+%%%%%%%%%%%%%
 \begin{document}
-\part{Księga pierwsza}
+
+\part{Elementarna teoria prawdopodobieństwa}
 \chapter{Algebra Boole'a}
-\section{Uwagi wstępne, treść rozdziału}
+
+% Pierwsza sekcja
+\section{Uwagi wstępne, treść rozdziału} \label{sec:wstep}
 Znamy obecnie różne, nieraz mocno od siebie odbiegające sposoby wprowadzania pojęcia 
 prawdopodobieństwa: teoria ,,klasyczna'' w różnych odmianach, teorie aksjomatyczne:
- {\fontfamily{qcr}\selectfont Bohlmanna, Keynesa, Kołmogrowa}, teoria ,,częstościowa''
-{\fontfamily{qcr}\selectfont Misesa} i inne \cite{bohlmann1}.
+ {\fontfamily{qcr}\selectfont Bohlmanna, Keynesa, Kołmogorowa}, teoria ,,częstościowa''
+{\fontfamily{qcr}\selectfont Misesa} i inne \footnote{\cite{bohlmann1} \cite{keynes1} \cite{kolmogoroff1} \cite{mises1}}. \todo{add missing citations}
+Porównanie tych sposobów prowadzi do następujących spostrzeżeń:
 
+$1^\circ$ Prawdopodobieństwo bywa określane rozmaicie, zawsze jednak jest ono liczbą nieujemną,
+            nie większą od jedności, przyporządkowaną pewnym przedmiotom.
+
+$2^\circ$ Co do natury przedmiotów, którym zostaje przyporządkowane prawdopodobieństwo, panuje rozbieżność
+            między poszczególnymi teoriami, w każdym jednak razie można uważać za ustalone, że przedmioty 
+            te (zdarzenia, zdania, zbiory, cechy) tworzą tak zwane \textit{ciała Boole'a}, którą
+            intuicyjnie określić można jako algebrę wyrazów: ,,nie'', ,,i'' oraz ,,lub''.
+
+Wobec tego podajemy w tym rozdziale zarys teorii ciał Boole'a, a więc: ich określenie
+przez postulaty (\S\ 2), elementarne twierdzenia algebry Boole'a (\S\S\ 3 i 4), związek teorii ciał Boole'a
+z teorią zbiorów częściowo uporządkowanych (\S\ 5), określenie działań nieskończonych w ciałach Boole'a i prawa nimi rządzące (\S\ 6),
+zastosowania ciał Boole'a w teorii zbiorów (\S\S\ 7 i 9) i w logice (\S\ 11), określenie podciał (\S\ 8), 
+określenie homomorfizmu między dwoma ciałami Boole'a, kongruencji w ciałach Boole'a i uogólnienie ciał Boole'a na tak zwane
+ciała zrelatywizowane (\S\ 10) oraz określenie atomu, ciała atomowego i operacji scalania
+atomów (\S\S\ 12, 13). Ostatni paragraf każdego rozdziału będzie zawierał przykłady i zadania.
+% Mój komentarz: zdecydowałem się ręcznie, ponieważ formatowanie podwójnych odwołań do sekcji jest różne:
+% raz jest z przecinkiem, raz z i, ponadto znak \S występuje dwa razy przed cytowaniem
+% Uznałem, że overloadowanie funkcji ref będzie mnie kosztowało zbyt dużo
+% w porównaniu z zyskiem czasu i przejrzystości w tekście, zwłaszcza, że odwołania do sekcji są w tekście rzadkie.
+
+% Druga sekcja
+\section{Określenie ciał Boole'a} \label{sec:postulaty}
+\textit{Ciałem Boole'a} nazywamy zbiór $U$, na którego elementach określone są działania 
++, $\cdot$ i $'$ (dwa pierwsze na dwu, trzecie na jednym elemencie) w taki sposób, aby dla 
+dowolnych elementów $u, v, w \in U$ były spełnione następujące związki:
+
+
+\noindent
+% \begin{small}
+\begin{minipage}{0.55\textwidth}
+\begin{flalign*} 
+  & u + v \in U, \quad u \cdot v \in U, \quad u' \in U, & \tag{B1} \label{eq:b1} \\
+  & u + (v + w) = (u+v)+w,  & \tag{B$^+$2} \label{eq:bp2} \\
+  & u + v = v + u,  & \tag{B$^+$3} \label{eq:bp3} \\
+  & u \cdot (v + w) = (u \cdot v) + (u \cdot w), & \tag{B$^+$4} \label{eq:bp4} \\
+  & u + (u \cdot u') = u, & \tag{B$^+$5} \label{eq:bp5} \\
+  & u + u' = v + v', & \tag{B$^+$6} \label{eq:bp6} \\
+\end{flalign*}
+\end{minipage}
+\hspace{-20pt}
+\begin{minipage}{0.53\textwidth}
+\begin{flalign*}
+  && \\
+  & u \cdot (v \cdot w) = (u \cdot v) \cdot w, & \tag{B$^.$2} \label{eq:bd2} \\
+  & u \cdot v = v \cdot u, & \tag{B$^.$3} \label{eq:bd3} \\
+  & u + (v \cdot w) = (u + w) \cdot (u + w), & \tag{B$^.$4} \label{eq:bd4} \\
+  & u \cdot (u + u') = u, & \tag{B$^.$5} \label{eq:bd5} \\
+  & u \cdot u' = v \cdot v'. & \tag{B$^.$6} \label{eq:bd6} \\
+\end{flalign*}
+\end{minipage}
+% \end{small}
+
+Działanie $+$ nazywamy \textit{dodawaniem} w ciele $U$, a element $u+v$ \textit{sumą} elementów $u$ i $v$;
+działanie $\cdot$ nazywamy \textit{mnożeniem} w ciele $U$, a element $u \cdot v$ \textit{iloczynem}
+elementów $u$ i $v$, wreszcie działanie $'$ nazywamy \textit{dopełnianiem} w ciele $U$, a element $u'$ 
+\textit{uzupełnieniem} elementu $u$.
+
+Wyrażenie zapisane sensownie za pomocą zmiennych przebiegających zbiór $U$ lub nazw elementów zbioru $U$, znaków $+$, $\cdot$, 
+$'$ i nawiasów nazywamy \textit{wyrażeniem algebraicznym} ciała $U$. Zdanie powstałe z dwu wyrażeń algebraicznych
+przez połączenie ich znakiem identyczności ($+$) nazywamy \textit{równością algebraiczną} lub \textit{równością}.
+Przy pisaniu wyrażeń algebraicznych umawiamy się, w celu oszczędzania pisania zbędnych nawiasów, 
+że znak mnożenia ($\cdot$) wiąże silniej niż znak oddawania ($+$), a następnie umawiamy się opuszczać nawiasy 
+przy wielokrotnych sumach lub iloczynach ze względu na aksjomaty (\ref{eq:bp2}) i (\ref{eq:bd2}) wyrażające łączność tych działań.
+Ponadto będziemy opuszczali, ilekrośc nie będzie to groziło nieporozumieniem, znak iloczynu, pisząc zamiast $u \cdot v$
+po prostu $uv$. To postępowanie upodabnia nasze znakowanie do znakowania zwykłej algebry, w której te uproszczenia 
+są ogólnie przyjęte.
+
+W ten sposób wyrażenie algebraczine $u +(v \cdot w)$ (por. \ref{eq:bp4}) zapisujemy w postaci $u+vw$, wyrażenie zaś
+$u+[(v \cdot w)+(u \cdot w)]$ - w postaci $u + vw + uw$.
+
+Związki (\ref{eq:b1})-(\ref{eq:bd6}) nazywamy \textit{układem postulatów algebry Boole'a}, w skróceniu: \textit{układem} (B).
+Wychodząc z postulatów układu (B) możemy, za pomocą rozumowań opartych na prawach logiki, wyprowadzać nowe związki prawdziwe w każdym ciele Boole'a, to znaczy spełnione
+przez każdy układ elementów każdego ciała Boole'a. Ogół tych wyszstkich związków (zdań), które dają się wyprowadzić
+z postulatów układu (B) przez logicznie poprawne rozumowanie, nazywamy \textit{systemem algebry Boole'a}.
+
+Używając współczesnej terminologii logicznej możemy powiedzieć, że ciała Boole'a \footnote{cytowanie} są 
+\textit{modelami systemu algebry Boole'a} lub - co na jedno wychodzi - \textit{modelami układu postulatów} (B) \footnote{cytowanie2}.
 \end{document}
