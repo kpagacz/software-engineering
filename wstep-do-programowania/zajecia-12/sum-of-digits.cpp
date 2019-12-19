@@ -22,5 +22,5 @@ int digit_sum(long long a) {
         return 0;
     }
 
-    return a - (a % 10) + digit_sum(a % 10);
+    return (a % 10) + digit_sum(a / 10);
 }
