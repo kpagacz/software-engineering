@@ -61,6 +61,8 @@
     }
 \makeatother
 
+% ref command for Boole definition
+\newcommand{\refb}[1]{(\ref{#1})}
 
 %%%%%%%%%%%%%
 % main body
@@ -140,19 +142,81 @@ $'$ i nawiasów nazywamy \textit{wyrażeniem algebraicznym} ciała $U$. Zdanie p
 przez połączenie ich znakiem identyczności ($+$) nazywamy \textit{równością algebraiczną} lub \textit{równością}.
 Przy pisaniu wyrażeń algebraicznych umawiamy się, w celu oszczędzania pisania zbędnych nawiasów, 
 że znak mnożenia ($\cdot$) wiąże silniej niż znak oddawania ($+$), a następnie umawiamy się opuszczać nawiasy 
-przy wielokrotnych sumach lub iloczynach ze względu na aksjomaty (\ref{eq:bp2}) i (\ref{eq:bd2}) wyrażające łączność tych działań.
+przy wielokrotnych sumach lub iloczynach ze względu na aksjomaty \refb{eq:bp2} i \refb{eq:bd2} wyrażające łączność tych działań.
 Ponadto będziemy opuszczali, ilekrośc nie będzie to groziło nieporozumieniem, znak iloczynu, pisząc zamiast $u \cdot v$
 po prostu $uv$. To postępowanie upodabnia nasze znakowanie do znakowania zwykłej algebry, w której te uproszczenia 
 są ogólnie przyjęte.
 
-W ten sposób wyrażenie algebraczine $u +(v \cdot w)$ (por. \ref{eq:bp4}) zapisujemy w postaci $u+vw$, wyrażenie zaś
+W ten sposób wyrażenie algebraczine $u +(v \cdot w)$ (por. \refb{eq:bp4}) zapisujemy w postaci $u+vw$, wyrażenie zaś
 $u+[(v \cdot w)+(u \cdot w)]$ - w postaci $u + vw + uw$.
 
-Związki (\ref{eq:b1})-(\ref{eq:bd6}) nazywamy \textit{układem postulatów algebry Boole'a}, w skróceniu: \textit{układem} (B).
+Związki \refb{eq:b1}-\refb{eq:bd6} nazywamy \textit{układem postulatów algebry Boole'a}, w skróceniu: \textit{układem} (B).
 Wychodząc z postulatów układu (B) możemy, za pomocą rozumowań opartych na prawach logiki, wyprowadzać nowe związki prawdziwe w każdym ciele Boole'a, to znaczy spełnione
 przez każdy układ elementów każdego ciała Boole'a. Ogół tych wyszstkich związków (zdań), które dają się wyprowadzić
 z postulatów układu (B) przez logicznie poprawne rozumowanie, nazywamy \textit{systemem algebry Boole'a}.
 
 Używając współczesnej terminologii logicznej możemy powiedzieć, że ciała Boole'a \footnote{cytowanie} są 
 \textit{modelami systemu algebry Boole'a} lub - co na jedno wychodzi - \textit{modelami układu postulatów} (B) \footnote{cytowanie2}.
+
+Przedstawiony tu układ postulatów algenry Boole'a nie jest ani jedynym możliwym (tę własność dzieli on
+ze wszystkimi układami postulatów abstrakcyjnych teorii), ani też najprostszym. Znane są rozmaite równoważne
+między sobą układy postulatów algebry Boole'a \footnote{cytowanie3}. Zaierają one przeważnie mniej postulatów niż
+podany tu układ (B), a często też mniej pojęć pierwotnych. Jednak podany tu układ postulatów ma wiele stron dodatnich;
+poszczególne postulaty mają łatwo uchwytny sens intuicyjny, są łatwe do zapamiętania i elementarne twierdzenia dają się z nich 
+prosto wyprowadzić. Poza tym uwidacznia on istotną dla ciał Boole'a symetrię między działaniami dodawania i mnożenia. 
+W następnym paragrafie wyciągniemy z tej uwagi ważną konsekwencję.
+
+Można wykazać, że do ugruntowania algebry Boole'a wystarczają postulaty \refb{eq:b1}, \refb{eq:bp3}, \refb{eq:bp4},
+\refb{eq:bd4}, \refb{eq:bd5}, \refb{eq:bp6}, \refb{eq:bd6}, których zespół oznaczmy przez (B*); natomiast pozostałe
+postulaty, tj. \refb{eq:bp2}, \refb{eq:bd2}, \refb{eq:bd3}, \refb{eq:bd5}, można z poprzednich wyprowadzić na drodze poprawnych
+rozumowań. Można też wykazać, ze z układu postulatów (B*) nie da się już odrzucić żadnego postulatu bez uszczerbku dla systemu algebry Boole'a;
+mówimy, że układ postulatów (B*) jest niezależny, a układ (B) nie jest taki.
+
+\section{Omówienie postulatów układu (B). Twierdzenie o dwoistości} \label{sec:dwoistosc}
+Postulat \refb{eq:b1} ma nieco odmienny charakter od pozostałych. Żąda on, aby działania
+$'$, $+$ i $\cdot$ były \textit{wykonalne} w ciele $U$, czyli aby ciało $U$ było \textit{zamknięte}
+ze względu na podstawowe działania, to znaczy, aby element powstały w wyniku wykonania któregoś
+ z działań podstawowych na elementach lub elemencie ciała $U$ należał do ciała $U$. Dalsze
+ postulaty charakteryzują pewne właśności działań podstawowych, a mianowicie:
+ postulaty \refb{eq:bp2} i \refb{eq:bd2} wyrażają \textit{łączność} działań dodawania i mnożenia,
+ postulaty \refb{eq:bp3} i \refb{eq:bd3} ich \textit{przemienność}, postulaty \refb{eq:bp4} i \refb{eq:bd4}
+ ich wzajemną \textit{rozdzielność}. Pozostałe cztery postulaty charakteryzują własności
+ działania uzupełniania w związku z dodawaniem i mnożeniem.
+
+ Postulaty \refb{eq:bp6} i \refb{eq:bd6} żądają, aby elementy przedstawione wyrażeniami algebraicznymi $u+u'$ i $uu'$
+ nie zależały od wyboru elementu $u$ w ciele $U$. Są to więc dwa wyróżnione elementy w ciele $U$, które umawiamy się oznaczać
+ odpowiednio przez 1 i 0, to znaczy przyjmujemy następujące określenia:
+ \begin{align}
+  1 &= u + u',  \label{eq:jedynka} \\ 
+  0 &= uu'.  \label{eq:zero}
+ \end{align}
+ Mamy prawo do przyjęcia takich określeń, gdyż ich jednoznaczność gwarantują nam postulaty 
+ \refb{eq:bp6} i \refb{eq:bd6}. Nie możemy co prawda twierdzić, że 0 nie jes tidentyczne z 1,
+ nie wiemy bowiem, czy zbiór $U$ składa się z więcej niż jednego elementu, łatwo jednak dowieść,
+ że jeżeli zbiór $U$ zawiera więcej niż jeden element, to 0 nie jest identyczne z 1.
+
+ Niech bowiem będzie $0 = 1 \in U$ i $u \in U$ niech będzie elementem różnym od 1 (a więc i od 0).
+ Ponieważ jak udowodnimy później (\ref{sec:elementarnetwierdzenie}, \refb{eq:zastaut}), w każdym ciele 
+ Boole'a zachodzi równość $u=u+u$ dla dowolnego elementu, więc
+\begin{enumerate}[label=(\Roman*), labelsep=2em]
+  \item $uu' = u + u'$ (na mocy założenia $0=1$), 
+  \item $u+(u+u')=u$ (na mocy postulatu \refb{eq:bp5} oraz (\RN{1})),
+  \item $(u+u)+u'=u$ (na mocy postulatu \refb{eq:bp2} oraz (\RN{2})),
+  \item $u+u'=u$ (na mocy równości $u+u=u$),
+  \item $1=u$ (na mocy (\RN{4}) i określenia \refb{eq:jedynka})
+\end{enumerate}
+
+Równość (\RN{5}) przeczy założeniu, że $u$ jest elementem różnym od 1, a to dowodzi słuszności tezy.
+
+Zwróćmy uwagę na to że elementy 0 i 1 zależą od ciała $U$, to znaczy, że jeżeli $U$ i $V$ są różnymi ciałami
+Boole'a, to elementy 0 i 1 w ciele $U$ są na ogół różne od elementów o i 1 w ciele $V$.
+
+Po przyjęciu określeń \refb{eq:jedynka} i \refb{eq:zero} możemy postulaty \refb{eq:bp5} i
+\refb{eq:bd5} zapisać w postaci:
+\begin{align*}
+u+0 &= u, \\
+u \cdot 1 &= u. 
+\end{align*}
+
+W tej postaci
 \end{document}
