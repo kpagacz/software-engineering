@@ -1,19 +1,19 @@
 [0] Config.pm:304> INFO - This is Biber 2.13
 [0] Config.pm:307> INFO - Logfile is 'pagacz_TEX.blg'
-[38] biber-MSWIN32:315> INFO - === 
-[63] Biber.pm:375> INFO - Reading 'pagacz_TEX.bcf'
-[200] Biber.pm:905> INFO - Found 4 citekeys in bib section 0
-[221] Biber.pm:4196> INFO - Processing section 0
-[223] Utils.pm:75> INFO - Globbing data source 'pagacz_TEX_bibliography.bib'
-[238] Utils.pm:91> INFO - Globbed data source 'pagacz_TEX_bibliography.bib' to pagacz_TEX_bibliography.bib
-[253] Biber.pm:4373> INFO - Looking for bibtex format file 'pagacz_TEX_bibliography.bib' for section 0
-[257] bibtex.pm:1462> INFO - LaTeX decoding ...
-[268] bibtex.pm:1281> INFO - Found BibTeX data source 'pagacz_TEX_bibliography.bib'
-[273] Utils.pm:300> WARN - year field '1900-1904' in entry 'bohlmann1' is not an integer - this will probably not sort properly.
-[301] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[302] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[302] Biber.pm:4024> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[302] Biber.pm:4030> INFO - No sort tailoring available for locale 'en-US'
-[308] bbl.pm:648> INFO - Writing 'pagacz_TEX.bbl' with encoding 'UTF-8'
-[311] bbl.pm:751> INFO - Output to pagacz_TEX.bbl
-[312] Biber.pm:110> INFO - WARNINGS: 1
+[40] biber-MSWIN32:315> INFO - === 
+[67] Biber.pm:375> INFO - Reading 'pagacz_TEX.bcf'
+[209] Biber.pm:905> INFO - Found 4 citekeys in bib section 0
+[237] Biber.pm:4196> INFO - Processing section 0
+[243] Utils.pm:75> INFO - Globbing data source 'pagacz_TEX_bibliography.bib'
+[261] Utils.pm:91> INFO - Globbed data source 'pagacz_TEX_bibliography.bib' to pagacz_TEX_bibliography.bib
+[283] Biber.pm:4373> INFO - Looking for bibtex format file 'pagacz_TEX_bibliography.bib' for section 0
+[289] bibtex.pm:1462> INFO - LaTeX decoding ...
+[301] bibtex.pm:1281> INFO - Found BibTeX data source 'pagacz_TEX_bibliography.bib'
+[308] Utils.pm:300> WARN - year field '1900-1904' in entry 'bohlmann1' is not an integer - this will probably not sort properly.
+[358] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[359] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[361] Biber.pm:4024> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[362] Biber.pm:4030> INFO - No sort tailoring available for locale 'en-US'
+[375] bbl.pm:648> INFO - Writing 'pagacz_TEX.bbl' with encoding 'UTF-8'
+[378] bbl.pm:751> INFO - Output to pagacz_TEX.bbl
+[379] Biber.pm:110> INFO - WARNINGS: 1
