@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.12.3)  20 DEC 2019 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.12.3)  20 DEC 2019 15:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -309,6 +309,15 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Cskip=\skip45
 )
 \c@@todonotes@numberoftodonotes=\count121
+) (c:/texlive/2019/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen157
+\ar@mcellbox=\box38
+\extrarowheight=\dimen158
+\NC@list=\toks32
+\extratabsurround=\skip46
+\backup@length=\skip47
+\ar@cellbox=\box39
 ) (c:/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2019/08/31 v3.13a programmable bibliographies (PK/MW)
  (c:/texlive/2019/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
@@ -381,14 +390,14 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@parenlevel@foot=\count161
 \blx@sectionciteorder@0=\count162
 \blx@entrysetcounter=\count163
-\labelnumberwidth=\skip46
-\labelalphawidth=\skip47
-\biblabelsep=\skip48
-\bibitemsep=\skip49
-\bibnamesep=\skip50
-\bibinitsep=\skip51
-\bibparsep=\skip52
-\bibhang=\skip53
+\labelnumberwidth=\skip48
+\labelalphawidth=\skip49
+\biblabelsep=\skip50
+\bibitemsep=\skip51
+\bibnamesep=\skip52
+\bibinitsep=\skip53
+\bibparsep=\skip54
+\bibhang=\skip55
 \blx@bcfin=\read2
 \blx@bcfout=\write4
 \blx@langwohyphens=\language85
@@ -470,20 +479,20 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedoriglanguage=\count298
 \c@pageref=\count299
 \c@savedpageref=\count300
-\shorthandwidth=\skip54
-\shortjournalwidth=\skip55
-\shortserieswidth=\skip56
-\shorttitlewidth=\skip57
-\shortauthorwidth=\skip58
-\shorteditorwidth=\skip59
-\locallabelnumberwidth=\skip60
-\locallabelalphawidth=\skip61
-\localshorthandwidth=\skip62
-\localshortjournalwidth=\skip63
-\localshortserieswidth=\skip64
-\localshorttitlewidth=\skip65
-\localshortauthorwidth=\skip66
-\localshorteditorwidth=\skip67
+\shorthandwidth=\skip56
+\shortjournalwidth=\skip57
+\shortserieswidth=\skip58
+\shorttitlewidth=\skip59
+\shortauthorwidth=\skip60
+\shorteditorwidth=\skip61
+\locallabelnumberwidth=\skip62
+\locallabelalphawidth=\skip63
+\localshorthandwidth=\skip64
+\localshortjournalwidth=\skip65
+\localshortserieswidth=\skip66
+\localshorttitlewidth=\skip67
+\localshortauthorwidth=\skip68
+\localshorteditorwidth=\skip69
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (c:/texlive/2019/texmf-dist/tex/latex/biblatex/blx-compat.def
@@ -540,20 +549,20 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 File: biblatex.cfg 
 )) (c:/texlive/2019/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
-\ttl@box=\box38
-\beforetitleunit=\skip68
-\aftertitleunit=\skip69
-\ttl@plus=\dimen157
-\ttl@minus=\dimen158
-\ttl@toksa=\toks32
-\titlewidth=\dimen159
-\titlewidthlast=\dimen160
-\titlewidthfirst=\dimen161
+\ttl@box=\box40
+\beforetitleunit=\skip70
+\aftertitleunit=\skip71
+\ttl@plus=\dimen159
+\ttl@minus=\dimen160
+\ttl@toksa=\toks33
+\titlewidth=\dimen161
+\titlewidthlast=\dimen162
+\titlewidthfirst=\dimen163
 ) (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks33
+\@emptytoks=\toks34
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -561,18 +570,18 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2019/11/16 v2.17d AMS math features
-\@mathmargin=\skip70
+\@mathmargin=\skip72
 
 For additional information on amsmath, use the `?' option.
 (c:/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
  (c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks34
-\ex@=\dimen162
+\@emptytoks=\toks35
+\ex@=\dimen164
 )) (c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen163
+\pmbraise@=\dimen165
 ) (c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
@@ -586,9 +595,9 @@ LaTeX Info: Redefining \overline on input line 389.
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box39
-\strutbox@=\box40
-\big@size=\dimen164
+\Mathstrutbox@=\box41
+\strutbox@=\box42
+\big@size=\dimen166
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \macc@depth=\count317
@@ -596,48 +605,46 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \dotsspace@=\muskip15
 \c@parentequation=\count319
 \dspbrk@lvl=\count320
-\tag@help=\toks35
+\tag@help=\toks36
 \row@=\count321
 \column@=\count322
 \maxfields@=\count323
-\andhelp@=\toks36
-\eqnshift@=\dimen165
-\alignsep@=\dimen166
-\tagshift@=\dimen167
-\tagwidth@=\dimen168
-\totwidth@=\dimen169
-\lineht@=\dimen170
-\@envbody=\toks37
-\multlinegap=\skip71
-\multlinetaggap=\skip72
-\mathdisplay@stack=\toks38
+\andhelp@=\toks37
+\eqnshift@=\dimen167
+\alignsep@=\dimen168
+\tagshift@=\dimen169
+\tagwidth@=\dimen170
+\totwidth@=\dimen171
+\lineht@=\dimen172
+\@envbody=\toks38
+\multlinegap=\skip73
+\multlinetaggap=\skip74
+\mathdisplay@stack=\toks39
 LaTeX Info: Redefining \[ on input line 2858.
 LaTeX Info: Redefining \] on input line 2859.
 ) (c:/texlive/2019/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2019/03/01 v1.8w multicolumn formatting (FMi)
 \c@tracingmulticols=\count324
-\mult@box=\box41
-\multicol@leftmargin=\dimen171
+\mult@box=\box43
+\multicol@leftmargin=\dimen173
 \c@unbalance=\count325
 \c@collectmore=\count326
 \doublecol@number=\count327
 \multicoltolerance=\count328
 \multicolpretolerance=\count329
-\full@width=\dimen172
-\page@free=\dimen173
-\premulticols=\dimen174
-\postmulticols=\dimen175
-\multicolsep=\skip73
-\multicolbaselineskip=\skip74
-\partial@page=\box42
-\last@line=\box43
-\maxbalancingoverflow=\dimen176
-\mult@rightbox=\box44
-\mult@grightbox=\box45
-\mult@gfirstbox=\box46
-\mult@firstbox=\box47
-\@tempa=\box48
-\@tempa=\box49
+\full@width=\dimen174
+\page@free=\dimen175
+\premulticols=\dimen176
+\postmulticols=\dimen177
+\multicolsep=\skip75
+\multicolbaselineskip=\skip76
+\partial@page=\box44
+\last@line=\box45
+\maxbalancingoverflow=\dimen178
+\mult@rightbox=\box46
+\mult@grightbox=\box47
+\mult@gfirstbox=\box48
+\mult@firstbox=\box49
 \@tempa=\box50
 \@tempa=\box51
 \@tempa=\box52
@@ -653,27 +660,29 @@ Package: multicol 2019/03/01 v1.8w multicolumn formatting (FMi)
 \@tempa=\box62
 \@tempa=\box63
 \@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
 \c@minrows=\count330
 \c@columnbadness=\count331
 \c@finalcolumnbadness=\count332
-\last@try=\dimen177
-\multicolovershoot=\dimen178
-\multicolundershoot=\dimen179
-\mult@nat@firstbox=\box65
-\colbreak@box=\box66
+\last@try=\dimen179
+\multicolovershoot=\dimen180
+\multicolundershoot=\dimen181
+\mult@nat@firstbox=\box67
+\colbreak@box=\box68
 \mc@col@check@num=\count333
 ) (c:/texlive/2019/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip75
-\enit@outerparindent=\dimen180
-\enit@toks=\toks39
-\enit@inbox=\box67
+\labelindent=\skip77
+\enit@outerparindent=\dimen182
+\enit@toks=\toks40
+\enit@inbox=\box69
 \enit@count@id=\count334
 \enitdp@description=\count335
 ) (c:/texlive/2019/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
-\FN@temptoken=\toks40
-\footnotemargin=\dimen181
+\FN@temptoken=\toks41
+\footnotemargin=\dimen183
 \c@pp@next@reset=\count336
 \c@@fnserial=\count337
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
@@ -692,31 +701,31 @@ File: english.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
 ) (./pagacz_TEX.aux)
 \openout1 = `pagacz_TEX.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
  (c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count338
-\scratchdimen=\dimen182
-\scratchbox=\box68
+\scratchdimen=\dimen184
+\scratchbox=\box70
 \nofMPsegments=\count339
 \nofMParguments=\count340
-\everyMPshowfont=\toks41
+\everyMPshowfont=\toks42
 \MPscratchCnt=\count341
-\MPscratchDim=\dimen183
+\MPscratchDim=\dimen185
 \MPnumerator=\count342
 \makeMPintoPDFobject=\count343
-\everyMPtoPDFconversion=\toks42
+\everyMPtoPDFconversion=\toks43
 ) (c:/texlive/2019/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2019-11-30 v2.9 Base part for package epstopdf
  (c:/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -739,23 +748,23 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'pagacz_TEX.bbl' found.
  (./pagacz_TEX.bbl)
-Package biblatex Info: Reference section=0 on input line 70.
-Package biblatex Info: Reference segment=0 on input line 70.
+Package biblatex Info: Reference section=0 on input line 73.
+Package biblatex Info: Reference segment=0 on input line 73.
 
 Rozdzia\PlPrIeC {\l } I.
-LaTeX Font Info:    Trying to load font information for T1+qcr on input line 79.
+LaTeX Font Info:    Trying to load font information for T1+qcr on input line 82.
 (c:/texlive/2019/texmf-dist/tex/latex/tex-gyre/t1qcr.fd
 File: t1qcr.fd 2009/09/25 v1.2 font definition file for T1/qcr
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
  (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
  (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (16.42169pt too wide) in paragraph at lines 110--134
+Overfull \hbox (16.42169pt too wide) in paragraph at lines 113--137
 $[]$   $[]$ 
  []
 
@@ -763,12 +772,12 @@ $[]$   $[]$
 
 
 {c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (3.72449pt too wide) in paragraph at lines 140--149
+Overfull \hbox (3.72449pt too wide) in paragraph at lines 143--152
 []\T1/cmr/m/n/12 Wyra»enie za-pi-sa-ne sen-sow-nie za po-mo-c¡ zmien-nych prze-bie-ga-j¡-cych zbiór
  []
 
 
-Overfull \hbox (2.06596pt too wide) in paragraph at lines 153--157
+Overfull \hbox (2.06596pt too wide) in paragraph at lines 156--160
 []\T1/cmr/m/n/12 Zwi¡zki (B1[])-(B$[]$6[]) na-zy-wa-my \T1/cmr/m/it/12 ukªa-dem po-stu-la-tów al-ge-bry Bo-ole'a\T1/cmr/m/n/12 , w skró-
  []
 
@@ -779,10 +788,10 @@ Overfull \hbox (50.90176pt too wide) has occurred while \output is active
 
 [3]
 
-LaTeX Warning: Reference `sec:elementarnetwierdzenie' on page 4 undefined on input line 199.
+LaTeX Warning: Reference `sec:elementarnetwierdzenie' on page 4 undefined on input line 202.
 
 
-LaTeX Warning: Reference `eq:zastaut' on page 4 undefined on input line 199.
+LaTeX Warning: Reference `eq:zastaut' on page 4 undefined on input line 202.
 
 [4] (./pagacz_TEX.aux)
 
@@ -793,15 +802,15 @@ Package logreq Info: Writing requests to 'pagacz_TEX.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22396 strings out of 492164
- 427966 string characters out of 6129088
- 871344 words of memory out of 5000000
- 26377 multiletter control sequences out of 15000+600000
+ 22447 strings out of 492164
+ 428549 string characters out of 6129088
+ 872188 words of memory out of 5000000
+ 26426 multiletter control sequences out of 15000+600000
  17208 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,10n,83p,908b,1606s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,11n,83p,908b,1606s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2019/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}<c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/tex-gyre/qcrr.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on pagacz_TEX.pdf (4 pages, 205409 bytes).
+Output written on pagacz_TEX.pdf (4 pages, 205739 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream

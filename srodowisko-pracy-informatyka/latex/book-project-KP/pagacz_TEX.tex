@@ -10,6 +10,9 @@
 % to do package
 \usepackage{todonotes}
 
+% tables environment
+\usepackage{array}
+
 % bibliography
 \usepackage{biblatex}
 \addbibresource{pagacz_TEX_bibliography.bib}
@@ -212,11 +215,16 @@ Zwróćmy uwagę na to że elementy 0 i 1 zależą od ciała $U$, to znaczy, że
 Boole'a, to elementy 0 i 1 w ciele $U$ są na ogół różne od elementów o i 1 w ciele $V$.
 
 Po przyjęciu określeń \refb{eq:jedynka} i \refb{eq:zero} możemy postulaty \refb{eq:bp5} i
-\refb{eq:bd5} zapisać w postaci:
-\begin{align*}
-u+0 &= u,\tag{$\overline{\mbox{B}^+5}$} \\
-u \cdot 1 &= u.
-\end{align*}
+\refb{eq:bd5} zapisać w postaci
 
-W tej postaci
+\noindent
+\begin{tabular}{p{0.1\textwidth} >{\raggedleft}p{0.35\textwidth} >{\raggedright}p{0.35\textwidth}}
+$\overline{(\mbox{B}^+5)}$ & 8 & 1
+\end{tabular}
+
+W tej postaci są one zwykle przyjmowane w układach postulatów algebry Boole'a.
+
+Nie należy zapominać, że ciało Boole'a tworzy nie sam zbiór $U$, lecz zbiór $U$ wraz z określonymi 
+w nim działaniami podstawowymi. Na przykład, gdy w pewnym zbiorze mamy określone dwa różne układy działań tworzące 
+wraz z tym zbiorem ciało Boole'a, uważamy, że mamy do czynienia z dwoma różnymi caiłami Boole'a.
 \end{document}
