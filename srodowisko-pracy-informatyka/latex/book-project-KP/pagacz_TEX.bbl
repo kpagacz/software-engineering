@@ -19,6 +19,29 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{birkhoff1}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fd4941cce3b0766c7673191a918e714c}{%
+           family={Birkhoff},
+           familyi={B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York 1948, II wyd.}%
+      }
+      \strng{namehash}{fd4941cce3b0766c7673191a918e714c}
+      \strng{fullhash}{fd4941cce3b0766c7673191a918e714c}
+      \strng{bibnamehash}{fd4941cce3b0766c7673191a918e714c}
+      \strng{authorbibnamehash}{fd4941cce3b0766c7673191a918e714c}
+      \strng{authornamehash}{fd4941cce3b0766c7673191a918e714c}
+      \strng{authorfullhash}{fd4941cce3b0766c7673191a918e714c}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lattice Theory}
+    \endentry
     \entry{bohlmann1}{book}{}
       \name{author}{1}{}{%
         {{hash=85b539f2ce02cbcadcfdf614a02357f5}{%
@@ -46,6 +69,31 @@
       \field{pages}{857\bibrangedash 917}
       \range{pages}{61}
     \endentry
+    \entry{huntington1}{book}{}
+      \name{author}{1}{}{%
+        {{hash=5769169116391eb574d93c298a8c80ea}{%
+           family={Huntington},
+           familyi={H\bibinitperiod},
+           given={E.\bibnamedelimi V.},
+           giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Transations of the American Mathematical Society 5 (1904)}%
+      }
+      \strng{namehash}{5769169116391eb574d93c298a8c80ea}
+      \strng{fullhash}{5769169116391eb574d93c298a8c80ea}
+      \strng{bibnamehash}{5769169116391eb574d93c298a8c80ea}
+      \strng{authorbibnamehash}{5769169116391eb574d93c298a8c80ea}
+      \strng{authornamehash}{5769169116391eb574d93c298a8c80ea}
+      \strng{authorfullhash}{5769169116391eb574d93c298a8c80ea}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sets of independent postulates for the algebra of logic}
+      \field{pages}{288\bibrangedash 309}
+      \range{pages}{22}
+    \endentry
     \entry{keynes1}{book}{}
       \name{author}{1}{}{%
         {{hash=ce5455d74de5aa8766d626a681a61e79}{%
@@ -55,7 +103,7 @@
            giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
       \list{location}{2}{%
-        {Londond}%
+        {London}%
         {New York 1921}%
       }
       \strng{namehash}{ce5455d74de5aa8766d626a681a61e79}
@@ -116,6 +164,29 @@
       \field{labeltitlesource}{title}
       \field{title}{Wahrscheinlichkeitsrechnung und ihre Anwendung in der Statistik und theoretischen Physik}
       \field{year}{1931}
+    \endentry
+    \entry{tarski1}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0225ae7a3b24989e6664572bb25c3824}{%
+           family={Tarski},
+           familyi={T\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Lwów-Warszawa, w szczególności str. 85-89}%
+      }
+      \strng{namehash}{0225ae7a3b24989e6664572bb25c3824}
+      \strng{fullhash}{0225ae7a3b24989e6664572bb25c3824}
+      \strng{bibnamehash}{0225ae7a3b24989e6664572bb25c3824}
+      \strng{authorbibnamehash}{0225ae7a3b24989e6664572bb25c3824}
+      \strng{authornamehash}{0225ae7a3b24989e6664572bb25c3824}
+      \strng{authorfullhash}{0225ae7a3b24989e6664572bb25c3824}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{O logice matematycznej i metodzie dedukcyjnej}
     \endentry
   \enddatalist
 \endrefsection

@@ -6,13 +6,16 @@
 \usepackage{polski}
 \usepackage{indentfirst}
 \usepackage{csquotes}
+\usepackage{lmodern}
 
-% to do package
-\usepackage{todonotes}
+% tables environment
+\usepackage{array}
 
 % bibliography
-\usepackage{biblatex}
+\usepackage[style=verbose, backend=biber]{biblatex}
 \addbibresource{pagacz_TEX_bibliography.bib}
+\DefineBibliographyStrings{english}{pages = {str\adddot}}
+
 
 % unfortunate section, chapters and part numbering
 \usepackage{titlesec}
@@ -57,12 +60,164 @@
 \makeatletter
 \renewcommand{\@makefnmark}{\normalfont\@thefnmark}
 \renewcommand{\@makefntext}[1]{
-    \noindent\@thefnmark\footnotesize#1
+    \makebox[30pt][r]{\footnotesize\@makefnmark} #1
     }
 \makeatother
 
 % ref command for Boole definition
 \newcommand{\refb}[1]{(\ref{#1})}
+
+% new command for a very weird Dowód
+\newcommand{\dowod}{D\,o\,w\,ó\,d}
+
+% for italics in math mode
+\newcommand{\italics}[1]{\mbox{\textit{#1}}}
+
+% environment Twierdzenie, Dowód oraz Wniosek
+\usepackage{amsthm}
+
+\newtheoremstyle{twr}% name of the style to be used
+  {}% measure of space to leave above the theorem. E.g.: 3pt
+  {}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {\parindent}% measure of space to indent
+  {\scshape}% name of head font
+  {.}% punctuation between head and body
+  { }% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+\newtheoremstyle{eqtext}% name of the style to be used
+  {}% measure of space to leave above the theorem. E.g.: 3pt
+  {}% measure of space to leave below the theorem. E.g.: 3pt
+  {}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {}% name of head font
+  {}% punctuation between head and body
+  {\parindent}% space after theorem head; " " = normal interword space
+  {(#2)}% Manually specify head
+
+\newtheoremstyle{okreslenie}% name of the style to be used
+  {}% measure of space to leave above the theorem. E.g.: 3pt
+  {}% measure of space to leave below the theorem. E.g.: 3pt
+  {}% name of font to use in the body of the theorem
+  {\parindent}% measure of space to indent
+  {\scshape}% name of head font
+  {.}% punctuation between head and body
+  { }% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+
+\theoremstyle{twr}
+\newtheorem{twr}{Twierdzenie}
+
+\theoremstyle{twr}
+\newtheorem*{wniosek}{Wniosek}
+
+\theoremstyle{eqtext}
+\newtheorem{eqtext}[equation]{Equation}
+
+\theoremstyle{okreslenie}
+\newtheorem{okreslenie}{Określenie}
+
+
+% Headers and footers
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{ \markboth{\footnotesize \thechapter . #1}{} } % changing the content of the leftmark
+\renewcommand{\sectionmark}[1]{ \markright{\footnotesize \S\ \thesection .\ #1}{} }  % changing the content of the rightmark
+\renewcommand{\headrulewidth}{0pt}
+\lhead[]{\thepage} % [odd output] {even output}
+\chead[\rightmark]{\leftmark}
+\rhead[\thepage]{}
+\rfoot[\tiny Podstawy teorii prawdopodobieństwa]{}
+\cfoot[]{}
+\lfoot[]{\tiny Podstawy teorii prawdopodobieństwa}
+
+\fancypagestyle{plain}{ % chapter pages - nothing in them
+  \fancyhf{} 
+}
+
+% spacing around math display mode
+\def\mycommand{\setlength{\abovedisplayskip}{7pt}%
+\setlength{\belowdisplayskip}{7pt}%
+\setlength{\abovedisplayshortskip}{7pt}%
+\setlength{\belowdisplayshortskip}{7pt}}
+
+\let\oldselectfont\selectfont
+\def\selectfont{\oldselectfont\mycommand}
+
+\mycommand
+
+% spacing around enumerate lists
+\setlist[enumerate]{itemsep=3pt,topsep=3pt}
+
+% length of the footnote rule
+\renewcommand{\footnoterule}{%
+  \kern -3pt
+  \hrule width 0.15\textwidth height 0.5pt
+  \kern 2pt
+}
+
+% defining bibliography
+\usepackage{filecontents}
+\begin{filecontents}{pagacz_TEX_bibliography.bib}
+  @book{
+    bohlmann1,
+    title = "Lebensversicherungsmethodik",
+    author = "G. Bohlman",
+    series = "Enzyklop{\"a}die der Mathematischen Wissenschaften, Bd.1, Teil II",
+    location = "Leipzig",
+    year = "1900-1904",
+    pages = "857-917"
+}
+
+@book{
+    keynes1,
+    author = "J. M. Keynes",
+    title = "A Treatise on Probability",
+    location = "London and New York 1921",
+    edition = "II",
+    year = "1929"
+}
+
+@book{
+    kolmogoroff1,
+    author = "A. Kolmogoroff",
+    title = "Grunbegriffe der Wahrscheinlichkeitsrechnung",
+    series = "Ergebnisse der Mathematik II.3 (1933)"
+}
+
+@book{
+    mises1,
+    author = "R. Mises",
+    title = "Wahrscheinlichkeitsrechnung und ihre Anwendung in der Statistik und theoretischen Physik",
+    location = "Wien",
+    year = "1931"
+}
+
+@book{
+    tarski1,
+    author = "A. Tarski",
+    title = "O logice matematycznej i metodzie dedukcyjnej",
+    location = "Lwów-Warszawa, w szczególności str. 85-89"
+}
+
+@book{
+    huntington1,
+    author = "E. V. Huntington",
+    title = "Sets of independent postulates for the algebra of logic",
+    location = "Transations of the American Mathematical Society 5 (1904)",
+    pages = "288-309"
+}
+
+@book{
+    birkhoff1,
+    author = "G. Birkhoff",
+    title = "Lattice Theory",
+    location = "New York 1948, II wyd."
+}
+\end{filecontents}
 
 %%%%%%%%%%%%%
 % main body
@@ -77,7 +232,7 @@
 Znamy obecnie różne, nieraz mocno od siebie odbiegające sposoby wprowadzania pojęcia 
 prawdopodobieństwa: teoria ,,klasyczna'' w różnych odmianach, teorie aksjomatyczne:
  {\fontfamily{qcr}\selectfont Bohlmanna, Keynesa, Kołmogorowa}, teoria ,,częstościowa''
-{\fontfamily{qcr}\selectfont Misesa} i inne \footnote{\cite{bohlmann1} \cite{keynes1} \cite{kolmogoroff1} \cite{mises1}}. \todo{add missing citations}
+{\fontfamily{qcr}\selectfont Misesa} i inne \footnote{\cite{bohlmann1}. \par \hspace{20pt} \cite{keynes1}. \par \hspace{20pt} \cite{kolmogoroff1}. \par \hspace{20pt} \cite{mises1}.}
 Porównanie tych sposobów prowadzi do następujących spostrzeżeń:
 
 $1^\circ$ Prawdopodobieństwo bywa określane rozmaicie, zawsze jednak jest ono liczbą nieujemną,
@@ -89,16 +244,12 @@ $2^\circ$ Co do natury przedmiotów, którym zostaje przyporządkowane prawdopod
             intuicyjnie określić można jako algebrę wyrazów: ,,nie'', ,,i'' oraz ,,lub''.
 
 Wobec tego podajemy w tym rozdziale zarys teorii ciał Boole'a, a więc: ich określenie
-przez postulaty (\S\ 2), elementarne twierdzenia algebry Boole'a (\S\S\ 3 i 4), związek teorii ciał Boole'a
-z teorią zbiorów częściowo uporządkowanych (\S\ 5), określenie działań nieskończonych w ciałach Boole'a i prawa nimi rządzące (\S\ 6),
+przez postulaty (\S\ \ref{sec:postulaty}), elementarne twierdzenia algebry Boole'a (\S\S\ \ref{sec:dwoistosc} i \ref{sec:elementarne}), związek teorii ciał Boole'a
+z teorią zbiorów częściowo uporządkowanych (\S\ \ref{sec:zbiory}), określenie działań nieskończonych w ciałach Boole'a i prawa nimi rządzące (\S\ 6),
 zastosowania ciał Boole'a w teorii zbiorów (\S\S\ 7 i 9) i w logice (\S\ 11), określenie podciał (\S\ 8), 
 określenie homomorfizmu między dwoma ciałami Boole'a, kongruencji w ciałach Boole'a i uogólnienie ciał Boole'a na tak zwane
 ciała zrelatywizowane (\S\ 10) oraz określenie atomu, ciała atomowego i operacji scalania
 atomów (\S\S\ 12, 13). Ostatni paragraf każdego rozdziału będzie zawierał przykłady i zadania.
-% Mój komentarz: zdecydowałem się ręcznie, ponieważ formatowanie podwójnych odwołań do sekcji jest różne:
-% raz jest z przecinkiem, raz z i, ponadto znak \S występuje dwa razy przed cytowaniem
-% Uznałem, że overloadowanie funkcji ref będzie mnie kosztowało zbyt dużo
-% w porównaniu z zyskiem czasu i przejrzystości w tekście, zwłaszcza, że odwołania do sekcji są w tekście rzadkie.
 
 % Druga sekcja
 \section{Określenie ciał Boole'a} \label{sec:postulaty}
@@ -155,12 +306,12 @@ Wychodząc z postulatów układu (B) możemy, za pomocą rozumowań opartych na 
 przez każdy układ elementów każdego ciała Boole'a. Ogół tych wyszstkich związków (zdań), które dają się wyprowadzić
 z postulatów układu (B) przez logicznie poprawne rozumowanie, nazywamy \textit{systemem algebry Boole'a}.
 
-Używając współczesnej terminologii logicznej możemy powiedzieć, że ciała Boole'a \footnote{cytowanie} są 
-\textit{modelami systemu algebry Boole'a} lub - co na jedno wychodzi - \textit{modelami układu postulatów} (B) \footnote{cytowanie2}.
+Używając współczesnej terminologii logicznej możemy powiedzieć, że ciała Boole'a \footnote{\ Przykłady ciał Boole'a znajdzie czytelnik w \S\S\ 7 i 9 tego rozdziału.} są 
+\textit{modelami systemu algebry Boole'a} lub - co na jedno wychodzi - \textit{modelami układu postulatów} (B) \footnote{\ Por. \cite{tarski1}.}.
 
 Przedstawiony tu układ postulatów algenry Boole'a nie jest ani jedynym możliwym (tę własność dzieli on
 ze wszystkimi układami postulatów abstrakcyjnych teorii), ani też najprostszym. Znane są rozmaite równoważne
-między sobą układy postulatów algebry Boole'a \footnote{cytowanie3}. Zaierają one przeważnie mniej postulatów niż
+między sobą układy postulatów algebry Boole'a \footnote{\ Różne układy postulatów algebry Boole'a bada \cite{huntington1}}. Zaierają one przeważnie mniej postulatów niż
 podany tu układ (B), a często też mniej pojęć pierwotnych. Jednak podany tu układ postulatów ma wiele stron dodatnich;
 poszczególne postulaty mają łatwo uchwytny sens intuicyjny, są łatwe do zapamiętania i elementarne twierdzenia dają się z nich 
 prosto wyprowadzić. Poza tym uwidacznia on istotną dla ciał Boole'a symetrię między działaniami dodawania i mnożenia. 
@@ -172,7 +323,10 @@ postulaty, tj. \refb{eq:bp2}, \refb{eq:bd2}, \refb{eq:bd3}, \refb{eq:bd5}, możn
 rozumowań. Można też wykazać, ze z układu postulatów (B*) nie da się już odrzucić żadnego postulatu bez uszczerbku dla systemu algebry Boole'a;
 mówimy, że układ postulatów (B*) jest niezależny, a układ (B) nie jest taki.
 
+% Trzecia sekcja
+\sectionmark{Omówienie postulatów układu (B) -- Twierdzenie o dwoistości}
 \section{Omówienie postulatów układu (B). Twierdzenie o dwoistości} \label{sec:dwoistosc}
+\sectionmark{Omówienie postulatów układu (B) -- Twierdzenie o dwoistości}
 Postulat \refb{eq:b1} ma nieco odmienny charakter od pozostałych. Żąda on, aby działania
 $'$, $+$ i $\cdot$ były \textit{wykonalne} w ciele $U$, czyli aby ciało $U$ było \textit{zamknięte}
 ze względu na podstawowe działania, to znaczy, aby element powstały w wyniku wykonania któregoś
@@ -196,9 +350,9 @@ ze względu na podstawowe działania, to znaczy, aby element powstały w wyniku 
  że jeżeli zbiór $U$ zawiera więcej niż jeden element, to 0 nie jest identyczne z 1.
 
  Niech bowiem będzie $0 = 1 \in U$ i $u \in U$ niech będzie elementem różnym od 1 (a więc i od 0).
- Ponieważ jak udowodnimy później (\ref{sec:elementarnetwierdzenie}, \refb{eq:zastaut}), w każdym ciele 
+ Ponieważ jak udowodnimy później (\S \ref{sec:elementarne}, \eqref{eq:taut}), w każdym ciele 
  Boole'a zachodzi równość $u=u+u$ dla dowolnego elementu, więc
-\begin{enumerate}[label=(\Roman*), labelsep=2em]
+\begin{enumerate}[label=(\Roman{*}), wide=0pt, widest=99,leftmargin=*, labelsep=15pt, itemsep=0pt]
   \item $uu' = u + u'$ (na mocy założenia $0=1$), 
   \item $u+(u+u')=u$ (na mocy postulatu \refb{eq:bp5} oraz (\RN{1})),
   \item $(u+u)+u'=u$ (na mocy postulatu \refb{eq:bp2} oraz (\RN{2})),
@@ -212,11 +366,316 @@ Zwróćmy uwagę na to że elementy 0 i 1 zależą od ciała $U$, to znaczy, że
 Boole'a, to elementy 0 i 1 w ciele $U$ są na ogół różne od elementów o i 1 w ciele $V$.
 
 Po przyjęciu określeń \refb{eq:jedynka} i \refb{eq:zero} możemy postulaty \refb{eq:bp5} i
-\refb{eq:bd5} zapisać w postaci:
-\begin{align*}
-u+0 &= u, \\
-u \cdot 1 &= u. 
-\end{align*}
+\refb{eq:bd5} zapisać w postaci
+\begin{displaymath}
+\begin{array}{@{}w{l}{0.1\textwidth} wr{0.40\textwidth} @{\hspace{5pt}} c @{\hspace{5pt}} wl{0.40\textwidth}}
+$\overline{(\mbox{B}^+5)}$ & $u + 0$ & $=$ & $u,$ \\[\medskipamount]
+$\overline{(\mbox{B}^\cdot5)}$ & $u \cdot 1$ & $=$ & $u.$
+\end{array}
+\end{displaymath}
 
-W tej postaci
+W tej postaci są one zwykle przyjmowane w układach postulatów algebry Boole'a.
+
+Nie należy zapominać, że ciało Boole'a tworzy nie sam zbiór $U$, lecz zbiór $U$ wraz z określonymi 
+w nim działaniami podstawowymi. Na przykład, gdy w pewnym zbiorze mamy określone dwa różne układy działań tworzące 
+wraz z tym zbiorem ciało Boole'a, uważamy, że mamy do czynienia z dwoma różnymi caiłami Boole'a.
+
+Z tego powodu byłoby rzeczą słuszną nazywać ciałem Boole'a nei sam zbiór $U$, lecz czwórkę uporządkowaną
+$\langle U, +, \cdot, ' \rangle$, składającą się ze zbioru $U$ i trech działań podstawowych spełniających postulaty układu (B).
+Nie będziemy się jednak trzymali tego sposobu oznaczania, gdyż mimo jego wielkiej ścisłości, nie jest on wygodny w użyciu.
+
+\begin{twr}[o dwoistości]
+Jeżeli zbiór $U$ jest ciałem Boole'a ze względu na działania $+, \cdot$ i $'$, to zbiór $U$ jest również ciałem Boole'a
+ze względu na działania $\cdot, +$ i $'$.
+\end{twr}
+
+Twierdzenie to mówi nam, że każdy zbiór, który jest ciałem Boole'a ze względu na pewien układ postawowych działań, jest również ciałem Boole'a
+ze względu na inny, różny od poprzedniego układu działań, działanie bowiem $\cdot$ nie pokrywa się z działaniem $+$ (z wyjątkiem trywialnego
+przypadku, gdy ciało Boole'a jest zbiorem jednoelementowym).
+
+Mówi nam ono dalej, że działanie $+$ i $\cdot$ określone w pewnym ciele Boole'a można traktować dowolnie: $+$ jako dodawanie, a $\cdot$ jako 
+mnożenie, lub przeciwnie. Dowów twierdzenia 1 jest natychmiastowy. Jak już mówiliśmy, postulaty układu (B) wykazują symetrię, która została 
+specjalnie zaznaczona w ich numeracji. Każdy z postulatów przechodzi w drugi oznaczony tym samym numerem, jeżeli w miejsce znaków
+$+$ wpiszemy znaki $\cdot$ i odwrotnie. Jeżeli więc dwa działania $+$ i $\cdot$ (wraz z trzecim działaniem $'$, które nie ulega zmianie)
+spełniają jeden z postulatów, to działania $\cdot$ i $+$ spełniają drugi z postulatów, po przestawieniu w nim znaków sumy i iloczynu.
+
+Mając dane wyrażenie algebraiczne nazwiemy \textit{dwoistym} do niego wyrażenie algebraiczne otrzymane z danego w ten sposób, że występujące
+w nim znaki iloczynu ($\cdot$) zastępujemy znakami ($+$) i na odwrót - znaki sumy znakami ilocynu (równocześnie zmieniając odpowiednio nawiasy, stosownie
+do zawartych poprzednio umów dotyczących zapisywania wyrażeń algebraicznych). Ze względu na określenie \eqref{eq:jedynka} i \eqref{eq:zero} oraz fakt,
+że wyrażenia $u + u' \quad uu'$ są względem siebie dwoiste, widzimy, że w przypadku występowania 0 lub 1 w danym wyrażeniu musimy, aby otrzymać wyrażenie względem
+niego dwoiste, zastąpić w nim wszędzie 0 przez 1 i odwrotnie.
+
+\textit{Równością algebraiczną dwoistą} względem danej nazywamy równość, której obie strony są wyrażeniami dwoistymi odpowiednio względem obu stron danej równości.
+Widzimy, że każdy z postulatów układu (B) oznaczony krzyżykiem jest dwoisty wwzględem postulatu oznaczego tym samym numerem i kropką. Dalej widzimy,
+że równości \eqref{eq:jedynka} i \eqref{eq:zero} są wzajemnie do siebie dwoiste. Wynika stąd następujący 
+
+\begin{wniosek}
+Jeżeli udowodnimy pewną równość algebraiczną opierając się w dowodzie kolejno na pewnych postulatach, to dowód równości dwoistej
+otrzymamy zastępując kolejno w dowodzie danej równości postulaty, na których opieraliśmy się, postulatami względem nich dwoistymi.
+\end{wniosek}
+
+Korzystając z tego wniosku będziemy z dwóch równości dwoistych dowodzili tylko jednej; drugą będziemy uważali za udowodnioną na podstawie powyższego wniosku.
+O słuszności tego postępowania może się czytelnik przekonać przeprowadzając w poszczególlnych pyrzypadkach dowód równości dwoistej na podstawie dowodu równości
+udowodnionej.
+
+% Czwarta sekcja
+\section{Elementarne twierdzenia algebry Boole'a} \label{sec:elementarne}
+Dowody równości algebraicznych będziemy pisali, podobnie jak się to robi w zwykłej algebrze, w postaci łańcuchów równości, zastępując przy przejściu
+od członu do członu ,,równe przez równe'' na podstawie postulatów lub równości wcześniej udowodnionych.
+
+Udowodnimy najpierw następujące twierdzenia dwoiste, zwane \textit{zasadami tautologii:}
+\begin{equation} \label{eq:taut}
+u = u + u, \quad u = u \cdot u
+\end{equation}
+
+\dowod. $u = u + uu' = (u + u)(u+u') = u + u.$ W dowodzie powołujemy się kolejno na postulaty \eqref{eq:bp5}, \eqref{eq:bd4} i \eqref{eq:bd5}.
+
+Dla wykazania na przykładzie zastosowania wniosku wysnutego w poprzednim paragrafie podamy dowód twierdzenia dwoistego:
+\begin{displaymath}
+u = u \cdot (u + u') = uu + uu' = uu.
+\end{displaymath}
+
+Powołujemy się kolejno na postulaty \eqref{eq:bd5}, \eqref{eq:bp4} i \eqref{eq:bp5}.
+
+Udowodnimy teraz twierdzenia:
+\begin{equation} \label{eq:sumailoczynow}
+u = uv + uv', \quad u = (u + v)(u + v').
+\end{equation}
+
+\dowod. $u = u(u + u') = u(v + v') = uv + uv'.$
+
+Powołaliśmy się na postulaty \eqref{eq:bd5}, \eqref{eq:bp6} i \eqref{eq:bp4}.
+\begin{equation} \label{eq:absorpcja}
+u = u + uv, \quad u = u(u + v).
+\end{equation}
+
+\dowod.
+\begin{displaymath}
+u = uv + uv' = uv' + uv = uv' + (uv + uv) = (uv' + uv) + uv = u + uv.
+\end{displaymath}
+
+Przy przechodzeniu od jednej równości do drugiej korzystaliśmy kolejno z wzorów \eqref{eq:sumailoczynow}, \eqref{eq:bp3}, \eqref{eq:taut},
+\eqref{eq:bp2} i \eqref{eq:sumailoczynow}.
+
+W dowodzie tego prawa, zwanego \textit{prawem absorpcji}, powołaliśmy się na postulat \eqref{eq:bp2} orzekający łączność działania $+$, po to,
+aby pokazać jego zastosowanie.
+
+Zgodnie z umową zawartą w \S 2 wielowyrazowe sumy i iloczyny bedziemy pisali bez nawiasów i nie będziemy się już więcej powoływali na postulaty 
+\eqref{eq:bp2} i \eqref{eq:bd2}.
+
+Oto dalsze dwa \textit{prawa absorpcji} oraz \textit{prawo podwójnego dopełnienia}:
+\begin{equation} \label{eq:absorpcja2}
+u + 1 = 1, \quad u \cdot 0 = 0.
+\end{equation}
+
+\dowod\ opiera się na wzorach \eqref{eq:jedynka}, \eqref{eq:taut} i \eqref{eq:jedynka}: $u + 1 = u + u + u' = u + u' = 1.$
+\begin{equation} \label{eq:2przeczenie}
+u = (u')'.
+\end{equation}
+
+Dowód opiera się na wzorach \eqref{eq:sumailoczynow}, \eqref{eq:bp3}, \eqref{eq:bd3}, \eqref{eq:bd6}, \eqref{eq:bd3}, \eqref{eq:sumailoczynow}:
+\begin{gather*}
+u = uu' + u(u')' = u(u')' + uu' = (u')'u + uu' = (u')'u + u'(u')' = \\
+= (u')'u + (u')'u' = (u')'.
+\end{gather*}
+
+W dalszych dowodach nie będziemy zaznaczali miejsc, w których powołujemy się na postulaty przemienności \eqref{eq:bp3} i \eqref{eq:bd3}.
+
+Udowodnimy teraz tak zwane wzory de M\,o\,r\,g\,a\,n\,a:
+\begin{equation} \label{eq:morgan}
+(u + v)' = u'v', \quad (uv)' = u' + v'.
+\end{equation}
+
+\dowod. Udowodnimy wpierw pomocniczo:
+\begin{equation*} \tag{a}
+  1 = u + v + u'v', \quad 0 = uv(u' + v')
+\end{equation*}
+
+Istotnie, $1 = (u + u')(v + v') = uv + uv' + u'v + u'v' = (uv + uv') + (uv + u'v) + u'v' = u + v + u'v'.$
+
+Przy dowodzie tej równości opieraliśmy się kolejno na wzorach \eqref{eq:jedynka}, \eqref{eq:taut}, \eqref{eq:bp4}, \eqref{eq:taut}, \eqref{eq:sumailoczynow}.
+
+Mamy teraz
+\begin{gather*}
+(u + v)' = (u + v + u'v')(u + v)' = (u + v)(u + v)' + u'v'(u + v)' = \\
+= u'v'(u + v)' + u'v'\big((u')' + (v')'\big) = u'v'(u + v)' = u'v'(u+v) = \\
+= u'v'[(u+v)' + (u + v)] = u'v',
+\end{gather*}
+przy czym oparliśmy się na wzorach \eqref{eq:bd5}, (a), \eqref{eq:bp4}, [\eqref{eq:bp5}, (a)], \eqref{eq:2przeczenie}, \eqref{eq:bp4}, \eqref{eq:bd5}.
+
+\small{Umawiamy się, że gdy przy przejściu od jednej równości do drugiej powołujemy się na więcej niż jeden postulat lub poprzdnio udowodnioną równość, ujmujemy numery 
+odpowiadających twierdzeń w nawiasy kwadratowe.}
+
+\normalsize Udowodnimy teraz dalsze twierdzenia:
+\begin{equation} \label{eq:odwrotnymorgan}
+u + v = (u'v')', \quad uv = (u' + v')'.
+\end{equation}
+
+\dowod\ opieramy na wzorach \eqref{eq:2przeczenie}, \eqref{eq:morgan}: $u + v = [(u + v)']' = (u'v')'.$
+\begin{equation} \label{eq:01przeczenia}
+0 = 1', \quad 1 = 0'.
+\end{equation}
+
+\dowod\ opieramy na wzorach \eqref{eq:zero}, [\eqref{eq:odwrotnymorgan}, \eqref{eq:2przeczenie}], \eqref{eq:jedynka}: $0 = uu' = (u' + u)' = 1'.$
+
+Określamy teraz indukcyjnie, podobnie jak w arytemtyce, sumę i iloczyn $n$-elementów $u_1, u_2, \ldots, u_n$ ciała $U$:
+\begin{equation}
+  \sum\limits_{i=1}^{1}u_i=u_1,\quad \prod\limits_{i=1}^{1}u_i=u_1.
+\end{equation}
+\begin{equation}
+  \sum\limits_{i=1}^{n}u_i = \big(\!\sum\limits_{i=1}^{n-1}u_i\big) + u_n, \quad \prod\limits_{i=1}^{n}u_i = \big(\!\prod\limits_{i=1}^{n-1}u_i\big) + u_n, \quad \mbox{dla}\ n > 1.
+\end{equation}
+
+Można drogą łatwej indukcji uogólnić wzory de Morgana na sumy i iloczyny $n$-elementów:
+\begin{equation}
+  \big(\!\sum\limits_{i=1}^{n}u_i\big)' = \!\prod\limits_{i=1}^{n}u_i', \quad \big(\!\prod\limits_{i=1}^{n}u_i\big)' = \!\sum\limits_{i=1}^{n}u_i'
+\end{equation}
+
+Na zakończenie tego paragrafu podamy jeszcze kilka twierdzeń nie mających postaci równości.
+\begin{eqtext}
+\textit{Jeżeli} $u + v = 1$ \textit{i} $uv = 0,$ \textit{to} $u = v'.$
+\end{eqtext}
+
+\dowod. Załóżmy, że (a) $u + v = 1$, (b) uv = 0. Opierając się kolejno na wzorach [\eqref{eq:bp5}, \eqref{eq:bd6}], \eqref{eq:bd4}, [(a), \eqref{eq:jedynka}, \eqref{eq:bd5}],
+[(b), \eqref{eq:morgan}, \eqref{eq:01przeczenia}, \eqref{eq:bd6}], \eqref{eq:sumailoczynow} otrzymujemy
+\begin{displaymath}
+  u = u + vv' = (u + v)(u + v') = u + v' = (v' + u)(v' + u') = v' + uu' = v'.
+\end{displaymath}
+\begin{eqtext} \label{eq:4rownosci}
+\textit{Nastepujące czztery wzory są równoważne} (to znaczy, jeżeli którykolwiek z nich zachodzi dla dwu elementów $u,v \in U$, to zachodzą też i pozostałe);
+\begin{displaymath}
+\mbox{(a)}\ u + v = v, \quad \mbox{(b)}\ u \cdot v = u, \quad \mbox{(c)}\ u' + v = 1, \quad \mbox{(d)}\ u \cdot v' = 0.
+\end{displaymath}
+\end{eqtext}
+
+\dowod. Załóżmy (a). Otrzymujemy $u \cdot v = u(u + v) = u$, czyli (b), przy czym oparliśmy się na wzorach (a) i \eqref{eq:absorpcja}.
+
+Załóżmy (b). Otrzymujemy $u' + v = (uv)' + v = u' + v' + v = 1,$ czyli (c), przy czym oparliśmy się na wzorach (b), \eqref{eq:morgan}, [\eqref{eq:jedynka}, \eqref{eq:absorpcja2}].
+
+Załóżmy (c). Otrzymujemy $u \cdot v' = (u' + v)' = 1' = 0,$  czyli (d), przy czym oparliśmy się na wzorach [\eqref{eq:morgan}, \eqref{eq:2przeczenie}], (c), \eqref{eq:01przeczenia}.
+
+Załóżmy (d). Otrzymujemy $u + v = uv + uv' + v = uv + v = v,$ czyli (a), przy czym oparliśmy się na wzorach \eqref{eq:sumailoczynow}, (d) i \eqref{eq:absorpcja}.
+
+Wykazaliśmy, że z (a) wynika (b), z (b) wynika (c), z (c) wynika (d) i z (d) wynika (a), co daje \eqref{eq:4rownosci}.
+\begin{eqtext} \label{eq:sekwsum}
+\textit{Jeżeli} $u + v = v$ \textit{i} $v + z = z,$ \textit{to} $u + z = z.$
+\end{eqtext}
+
+\dowod. Załóżmy (a) $u + v = v,$ (b) $v + z = z$; opierając się na wzorach (b), (a) i (b) \footnote{\ Pozornie w dowodzie tym nie korzystamy z żadnych specyficznych twierdzeń
+algebry Boole'a, w istocie jednak korzystamy z \eqref{eq:bp2}, czego zgodnie z umową nie uwidaczniamy.} otrzymujemy $u + z = u + v + z = v + z = z.$
+\begin{eqtext}
+$u = v$ \textit{wtedy i tylko wtedy, gdy} $uv' + u'v = 0.$
+\end{eqtext}
+
+\dowod. Załóżmy (a) $u = v$; otrzymujemy $uv' + u' = uu' + u'u = 0$, gdzie skorzystaliśmy z wzorów [(a), (a)], [\eqref{eq:sumailoczynow}, \eqref{eq:taut}].
+
+Załóżmy (b) $uv' + u'v = 0$; otrzymujemy $u = uv + uv' = uv + uv' + uv' +u'v = uv + uv' +u'v = uv + (uv' + u'v) + u'v = uv + u + v = v.$ Oparliśmy się na wzorach
+\eqref{eq:sumailoczynow}, (b), \eqref{eq:taut}, \eqref{eq:taut}, (b) i \eqref{eq:sumailoczynow}.
+
+% Sekcja piąta
+\sectionmark{Zawieranie -- Ciała Boole'a jako zbiory częściowo uporządkowane}
+\section{Zawierania (implikacja). Cała Boole'a jako zbiory częściowo uporządkowane} \label{sec:zbiory}
+
+Określimy obecnie pewną relację dwuargumentową między elementami dowolnego ciała Boole'a, zwaną relacją \textit{zawierania} lub \textit{implikacji}.
+
+\begin{okreslenie}
+Jeżeli $u$ i $v$ są dwoma elementami ciała Boole'a, to mówimy, że \textit{element u jest zawarty w elemencie v} (lub że \textit{u implikuje v}), i piszemy $u\rightarrow v$, jeśli $u + v = v.$
+\end{okreslenie}
+
+Na mocy tego określenia i twierdzenia \eqref{eq:4rownosci} wzór $u\rightarrow v$ jest równoważny każdemu z wzorór \eqref{eq:4rownosci}: (a), (b), (c) i (d).
+
+Następujące własności implikacji otrzymamy natychmiast z udowodnionych już twierdzeń:
+\begin{equation} \label{eq:zwrotnosc}
+u \rightarrow u.
+\end{equation}
+
+Jest to tak zwana \textit{zwrotność} stosunku zawierania. Dowód opiera się na wzorze \eqref{eq:taut}.
+\begin{eqtext} \label{eq:przechodniosc}
+\textit{Jeżeli} $u \rightarrow v$ \textit{i} $v \rightarrow z$, \textit{to} $u \rightarrow z$.
+\end{eqtext}
+
+Jest to tak zwana \textit{przechodniość} stosunku zawierania. Dowód opiera się na wzorze \eqref{eq:sekwsum}.
+\begin{equation}
+  u \rightarrow 1.
+\end{equation}
+
+\dowod\ wynika z wzoru \eqref{eq:absorpcja2}.
+\begin{equation}
+0 \rightarrow u.
+\end{equation}
+
+\dowod \ wynika z wzorów \eqref{eq:absorpcja2} i \eqref{eq:sekwsum}.
+\begin{equation}
+u \rightarrow u + v.
+\end{equation}
+
+\dowod \ wynika z twierdzeń \eqref{eq:absorpcja} i \eqref{eq:sekwsum}.
+\begin{equation}
+  uv \rightarrow u.
+\end{equation}
+
+\dowod \ wynika z wzoru \eqref{eq:absorpcja}.
+\begin{eqtext}
+\itshape Jeżeli $u \rightarrow z$ i  $v \rightarrow z,$ to  $u + v \rightarrow z.$
+\end{eqtext}
+
+\dowod. Załóżmy (a) $u + z = z,$ (b) $v + z = z$; otrzymujemy: $u + v + z = u + z = z,$ przy czym opieraliśmy się na wzorach (b), (a).
+\begin{eqtext}
+\itshape Jeżeli $z \rightarrow u$ i $z \rightarrow v$, to $z \rightarrow u\cdot v$.
+\end{eqtext}
+
+\dowod \ jest analogiczny do poprzedniego przy użyciu równoważności \eqref{eq:4rownosci}. Pozostawimy go czytelnikowi.
+\begin{eqtext}
+\itshape Jeżeli $u \rightarrow 0,$ to $u = 0$.
+\end{eqtext}
+
+\dowod. Załóżmy (a) $u + 0 = 0$; otrzymujemy $u = u + uu' = u + 0 = 0.$
+
+Oparliśmy się na wzorach \eqref{eq:bp5}, \eqref{eq:zero}, (a).
+\begin{eqtext}
+\itshape Jeżeli $1 \rightarrow u$, to $u = 1.$
+\end{eqtext}
+
+\dowod, który jest analogiczny do poprzedniego, pozostawiamy czytelnikowi.
+\begin{eqtext}
+\itshape Jeżeli $u \rightarrow v$, to $v' \rightarrow u'.$
+\end{eqtext}
+
+\dowod. Załóżmy (a) $u + v = v$; opoierając się na wzorach (a) i \eqref{eq:morgan} otrzymujemy $v' = (u + v)' = u'v',$ co na mocy \eqref{eq:4rownosci}
+jest równoważne wzorowi $v' + u' = u'.$
+\begin{eqtext}
+  \itshape $u = v$ wtedy i tylko wtedy, gdy $u \rightarrow v$ i $v \rightarrow u$.
+\end{eqtext}
+
+\dowod. Z założenia, że $u = v$, wynika na mocy \eqref{eq:zwrotnosc} $u \rightarrow v$ i $v \rightarrow u$. Załóżmy, że $u + v = v$ i $v + u = u$. Korzystając
+z \eqref{eq:bp3} mamy stąd $u=v.$
+
+Zajmiemy się teraz abstrakcyjnym badaniem takich relacyj, które mają własności podobne do relacji zawierania w ciałach Boole'a.
+
+Niech $A$ będzie dowolnym zbiorem, $\prec$ relacją określoną dla elementów zbioru $A$. O relacji $\prec$ mówimy, że \textit{porządkuje częściowo} zbiór $A$, jeżeli
+ma następujące dwie własności:
+\begin{enumerate}[label=(\Roman{*}), wide=0pt, widest=99,leftmargin=*, labelsep=15pt, itemsep=0pt]
+  \item \itshape Jeżeli $a \in A$, to $a \prec a$. \normalfont
+  \item \itshape Jeżeli $a, b, c \in A,\ a \prec b$ i $b \prec c$, to $a \prec c$. \normalfont
+\end{enumerate}
+
+Własności (I) i (II) nazywamy odpowiednio \textit{zwrotnością} i \textit{przechodniością} relacji $\prec$ w zbiorze $A$. Jeżeli relacja $\prec$ ma ponadto własność 
+
+\begin{enumerate}[label=(\Roman{*}), wide=0pt, widest=99,leftmargin=*, labelsep=15pt, itemsep=0pt]
+\setcounter{enumi}{2}
+  \item \itshape Jeżeli $a,b \in A,\ a \prec b$ i $b \prec a$, to $a = b$, \normalfont
+\end{enumerate}
+to mówimy, że jest ona w zbiorze $A$ \textit{zredukowana.}
+
+W przypadku, gdy prócz warunków (I), (II), (III) relacja $\prec$ spełnia jeszcze warunki:
+\begin{enumerate}[label=(\Roman{*}), wide=0pt, widest=99,leftmargin=*, labelsep=15pt, itemsep=0pt]
+\setcounter{enumi}{3}
+  \item \itshape Jeżeli $a, b \in A$, to istnieje takie $c \in A$, że $a \in c,\ b\prec c$ i dla każdego $d\in A$, jeżeli $a \prec d$ i $b\prec d$, to $c \prec d$, \normalfont
+  \item \itshape Jeżeli $a, b \in A$, to istnieje takie $c \in A$, że $a \in c,\ b\prec c$ i dla każdego $d\in A$, jeżeli $d \prec a$ i $d \prec b$, to $d \prec c$, \normalfont 
+\end{enumerate}
+mówimy, że \textit{indukuje} ona w zbiorze $A$ \textit{strukturę}.
+
+Tak określone pojęcie struktury \footnote{Teoria struktur jest szczegółowo omówiona w książce: \cite{birkhoff1}} ma wiele zastosowań w różnych działach matematyki. Czytelnik sprawdzi, że np. relacja
+,,$k$ dzieli bez reszty $l\,$'' indukuje strukturę w zbiorze liczb całkowitych.
+
 \end{document}
