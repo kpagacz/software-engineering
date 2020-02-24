@@ -3,7 +3,6 @@
 
 
 int main() {
-
     Osoba o;
     o.Imie = "Ola";
     o.Nazwisko = "Ryk";

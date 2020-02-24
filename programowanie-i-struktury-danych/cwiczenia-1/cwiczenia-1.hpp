@@ -16,3 +16,18 @@ struct Osoba {
     int DzienUrodzenia();
 };
 
+struct Grupa {
+    Osoba osoby[30];
+    int liczba_osob;
+    Grupa();
+    void DodajOsobe(Osoba o);
+    void Wypisz();
+    bool CzyJestMezczyzna();
+    void UrodzoneWMiesiacu(int miesiac);
+    float SredniWzrost();
+    Osoba Najstarsza();
+    Osoba Najmlodsza();
+    void WypiszNazwiska();
+};
+
+Grupa NowaGrupaPrzedzial(Grupa grupa, int rok1, int rok2);
