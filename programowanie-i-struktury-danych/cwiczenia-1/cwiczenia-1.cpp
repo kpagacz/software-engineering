@@ -93,7 +93,7 @@ void Grupa::Wypisz() {
 bool Grupa::CzyJestMezczyzna() {
     bool sa_mezczyzni = false;
     for (int i = 0; i < liczba_osob; i++) {
-        if (osoby[i].czyMezczyzna) {
+        if (osoby[i].czyMezczyzna()) {
             sa_mezczyzni = true;
             break;
         }
@@ -104,7 +104,7 @@ bool Grupa::CzyJestMezczyzna() {
 
 void Grupa::UrodzoneWMiesiacu(int miesiac) {
     for (int i = 0; i < liczba_osob; i++) {
-        if (osoby[i].MiesiacUrodzenia == miesiac) {
+        if (osoby[i].MiesiacUrodzenia() == miesiac) {
             osoby[i].wypisz();
         }
     }
@@ -120,11 +120,11 @@ float Grupa::SredniWzrost() {
 
 Osoba Grupa::Najstarsza() {
     int najstarsza_indeks = 0;
-    int najstarsza_rok = osoby[0].RokUrodzenia;
+    int najstarsza_rok = osoby[0].RokUrodzenia();
 
     for (int i = 0; i < liczba_osob; i++) {
-        if (osoby[i].RokUrodzenia < najstarsza_rok) {
-            najstarsza_rok = osoby[i].RokUrodzenia;
+        if (osoby[i].RokUrodzenia() < najstarsza_rok) {
+            najstarsza_rok = osoby[i].RokUrodzenia();
             najstarsza_indeks = i;
         }
     }
@@ -134,11 +134,11 @@ Osoba Grupa::Najstarsza() {
 
 Osoba Grupa::Najmlodsza() {
     int najmlodsza_indeks = 0;
-    int najmlodsza_rok = osoby[0].RokUrodzenia;
+    int najmlodsza_rok = osoby[0].RokUrodzenia();
 
     for (int i = 0; i < liczba_osob; i++) {
-        if (osoby[i].RokUrodzenia > najmlodsza_rok) {
-            najmlodsza_rok = osoby[i].RokUrodzenia;
+        if (osoby[i].RokUrodzenia() > najmlodsza_rok) {
+            najmlodsza_rok = osoby[i].RokUrodzenia();
             najmlodsza_indeks = i;
         }
     }
@@ -153,7 +153,14 @@ void Grupa::WypiszNazwiska() {
 }
 
 Grupa NowaGrupaPrzedzial(Grupa grupa, int rok1, int rok2) {
-    
+    Grupa nowa_grupa;
+    for (int i = 0; i < grupa.liczba_osob; i++) {
+        if (grupa.osoby[i].RokUrodzenia() > rok1 && grupa.osoby[i].RokUrodzenia() < rok2) {
+            nowa_grupa.DodajOsobe(grupa.osoby[i]);
+        }
+    }
+
+    return nowa_grupa;
 }
 
 # endif
