@@ -43,8 +43,17 @@ Prosta::Prosta(const Punkt& point1, const Punkt& point2) {
     int x2 = point2.GetX();
     int y2 = point2.GetY();
 
+    if (x1 == x2) {
+        throw std::invalid_argument("There is no function passing through the provided 2 points.");
+    }
+
     _a = (y2 - y1) / (x2 - x1);
     _b = y1 - x1 * (y2 - y1) / (x2 - x1);
+
+    // check if the points lie on the line
+    if (_a * x1 + _b != y1 || _a * x2 + _b != y2) {
+        throw std::invalid_argument("There is no line with int coefficients passing through the provided 2 points.");
+    }
 }
 
 // setters and getter for Prosta

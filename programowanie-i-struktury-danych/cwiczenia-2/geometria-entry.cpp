@@ -50,5 +50,22 @@ int main() {
     } else {
         std::cout << "failed" << std::endl;
     }
+
+    std::cout << "Testing throwing an exception for two Points that do not lie on a single line: ";
+    bool exception_thrown = false;
+    Punkt point3(2, 4);
+    Punkt point4(4, 5);
+    try {
+        Prosta should_throw(point3, point4);
+    } catch (std::exception& e) {
+        std::cout << "passed" << std::endl;
+        exception_thrown = true;
+    }
+    // exception not thrown - test failed
+    if (!exception_thrown) {
+        std::cout << "failed" << std::endl;
+        Prosta should_throw(point3, point4);
+        should_throw.Print();
+    }
     return 0;
 }
