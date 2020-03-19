@@ -27,12 +27,9 @@ int main() {
     my_queue.Enqueue(4);
     my_queue.Enqueue(5);
     my_queue.Enqueue(6);
-    try {
-        my_queue.Enqueue(7);
-        my_queue.Output();
-    } catch (std::exception e) {
-        std::cout << "Queue is full, you rascal." << std::endl;
-    }
+    my_queue.Enqueue(7);
+    my_queue.Output();
+
 
     return 0;
 }
