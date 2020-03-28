@@ -1,0 +1,25 @@
+Biblioteki, struktury - cd
+
+    Napisać bibliotekę udostępniającą operacje na ułamkach zwykłych, zawierającą:
+        typ Ulamek (typ strukturalny, reprezentujący ułamek zwykły)
+        konstruktor ułamka przyjmujący jako parametry wartość jego licznika i mianownika (parametr przekazujący licznik ma mieć domyślną wartość 0, przekazujący mianownik - domyślną wartość 1)
+        funkcję (metodę) wypisującą ułamek
+        funkcję (metodę) przekształcającą ułamek do postaci nieskracalnej
+        operatory porównujące ułamki (<, >, == itd)
+        operatory dodawania, odejmowania, mnożenia i dzielenia dla ułamków. oraz program testujący działanie biblioteki. Uwaga - zaimplementowanie powyższych funkcji może wymagać funkcji pomocniczych (do wymyślenia przez Programującego :-) ). Operacje mają być faktycznie operacjami na ułamkach zwykłych (nie sprowadzamy ułamków do dziesiętnych). 
+    Napisać bibliotekę Geometria udostępniającą:
+        typy strukturalne Prosta i Punkt reprezentujące odpowiednio prostą i punkt na płaszczyźnie;
+        konstruktory: prostej i punktu, przyjmujące jako parametry współrzędne punktu / współczynniki prostej, oraz konstruktory bezparametrowe obu w/w typów,
+        funkcję (metodę) wypisującą punkt i funkcję wypisującą prostą,
+        funkcję zwracającą wartość logiczną mówiącą, czy punkt leży na prostej podanej jako parametr;
+        funkcję zwracającą prostą przechodzącą przez dwa punkty podane jako parametry 
+    oraz program testujący działanie biblioteki. Jeśli do poprawnego działania potrzebne są wyjątki lub dodatkowe funkcje, należy je dodać.
+    Napisać bibliotekę Macierze udostępniającą:
+        typ Macierz umożliwiający reprezentowanie macierzy (dwuwymiarowych, przechowujących liczby rzeczywiste),
+        konstruktor przyjmujący jako parametry liczbę wierszy i kolumn macierzy oraz wartość rzeczywistą przypisaną wszystkim jej elementom (domyślnie 0),
+        funkcję (metodę) pobierającą zawartość macierzy,
+        funkcję wypisującą macierz,
+        operatory dodawania, odejmowania i mnożenia macierzy; w przypadku niezgodnego rozmiaru macierzy będących argumentami operacji każda z w/w funkcji ma zgłaszać wjątek,
+        funkcję Transpozycja zwracającą macierz stanowiącą transpozycję macierzy 
+    oraz program testujący działanie biblioteki. Jeśli do poprawnego działania biblioteki potrzebne są dodatkowe wyjątki lub pomocnicze funkcje, należy je dodać. 
+

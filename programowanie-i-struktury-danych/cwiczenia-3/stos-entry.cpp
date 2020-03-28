@@ -1,3 +1,19 @@
+/*
+Biblioteki, struktury - cd. Stosy.
+
+    Napisać bibliotekę implementującą stosy liczb całkowitych o ograniczonym rozmiarze, tj. udostępniającą:
+        typ Stos (typ strukturalny, przechowujący tablicę liczb całkowitych o rozmiarze odpowiadającym maksymalnemu rozmiarowi stosu, liczbę pamiętającą maksymalny rozmiar oraz indeks elementu będącego aktualnym wierzchołkiem stosu),
+        konstruktor stosu przyjmujący jako parametr maksymalny rozmiar tworzonego stosu,
+        destruktor stosu,
+        funkcję wypisującą zawartość stosu,
+        funkcję wkładającą element na stos, zgłaszającą wyjątek jeśli włożenie elementu nie jest możliwe (stos jest pełny),
+        funkcję zdejmującą element ze stosu, zwracającą zdjętą wartość oraz zgłaszającą wyjątek jeśli zdjęcie elementu nie jest możliwe (stos jest pusty),
+        funkcję czyszczącą stos,
+        funkcję zwracającą aktualny rozmiar stosu 
+    oraz program testujący działanie biblioteki.
+    Wykorzystać powyższą bibliotekę do napisania programu obliczającego wartość wyrażenia zapisanego w odwrotnej notacji polskiej. 
+*/
+
 #include "stos.hpp"
 #include <iostream>
 

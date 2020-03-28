@@ -1,3 +1,19 @@
+/*
+Biblioteki, struktury - cd. Kolejki.
+
+    Napisać bibliotekę implementującą kolejki liczb całkowitych o zmiennym rozmiarze, tj. udostępniającą:
+        typ Kolejka (typ strukturalny, przechowujący dynamiczną tablicę liczb całkowitych o rozmiarze odpowiadającym bieżącemu rozmiarowi kolejki oraz liczbę pamiętającą obecny rozmiar,
+        konstruktor kolejki (bezparametrowy),
+        destruktor kolejki,
+        funkcję wypisującą zawartość kolejki,
+        funkcję wstawiającą element do kolejki, zgłaszającą wyjątek jeśli wstawienie elementu nie jest możliwe (brak pamięci),
+        funkcję usuwającą element z kolejki, zwracającą usuniętą wartość oraz zgłaszającą wyjątek jeśli usunięcie elementu nie jest możliwe (kolejka jest pusta),
+        funkcję czyszczącą kolejkę,
+        funkcję zwracającą aktualny rozmiar kolejki 
+    oraz program testujący działanie biblioteki. 
+*/
+
+
 #include <iostream>
 #include <stdexcept>
 

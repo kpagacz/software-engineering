@@ -8,9 +8,7 @@ class Queue {
         // basic operatotions
         Queue();
         Queue(const Queue&); // copying constructor
-        Queue(Queue&&) = delete; // move constructor
-        Queue& operator=(const Queue&); // copy assignment
-        Queue& operator=(const Queue&&); // move assignment
+        Queue& operator=(Queue); // copy assignment
         ~Queue();
 
         void Output() const;

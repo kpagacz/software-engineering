@@ -24,6 +24,14 @@ Queue::Queue(const Queue& other_queue) { // copy constructor
     current_size = other_queue.current_size;
 }
 
+Queue& Queue::operator=(Queue other_queue){      // copy assignment
+    std::swap(max_size, other_queue.max_size);
+    std::swap(first_index, other_queue.first_index);
+    std::swap(current_size, other_queue.current_size);
+    std::swap(_queue, other_queue._queue);
+    return *this;
+} 
+
 // other
 void Queue::Output() const {
     std::cout << "Queue is: ";
@@ -87,6 +95,10 @@ int Queue::Dequeue() {
 void Queue::Clear() {
     first_index = 0;
     current_size = 0;
+    max_size = 5;
+    int* new_queue = new int [max_size];
+    delete [] _queue;
+    _queue = new_queue;
 }
 
 int Queue::Size() const {
