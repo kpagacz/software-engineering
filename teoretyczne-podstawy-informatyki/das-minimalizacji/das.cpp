@@ -190,12 +190,12 @@ DAS DAS::minimizeDAS() const {
     
     std::vector<bool> equivalence_matrix = buildEquivalenceMatrix();
 
-    for (int i = 0; i < nodes_number; i++) {
-        for (int j = 0; j < i; j++) {
-            std::cout << equivalence_matrix[i * nodes_number + j] << " ";
-        }
-        std::cout << "s" << i << std::endl;
-    }
+    // for (int i = 0; i < nodes_number; i++) {
+    //     for (int j = 0; j < i; j++) {
+    //         std::cout << equivalence_matrix[i * nodes_number + j] << " ";
+    //     }
+    //     std::cout << "s" << i << std::endl;
+    // }
 
     std::vector<std::set<int>> new_node_names = buildNewNodeNames(equivalence_matrix); 
     
@@ -309,11 +309,17 @@ std::vector<bool> DAS::buildEquivalenceMatrix() const {
                         continue;
                     }
                     for (int symbol = 0; symbol < symbols_number; symbol++) {
-                        equivalent = (
-                            ending_nodes.count(delta_matrix[i * symbols_number + symbol]) ==
-                                ending_nodes.count(delta_matrix[j * symbols_number + symbol])
-                        );
-                        std::cout << "Nodes: " << i << " " << j << " " << equivalent << std::endl;
+                        // std::cout << "Values from delta matrix: " ;
+                        // std::cout << delta_matrix[i * symbols_number + symbol] << " " <<
+                        //     delta_matrix[j * symbols_number + symbol];
+
+                        equivalent =
+                            equivalence_matrix[delta_matrix[i * symbols_number + symbol] * nodes_number +
+                                delta_matrix[j * symbols_number + symbol]] &&
+                            equivalence_matrix[delta_matrix[j * symbols_number + symbol] * nodes_number +
+                                delta_matrix[i * symbols_number + symbol]];
+                        
+                        // std::cout << "Nodes: " << i << " " << j << " " << equivalent << std::endl;
                         if (!equivalent) {
                             equivalence_matrix[i * nodes_number + j] = false;
                             changed_matrix = true;
