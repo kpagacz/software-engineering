@@ -1,0 +1,60 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]
+then
+	echo "Dwa argumenty K i N potrzebne."
+	exit 1
+	fi
+
+getMinutes() {
+	local parsed=`echo "$1" | sed 's/[a-zA-Z()]//g'`
+	if [[ -z "$parsed" ]]
+	then
+		echo "0"
+		exit 1
+		fi
+	local minutes_from_hours=$((10#`echo "$parsed" | cut -d: -f 1`*60))
+	local minutes_from_minutes=10#`echo "$parsed" | cut -d: -f 2`
+	local out=$((minutes_from_hours+minutes_from_minutes))
+	echo "$out"
+}
+
+printTime() {
+	local hours=$(($1/60))
+	local minutes=$(($1-(hours*60)))
+	printf '%02d:%02d' $hours $minutes
+}
+
+# getting names 
+login_names=`iconv -f ISO8859-2 -t UTF-8 /etc/passwd | cut -d: -f 1,5 | sed 's/:/;/g' | sort`
+times=`last -s -${2}days | head -n -2 | sed 's/[[:blank:]]\+/;/g' | cut -d ";" -f 1,10 | sort`
+
+unique_names_in_times=`echo "$times" | cut -d ";" -f 1 | sort | uniq`
+
+
+for login in $unique_names_in_times
+do	
+	name=`echo "$login_names" | grep -e "^$login;" | cut -d";" -f 2 | sed 's/,//g'`
+	total_time=0
+	user_login_times=`echo "$times" | grep -e "^$login;" | cut -d";" -f 2`
+	
+	for one_time in `echo "$user_login_times"`
+	do
+		additional_time=`getMinutes $one_time`
+		total_time=$((total_time+additional_time))	
+	done
+	
+	final="$final"$'\n'"$name;$login;$total_time"
+done
+
+sorted_only_relevant=`echo "$final" | sort -t";" -nrk 3 | head -n $1`
+IFS=$'\n'
+for line in $sorted_only_relevant
+do
+	login=`echo "$line" | cut -d";" -f 2`
+	name=`echo "$line" | cut -d";" -f 1`
+	time=`echo "$line" | cut -d";" -f 3`
+	time2=`printTime $time`
+	
+	echo "$name ($login) -- $time2"	
+done

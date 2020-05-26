@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "Wyswietla K najczesciej logujacych sie przez ostatnie N dni"
+
+if [ $# -ne 2 ]
+then
+	echo "Potrzebne dwa parametry: K najczesciej logujacych sie oraz N ostatnich dni"
+	exit 1
+	fi
+
+Logowania=`last -s -${2}days | head -n -2 |  sed 's/[[:blank:]]\+/%/g'`
+# Lista przedzielona znakami %
+
+temp=`echo "$Logowania" |  awk -v users="$1" -F "%" '{liczba_logowan[$1]++} END {for (key in liczba_logowan) {printf "%s,%s\n", key, liczba_logowan[key]}}'`
+sorted_login=`echo "$temp" | sort -t,`
+
+login_imie=`iconv -f ISO8859-2 -t UTF-8 /etc/passwd | cut -d: -f 1,5 | sed 's/,//g' | sed 's/:/,/' | sort -t, -k 1b,1`
+
+
+joined=`join -t, <(echo "$sorted_login") <(echo "$login_imie")`
+   
+
+
+echo "$joined" | sort -t, -k2 -rn | head -n $1 | awk -F, '{printf "%s (%s) -- %s\n", $3, $1, $2}'
