@@ -2,6 +2,7 @@
 #define STUDENT
 
 #include<string>
+#include<iostream>
 
 class Student{
     private:
@@ -28,5 +29,16 @@ class Student{
         int getYear() const;
         int getAge() const;
         float getAvg() const;
+
+        // operators
+        bool operator==(const Student& rhs) const;
+        bool operator>(const Student& rhs) const;
+        friend std::ostream& operator<<(std::ostream &out, Student stud) {
+            out << stud.names << " " << stud.surname << " " << stud.id << " " << stud.year 
+            << " " << stud.age << " " << stud.avg << std::endl;
+            return out;
+        }
 };
+
+#include "student.cpp"
 #endif

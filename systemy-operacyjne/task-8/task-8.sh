@@ -23,7 +23,7 @@ else
 fi 
 
 counter=0
-while IFS="" read -r -u 3 line || [ -n "$line" ]
+while read -r -u 3 line || [ -n "$line" ]
 do
     #printf 'Counter: %i\n' "$counter"
     if [ $((counter % 2)) -eq 1 ]
@@ -31,12 +31,15 @@ do
         printf '%s\n' "${line^^}" >> $1
     else
         out=$(printf "%s" "$line" | rev)
-        printf '%s\n' "$out" >> $2
+        printf '%s\n' "$out" >> tmp
     fi
     counter=$((counter+1))
 done
 
+grep . tmp > $2
+rm -Rf tmp
 exec 3<&-
+
 
 
 
