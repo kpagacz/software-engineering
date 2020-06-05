@@ -1,0 +1,10 @@
+Zdefiniować typ strukturalny Student przechowujący dane studenta (imiona, nazwisko, nr indeksu, rok studiów, wiek, średnia ocen). Napisać program umożliwiający:
+    dopisanie studenta na końcu pliku tekstowego o nazwie podanej przez użytkownika,
+    wypisanie z pliku o nazwie podanej przez użytkownika wszystkich studentów z roku podanego przez użytkownika,
+    obliczenie średniej wieku studentów umieszczonych w pliku,
+    wypisanie studenta o najwyższej średniej (jeśli w pliku jest kilku studentów o maksymalnej średniej wypisany ma być jeden z nich),
+    utworzenie nowego pliku tekstowego (o nazwie podanej przez użytkownika) zawierającego dane studentów z pliku wejściowego uporządkowane wg numeru indeksu. 
+Powyższe czynności powinny być zrealizowane przy użyciu funkcji (uwaga: funkcja nie powinna pobierać żadnych danych - powinny one być przekazane przez parametry; ponadto funkcja nie musi realizować całości czynności z danego podpunktu - może np. zwracać odpowiednią wartość której wypisaniem zajmie się program główny). 
+zbiór zadań
+o plikach (szkicowy opis, napisany dawno temu dla innych studentów) 
+

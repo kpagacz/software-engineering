@@ -1,0 +1,56 @@
+Zestaw 1:
+Organizacja plików: Wszystkie pliki oddawane do sprawdzenia należy zapisać we 
+wspólnym folderze o nazwie będącej numerem indeksu, umieszczonym na pulpicie.
+Oddajemy tylko źródła programów (pliki o rozszerzeniach .cpp i .h)!!!
+Zad.1: Napisać bibliotekę udostępniającą:
+typ Sznur będący dynamiczną listą łączoną przechowującą liczby całkowite;
+funkcję wypisz wypisującą zawartość sznura;
+funkcję wstawwstawiającą do sznura element 
+    zawierający liczbę podaną jako parametr tak, abysznur był uporządkowany nierosnąco 
+    (zakładając, że sznur „na wejściu” jest już uporządkowany wtaki sposób);
+funkcję   usun rozpatrującą   rozłączne   trójki   elementów   sznura   podanego   
+    jako   parametr   iusuwającą   pierwszy   element   trójki   jeżeli   średnia   
+    trójki   jest   mniejsza   od   liczby   całkowitej   Kbędącej   parametrem   funkcji,   
+    lub   usuwającą   drugi   i   ostatni   element   w   trójce   w   przeciwnymprzypadku.  
+    W   przypadku   sznura   o   długości   nie   podzielnej   przez   3   końcowe   elementy   
+    (niewchodzące   w   skład   żadnej   trójki   –   trójki   wybierane   są   tak,   
+    że   pierwszy   element   sznura   jestpoczątkowym   elementem   pierwszej   trójki)  
+    nie   są   usuwane.  Pamięć   zajmowana   przez   usuwaneelementy   ma   zostać   zwolniona.  
+    Funkcja   nie   może   używać   tablic,   pomocniczych   sznurów  anistruktur danych dostępnych 
+    w bibliotece standardowej (wektorów, list, kolejek, itp);oraz   program   testujący   działanie   
+    biblioteki   poprzez   pobranie   sznura   (funkcja  wstaw;   użytkownikpodaje liczby, 
+    które mają być  wstawione do sznura i decyduje o zakończeniu podawania), wypisaniejego 
+    zawartości (funkcja wypisz; przykład: dla zestawu liczb wejściowych 1,3,6,1,3,7,2,6,3,1,1 
+    sznur uzyskuje postać 7,6,6,3,3,3,2,1,1,1,1), a następnie po pobraniu od użytkownika wartości K, 
+    usunięcie wsznurze   wybranych   elementów   z   rozłącznych   trójek   (funkcja  usun)   i   
+    ponowne   wypisanie   jegozawartości   (przykład:   dla   K=3   sznur   7,6,6,3,3,3,2,1,1,1,1,   
+    zostanie   przekształcony   do   postaci7,3,1,1,1,1, a ten sam sznur dla K=7 zostanie 
+    przekształcony do postaci 6,6,3,3,1,1,1,1).
+
+Zad.2:Rozszerzyć   bibliotekę   z   zad.1   o   funkcję  przenies,   która   modyfikuje   
+sznur   poprzez   przepięciewybranych elementów z rozłącznych par w następujący sposób: 
+jeżeli elementy w parze mają tę samąwartość przepinane są na początek sznura z 
+zachowaniem wzajemnej oryginalnej kolejności par, jeżelijednak elementy mają różne 
+wartości, to drugi  z elementów pary jest przepinany na koniec sznura zodwróceniem 
+kolejności przenoszonych elementów (pary wybierane są tak że pierwszy element sznura
+jest   pierwszym   elementem   pierwszej   pary,   a   przypadku   sznura   nieparzystej   
+długości   jego   ostatnielement   nie   jest   elementem   żadnej   pary).   
+Przykład:   dla   sznura   przechowującego   liczby9,9,9,8,8,6,6,6,6,5,5,5,5,2,2,1,1   
+dostaniemy   wynik  9,9,6,6,5,5,9,8,6,5,2,1,1,2,5,6,8,  sznur  9,8,7,5,4,3,2
+uzyska   postać   9,7,4,2,3,5,8,   a   sznur  3,3,2,2,1,1  nie   zmieni   się.   
+Funkcja   nie   może   używać   tablic, pomocniczych   sznurów   ani   struktur   
+danych   dostępnych   w   bibliotece   standardowej   (wektorów,   list,kolejek, itp). 
+Wykorzystać funkcję w programie testującym.
+
+Zad.3:  Rozszerzyć  bibliotekę z zad.1 o funkcję  wymienStaleCiagi, modyfikującą dany 
+sznur oraz drugi sznur   S2   podany   jako   parametr   w   następujący   sposób:   
+pierwszy   nieprzedłużalny   (być   możejednoelementowy)   ciąg   stały   z   „tego”   
+sznura   (oznaczonego   w   dalszym   opisie   przez   S1)   ma   zostaćzamieniony z 
+pierwszym takim ciągiem z S2, następnie pomijamy w obu sznurach nieprzedłużalny ciąg
+sąsiednich różnych wartości (o ile istnieje), wybieramy kolejne dwa ciągi stałe do wymiany pomiędzy
+sznurami, omijamy ciągi różnowartościowe, itd. Ewentualne elementy nadmiarowych ciągów w jednym
+ze sznurów nie są przenoszone. Przykład: dla sznurów S1=7,7,6,5,4,4,4,4,3,2,2 i S2=8,8,6,6,6,5,4,4,2,2
+wynikiem będzie S1=8,8,6,5,4,6,6,3,2,4 i S2=7,7,6,4,4,4,5,4,2,2,2, dla S1=5,5 i S2=9,8,7,6,1 wynikiem
+będzie S1=9 oraz S2=5,5,8,7,6,1). Funkcja nie może używać tablic, pomocniczych sznurów ani struktur
+danych   dostępnych   w  bibliotece   standardowej   (wektorów,   list,  kolejek,   itp).   
+Wykorzystać   funkcję   wprogramie testującym.
