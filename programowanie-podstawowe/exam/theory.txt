@@ -1,0 +1,10 @@
+instrukcja blokowa
+nawiasy klamrowe
+instrukcję warunkową
+obie poprawne
+jest instrukcją, która pozwala dokonać wyboru jednej z wielu sekwencji instrukcji
+while
+że warunek sprawdzany jest po każdym wykonaniu pętli
+pętli while
+W1 while (W2) {I W3}
+obie poprawne
