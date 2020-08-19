@@ -53,7 +53,7 @@ void Rope::funny_remove(const unsigned int& M)
 		sum += it->value;
 	}
 
-	mean = 1.0 * sum / size;
+	mean = 1.0 * sum / (size / M);
 
 	Node* pred = nullptr, * succ = head;
 
