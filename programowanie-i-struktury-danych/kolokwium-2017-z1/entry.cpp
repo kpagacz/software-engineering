@@ -9,7 +9,7 @@ int main() {
 	}
 	r1.print();
 
-	r1.funny_remove(2);
+	r1.funny_remove(3);
 	r1.print();
 
 	Rope r2;
