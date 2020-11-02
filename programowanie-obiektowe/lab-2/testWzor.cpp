@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include "Wzor.h"
+#include<vector>
+
+
 
 int main()
 {
@@ -23,23 +26,39 @@ int main()
 	unsigned int formulas_count;
 	std::cin >> formulas_count;
 
-	Wzor* formulas = new Wzor[formulas_count];
+	Wzor** formulas = new Wzor*[formulas_count];
 
 	int _length;
 	char _sign;
 	for (int i = 0; i < formulas_count; i++) {
 		std::cout << "Podaj znak oraz liczbe dodatnia: ";
 		std::cin >> _sign >> _length;
-		formulas[i].ustaw(_sign, _length);
+		formulas[i] = new Wzor(_sign, _length);
 		std::cout << "\n";
 	}
 
 	std::cout << "WZORY:\n";
 	for (int i = 0; i < formulas_count; i++) {
-		formulas[i].drukuj();
+		formulas[i]->drukuj();
+	}
+	for (int i = 0; i < formulas_count; i++) {
+		delete formulas[i];
+	}
+	delete[] formulas;
+
+	std::vector<Wzor*> patterns;
+	char input = 'c';
+	while (input == 'c') {
+		std::cout << "Podaj znak oraz liczbe dodatnia: ";
+		std::cin >> _sign >> _length;
+		patterns.push_back(new Wzor(_sign, _length));
+		std::cin >> input;
 	}
 
-	delete[] formulas;
+	for (int i = 0; i < patterns.size(); i++) {
+		patterns[i]->drukuj();
+	}
+
 
 	return 0;
 }
