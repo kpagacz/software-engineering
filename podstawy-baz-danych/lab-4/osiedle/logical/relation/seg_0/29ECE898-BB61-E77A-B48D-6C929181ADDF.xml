@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="POSIADANIE" directorySegmentName="seg_0" id="29ECE898-BB61-E77A-B48D-6C929181ADDF">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:23:35 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<engineerTo>
+<item key="78BFBC34-4F8F-306D-3D26-401F0C3C83E4" value="true"/>
+</engineerTo>
+<useSurrogateKey>true</useSurrogateKey>
+<sourcePk>C898666D-04EE-3353-C1F5-6A9CCD2D2FAA</sourcePk>
+<targetPk>8C51A790-DFE0-41C8-6D41-C7864447C8C2</targetPk>
+<identifying>false</identifying>
+<nameOnSource>MIESZKANIEC_FK</nameOnSource>
+<nameOnTarget>ADRES_FK</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>5B97D4E2-DDA8-DB8B-2470-9C69D6C1E833</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>76562B4B-7308-1431-E15C-1FB2C77BD87E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

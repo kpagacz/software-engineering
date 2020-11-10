@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9B8FC845-0C59-7D35-5386-6B45A40CA3CF" name="POSIADANIE">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:27:07 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_posiadanie" id="922C2AB8-AC27-7CAC-142F-D024B5FF32EF">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:48:51 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MIESZKANIEC_nr_mieszkaniec" id="30F77F06-7066-D55D-5A6C-42709A7CA13D">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:27:07 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D5EC37D0-275E-2B47-D6C8-9D699DEA1329" referredColumn="18DD2B32-9DDD-AF1A-6791-375969FFD2CF"/>
+</associations>
+</Column>
+<Column name="ADRES_id_adres" id="5E7F9636-BF19-0423-071F-B94126C37C80">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:27:07 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="876B58CE-F51C-4A27-9B65-745E1EBA26EF" referredColumn="C66F912D-3590-275A-420E-B1A5E42A58A0"/>
+</associations>
+</Column>
+<Column name="od" id="CADF5079-6B21-E840-55D2-AD696F0CA9DB">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:43:05 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="do" id="05A7A1B9-F5A0-2E22-EA03-74EF68379DD6">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:43:05 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DEFAEB2B-330F-0E83-8F20-1CA9038A0707" name="POSIADANIE_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:27:07 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="922C2AB8-AC27-7CAC-142F-D024B5FF32EF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="074B60DD-2AE6-6331-5C1B-46122D8D56A5" name="MIESZKANIEC_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:27:07 UTC</createdTime>
+<generatorID>29ECE898-BB61-E77A-B48D-6C929181ADDF</generatorID>
+<ownerDesignName>osiedle</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="30F77F06-7066-D55D-5A6C-42709A7CA13D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A434EC22-84B0-ED52-40B5-62A445851D0B" name="ADRES_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:27:07 UTC</createdTime>
+<generatorID>29ECE898-BB61-E77A-B48D-6C929181ADDF</generatorID>
+<ownerDesignName>osiedle</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5E7F9636-BF19-0423-071F-B94126C37C80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

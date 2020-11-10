@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6592BB31-8C12-06FC-91DA-249EAAD905A5" name="MIESZKANIEC">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:23:57 UTC</createdTime>
+<generatorID>5B97D4E2-DDA8-DB8B-2470-9C69D6C1E833</generatorID>
+<ownerDesignName>osiedle</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nr_mieszkaniec" id="18DD2B32-9DDD-AF1A-6791-375969FFD2CF">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:23:57 UTC</createdTime>
+<generatorID>41253D96-EE6C-11D1-7C70-52196CA28F7F</generatorID>
+<ownerDesignName>osiedle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwisko" id="AF819D48-B6C4-1858-FF13-A15CEFB86D5C">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:23:57 UTC</createdTime>
+<generatorID>35C8A9C0-4F26-85E6-9C11-D1A11A1BB5A2</generatorID>
+<ownerDesignName>osiedle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwisko_panienskie" id="C9B98E13-7EB6-D071-3859-25087887486E">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:23:57 UTC</createdTime>
+<generatorID>29B1A9A2-6711-4165-59A8-257DBC22813F</generatorID>
+<ownerDesignName>osiedle</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="imie" id="E60C49F7-8CB6-88AB-2E9D-234BEF0F44D5">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:23:57 UTC</createdTime>
+<generatorID>1738FB51-EE6D-E7A9-96BE-B832408F515B</generatorID>
+<ownerDesignName>osiedle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="plec" id="EA2BBC3C-FC89-3B62-7E62-38112168C98F">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:23:57 UTC</createdTime>
+<generatorID>1F1C2AC3-57F1-7346-F0DC-54D5F01B1852</generatorID>
+<ownerDesignName>osiedle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_ur" id="C1D2EB50-DDF6-D5BC-0A21-68B7472EE81A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:23:57 UTC</createdTime>
+<generatorID>4A249168-DB29-B5FC-C630-36CB4D337471</generatorID>
+<ownerDesignName>osiedle</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CD604D4D-1A34-1B71-710A-EFF19F1CC19D" name="MIESZKANIEC_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 08:23:57 UTC</createdTime>
+<generatorID>C898666D-04EE-3353-C1F5-6A9CCD2D2FAA</generatorID>
+<ownerDesignName>osiedle</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="18DD2B32-9DDD-AF1A-6791-375969FFD2CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

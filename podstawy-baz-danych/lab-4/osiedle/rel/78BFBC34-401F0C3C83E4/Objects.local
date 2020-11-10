@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="2BC28211-A6C2-D321-49B8-98719657C879" name="ADRES" seqName="seg_0"/>
+   <object objectType="Table" objectID="6592BB31-8C12-06FC-91DA-249EAAD905A5" name="MIESZKANIEC" seqName="seg_0"/>
+   <object objectType="Table" objectID="9B8FC845-0C59-7D35-5386-6B45A40CA3CF" name="POSIADANIE" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="876B58CE-F51C-4A27-9B65-745E1EBA26EF" name="ADRES_FK" seqName="seg_0" containerID="9B8FC845-0C59-7D35-5386-6B45A40CA3CF" refContainerID="2BC28211-A6C2-D321-49B8-98719657C879"/>
+   <object objectType="FKIndexAssociation" objectID="D5EC37D0-275E-2B47-D6C8-9D699DEA1329" name="MIESZKANIEC_FK" seqName="seg_0" containerID="9B8FC845-0C59-7D35-5386-6B45A40CA3CF" refContainerID="6592BB31-8C12-06FC-91DA-249EAAD905A5"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

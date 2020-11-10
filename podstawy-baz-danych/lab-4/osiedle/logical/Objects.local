@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="76562B4B-7308-1431-E15C-1FB2C77BD87E" name="ADRES" seqName="seg_0"/>
+   <object objectType="Entity" objectID="5B97D4E2-DDA8-DB8B-2470-9C69D6C1E833" name="MIESZKANIEC" seqName="seg_0"/>
+   <object objectType="Relation" objectID="29ECE898-BB61-E77A-B48D-6C929181ADDF" name="POSIADANIE" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

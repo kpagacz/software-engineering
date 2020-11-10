@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5B97D4E2-DDA8-DB8B-2470-9C69D6C1E833" name="MIESZKANIEC">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 07:30:57 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<engineerTo>
+<item key="78BFBC34-4F8F-306D-3D26-401F0C3C83E4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nr_mieszkaniec" id="41253D96-EE6C-11D1-7C70-52196CA28F7F">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 07:31:19 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<engineerTo>
+<item key="78BFBC34-4F8F-306D-3D26-401F0C3C83E4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwisko" id="35C8A9C0-4F26-85E6-9C11-D1A11A1BB5A2">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 07:31:23 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<engineerTo>
+<item key="78BFBC34-4F8F-306D-3D26-401F0C3C83E4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwisko_panienskie" id="29B1A9A2-6711-4165-59A8-257DBC22813F">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 07:31:50 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<engineerTo>
+<item key="78BFBC34-4F8F-306D-3D26-401F0C3C83E4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="imie" id="1738FB51-EE6D-E7A9-96BE-B832408F515B">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 07:31:51 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<engineerTo>
+<item key="78BFBC34-4F8F-306D-3D26-401F0C3C83E4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plec" id="1F1C2AC3-57F1-7346-F0DC-54D5F01B1852">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 07:31:52 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<engineerTo>
+<item key="78BFBC34-4F8F-306D-3D26-401F0C3C83E4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_ur" id="4A249168-DB29-B5FC-C630-36CB4D337471">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 07:32:12 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<engineerTo>
+<item key="78BFBC34-4F8F-306D-3D26-401F0C3C83E4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C898666D-04EE-3353-C1F5-6A9CCD2D2FAA" name="MIESZKANIEC PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-09 07:33:06 UTC</createdTime>
+<ownerDesignName>osiedle</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="78BFBC34-4F8F-306D-3D26-401F0C3C83E4" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>41253D96-EE6C-11D1-7C70-52196CA28F7F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
