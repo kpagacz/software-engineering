@@ -3,8 +3,6 @@
 *.exe
 *x64*
 *x84*
-*vcx*
-*sln*
 *vs*
 *Debug*
 *.pdf
