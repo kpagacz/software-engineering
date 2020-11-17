@@ -2,13 +2,10 @@
 //
 
 #include <iostream>
+#include<string>
 #include"Sportowiec.h"
-#include<vector>
+#include"Sportowcy.h"
 
-struct Sportowcy {
-    std::vector<Sportowiec> sportowcy;
-    Sportowcy(std::vector<Sportowiec> _sportowcy) : sportowcy(_sportowcy) {}
-};
 
 int main()
 {
@@ -27,17 +24,61 @@ int main()
     std::cout << s1.getIle() << "\n";
 
     // Prosty program
+    Sportowcy sportowcy1;
+
+    char c = 'c';
+
+    while (c != 'e') {
+        std::cout << "Co chcesz zrobic?\n"
+            << "1 - dodaj sportowca\n"
+            << "2 - modyfikuj sportowca\n"
+            << "3 - usun sportowca\n"
+            << "4 - drukuj sportowcow\n"
+            << "e - wyjdz z programu\n";
+
+        std::cin >> c;
+        std::string imie = "", sport = "";
+        double waga;
+        int numer;
+        Sportowiec s1;
+
+        switch (c) {
+        case '1':
+            std::cout << "Podaj imie, sport oraz wage: ";
+            std::cin >> imie >> sport >> waga;
+
+            s1.setNazwisko(imie.data());
+            s1.setSport(sport.data());
+            s1.setWaga(waga);
+            sportowcy1.dodajSportowca(s1);
+
+            continue;
+        case '2':
+            std::cout << "Podaj numer sportowca do modyfikacji: ";
+            std::cin >> numer;
+
+            std::cout << "Podaj imie, sport oraz wage: ";
+            std::cin >> imie >> sport >> waga;
+
+            sportowcy1.modyfikujSportowca(numer, imie.data(), sport.data(), waga);
+
+            continue;
+        case '3':
+            std::cout << "Podaj numer sportowca do usuniecia: ";
+            std::cin >> numer;
+            sportowcy1.usunSportowca(numer);
+
+            continue;
+        case '4':
+            std::cout << sportowcy1;
+            continue;
+        case 'e':
+            break;
+
+        default:
+            continue;
+        }
+    }
 
     return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

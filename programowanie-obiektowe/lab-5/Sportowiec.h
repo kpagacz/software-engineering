@@ -18,7 +18,7 @@ public:
 	friend std::ostream& operator<<(std::ostream& out, const Sportowiec&);
 
 	// setters
-	void setWaga(const int&);
+	void setWaga(const double&);
 	void setNazwisko(const char*);
 	void setSport(const char*);
 

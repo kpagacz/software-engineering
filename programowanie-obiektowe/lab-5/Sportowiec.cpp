@@ -67,7 +67,7 @@ int Sportowiec::getIle()
 	return ile;
 }
 
-void Sportowiec::setWaga(const int& _waga)
+void Sportowiec::setWaga(const double& _waga)
 {
 	waga = _waga;
 }
