@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E79A3271-425F-4424-AEBA-C81390E3DC86" name="kierowca">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:12:02 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<engineerTo>
+<item key="9D64FC4F-2914-A791-9DCF-795BC00A3937" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_kierowcy" id="531AB4DF-274A-225F-076E-EC4292367CC8">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:12:09 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<engineerTo>
+<item key="9D64FC4F-2914-A791-9DCF-795BC00A3937" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwisko" id="6CAFA2C4-B37D-1EB3-9186-857872AA6E4A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:12:25 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<engineerTo>
+<item key="9D64FC4F-2914-A791-9DCF-795BC00A3937" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>18 CHAR</dataTypeSize>
+<ownDataTypeParameters>18 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="imie" id="9B9479E8-62A7-63DA-A11A-C835E4D98036">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:12:49 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<engineerTo>
+<item key="9D64FC4F-2914-A791-9DCF-795BC00A3937" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_ur" id="5A7C2F59-32C9-9287-F10E-50A782C54A73">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:12:59 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<engineerTo>
+<item key="9D64FC4F-2914-A791-9DCF-795BC00A3937" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plec" id="906C6CC8-3BDD-0033-92A7-6AD4BB1CD987">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:13:08 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<engineerTo>
+<item key="9D64FC4F-2914-A791-9DCF-795BC00A3937" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D6B631F4-8E8D-9093-4015-8D7285A03210" name="kierowca PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:12:22 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="9D64FC4F-2914-A791-9DCF-795BC00A3937" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>531AB4DF-274A-225F-076E-EC4292367CC8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

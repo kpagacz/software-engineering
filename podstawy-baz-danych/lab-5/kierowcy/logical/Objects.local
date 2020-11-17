@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="41398B19-6297-5547-B722-066C90AF6F5A" name="auto" seqName="seg_0"/>
+   <object objectType="Entity" objectID="1770149B-71E4-DE9B-CA36-CC9F42079321" name="kategorie" seqName="seg_0"/>
+   <object objectType="Entity" objectID="E79A3271-425F-4424-AEBA-C81390E3DC86" name="kierowca" seqName="seg_0"/>
+   <object objectType="Relation" objectID="B09A6196-BD9C-5B42-8AFB-09C41D7DAE79" name="prawa_jazdy" seqName="seg_0"/>
+   <object objectType="Relation" objectID="C624578F-1FAC-9E33-DC30-C9E81C303B57" name="uzytkowanie" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

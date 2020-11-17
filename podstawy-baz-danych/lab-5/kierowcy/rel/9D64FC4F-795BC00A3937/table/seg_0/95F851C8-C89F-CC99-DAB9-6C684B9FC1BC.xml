@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="95F851C8-C89F-CC99-DAB9-6C684B9FC1BC" name="kategorie">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:57:38 UTC</createdTime>
+<generatorID>1770149B-71E4-DE9B-CA36-CC9F42079321</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_kierowcy" id="531034D4-5A17-EF7A-CC81-D74E9E8E3A2E">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:57:38 UTC</createdTime>
+<generatorID>7B8E7AC7-7A18-05D0-531B-641B20C92DC5</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kategoria" id="0437B6A0-912F-677C-CD26-F607392C92E1">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:57:38 UTC</createdTime>
+<generatorID>3D2DCA34-F116-74AD-58A3-B807EF8B0662</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kierowca_id_kierowcy" id="CC8201B8-2667-8180-7D17-9A7641ABC54E">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:57:38 UTC</createdTime>
+<generatorID>E3AC87F0-B31F-05C7-210A-38E16A7CD971</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3BC0BEBF-8983-A9E2-B33A-F1145EE16743" referredColumn="FF67C08A-4709-E103-B481-04A4A7AC8EBA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FBCBD9F4-4DC4-5162-D935-0A907FAD4D00" name="kategorie_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:57:38 UTC</createdTime>
+<generatorID>9C60CDE3-E8D3-9C11-8342-F19882B3A5B0</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="531034D4-5A17-EF7A-CC81-D74E9E8E3A2E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BA77DD44-3CA5-CE65-7DAB-33D020F98343" name="kategorie_kierowca_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:57:38 UTC</createdTime>
+<generatorID>B09A6196-BD9C-5B42-8AFB-09C41D7DAE79</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC8201B8-2667-8180-7D17-9A7641ABC54E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

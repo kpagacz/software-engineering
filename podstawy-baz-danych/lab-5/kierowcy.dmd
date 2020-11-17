@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="kierowcy" id="F5E8C2FB-D50A-ED99-C739-8A2C008E5553" version="3.5">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:06:20 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>F5E8C2FB-D50A-ED99-C739-8A2C008E5553</designId>
+</OSDM_Design>

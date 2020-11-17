@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F3EF92A4-9F25-9D78-6D41-A1785D02B81C" name="kierowca">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:16:43 UTC</createdTime>
+<generatorID>E79A3271-425F-4424-AEBA-C81390E3DC86</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_kierowcy" id="FF67C08A-4709-E103-B481-04A4A7AC8EBA">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:16:43 UTC</createdTime>
+<generatorID>531AB4DF-274A-225F-076E-EC4292367CC8</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwisko" id="A7BBE2B6-6318-B00D-CA46-A18898FACD0F">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:16:43 UTC</createdTime>
+<generatorID>6CAFA2C4-B37D-1EB3-9186-857872AA6E4A</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>18 CHAR</dataTypeSize>
+<ownDataTypeParameters>18 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="imie" id="4FA2846D-AA27-AD49-9D90-7EAE20E14176">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:16:43 UTC</createdTime>
+<generatorID>9B9479E8-62A7-63DA-A11A-C835E4D98036</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_ur" id="5EE90864-7564-283B-ABFF-B15134A3DD22">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:16:43 UTC</createdTime>
+<generatorID>5A7C2F59-32C9-9287-F10E-50A782C54A73</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="plec" id="028358D4-5376-C9E7-F0B2-71382AFDC5D0">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:16:43 UTC</createdTime>
+<generatorID>906C6CC8-3BDD-0033-92A7-6AD4BB1CD987</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kategoria_prawa_jazdy" id="96B1AB16-DB8B-CE7D-C2E2-7EE4E5608362">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:16:43 UTC</createdTime>
+<generatorID>43EF129D-4BC9-B5EE-23DE-C83CC9FC46BF</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="571092F3-8319-A906-29D2-74F95D775A27" name="kierowca_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:16:43 UTC</createdTime>
+<generatorID>D6B631F4-8E8D-9093-4015-8D7285A03210</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF67C08A-4709-E103-B481-04A4A7AC8EBA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="82E9BA64-297A-A8A0-5DBE-2011AA07AD5E" name="kierowca__IDX">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:16:43 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>8671A7B8-E0D4-550F-FA8F-10BB4FC6C457</relationGeneratorID>
+</ind_PK_UK>
+</indexes>
+</Table>

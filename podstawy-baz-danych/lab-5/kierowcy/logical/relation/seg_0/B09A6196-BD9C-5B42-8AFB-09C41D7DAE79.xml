@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="prawa_jazdy" directorySegmentName="seg_0" id="B09A6196-BD9C-5B42-8AFB-09C41D7DAE79">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:56:47 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<engineerTo>
+<item key="9D64FC4F-2914-A791-9DCF-795BC00A3937" value="true"/>
+</engineerTo>
+<sourcePk>D6B631F4-8E8D-9093-4015-8D7285A03210</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E79A3271-425F-4424-AEBA-C81390E3DC86</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1770149B-71E4-DE9B-CA36-CC9F42079321</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="809F49BD-7EA1-0E9C-8CA4-1B53788E6E1A" name="uzytkowanie">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:17:39 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="kierowca_id_kierowcy" id="D1EA3969-43C9-6E54-074F-7C985E3DE670">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:17:39 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="10B4485C-635E-FE1F-435B-AC9636CA92D0" referredColumn="FF67C08A-4709-E103-B481-04A4A7AC8EBA"/>
+</associations>
+</Column>
+<Column name="auto_nr_silnik" id="1CD7FD03-3E15-D601-0F86-E242659DE275">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:17:39 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>18 CHAR</dataTypeSize>
+<ownDataTypeParameters>18 CHAR,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BF082F17-818F-A88C-49B9-6AF8201A06CA" referredColumn="BF75548C-2725-3FA6-79B6-1464E047A32A"/>
+</associations>
+</Column>
+<Column name="id_uzytkowania" id="CF7080F2-E50A-F2B2-E8FF-4A487AF31B17">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:51:45 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="od" id="183ED0B8-30BE-A4FF-EF2E-BC5E05A7C1D4">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:52:24 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="do" id="D0DF14B1-886C-192B-0778-014239768DE1">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:52:24 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="przebieg" id="5E5D25A7-6C6C-C249-942B-F3FC9817C449">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:52:24 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="paliwo" id="D77D77A7-1410-B127-754C-7F259C63E328">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:52:24 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="155ADAE4-76F9-34CC-AE94-8CC2D40F67A2" name="uzytkowanie_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:17:39 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CF7080F2-E50A-F2B2-E8FF-4A487AF31B17"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C4F0FC01-27EA-0E38-76F9-4E38832E50F7" name="fk_kierowca">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:17:39 UTC</createdTime>
+<generatorID>C624578F-1FAC-9E33-DC30-C9E81C303B57</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D1EA3969-43C9-6E54-074F-7C985E3DE670"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0446C322-BE05-7A08-0C13-4C37CB801802" name="fk_auto">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-16 08:17:39 UTC</createdTime>
+<generatorID>C624578F-1FAC-9E33-DC30-C9E81C303B57</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CD7FD03-3E15-D601-0F86-E242659DE275"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
