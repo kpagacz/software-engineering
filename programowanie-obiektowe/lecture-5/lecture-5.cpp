@@ -1,23 +1,29 @@
-// lecture-5.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include"FifoQueue.h"
 
 int main()
 {
     FifoQueue<int> q1;
+    q1.push(7);
+    q1.push(8);
+    q1.push(9);
+    std::cout << q1;
+
+    q1.pop();
+    std::cout << q1;
+
+    std::cout << "Testing copy constructor:\n";
+    FifoQueue<int> q2(q1);
+    std::cout << q2;
+    q1.push(111);
+    std::cout << "q1: " << q1 << "q2: " << q2;
+
+    std::cout << "Testing assignment operator\n";
+    FifoQueue<int> q3;
+    q3 = q1;
+    q3.push(128);
+    std::cout << "q3: " << q3 << "q1: " << q1;
+
 
     return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

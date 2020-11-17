@@ -11,7 +11,7 @@ private:
 	struct Node {
 		T value;
 		Node* next;
-		Node(T el, Node* _next) : value(el), next(_next) {}
+		Node(T el, Node* _next = nullptr) : value(el), next(_next) {}
 	};
 
 	size_t size;
@@ -26,21 +26,38 @@ public:
 	// adding, removing
 	void push(const T&);
 	T pop();
+	void empty();
 
 	// operators
-	friend std::ostream& operator<<(std::ostream&, const FifoQueue& queue) {
-		Node* it = head;
+	friend std::ostream& operator<<(std::ostream& out, const FifoQueue& queue) {
+		Node* it = queue.head;
 		while (it != nullptr) {
-			std::cout << it->value << " ";
+			out << it->value << " ";
 			it = it->next;
 		}
 
-		std::cout << "\n";
+		out << "\n";
+
+		return out;
 	}
-	FifoQueue& operator=(const FifoQueue&);
+	FifoQueue<T>& operator=(const FifoQueue&);
 };
 
 #endif // FIFO
+
+template<class T>
+inline FifoQueue<T>::FifoQueue(const FifoQueue& other)
+{
+	size = 0;
+	head = nullptr;
+	tail = nullptr;
+
+	Node* other_it = other.head;
+	while (other_it != nullptr) {
+		push(other_it->value);
+		other_it = other_it->next;
+	}
+}
 
 template<class T>
 inline FifoQueue<T>::~FifoQueue()
@@ -58,22 +75,24 @@ template<class T>
 inline void FifoQueue<T>::push(const T& el)
 {
 	Node* creator = new Node(el);
+
 	if (size == 0) {
+		size++;
 		head = creator;
 		tail = creator;
 		return;
 	}
 
+	size++;
 	tail->next = creator;
 	tail = creator;
-	size++;
 }
 
 template<class T>
 inline T FifoQueue<T>::pop()
 {
 	if (size == 0) {
-		return std::out_of_range("Queue is empty\n");
+		throw std::out_of_range("Queue is empty\n");
 	}
 
 	Node* destr = head;
@@ -89,4 +108,36 @@ inline T FifoQueue<T>::pop()
 	size--;
 
 	return value;
+}
+
+template<class T>
+inline void FifoQueue<T>::empty()
+{
+	Node* succ = head, * destr = nullptr;
+
+	while (head != nullptr) {
+		destr = succ;
+		succ = succ->next;
+		delete destr;
+		destr = nullptr;
+	}
+
+	size = 0;
+}
+
+template<class T>
+inline FifoQueue<T>& FifoQueue<T>::operator=(const FifoQueue& other)
+{
+	if (this == &other) {
+		return *this;
+	}
+
+	empty();
+	Node* other_it = other.head;
+	while (other_it != nullptr) {
+		push(other_it->value);
+		other_it = other_it->next;
+	}
+
+	return *this;
 }
