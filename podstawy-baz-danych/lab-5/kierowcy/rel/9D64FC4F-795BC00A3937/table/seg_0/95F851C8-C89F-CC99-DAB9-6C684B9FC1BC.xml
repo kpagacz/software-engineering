@@ -8,17 +8,6 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id_kierowcy" id="531034D4-5A17-EF7A-CC81-D74E9E8E3A2E">
-<createdBy>pagaczk</createdBy>
-<createdTime>2020-11-16 08:57:38 UTC</createdTime>
-<generatorID>7B8E7AC7-7A18-05D0-531B-641B20C92DC5</generatorID>
-<ownerDesignName>kierowcy</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="kategoria" id="0437B6A0-912F-677C-CD26-F607392C92E1">
 <createdBy>pagaczk</createdBy>
 <createdTime>2020-11-16 08:57:38 UTC</createdTime>
@@ -47,6 +36,18 @@
 <colAssociation fkAssociation="3BC0BEBF-8983-A9E2-B33A-F1145EE16743" referredColumn="FF67C08A-4709-E103-B481-04A4A7AC8EBA"/>
 </associations>
 </Column>
+<Column name="id_dokumentu" id="37050CAA-AC21-2CFE-DDF3-D2CEAB78F18D">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-23 07:46:20 UTC</createdTime>
+<generatorID>17EB9E0A-FE31-3DCE-4D01-4A664E38CAEF</generatorID>
+<ownerDesignName>kierowcy</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="FBCBD9F4-4DC4-5162-D935-0A907FAD4D00" name="kategorie_PK">
@@ -58,7 +59,7 @@
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="531034D4-5A17-EF7A-CC81-D74E9E8E3A2E"/>
+<colUsage columnID="37050CAA-AC21-2CFE-DDF3-D2CEAB78F18D"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="BA77DD44-3CA5-CE65-7DAB-33D020F98343" name="kategorie_kierowca_FK">

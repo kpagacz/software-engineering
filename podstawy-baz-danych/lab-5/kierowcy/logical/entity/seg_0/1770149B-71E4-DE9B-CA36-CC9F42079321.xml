@@ -55,6 +55,19 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_dokumentu" id="17EB9E0A-FE31-3DCE-4D01-4A664E38CAEF">
+<createdBy>pagaczk</createdBy>
+<createdTime>2020-11-23 07:45:06 UTC</createdTime>
+<ownerDesignName>kierowcy</ownerDesignName>
+<engineerTo>
+<item key="9D64FC4F-2914-A791-9DCF-795BC00A3937" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="9C60CDE3-E8D3-9C11-8342-F19882B3A5B0" name="kategorie PK">
@@ -66,7 +79,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>7B8E7AC7-7A18-05D0-531B-641B20C92DC5</attributeRef>
+<attributeRef>17EB9E0A-FE31-3DCE-4D01-4A664E38CAEF</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

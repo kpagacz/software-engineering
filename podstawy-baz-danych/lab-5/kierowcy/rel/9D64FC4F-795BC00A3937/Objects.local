@@ -4,7 +4,9 @@
    <object objectType="Table" objectID="95F851C8-C89F-CC99-DAB9-6C684B9FC1BC" name="kategorie" seqName="seg_0"/>
    <object objectType="Table" objectID="F3EF92A4-9F25-9D78-6D41-A1785D02B81C" name="kierowca" seqName="seg_0"/>
    <object objectType="Table" objectID="809F49BD-7EA1-0E9C-8CA4-1B53788E6E1A" name="uzytkowanie" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="321BA4C6-66B9-FA64-DA31-D14290DBEE0D" name="auto_kierowca_FK" seqName="seg_0" containerID="4D021924-EE3B-0266-1F78-8BDA39F8AA54" refContainerID="F3EF92A4-9F25-9D78-6D41-A1785D02B81C"/>
    <object objectType="FKIndexAssociation" objectID="BF082F17-818F-A88C-49B9-6AF8201A06CA" name="fk_auto" seqName="seg_0" containerID="809F49BD-7EA1-0E9C-8CA4-1B53788E6E1A" refContainerID="4D021924-EE3B-0266-1F78-8BDA39F8AA54"/>
    <object objectType="FKIndexAssociation" objectID="10B4485C-635E-FE1F-435B-AC9636CA92D0" name="fk_kierowca" seqName="seg_0" containerID="809F49BD-7EA1-0E9C-8CA4-1B53788E6E1A" refContainerID="F3EF92A4-9F25-9D78-6D41-A1785D02B81C"/>
    <object objectType="FKIndexAssociation" objectID="3BC0BEBF-8983-A9E2-B33A-F1145EE16743" name="kategorie_kierowca_FK" seqName="seg_0" containerID="95F851C8-C89F-CC99-DAB9-6C684B9FC1BC" refContainerID="F3EF92A4-9F25-9D78-6D41-A1785D02B81C"/>
+   <object objectType="FKIndexAssociation" objectID="45EB8FD6-D5EC-0F6E-8B1C-71E539E237D2" name="kierowca_auto_FK" seqName="seg_0" containerID="F3EF92A4-9F25-9D78-6D41-A1785D02B81C" refContainerID="4D021924-EE3B-0266-1F78-8BDA39F8AA54"/>
 </oracle.dbtools.crest.model.design.relational.RelationalDesign>
