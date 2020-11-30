@@ -7,22 +7,22 @@ Planet::~Planet()
 
 void Planet::moveUp()
 {
-	--(p->gety());
+	if(p->gety() > 1) --(p->gety());
 }
 
 void Planet::moveDown()
 {
-	(p->gety())++;
+	if(p->gety() < height - 2) (p->gety())++;
 }
 
 void Planet::moveRight()
 {
-	(p->getx())++;
+	if(p->getx() < width - 2) (p->getx())++;
 }
 
 void Planet::moveLeft()
 {
-	(p->getx())--;
+	if(p->getx() > 1) (p->getx())--;
 }
 
 std::ostream& operator<<(std::ostream& out, const Planet& planet)
