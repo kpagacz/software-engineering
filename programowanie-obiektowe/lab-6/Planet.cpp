@@ -25,6 +25,11 @@ void Planet::moveLeft()
 	if(p->getx() > 1) (p->getx())--;
 }
 
+void Planet::addPlaszczak(const Plaszczak& p)
+{
+
+}
+
 std::ostream& operator<<(std::ostream& out, const Planet& planet)
 {
 	for (int j = 0; j < planet.height; ++j) {
