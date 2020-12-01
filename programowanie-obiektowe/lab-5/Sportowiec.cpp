@@ -88,8 +88,8 @@ void Sportowiec::setSport(const char* _sport)
 
 std::ostream& operator<<(std::ostream& out, const Sportowiec& sportowiec)
 {
-	out << "Sport: " << sportowiec.nazwisko << "\n";
-	out << "Nazwisko: " << sportowiec.sport << "\n";
+	out << "Imie: " << sportowiec.nazwisko << "\n";
+	out << "Sport: " << sportowiec.sport << "\n";
 	out << "Waga: " << sportowiec.waga << "\n";
 
 	return out;
