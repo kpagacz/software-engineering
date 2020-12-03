@@ -28,9 +28,16 @@ double root_newton(double x, double eps) {
 
 int main()
 {
-    double x_0 = -10;
     double h = 0.001;
-    std::cout << std::fixed << std::setprecision(16) << root_newton(x_0, h);
+    for (double x_0 = 10; x_0 < 10000000000; x_0 *= 10) {
+        std::cout << "x_0: " << x_0 << ":\n";
+        std::cout << std::fixed << std::setprecision(16) << root_newton(x_0, h) << "\n\n";
+    }
+
+    for (double x_0 = -10; x_0 > -10000000000; x_0 *= 10) {
+        std::cout << "x_0: " << x_0 << ":\n";
+        std::cout << std::fixed << std::setprecision(16) << root_newton(x_0, h) << "\n\n";
+    }
 
     return 0;
 
