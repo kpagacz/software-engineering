@@ -1,0 +1,15 @@
+Array size;Fill function;Pivot function;Time elapsed[s]
+1000;Random;Begin;0.000
+1000;Only 0 to 100 values;Begin;0.000
+1000;Non-decreasing;Begin;0.002
+2000;Random;Begin;0.001
+2000;Only 0 to 100 values;Begin;0.001
+2000;Non-decreasing;Begin;0.004
+3000;Random;Begin;0.002
+3000;Only 0 to 100 values;Begin;0.002
+3000;Non-decreasing;Begin;0.009
+4000;Random;Begin;0.002
+4000;Only 0 to 100 values;Begin;0.002
+4000;Non-decreasing;Begin;0.016
+5000;Random;Begin;0.003
+5000;Only 0 to 100 values;Begin;0.003

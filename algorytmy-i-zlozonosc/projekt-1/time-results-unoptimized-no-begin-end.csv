@@ -1,0 +1,601 @@
+Array size;Fill function;Pivot function;Time elapsed[s]
+1000;Random;Random;0.001
+1000;Only 0 to 100 values;Random;0.001
+1000;Non-decreasing;Random;0.001
+2000;Random;Random;0.002
+2000;Only 0 to 100 values;Random;0.002
+2000;Non-decreasing;Random;0.002
+3000;Random;Random;0.003
+3000;Only 0 to 100 values;Random;0.003
+3000;Non-decreasing;Random;0.002
+4000;Random;Random;0.003
+4000;Only 0 to 100 values;Random;0.003
+4000;Non-decreasing;Random;0.003
+5000;Random;Random;0.005
+5000;Only 0 to 100 values;Random;0.005
+5000;Non-decreasing;Random;0.005
+6000;Random;Random;0.005
+6000;Only 0 to 100 values;Random;0.006
+6000;Non-decreasing;Random;0.006
+7000;Random;Random;0.007
+7000;Only 0 to 100 values;Random;0.007
+7000;Non-decreasing;Random;0.006
+8000;Random;Random;0.007
+8000;Only 0 to 100 values;Random;0.007
+8000;Non-decreasing;Random;0.007
+9000;Random;Random;0.008
+9000;Only 0 to 100 values;Random;0.009
+9000;Non-decreasing;Random;0.009
+10000;Random;Random;0.010
+10000;Only 0 to 100 values;Random;0.009
+10000;Non-decreasing;Random;0.009
+11000;Random;Random;0.010
+11000;Only 0 to 100 values;Random;0.010
+11000;Non-decreasing;Random;0.010
+12000;Random;Random;0.012
+12000;Only 0 to 100 values;Random;0.012
+12000;Non-decreasing;Random;0.011
+13000;Random;Random;0.012
+13000;Only 0 to 100 values;Random;0.013
+13000;Non-decreasing;Random;0.012
+14000;Random;Random;0.016
+14000;Only 0 to 100 values;Random;0.014
+14000;Non-decreasing;Random;0.014
+15000;Random;Random;0.014
+15000;Only 0 to 100 values;Random;0.015
+15000;Non-decreasing;Random;0.016
+16000;Random;Random;0.016
+16000;Only 0 to 100 values;Random;0.016
+16000;Non-decreasing;Random;0.014
+17000;Random;Random;0.016
+17000;Only 0 to 100 values;Random;0.018
+17000;Non-decreasing;Random;0.016
+18000;Random;Random;0.019
+18000;Only 0 to 100 values;Random;0.021
+18000;Non-decreasing;Random;0.018
+19000;Random;Random;0.018
+19000;Only 0 to 100 values;Random;0.019
+19000;Non-decreasing;Random;0.018
+20000;Random;Random;0.020
+20000;Only 0 to 100 values;Random;0.021
+20000;Non-decreasing;Random;0.020
+21000;Random;Random;0.021
+21000;Only 0 to 100 values;Random;0.023
+21000;Non-decreasing;Random;0.022
+22000;Random;Random;0.021
+22000;Only 0 to 100 values;Random;0.023
+22000;Non-decreasing;Random;0.021
+23000;Random;Random;0.023
+23000;Only 0 to 100 values;Random;0.024
+23000;Non-decreasing;Random;0.024
+24000;Random;Random;0.023
+24000;Only 0 to 100 values;Random;0.026
+24000;Non-decreasing;Random;0.024
+25000;Random;Random;0.026
+25000;Only 0 to 100 values;Random;0.028
+25000;Non-decreasing;Random;0.025
+26000;Random;Random;0.028
+26000;Only 0 to 100 values;Random;0.030
+26000;Non-decreasing;Random;0.025
+27000;Random;Random;0.028
+27000;Only 0 to 100 values;Random;0.030
+27000;Non-decreasing;Random;0.026
+28000;Random;Random;0.030
+28000;Only 0 to 100 values;Random;0.031
+28000;Non-decreasing;Random;0.027
+29000;Random;Random;0.029
+29000;Only 0 to 100 values;Random;0.035
+29000;Non-decreasing;Random;0.030
+30000;Random;Random;0.032
+30000;Only 0 to 100 values;Random;0.034
+30000;Non-decreasing;Random;0.030
+31000;Random;Random;0.037
+31000;Only 0 to 100 values;Random;0.038
+31000;Non-decreasing;Random;0.031
+32000;Random;Random;0.033
+32000;Only 0 to 100 values;Random;0.040
+32000;Non-decreasing;Random;0.032
+33000;Random;Random;0.035
+33000;Only 0 to 100 values;Random;0.042
+33000;Non-decreasing;Random;0.033
+34000;Random;Random;0.036
+34000;Only 0 to 100 values;Random;0.040
+34000;Non-decreasing;Random;0.035
+35000;Random;Random;0.036
+35000;Only 0 to 100 values;Random;0.040
+35000;Non-decreasing;Random;0.035
+36000;Random;Random;0.037
+36000;Only 0 to 100 values;Random;0.047
+36000;Non-decreasing;Random;0.036
+37000;Random;Random;0.038
+37000;Only 0 to 100 values;Random;0.044
+37000;Non-decreasing;Random;0.036
+38000;Random;Random;0.042
+38000;Only 0 to 100 values;Random;0.047
+38000;Non-decreasing;Random;0.041
+39000;Random;Random;0.040
+39000;Only 0 to 100 values;Random;0.048
+39000;Non-decreasing;Random;0.040
+40000;Random;Random;0.040
+40000;Only 0 to 100 values;Random;0.050
+40000;Non-decreasing;Random;0.041
+41000;Random;Random;0.044
+41000;Only 0 to 100 values;Random;0.051
+41000;Non-decreasing;Random;0.041
+42000;Random;Random;0.043
+42000;Only 0 to 100 values;Random;0.053
+42000;Non-decreasing;Random;0.043
+43000;Random;Random;0.044
+43000;Only 0 to 100 values;Random;0.055
+43000;Non-decreasing;Random;0.044
+44000;Random;Random;0.047
+44000;Only 0 to 100 values;Random;0.057
+44000;Non-decreasing;Random;0.044
+45000;Random;Random;0.051
+45000;Only 0 to 100 values;Random;0.057
+45000;Non-decreasing;Random;0.046
+46000;Random;Random;0.049
+46000;Only 0 to 100 values;Random;0.063
+46000;Non-decreasing;Random;0.047
+47000;Random;Random;0.051
+47000;Only 0 to 100 values;Random;0.063
+47000;Non-decreasing;Random;0.047
+48000;Random;Random;0.051
+48000;Only 0 to 100 values;Random;0.065
+48000;Non-decreasing;Random;0.051
+49000;Random;Random;0.051
+49000;Only 0 to 100 values;Random;0.063
+49000;Non-decreasing;Random;0.050
+50000;Random;Random;0.053
+50000;Only 0 to 100 values;Random;0.070
+50000;Non-decreasing;Random;0.050
+1000;Random;Median of 3 elements;0.001
+1000;Only 0 to 100 values;Median of 3 elements;0.002
+1000;Non-decreasing;Median of 3 elements;0.001
+2000;Random;Median of 3 elements;0.002
+2000;Only 0 to 100 values;Median of 3 elements;0.004
+2000;Non-decreasing;Median of 3 elements;0.002
+3000;Random;Median of 3 elements;0.004
+3000;Only 0 to 100 values;Median of 3 elements;0.005
+3000;Non-decreasing;Median of 3 elements;0.004
+4000;Random;Median of 3 elements;0.005
+4000;Only 0 to 100 values;Median of 3 elements;0.007
+4000;Non-decreasing;Median of 3 elements;0.004
+5000;Random;Median of 3 elements;0.006
+5000;Only 0 to 100 values;Median of 3 elements;0.008
+5000;Non-decreasing;Median of 3 elements;0.006
+6000;Random;Median of 3 elements;0.007
+6000;Only 0 to 100 values;Median of 3 elements;0.010
+6000;Non-decreasing;Median of 3 elements;0.008
+7000;Random;Median of 3 elements;0.009
+7000;Only 0 to 100 values;Median of 3 elements;0.011
+7000;Non-decreasing;Median of 3 elements;0.008
+8000;Random;Median of 3 elements;0.010
+8000;Only 0 to 100 values;Median of 3 elements;0.013
+8000;Non-decreasing;Median of 3 elements;0.009
+9000;Random;Median of 3 elements;0.012
+9000;Only 0 to 100 values;Median of 3 elements;0.015
+9000;Non-decreasing;Median of 3 elements;0.010
+10000;Random;Median of 3 elements;0.012
+10000;Only 0 to 100 values;Median of 3 elements;0.018
+10000;Non-decreasing;Median of 3 elements;0.012
+11000;Random;Median of 3 elements;0.015
+11000;Only 0 to 100 values;Median of 3 elements;0.019
+11000;Non-decreasing;Median of 3 elements;0.014
+12000;Random;Median of 3 elements;0.015
+12000;Only 0 to 100 values;Median of 3 elements;0.021
+12000;Non-decreasing;Median of 3 elements;0.015
+13000;Random;Median of 3 elements;0.017
+13000;Only 0 to 100 values;Median of 3 elements;0.023
+13000;Non-decreasing;Median of 3 elements;0.016
+14000;Random;Median of 3 elements;0.018
+14000;Only 0 to 100 values;Median of 3 elements;0.025
+14000;Non-decreasing;Median of 3 elements;0.016
+15000;Random;Median of 3 elements;0.020
+15000;Only 0 to 100 values;Median of 3 elements;0.027
+15000;Non-decreasing;Median of 3 elements;0.017
+16000;Random;Median of 3 elements;0.022
+16000;Only 0 to 100 values;Median of 3 elements;0.028
+16000;Non-decreasing;Median of 3 elements;0.018
+17000;Random;Median of 3 elements;0.023
+17000;Only 0 to 100 values;Median of 3 elements;0.031
+17000;Non-decreasing;Median of 3 elements;0.019
+18000;Random;Median of 3 elements;0.023
+18000;Only 0 to 100 values;Median of 3 elements;0.031
+18000;Non-decreasing;Median of 3 elements;0.021
+19000;Random;Median of 3 elements;0.025
+19000;Only 0 to 100 values;Median of 3 elements;0.034
+19000;Non-decreasing;Median of 3 elements;0.023
+20000;Random;Median of 3 elements;0.026
+20000;Only 0 to 100 values;Median of 3 elements;0.038
+20000;Non-decreasing;Median of 3 elements;0.024
+21000;Random;Median of 3 elements;0.028
+21000;Only 0 to 100 values;Median of 3 elements;0.039
+21000;Non-decreasing;Median of 3 elements;0.026
+22000;Random;Median of 3 elements;0.030
+22000;Only 0 to 100 values;Median of 3 elements;0.041
+22000;Non-decreasing;Median of 3 elements;0.027
+23000;Random;Median of 3 elements;0.031
+23000;Only 0 to 100 values;Median of 3 elements;0.043
+23000;Non-decreasing;Median of 3 elements;0.029
+24000;Random;Median of 3 elements;0.034
+24000;Only 0 to 100 values;Median of 3 elements;0.045
+24000;Non-decreasing;Median of 3 elements;0.031
+25000;Random;Median of 3 elements;0.034
+25000;Only 0 to 100 values;Median of 3 elements;0.047
+25000;Non-decreasing;Median of 3 elements;0.031
+26000;Random;Median of 3 elements;0.035
+26000;Only 0 to 100 values;Median of 3 elements;0.049
+26000;Non-decreasing;Median of 3 elements;0.032
+27000;Random;Median of 3 elements;0.036
+27000;Only 0 to 100 values;Median of 3 elements;0.051
+27000;Non-decreasing;Median of 3 elements;0.033
+28000;Random;Median of 3 elements;0.038
+28000;Only 0 to 100 values;Median of 3 elements;0.053
+28000;Non-decreasing;Median of 3 elements;0.034
+29000;Random;Median of 3 elements;0.040
+29000;Only 0 to 100 values;Median of 3 elements;0.056
+29000;Non-decreasing;Median of 3 elements;0.035
+30000;Random;Median of 3 elements;0.040
+30000;Only 0 to 100 values;Median of 3 elements;0.059
+30000;Non-decreasing;Median of 3 elements;0.036
+31000;Random;Median of 3 elements;0.043
+31000;Only 0 to 100 values;Median of 3 elements;0.059
+31000;Non-decreasing;Median of 3 elements;0.037
+32000;Random;Median of 3 elements;0.043
+32000;Only 0 to 100 values;Median of 3 elements;0.063
+32000;Non-decreasing;Median of 3 elements;0.038
+33000;Random;Median of 3 elements;0.045
+33000;Only 0 to 100 values;Median of 3 elements;0.064
+33000;Non-decreasing;Median of 3 elements;0.039
+34000;Random;Median of 3 elements;0.046
+34000;Only 0 to 100 values;Median of 3 elements;0.067
+34000;Non-decreasing;Median of 3 elements;0.040
+35000;Random;Median of 3 elements;0.048
+35000;Only 0 to 100 values;Median of 3 elements;0.069
+35000;Non-decreasing;Median of 3 elements;0.041
+36000;Random;Median of 3 elements;0.048
+36000;Only 0 to 100 values;Median of 3 elements;0.071
+36000;Non-decreasing;Median of 3 elements;0.044
+37000;Random;Median of 3 elements;0.052
+37000;Only 0 to 100 values;Median of 3 elements;0.074
+37000;Non-decreasing;Median of 3 elements;0.045
+38000;Random;Median of 3 elements;0.053
+38000;Only 0 to 100 values;Median of 3 elements;0.077
+38000;Non-decreasing;Median of 3 elements;0.046
+39000;Random;Median of 3 elements;0.053
+39000;Only 0 to 100 values;Median of 3 elements;0.081
+39000;Non-decreasing;Median of 3 elements;0.048
+40000;Random;Median of 3 elements;0.055
+40000;Only 0 to 100 values;Median of 3 elements;0.080
+40000;Non-decreasing;Median of 3 elements;0.049
+41000;Random;Median of 3 elements;0.056
+41000;Only 0 to 100 values;Median of 3 elements;0.083
+41000;Non-decreasing;Median of 3 elements;0.051
+42000;Random;Median of 3 elements;0.058
+42000;Only 0 to 100 values;Median of 3 elements;0.088
+42000;Non-decreasing;Median of 3 elements;0.052
+43000;Random;Median of 3 elements;0.061
+43000;Only 0 to 100 values;Median of 3 elements;0.087
+43000;Non-decreasing;Median of 3 elements;0.054
+44000;Random;Median of 3 elements;0.060
+44000;Only 0 to 100 values;Median of 3 elements;0.090
+44000;Non-decreasing;Median of 3 elements;0.056
+45000;Random;Median of 3 elements;0.063
+45000;Only 0 to 100 values;Median of 3 elements;0.092
+45000;Non-decreasing;Median of 3 elements;0.057
+46000;Random;Median of 3 elements;0.063
+46000;Only 0 to 100 values;Median of 3 elements;0.096
+46000;Non-decreasing;Median of 3 elements;0.059
+47000;Random;Median of 3 elements;0.067
+47000;Only 0 to 100 values;Median of 3 elements;0.097
+47000;Non-decreasing;Median of 3 elements;0.060
+48000;Random;Median of 3 elements;0.067
+48000;Only 0 to 100 values;Median of 3 elements;0.102
+48000;Non-decreasing;Median of 3 elements;0.062
+49000;Random;Median of 3 elements;0.066
+49000;Only 0 to 100 values;Median of 3 elements;0.104
+49000;Non-decreasing;Median of 3 elements;0.064
+50000;Random;Median of 3 elements;0.069
+50000;Only 0 to 100 values;Median of 3 elements;0.105
+50000;Non-decreasing;Median of 3 elements;0.064
+1000;Random;Median of 5 elements;0.002
+1000;Only 0 to 100 values;Median of 5 elements;0.002
+1000;Non-decreasing;Median of 5 elements;0.001
+2000;Random;Median of 5 elements;0.003
+2000;Only 0 to 100 values;Median of 5 elements;0.004
+2000;Non-decreasing;Median of 5 elements;0.002
+3000;Random;Median of 5 elements;0.004
+3000;Only 0 to 100 values;Median of 5 elements;0.006
+3000;Non-decreasing;Median of 5 elements;0.004
+4000;Random;Median of 5 elements;0.006
+4000;Only 0 to 100 values;Median of 5 elements;0.008
+4000;Non-decreasing;Median of 5 elements;0.004
+5000;Random;Median of 5 elements;0.007
+5000;Only 0 to 100 values;Median of 5 elements;0.010
+5000;Non-decreasing;Median of 5 elements;0.006
+6000;Random;Median of 5 elements;0.008
+6000;Only 0 to 100 values;Median of 5 elements;0.013
+6000;Non-decreasing;Median of 5 elements;0.008
+7000;Random;Median of 5 elements;0.010
+7000;Only 0 to 100 values;Median of 5 elements;0.015
+7000;Non-decreasing;Median of 5 elements;0.009
+8000;Random;Median of 5 elements;0.012
+8000;Only 0 to 100 values;Median of 5 elements;0.018
+8000;Non-decreasing;Median of 5 elements;0.010
+9000;Random;Median of 5 elements;0.013
+9000;Only 0 to 100 values;Median of 5 elements;0.020
+9000;Non-decreasing;Median of 5 elements;0.011
+10000;Random;Median of 5 elements;0.015
+10000;Only 0 to 100 values;Median of 5 elements;0.023
+10000;Non-decreasing;Median of 5 elements;0.013
+11000;Random;Median of 5 elements;0.016
+11000;Only 0 to 100 values;Median of 5 elements;0.025
+11000;Non-decreasing;Median of 5 elements;0.016
+12000;Random;Median of 5 elements;0.017
+12000;Only 0 to 100 values;Median of 5 elements;0.028
+12000;Non-decreasing;Median of 5 elements;0.017
+13000;Random;Median of 5 elements;0.019
+13000;Only 0 to 100 values;Median of 5 elements;0.030
+13000;Non-decreasing;Median of 5 elements;0.018
+14000;Random;Median of 5 elements;0.020
+14000;Only 0 to 100 values;Median of 5 elements;0.032
+14000;Non-decreasing;Median of 5 elements;0.019
+15000;Random;Median of 5 elements;0.023
+15000;Only 0 to 100 values;Median of 5 elements;0.036
+15000;Non-decreasing;Median of 5 elements;0.020
+16000;Random;Median of 5 elements;0.024
+16000;Only 0 to 100 values;Median of 5 elements;0.038
+16000;Non-decreasing;Median of 5 elements;0.021
+17000;Random;Median of 5 elements;0.025
+17000;Only 0 to 100 values;Median of 5 elements;0.040
+17000;Non-decreasing;Median of 5 elements;0.022
+18000;Random;Median of 5 elements;0.027
+18000;Only 0 to 100 values;Median of 5 elements;0.042
+18000;Non-decreasing;Median of 5 elements;0.023
+19000;Random;Median of 5 elements;0.027
+19000;Only 0 to 100 values;Median of 5 elements;0.044
+19000;Non-decreasing;Median of 5 elements;0.025
+20000;Random;Median of 5 elements;0.030
+20000;Only 0 to 100 values;Median of 5 elements;0.048
+20000;Non-decreasing;Median of 5 elements;0.027
+21000;Random;Median of 5 elements;0.032
+21000;Only 0 to 100 values;Median of 5 elements;0.049
+21000;Non-decreasing;Median of 5 elements;0.029
+22000;Random;Median of 5 elements;0.032
+22000;Only 0 to 100 values;Median of 5 elements;0.053
+22000;Non-decreasing;Median of 5 elements;0.031
+23000;Random;Median of 5 elements;0.034
+23000;Only 0 to 100 values;Median of 5 elements;0.056
+23000;Non-decreasing;Median of 5 elements;0.033
+24000;Random;Median of 5 elements;0.036
+24000;Only 0 to 100 values;Median of 5 elements;0.058
+24000;Non-decreasing;Median of 5 elements;0.034
+25000;Random;Median of 5 elements;0.038
+25000;Only 0 to 100 values;Median of 5 elements;0.062
+25000;Non-decreasing;Median of 5 elements;0.036
+26000;Random;Median of 5 elements;0.040
+26000;Only 0 to 100 values;Median of 5 elements;0.063
+26000;Non-decreasing;Median of 5 elements;0.037
+27000;Random;Median of 5 elements;0.040
+27000;Only 0 to 100 values;Median of 5 elements;0.066
+27000;Non-decreasing;Median of 5 elements;0.038
+28000;Random;Median of 5 elements;0.041
+28000;Only 0 to 100 values;Median of 5 elements;0.069
+28000;Non-decreasing;Median of 5 elements;0.039
+29000;Random;Median of 5 elements;0.044
+29000;Only 0 to 100 values;Median of 5 elements;0.072
+29000;Non-decreasing;Median of 5 elements;0.039
+30000;Random;Median of 5 elements;0.046
+30000;Only 0 to 100 values;Median of 5 elements;0.074
+30000;Non-decreasing;Median of 5 elements;0.040
+31000;Random;Median of 5 elements;0.048
+31000;Only 0 to 100 values;Median of 5 elements;0.076
+31000;Non-decreasing;Median of 5 elements;0.041
+32000;Random;Median of 5 elements;0.048
+32000;Only 0 to 100 values;Median of 5 elements;0.080
+32000;Non-decreasing;Median of 5 elements;0.042
+33000;Random;Median of 5 elements;0.050
+33000;Only 0 to 100 values;Median of 5 elements;0.083
+33000;Non-decreasing;Median of 5 elements;0.043
+34000;Random;Median of 5 elements;0.052
+34000;Only 0 to 100 values;Median of 5 elements;0.085
+34000;Non-decreasing;Median of 5 elements;0.045
+35000;Random;Median of 5 elements;0.053
+35000;Only 0 to 100 values;Median of 5 elements;0.089
+35000;Non-decreasing;Median of 5 elements;0.046
+36000;Random;Median of 5 elements;0.054
+36000;Only 0 to 100 values;Median of 5 elements;0.090
+36000;Non-decreasing;Median of 5 elements;0.049
+37000;Random;Median of 5 elements;0.056
+37000;Only 0 to 100 values;Median of 5 elements;0.094
+37000;Non-decreasing;Median of 5 elements;0.050
+38000;Random;Median of 5 elements;0.057
+38000;Only 0 to 100 values;Median of 5 elements;0.097
+38000;Non-decreasing;Median of 5 elements;0.052
+39000;Random;Median of 5 elements;0.059
+39000;Only 0 to 100 values;Median of 5 elements;0.099
+39000;Non-decreasing;Median of 5 elements;0.053
+40000;Random;Median of 5 elements;0.061
+40000;Only 0 to 100 values;Median of 5 elements;0.103
+40000;Non-decreasing;Median of 5 elements;0.056
+41000;Random;Median of 5 elements;0.063
+41000;Only 0 to 100 values;Median of 5 elements;0.105
+41000;Non-decreasing;Median of 5 elements;0.057
+42000;Random;Median of 5 elements;0.065
+42000;Only 0 to 100 values;Median of 5 elements;0.108
+42000;Non-decreasing;Median of 5 elements;0.059
+43000;Random;Median of 5 elements;0.066
+43000;Only 0 to 100 values;Median of 5 elements;0.111
+43000;Non-decreasing;Median of 5 elements;0.061
+44000;Random;Median of 5 elements;0.067
+44000;Only 0 to 100 values;Median of 5 elements;0.114
+44000;Non-decreasing;Median of 5 elements;0.062
+45000;Random;Median of 5 elements;0.068
+45000;Only 0 to 100 values;Median of 5 elements;0.119
+45000;Non-decreasing;Median of 5 elements;0.065
+46000;Random;Median of 5 elements;0.070
+46000;Only 0 to 100 values;Median of 5 elements;0.121
+46000;Non-decreasing;Median of 5 elements;0.067
+47000;Random;Median of 5 elements;0.073
+47000;Only 0 to 100 values;Median of 5 elements;0.124
+47000;Non-decreasing;Median of 5 elements;0.069
+48000;Random;Median of 5 elements;0.072
+48000;Only 0 to 100 values;Median of 5 elements;0.126
+48000;Non-decreasing;Median of 5 elements;0.070
+49000;Random;Median of 5 elements;0.076
+49000;Only 0 to 100 values;Median of 5 elements;0.131
+49000;Non-decreasing;Median of 5 elements;0.072
+50000;Random;Median of 5 elements;0.078
+50000;Only 0 to 100 values;Median of 5 elements;0.132
+50000;Non-decreasing;Median of 5 elements;0.074
+1000;Random;Median of 7 elements;0.001
+1000;Only 0 to 100 values;Median of 7 elements;0.002
+1000;Non-decreasing;Median of 7 elements;0.001
+2000;Random;Median of 7 elements;0.003
+2000;Only 0 to 100 values;Median of 7 elements;0.005
+2000;Non-decreasing;Median of 7 elements;0.002
+3000;Random;Median of 7 elements;0.004
+3000;Only 0 to 100 values;Median of 7 elements;0.007
+3000;Non-decreasing;Median of 7 elements;0.005
+4000;Random;Median of 7 elements;0.006
+4000;Only 0 to 100 values;Median of 7 elements;0.011
+4000;Non-decreasing;Median of 7 elements;0.005
+5000;Random;Median of 7 elements;0.007
+5000;Only 0 to 100 values;Median of 7 elements;0.013
+5000;Non-decreasing;Median of 7 elements;0.007
+6000;Random;Median of 7 elements;0.009
+6000;Only 0 to 100 values;Median of 7 elements;0.016
+6000;Non-decreasing;Median of 7 elements;0.009
+7000;Random;Median of 7 elements;0.010
+7000;Only 0 to 100 values;Median of 7 elements;0.019
+7000;Non-decreasing;Median of 7 elements;0.010
+8000;Random;Median of 7 elements;0.013
+8000;Only 0 to 100 values;Median of 7 elements;0.022
+8000;Non-decreasing;Median of 7 elements;0.011
+9000;Random;Median of 7 elements;0.013
+9000;Only 0 to 100 values;Median of 7 elements;0.025
+9000;Non-decreasing;Median of 7 elements;0.013
+10000;Random;Median of 7 elements;0.015
+10000;Only 0 to 100 values;Median of 7 elements;0.027
+10000;Non-decreasing;Median of 7 elements;0.014
+11000;Random;Median of 7 elements;0.016
+11000;Only 0 to 100 values;Median of 7 elements;0.031
+11000;Non-decreasing;Median of 7 elements;0.016
+12000;Random;Median of 7 elements;0.018
+12000;Only 0 to 100 values;Median of 7 elements;0.034
+12000;Non-decreasing;Median of 7 elements;0.017
+13000;Random;Median of 7 elements;0.020
+13000;Only 0 to 100 values;Median of 7 elements;0.037
+13000;Non-decreasing;Median of 7 elements;0.019
+14000;Random;Median of 7 elements;0.021
+14000;Only 0 to 100 values;Median of 7 elements;0.040
+14000;Non-decreasing;Median of 7 elements;0.020
+15000;Random;Median of 7 elements;0.022
+15000;Only 0 to 100 values;Median of 7 elements;0.043
+15000;Non-decreasing;Median of 7 elements;0.021
+16000;Random;Median of 7 elements;0.024
+16000;Only 0 to 100 values;Median of 7 elements;0.046
+16000;Non-decreasing;Median of 7 elements;0.023
+17000;Random;Median of 7 elements;0.026
+17000;Only 0 to 100 values;Median of 7 elements;0.049
+17000;Non-decreasing;Median of 7 elements;0.023
+18000;Random;Median of 7 elements;0.027
+18000;Only 0 to 100 values;Median of 7 elements;0.053
+18000;Non-decreasing;Median of 7 elements;0.025
+19000;Random;Median of 7 elements;0.030
+19000;Only 0 to 100 values;Median of 7 elements;0.055
+19000;Non-decreasing;Median of 7 elements;0.027
+20000;Random;Median of 7 elements;0.031
+20000;Only 0 to 100 values;Median of 7 elements;0.059
+20000;Non-decreasing;Median of 7 elements;0.029
+21000;Random;Median of 7 elements;0.033
+21000;Only 0 to 100 values;Median of 7 elements;0.062
+21000;Non-decreasing;Median of 7 elements;0.031
+22000;Random;Median of 7 elements;0.035
+22000;Only 0 to 100 values;Median of 7 elements;0.065
+22000;Non-decreasing;Median of 7 elements;0.033
+23000;Random;Median of 7 elements;0.036
+23000;Only 0 to 100 values;Median of 7 elements;0.069
+23000;Non-decreasing;Median of 7 elements;0.035
+24000;Random;Median of 7 elements;0.038
+24000;Only 0 to 100 values;Median of 7 elements;0.071
+24000;Non-decreasing;Median of 7 elements;0.037
+25000;Random;Median of 7 elements;0.039
+25000;Only 0 to 100 values;Median of 7 elements;0.074
+25000;Non-decreasing;Median of 7 elements;0.038
+26000;Random;Median of 7 elements;0.041
+26000;Only 0 to 100 values;Median of 7 elements;0.077
+26000;Non-decreasing;Median of 7 elements;0.038
+27000;Random;Median of 7 elements;0.042
+27000;Only 0 to 100 values;Median of 7 elements;0.081
+27000;Non-decreasing;Median of 7 elements;0.040
+28000;Random;Median of 7 elements;0.043
+28000;Only 0 to 100 values;Median of 7 elements;0.084
+28000;Non-decreasing;Median of 7 elements;0.041
+29000;Random;Median of 7 elements;0.047
+29000;Only 0 to 100 values;Median of 7 elements;0.087
+29000;Non-decreasing;Median of 7 elements;0.042
+30000;Random;Median of 7 elements;0.047
+30000;Only 0 to 100 values;Median of 7 elements;0.090
+30000;Non-decreasing;Median of 7 elements;0.044
+31000;Random;Median of 7 elements;0.049
+31000;Only 0 to 100 values;Median of 7 elements;0.094
+31000;Non-decreasing;Median of 7 elements;0.044
+32000;Random;Median of 7 elements;0.051
+32000;Only 0 to 100 values;Median of 7 elements;0.097
+32000;Non-decreasing;Median of 7 elements;0.045
+33000;Random;Median of 7 elements;0.052
+33000;Only 0 to 100 values;Median of 7 elements;0.101
+33000;Non-decreasing;Median of 7 elements;0.046
+34000;Random;Median of 7 elements;0.054
+34000;Only 0 to 100 values;Median of 7 elements;0.103
+34000;Non-decreasing;Median of 7 elements;0.048
+35000;Random;Median of 7 elements;0.056
+35000;Only 0 to 100 values;Median of 7 elements;0.109
+35000;Non-decreasing;Median of 7 elements;0.050
+36000;Random;Median of 7 elements;0.057
+36000;Only 0 to 100 values;Median of 7 elements;0.112
+36000;Non-decreasing;Median of 7 elements;0.052
+37000;Random;Median of 7 elements;0.058
+37000;Only 0 to 100 values;Median of 7 elements;0.113
+37000;Non-decreasing;Median of 7 elements;0.053
+38000;Random;Median of 7 elements;0.060
+38000;Only 0 to 100 values;Median of 7 elements;0.117
+38000;Non-decreasing;Median of 7 elements;0.055
+39000;Random;Median of 7 elements;0.061
+39000;Only 0 to 100 values;Median of 7 elements;0.122
+39000;Non-decreasing;Median of 7 elements;0.057
+40000;Random;Median of 7 elements;0.064
+40000;Only 0 to 100 values;Median of 7 elements;0.124
+40000;Non-decreasing;Median of 7 elements;0.059
+41000;Random;Median of 7 elements;0.065
+41000;Only 0 to 100 values;Median of 7 elements;0.128
+41000;Non-decreasing;Median of 7 elements;0.061
+42000;Random;Median of 7 elements;0.066
+42000;Only 0 to 100 values;Median of 7 elements;0.132
+42000;Non-decreasing;Median of 7 elements;0.062
+43000;Random;Median of 7 elements;0.068
+43000;Only 0 to 100 values;Median of 7 elements;0.135
+43000;Non-decreasing;Median of 7 elements;0.065
+44000;Random;Median of 7 elements;0.070
+44000;Only 0 to 100 values;Median of 7 elements;0.138
+44000;Non-decreasing;Median of 7 elements;0.067
+45000;Random;Median of 7 elements;0.072
+45000;Only 0 to 100 values;Median of 7 elements;0.142
+45000;Non-decreasing;Median of 7 elements;0.069
+46000;Random;Median of 7 elements;0.073
+46000;Only 0 to 100 values;Median of 7 elements;0.145
+46000;Non-decreasing;Median of 7 elements;0.070
+47000;Random;Median of 7 elements;0.076
+47000;Only 0 to 100 values;Median of 7 elements;0.150
+47000;Non-decreasing;Median of 7 elements;0.072
+48000;Random;Median of 7 elements;0.076
+48000;Only 0 to 100 values;Median of 7 elements;0.152
+48000;Non-decreasing;Median of 7 elements;0.073
+49000;Random;Median of 7 elements;0.077
+49000;Only 0 to 100 values;Median of 7 elements;0.158
+49000;Non-decreasing;Median of 7 elements;0.076
+50000;Random;Median of 7 elements;0.079
+50000;Only 0 to 100 values;Median of 7 elements;0.161
+50000;Non-decreasing;Median of 7 elements;0.078

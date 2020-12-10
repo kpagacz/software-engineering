@@ -1,0 +1,201 @@
+Array size;Fill function;Pivot function;Time elapsed[s]
+10000;Random;End;0.011
+10000;Only 0 to 100 values;End;0.004
+20000;Random;End;0.025
+20000;Only 0 to 100 values;End;0.009
+30000;Random;End;0.038
+30000;Only 0 to 100 values;End;0.013
+40000;Random;End;0.056
+40000;Only 0 to 100 values;End;0.018
+50000;Random;End;0.070
+50000;Only 0 to 100 values;End;0.024
+60000;Random;End;0.085
+60000;Only 0 to 100 values;End;0.031
+70000;Random;End;0.100
+70000;Only 0 to 100 values;End;0.029
+80000;Random;End;0.120
+80000;Only 0 to 100 values;End;0.037
+90000;Random;End;0.128
+90000;Only 0 to 100 values;End;0.044
+100000;Random;End;0.146
+100000;Only 0 to 100 values;End;0.044
+110000;Random;End;0.166
+110000;Only 0 to 100 values;End;0.056
+120000;Random;End;0.183
+120000;Only 0 to 100 values;End;0.052
+130000;Random;End;0.199
+130000;Only 0 to 100 values;End;0.058
+140000;Random;End;0.212
+140000;Only 0 to 100 values;End;0.064
+150000;Random;End;0.231
+150000;Only 0 to 100 values;End;0.062
+160000;Random;End;0.245
+160000;Only 0 to 100 values;End;0.072
+170000;Random;End;0.264
+170000;Only 0 to 100 values;End;0.082
+180000;Random;End;0.285
+180000;Only 0 to 100 values;End;0.076
+190000;Random;End;0.303
+190000;Only 0 to 100 values;End;0.079
+200000;Random;End;0.317
+200000;Only 0 to 100 values;End;0.096
+210000;Random;End;0.330
+210000;Only 0 to 100 values;End;0.084
+220000;Random;End;0.345
+220000;Only 0 to 100 values;End;0.099
+230000;Random;End;0.381
+230000;Only 0 to 100 values;End;0.095
+240000;Random;End;0.392
+240000;Only 0 to 100 values;End;0.107
+250000;Random;End;0.392
+250000;Only 0 to 100 values;End;0.097
+260000;Random;End;0.423
+260000;Only 0 to 100 values;End;0.123
+270000;Random;End;0.453
+270000;Only 0 to 100 values;End;0.125
+280000;Random;End;0.435
+280000;Only 0 to 100 values;End;0.119
+290000;Random;End;0.479
+290000;Only 0 to 100 values;End;0.160
+300000;Random;End;0.492
+300000;Only 0 to 100 values;End;0.153
+310000;Random;End;0.503
+310000;Only 0 to 100 values;End;0.134
+320000;Random;End;0.523
+320000;Only 0 to 100 values;End;0.160
+330000;Random;End;0.541
+330000;Only 0 to 100 values;End;0.143
+340000;Random;End;0.593
+340000;Only 0 to 100 values;End;0.142
+350000;Random;End;0.587
+350000;Only 0 to 100 values;End;0.170
+360000;Random;End;0.597
+360000;Only 0 to 100 values;End;0.164
+370000;Random;End;0.610
+370000;Only 0 to 100 values;End;0.160
+380000;Random;End;0.640
+380000;Only 0 to 100 values;End;0.149
+390000;Random;End;0.646
+390000;Only 0 to 100 values;End;0.200
+400000;Random;End;0.653
+400000;Only 0 to 100 values;End;0.154
+410000;Random;End;0.696
+410000;Only 0 to 100 values;End;0.164
+420000;Random;End;0.696
+420000;Only 0 to 100 values;End;0.192
+430000;Random;End;0.773
+430000;Only 0 to 100 values;End;0.168
+440000;Random;End;0.756
+440000;Only 0 to 100 values;End;0.219
+450000;Random;End;0.749
+450000;Only 0 to 100 values;End;0.190
+460000;Random;End;0.803
+460000;Only 0 to 100 values;End;0.207
+470000;Random;End;0.779
+470000;Only 0 to 100 values;End;0.206
+480000;Random;End;0.799
+480000;Only 0 to 100 values;End;0.190
+490000;Random;End;0.848
+490000;Only 0 to 100 values;End;0.220
+500000;Random;End;0.886
+500000;Only 0 to 100 values;End;0.250
+510000;Random;End;0.894
+510000;Only 0 to 100 values;End;0.244
+520000;Random;End;0.876
+520000;Only 0 to 100 values;End;0.244
+530000;Random;End;0.897
+530000;Only 0 to 100 values;End;0.230
+540000;Random;End;0.910
+540000;Only 0 to 100 values;End;0.227
+550000;Random;End;0.943
+550000;Only 0 to 100 values;End;0.245
+560000;Random;End;0.972
+560000;Only 0 to 100 values;End;0.281
+570000;Random;End;0.985
+570000;Only 0 to 100 values;End;0.224
+580000;Random;End;0.966
+580000;Only 0 to 100 values;End;0.278
+590000;Random;End;1.011
+590000;Only 0 to 100 values;End;0.244
+600000;Random;End;1.011
+600000;Only 0 to 100 values;End;0.251
+610000;Random;End;1.124
+610000;Only 0 to 100 values;End;0.286
+620000;Random;End;1.073
+620000;Only 0 to 100 values;End;0.249
+630000;Random;End;1.116
+630000;Only 0 to 100 values;End;0.279
+640000;Random;End;1.147
+640000;Only 0 to 100 values;End;0.303
+650000;Random;End;1.148
+650000;Only 0 to 100 values;End;0.284
+660000;Random;End;1.199
+660000;Only 0 to 100 values;End;0.262
+670000;Random;End;1.219
+670000;Only 0 to 100 values;End;0.300
+680000;Random;End;1.177
+680000;Only 0 to 100 values;End;0.284
+690000;Random;End;1.198
+690000;Only 0 to 100 values;End;0.285
+700000;Random;End;1.199
+700000;Only 0 to 100 values;End;0.300
+710000;Random;End;1.253
+710000;Only 0 to 100 values;End;0.346
+720000;Random;End;1.237
+720000;Only 0 to 100 values;End;0.422
+730000;Random;End;1.337
+730000;Only 0 to 100 values;End;0.326
+740000;Random;End;1.257
+740000;Only 0 to 100 values;End;0.338
+750000;Random;End;1.308
+750000;Only 0 to 100 values;End;0.347
+760000;Random;End;1.327
+760000;Only 0 to 100 values;End;0.310
+770000;Random;End;1.317
+770000;Only 0 to 100 values;End;0.355
+780000;Random;End;1.359
+780000;Only 0 to 100 values;End;0.353
+790000;Random;End;1.375
+790000;Only 0 to 100 values;End;0.333
+800000;Random;End;1.372
+800000;Only 0 to 100 values;End;0.356
+810000;Random;End;1.500
+810000;Only 0 to 100 values;End;0.374
+820000;Random;End;1.430
+820000;Only 0 to 100 values;End;0.376
+830000;Random;End;1.431
+830000;Only 0 to 100 values;End;0.381
+840000;Random;End;1.488
+840000;Only 0 to 100 values;End;0.358
+850000;Random;End;1.505
+850000;Only 0 to 100 values;End;0.354
+860000;Random;End;1.518
+860000;Only 0 to 100 values;End;0.423
+870000;Random;End;1.503
+870000;Only 0 to 100 values;End;0.352
+880000;Random;End;1.594
+880000;Only 0 to 100 values;End;0.399
+890000;Random;End;1.559
+890000;Only 0 to 100 values;End;0.437
+900000;Random;End;1.631
+900000;Only 0 to 100 values;End;0.357
+910000;Random;End;1.621
+910000;Only 0 to 100 values;End;0.376
+920000;Random;End;1.596
+920000;Only 0 to 100 values;End;0.378
+930000;Random;End;1.611
+930000;Only 0 to 100 values;End;0.420
+940000;Random;End;1.686
+940000;Only 0 to 100 values;End;0.377
+950000;Random;End;1.716
+950000;Only 0 to 100 values;End;0.401
+960000;Random;End;1.665
+960000;Only 0 to 100 values;End;0.430
+970000;Random;End;1.748
+970000;Only 0 to 100 values;End;0.428
+980000;Random;End;1.831
+980000;Only 0 to 100 values;End;0.549
+990000;Random;End;1.837
+990000;Only 0 to 100 values;End;0.442
+1000000;Random;End;1.780
+1000000;Only 0 to 100 values;End;0.415

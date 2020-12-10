@@ -1,0 +1,537 @@
+Array size;Fill function;Pivot function;Time elapsed[s]
+10000;Random;Random;0.014
+10000;Only 0 to 100 values;Random;0.004
+10000;Non-decreasing;Random;0.014
+20000;Random;Random;0.030
+20000;Only 0 to 100 values;Random;0.008
+20000;Non-decreasing;Random;0.030
+30000;Random;Random;0.047
+30000;Only 0 to 100 values;Random;0.013
+30000;Non-decreasing;Random;0.047
+40000;Random;Random;0.062
+40000;Only 0 to 100 values;Random;0.022
+40000;Non-decreasing;Random;0.067
+50000;Random;Random;0.082
+50000;Only 0 to 100 values;Random;0.025
+50000;Non-decreasing;Random;0.084
+60000;Random;Random;0.097
+60000;Only 0 to 100 values;Random;0.027
+60000;Non-decreasing;Random;0.101
+70000;Random;Random;0.117
+70000;Only 0 to 100 values;Random;0.031
+70000;Non-decreasing;Random;0.121
+80000;Random;Random;0.139
+80000;Only 0 to 100 values;Random;0.035
+80000;Non-decreasing;Random;0.134
+90000;Random;Random;0.158
+90000;Only 0 to 100 values;Random;0.038
+90000;Non-decreasing;Random;0.151
+100000;Random;Random;0.165
+100000;Only 0 to 100 values;Random;0.048
+100000;Non-decreasing;Random;0.180
+110000;Random;Random;0.188
+110000;Only 0 to 100 values;Random;0.047
+110000;Non-decreasing;Random;0.189
+120000;Random;Random;0.207
+120000;Only 0 to 100 values;Random;0.050
+120000;Non-decreasing;Random;0.212
+130000;Random;Random;0.227
+130000;Only 0 to 100 values;Random;0.063
+130000;Non-decreasing;Random;0.231
+140000;Random;Random;0.249
+140000;Only 0 to 100 values;Random;0.064
+140000;Non-decreasing;Random;0.253
+150000;Random;Random;0.264
+150000;Only 0 to 100 values;Random;0.069
+150000;Non-decreasing;Random;0.269
+160000;Random;Random;0.285
+160000;Only 0 to 100 values;Random;0.089
+160000;Non-decreasing;Random;0.287
+170000;Random;Random;0.337
+170000;Only 0 to 100 values;Random;0.072
+170000;Non-decreasing;Random;0.309
+180000;Random;Random;0.341
+180000;Only 0 to 100 values;Random;0.081
+180000;Non-decreasing;Random;0.332
+190000;Random;Random;0.344
+190000;Only 0 to 100 values;Random;0.085
+190000;Non-decreasing;Random;0.358
+200000;Random;Random;0.352
+200000;Only 0 to 100 values;Random;0.093
+200000;Non-decreasing;Random;0.356
+210000;Random;Random;0.372
+210000;Only 0 to 100 values;Random;0.086
+210000;Non-decreasing;Random;0.382
+220000;Random;Random;0.402
+220000;Only 0 to 100 values;Random;0.102
+220000;Non-decreasing;Random;0.413
+230000;Random;Random;0.407
+230000;Only 0 to 100 values;Random;0.100
+230000;Non-decreasing;Random;0.437
+240000;Random;Random;0.446
+240000;Only 0 to 100 values;Random;0.120
+240000;Non-decreasing;Random;0.439
+250000;Random;Random;0.458
+250000;Only 0 to 100 values;Random;0.106
+250000;Non-decreasing;Random;0.475
+260000;Random;Random;0.475
+260000;Only 0 to 100 values;Random;0.116
+260000;Non-decreasing;Random;0.492
+270000;Random;Random;0.518
+270000;Only 0 to 100 values;Random;0.120
+270000;Non-decreasing;Random;0.514
+280000;Random;Random;0.497
+280000;Only 0 to 100 values;Random;0.134
+280000;Non-decreasing;Random;0.517
+290000;Random;Random;0.547
+290000;Only 0 to 100 values;Random;0.138
+290000;Non-decreasing;Random;0.553
+300000;Random;Random;0.557
+300000;Only 0 to 100 values;Random;0.139
+300000;Non-decreasing;Random;0.574
+310000;Random;Random;0.580
+310000;Only 0 to 100 values;Random;0.139
+310000;Non-decreasing;Random;0.603
+320000;Random;Random;0.604
+320000;Only 0 to 100 values;Random;0.139
+320000;Non-decreasing;Random;0.607
+330000;Random;Random;0.623
+330000;Only 0 to 100 values;Random;0.141
+330000;Non-decreasing;Random;0.629
+340000;Random;Random;0.630
+340000;Only 0 to 100 values;Random;0.166
+340000;Non-decreasing;Random;0.683
+350000;Random;Random;0.650
+350000;Only 0 to 100 values;Random;0.161
+350000;Non-decreasing;Random;0.673
+360000;Random;Random;0.679
+360000;Only 0 to 100 values;Random;0.155
+360000;Non-decreasing;Random;0.707
+370000;Random;Random;0.709
+370000;Only 0 to 100 values;Random;0.157
+370000;Non-decreasing;Random;0.706
+380000;Random;Random;0.722
+380000;Only 0 to 100 values;Random;0.175
+380000;Non-decreasing;Random;0.777
+390000;Random;Random;0.713
+390000;Only 0 to 100 values;Random;0.182
+390000;Non-decreasing;Random;0.758
+400000;Random;Random;0.754
+400000;Only 0 to 100 values;Random;0.162
+400000;Non-decreasing;Random;0.785
+410000;Random;Random;0.814
+410000;Only 0 to 100 values;Random;0.177
+410000;Non-decreasing;Random;0.778
+420000;Random;Random;0.806
+420000;Only 0 to 100 values;Random;0.216
+420000;Non-decreasing;Random;0.796
+430000;Random;Random;0.801
+430000;Only 0 to 100 values;Random;0.205
+430000;Non-decreasing;Random;0.876
+440000;Random;Random;0.817
+440000;Only 0 to 100 values;Random;0.215
+440000;Non-decreasing;Random;0.871
+450000;Random;Random;0.913
+450000;Only 0 to 100 values;Random;0.196
+450000;Non-decreasing;Random;0.934
+460000;Random;Random;0.885
+460000;Only 0 to 100 values;Random;0.222
+460000;Non-decreasing;Random;0.965
+470000;Random;Random;0.920
+470000;Only 0 to 100 values;Random;0.235
+470000;Non-decreasing;Random;0.919
+480000;Random;Random;0.924
+480000;Only 0 to 100 values;Random;0.240
+480000;Non-decreasing;Random;0.947
+490000;Random;Random;0.932
+490000;Only 0 to 100 values;Random;0.224
+490000;Non-decreasing;Random;0.946
+500000;Random;Random;0.971
+500000;Only 0 to 100 values;Random;0.230
+500000;Non-decreasing;Random;0.979
+510000;Random;Random;1.021
+510000;Only 0 to 100 values;Random;0.222
+510000;Non-decreasing;Random;1.004
+520000;Random;Random;0.970
+520000;Only 0 to 100 values;Random;0.221
+520000;Non-decreasing;Random;1.045
+530000;Random;Random;0.996
+530000;Only 0 to 100 values;Random;0.236
+530000;Non-decreasing;Random;1.047
+540000;Random;Random;1.031
+540000;Only 0 to 100 values;Random;0.279
+540000;Non-decreasing;Random;1.072
+550000;Random;Random;1.053
+550000;Only 0 to 100 values;Random;0.300
+550000;Non-decreasing;Random;1.139
+560000;Random;Random;1.097
+560000;Only 0 to 100 values;Random;0.253
+560000;Non-decreasing;Random;1.088
+570000;Random;Random;1.080
+570000;Only 0 to 100 values;Random;0.268
+570000;Non-decreasing;Random;1.137
+580000;Random;Random;1.103
+580000;Only 0 to 100 values;Random;0.256
+580000;Non-decreasing;Random;1.142
+590000;Random;Random;1.195
+590000;Only 0 to 100 values;Random;0.255
+590000;Non-decreasing;Random;1.157
+600000;Random;Random;1.153
+600000;Only 0 to 100 values;Random;0.244
+600000;Non-decreasing;Random;1.216
+610000;Random;Random;1.179
+610000;Only 0 to 100 values;Random;0.255
+610000;Non-decreasing;Random;1.207
+620000;Random;Random;1.215
+620000;Only 0 to 100 values;Random;0.263
+620000;Non-decreasing;Random;1.333
+630000;Random;Random;1.214
+630000;Only 0 to 100 values;Random;0.263
+630000;Non-decreasing;Random;1.243
+640000;Random;Random;1.269
+640000;Only 0 to 100 values;Random;0.357
+640000;Non-decreasing;Random;1.265
+650000;Random;Random;1.314
+650000;Only 0 to 100 values;Random;0.309
+650000;Non-decreasing;Random;1.285
+660000;Random;Random;1.319
+660000;Only 0 to 100 values;Random;0.287
+660000;Non-decreasing;Random;1.417
+670000;Random;Random;1.306
+670000;Only 0 to 100 values;Random;0.313
+670000;Non-decreasing;Random;1.361
+680000;Random;Random;1.353
+680000;Only 0 to 100 values;Random;0.315
+680000;Non-decreasing;Random;1.360
+690000;Random;Random;1.330
+690000;Only 0 to 100 values;Random;0.310
+690000;Non-decreasing;Random;1.400
+700000;Random;Random;1.389
+700000;Only 0 to 100 values;Random;0.302
+700000;Non-decreasing;Random;1.393
+710000;Random;Random;1.388
+710000;Only 0 to 100 values;Random;0.325
+710000;Non-decreasing;Random;1.449
+720000;Random;Random;1.420
+720000;Only 0 to 100 values;Random;0.301
+720000;Non-decreasing;Random;1.483
+730000;Random;Random;1.411
+730000;Only 0 to 100 values;Random;0.304
+730000;Non-decreasing;Random;1.463
+740000;Random;Random;1.467
+740000;Only 0 to 100 values;Random;0.301
+740000;Non-decreasing;Random;1.476
+750000;Random;Random;1.493
+750000;Only 0 to 100 values;Random;0.331
+750000;Non-decreasing;Random;1.526
+760000;Random;Random;1.485
+760000;Only 0 to 100 values;Random;0.350
+760000;Non-decreasing;Random;1.578
+770000;Random;Random;1.503
+770000;Only 0 to 100 values;Random;0.366
+770000;Non-decreasing;Random;1.546
+780000;Random;Random;1.527
+780000;Only 0 to 100 values;Random;0.311
+780000;Non-decreasing;Random;1.575
+790000;Random;Random;1.536
+790000;Only 0 to 100 values;Random;0.335
+790000;Non-decreasing;Random;1.586
+800000;Random;Random;1.598
+800000;Only 0 to 100 values;Random;0.415
+800000;Non-decreasing;Random;1.578
+810000;Random;Random;1.624
+810000;Only 0 to 100 values;Random;0.388
+810000;Non-decreasing;Random;1.671
+820000;Random;Random;1.622
+820000;Only 0 to 100 values;Random;0.387
+820000;Non-decreasing;Random;1.619
+830000;Random;Random;1.714
+830000;Only 0 to 100 values;Random;0.370
+830000;Non-decreasing;Random;1.707
+840000;Random;Random;1.708
+840000;Only 0 to 100 values;Random;0.367
+840000;Non-decreasing;Random;1.676
+850000;Random;Random;1.656
+850000;Only 0 to 100 values;Random;0.436
+850000;Non-decreasing;Random;1.716
+860000;Random;Random;1.713
+860000;Only 0 to 100 values;Random;0.365
+860000;Non-decreasing;Random;1.799
+870000;Random;Random;1.798
+870000;Only 0 to 100 values;Random;0.403
+870000;Non-decreasing;Random;1.770
+880000;Random;Random;1.790
+880000;Only 0 to 100 values;Random;0.359
+880000;Non-decreasing;Random;1.773
+890000;Random;Random;1.806
+890000;Only 0 to 100 values;Random;0.420
+890000;Non-decreasing;Random;1.923
+900000;Random;Random;1.859
+900000;Only 0 to 100 values;Random;0.404
+900000;Non-decreasing;Random;1.832
+910000;Random;Random;1.835
+910000;Only 0 to 100 values;Random;0.410
+910000;Non-decreasing;Random;1.927
+920000;Random;Random;1.867
+920000;Only 0 to 100 values;Random;0.417
+920000;Non-decreasing;Random;1.869
+930000;Random;Random;1.897
+930000;Only 0 to 100 values;Random;0.442
+930000;Non-decreasing;Random;1.901
+940000;Random;Random;1.886
+940000;Only 0 to 100 values;Random;0.434
+940000;Non-decreasing;Random;1.936
+950000;Random;Random;1.966
+950000;Only 0 to 100 values;Random;0.424
+950000;Non-decreasing;Random;1.964
+960000;Random;Random;1.935
+960000;Only 0 to 100 values;Random;0.480
+960000;Non-decreasing;Random;1.957
+970000;Random;Random;2.052
+970000;Only 0 to 100 values;Random;0.431
+970000;Non-decreasing;Random;1.966
+980000;Random;Random;1.945
+980000;Only 0 to 100 values;Random;0.407
+980000;Non-decreasing;Random;1.963
+990000;Random;Random;2.052
+990000;Only 0 to 100 values;Random;0.449
+990000;Non-decreasing;Random;2.010
+1000000;Random;Random;2.006
+1000000;Only 0 to 100 values;Random;0.433
+1000000;Non-decreasing;Random;2.107
+10000;Random;Begin;0.012
+10000;Only 0 to 100 values;Begin;0.004
+10000;Non-decreasing;Begin;0.094
+20000;Random;Begin;0.027
+20000;Only 0 to 100 values;Begin;0.010
+20000;Non-decreasing;Begin;0.265
+30000;Random;Begin;0.040
+30000;Only 0 to 100 values;Begin;0.014
+30000;Non-decreasing;Begin;0.486
+40000;Random;Begin;0.057
+40000;Only 0 to 100 values;Begin;0.018
+40000;Non-decreasing;Begin;0.748
+50000;Random;Begin;0.068
+50000;Only 0 to 100 values;Begin;0.023
+50000;Non-decreasing;Begin;1.043
+60000;Random;Begin;0.091
+60000;Only 0 to 100 values;Begin;0.028
+60000;Non-decreasing;Begin;1.375
+70000;Random;Begin;0.101
+70000;Only 0 to 100 values;Begin;0.033
+70000;Non-decreasing;Begin;1.731
+80000;Random;Begin;0.122
+80000;Only 0 to 100 values;Begin;0.038
+80000;Non-decreasing;Begin;2.113
+90000;Random;Begin;0.136
+90000;Only 0 to 100 values;Begin;0.047
+90000;Non-decreasing;Begin;2.528
+100000;Random;Begin;0.163
+100000;Only 0 to 100 values;Begin;0.045
+100000;Non-decreasing;Begin;2.975
+110000;Random;Begin;0.162
+110000;Only 0 to 100 values;Begin;0.048
+110000;Non-decreasing;Begin;3.411
+120000;Random;Begin;0.182
+120000;Only 0 to 100 values;Begin;0.051
+120000;Non-decreasing;Begin;3.881
+130000;Random;Begin;0.206
+130000;Only 0 to 100 values;Begin;0.060
+130000;Non-decreasing;Begin;4.393
+140000;Random;Begin;0.218
+140000;Only 0 to 100 values;Begin;0.060
+140000;Non-decreasing;Begin;4.890
+150000;Random;Begin;0.234
+150000;Only 0 to 100 values;Begin;0.066
+150000;Non-decreasing;Begin;5.432
+160000;Random;Begin;0.246
+160000;Only 0 to 100 values;Begin;0.066
+160000;Non-decreasing;Begin;5.976
+170000;Random;Begin;0.268
+170000;Only 0 to 100 values;Begin;0.078
+170000;Non-decreasing;Begin;6.549
+180000;Random;Begin;0.291
+180000;Only 0 to 100 values;Begin;0.091
+180000;Non-decreasing;Begin;7.124
+190000;Random;Begin;0.300
+190000;Only 0 to 100 values;Begin;0.075
+190000;Non-decreasing;Begin;7.733
+200000;Random;Begin;0.324
+200000;Only 0 to 100 values;Begin;0.088
+200000;Non-decreasing;Begin;8.354
+210000;Random;Begin;0.341
+210000;Only 0 to 100 values;Begin;0.097
+210000;Non-decreasing;Begin;8.978
+220000;Random;Begin;0.352
+220000;Only 0 to 100 values;Begin;0.092
+220000;Non-decreasing;Begin;9.637
+230000;Random;Begin;0.363
+230000;Only 0 to 100 values;Begin;0.097
+230000;Non-decreasing;Begin;10.293
+240000;Random;Begin;0.403
+240000;Only 0 to 100 values;Begin;0.128
+240000;Non-decreasing;Begin;10.978
+250000;Random;Begin;0.412
+250000;Only 0 to 100 values;Begin;0.108
+250000;Non-decreasing;Begin;11.660
+260000;Random;Begin;0.414
+260000;Only 0 to 100 values;Begin;0.144
+260000;Non-decreasing;Begin;12.371
+270000;Random;Begin;0.444
+270000;Only 0 to 100 values;Begin;0.104
+270000;Non-decreasing;Begin;13.087
+280000;Random;Begin;0.449
+280000;Only 0 to 100 values;Begin;0.130
+280000;Non-decreasing;Begin;13.823
+290000;Random;Begin;0.472
+290000;Only 0 to 100 values;Begin;0.136
+290000;Non-decreasing;Begin;14.579
+300000;Random;Begin;0.494
+300000;Only 0 to 100 values;Begin;0.146
+300000;Non-decreasing;Begin;15.339
+310000;Random;Begin;0.513
+310000;Only 0 to 100 values;Begin;0.124
+310000;Non-decreasing;Begin;16.118
+320000;Random;Begin;0.523
+320000;Only 0 to 100 values;Begin;0.142
+320000;Non-decreasing;Begin;16.938
+330000;Random;Begin;0.539
+330000;Only 0 to 100 values;Begin;0.136
+330000;Non-decreasing;Begin;17.728
+340000;Random;Begin;0.587
+340000;Only 0 to 100 values;Begin;0.178
+340000;Non-decreasing;Begin;18.501
+350000;Random;Begin;0.584
+350000;Only 0 to 100 values;Begin;0.158
+350000;Non-decreasing;Begin;19.340
+360000;Random;Begin;0.599
+360000;Only 0 to 100 values;Begin;0.170
+360000;Non-decreasing;Begin;20.173
+370000;Random;Begin;0.632
+370000;Only 0 to 100 values;Begin;0.156
+370000;Non-decreasing;Begin;21.009
+380000;Random;Begin;0.644
+380000;Only 0 to 100 values;Begin;0.175
+380000;Non-decreasing;Begin;21.896
+390000;Random;Begin;0.649
+390000;Only 0 to 100 values;Begin;0.205
+390000;Non-decreasing;Begin;22.752
+400000;Random;Begin;0.688
+400000;Only 0 to 100 values;Begin;0.183
+400000;Non-decreasing;Begin;23.627
+410000;Random;Begin;0.680
+410000;Only 0 to 100 values;Begin;0.204
+410000;Non-decreasing;Begin;24.517
+420000;Random;Begin;0.715
+420000;Only 0 to 100 values;Begin;0.171
+420000;Non-decreasing;Begin;25.828
+430000;Random;Begin;0.753
+430000;Only 0 to 100 values;Begin;0.194
+430000;Non-decreasing;Begin;26.324
+440000;Random;Begin;0.757
+440000;Only 0 to 100 values;Begin;0.188
+440000;Non-decreasing;Begin;27.234
+450000;Random;Begin;0.783
+450000;Only 0 to 100 values;Begin;0.250
+450000;Non-decreasing;Begin;28.182
+460000;Random;Begin;0.791
+460000;Only 0 to 100 values;Begin;0.185
+460000;Non-decreasing;Begin;29.172
+470000;Random;Begin;0.829
+470000;Only 0 to 100 values;Begin;0.203
+470000;Non-decreasing;Begin;30.160
+480000;Random;Begin;0.852
+480000;Only 0 to 100 values;Begin;0.226
+480000;Non-decreasing;Begin;31.047
+490000;Random;Begin;0.806
+490000;Only 0 to 100 values;Begin;0.249
+490000;Non-decreasing;Begin;32.000
+500000;Random;Begin;0.856
+500000;Only 0 to 100 values;Begin;0.216
+500000;Non-decreasing;Begin;33.020
+510000;Random;Begin;0.880
+510000;Only 0 to 100 values;Begin;0.249
+510000;Non-decreasing;Begin;34.050
+520000;Random;Begin;0.884
+520000;Only 0 to 100 values;Begin;0.227
+520000;Non-decreasing;Begin;34.990
+530000;Random;Begin;0.905
+530000;Only 0 to 100 values;Begin;0.247
+530000;Non-decreasing;Begin;36.111
+540000;Random;Begin;0.957
+540000;Only 0 to 100 values;Begin;0.253
+540000;Non-decreasing;Begin;37.034
+550000;Random;Begin;0.952
+550000;Only 0 to 100 values;Begin;0.233
+550000;Non-decreasing;Begin;38.051
+560000;Random;Begin;0.965
+560000;Only 0 to 100 values;Begin;0.259
+560000;Non-decreasing;Begin;39.106
+570000;Random;Begin;0.987
+570000;Only 0 to 100 values;Begin;0.262
+570000;Non-decreasing;Begin;40.159
+580000;Random;Begin;1.010
+580000;Only 0 to 100 values;Begin;0.279
+580000;Non-decreasing;Begin;41.236
+590000;Random;Begin;1.053
+590000;Only 0 to 100 values;Begin;0.255
+590000;Non-decreasing;Begin;42.294
+600000;Random;Begin;1.032
+600000;Only 0 to 100 values;Begin;0.253
+600000;Non-decreasing;Begin;43.411
+610000;Random;Begin;1.081
+610000;Only 0 to 100 values;Begin;0.263
+610000;Non-decreasing;Begin;44.520
+620000;Random;Begin;1.103
+620000;Only 0 to 100 values;Begin;0.289
+620000;Non-decreasing;Begin;45.566
+630000;Random;Begin;1.101
+630000;Only 0 to 100 values;Begin;0.291
+630000;Non-decreasing;Begin;46.739
+640000;Random;Begin;1.118
+640000;Only 0 to 100 values;Begin;0.253
+640000;Non-decreasing;Begin;47.766
+650000;Random;Begin;1.216
+650000;Only 0 to 100 values;Begin;0.300
+650000;Non-decreasing;Begin;48.891
+660000;Random;Begin;1.150
+660000;Only 0 to 100 values;Begin;0.287
+660000;Non-decreasing;Begin;50.029
+670000;Random;Begin;1.209
+670000;Only 0 to 100 values;Begin;0.341
+670000;Non-decreasing;Begin;51.194
+680000;Random;Begin;1.237
+680000;Only 0 to 100 values;Begin;0.311
+680000;Non-decreasing;Begin;52.326
+690000;Random;Begin;1.245
+690000;Only 0 to 100 values;Begin;0.299
+690000;Non-decreasing;Begin;53.471
+700000;Random;Begin;1.259
+700000;Only 0 to 100 values;Begin;0.308
+700000;Non-decreasing;Begin;54.632
+710000;Random;Begin;1.244
+710000;Only 0 to 100 values;Begin;0.336
+710000;Non-decreasing;Begin;55.797
+720000;Random;Begin;1.333
+720000;Only 0 to 100 values;Begin;0.323
+720000;Non-decreasing;Begin;56.966
+730000;Random;Begin;1.293
+730000;Only 0 to 100 values;Begin;0.314
+730000;Non-decreasing;Begin;58.175
+740000;Random;Begin;1.282
+740000;Only 0 to 100 values;Begin;0.351
+740000;Non-decreasing;Begin;59.392
+750000;Random;Begin;1.334
+750000;Only 0 to 100 values;Begin;0.327
+750000;Non-decreasing;Begin;60.622
+760000;Random;Begin;1.331
+760000;Only 0 to 100 values;Begin;0.398
+760000;Non-decreasing;Begin;61.840
+770000;Random;Begin;1.350
+770000;Only 0 to 100 values;Begin;0.375
+770000;Non-decreasing;Begin;63.090
+780000;Random;Begin;1.367
+780000;Only 0 to 100 values;Begin;0.321
+780000;Non-decreasing;Begin;64.394
+790000;Random;Begin;1.393
+790000;Only 0 to 100 values;Begin;0.356
