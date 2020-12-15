@@ -10,7 +10,8 @@ public:
 	Cell(bool _alive) : alive(_alive) {}
 	virtual ~Cell() = default;
 	
-	bool& checkAlive() { return alive; }
+	bool& getAlive() { return alive; }
+
 	friend std::ostream& operator<<(std::ostream& out, const Cell& c) {
 		out << ((c.alive) ? 'o' : '.');
 		return out;
