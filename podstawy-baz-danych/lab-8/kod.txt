@@ -1,0 +1,25 @@
+CREATE TABLE studenci(
+nr_studenta NUMBER CONSTRAINT stud_nr_PK PRIMARY KEY,
+nazwisko VARCHAR(15) CONSTRAINT stud_naz_NN NOT NULL,
+imie VARCHAR(15) CONSTRAINT stud_imie_NN NOT NULL,
+data_ur DATE,
+plec CHAR(1) CONSTRAINT stud_plec CHECK(plec='M' or plec='K')
+);
+
+CREATE TABLE oceny_studentow(
+id_ocena NUMBER CONSTRAINT ocena_PK PRIMARY KEY,
+nr_stud NUMBER,
+data_oceny DATE CONSTRAINT data_oceny_NN NOT NULL,
+ocena VARCHAR(15) CONSTRAINT ocena_oc_NN CHECK(ocena = '2' OR ocena = '3' OR ocena = '3.5' OR ocena = '4' OR ocena = '4.5' OR ocena = '5'),
+slownie VARCHAR(15) CONSTRAINT slownie_NN CHECK(slownie='dopuszczajacy' OR slownie = 'dostateczny' OR slownie = 'dostateczny +' OR
+slownie = 'dobry' OR slownie = 'dobry +' OR slownie = 'bardzo dobry') NOT NULL,
+CONSTRAINT oceny_studenci_FK FOREIGN KEY (nr_stud) REFERENCES studenci(nr_studenta));
+
+ALTER TABLE oceny_studentow RENAME TO oceny;
+
+ALTER TABLE studenci MODIFY(nazwisko VARCHAR2(30));
+
+ALTER TABLE studenci ADD(telefon CHAR(7));
+
+ALTER TABLE studenci
+DROP COLUMN telefon;
