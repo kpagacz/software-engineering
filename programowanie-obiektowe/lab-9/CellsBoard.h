@@ -12,9 +12,12 @@ public:
 	~CellsBoard();
 
 	void print(std::ostream& out);
+	int get_cycle();
+	void next_cycle();
 private:
 	Board_tp<Cell> *board;
-	int width, height;
+	int width, height, cycle;
+	bool validate_x_y(const int&, const int&) const;
 };
 
 #endif // CELLS_BOARD

@@ -17,7 +17,6 @@ private:
 	int width, height;
 };
 
-#endif BOARD_TP
 
 template<class T>
 inline Board_tp<T>::Board_tp(int _width, int _height)
@@ -47,7 +46,10 @@ template<typename T>
 inline void Board_tp<T>::print(std::ostream& out)
 {
 	for (int i = 0; i < height; i++) {
-		for (int j = 0; j < width; j++) if (board[i][j]) out << *board[i][j]; else out << ".";
+		for (int j = 0; j < width; j++) {
+			if (board[i][j]) out << *board[i][j]; else out << ".";
+			out << " ";
+		}
 		out << "\n";
 	}
 	out << "\n";
@@ -58,3 +60,5 @@ inline T*& Board_tp<T>::get_position(int x, int y)
 {
 	return board[x][y];
 }
+
+#endif // BOARD_TP

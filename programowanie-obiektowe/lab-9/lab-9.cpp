@@ -1,17 +1,21 @@
-#include "Board_tp.h"
-#include "Cell.h"
 #include "CellsBoard.h"
 
 #include <iostream>
 
 int main() {
-	Board_tp<int> b(2, 2);
-	Board_tp<Cell> board_cells(10, 10);
+	int width, height, cycles;
+	std::cout << "Input the width and height of the board with cells: ";
+	std::cin >> width >> height;
+	CellsBoard b(width, height);
 
+	std::cout << "Input the number of cycles to perform: ";
+	std::cin >> cycles;
+
+	for (int i = 0; i < cycles; i++) {
+		b.print(std::cout);
+		b.next_cycle();
+	}
 	b.print(std::cout);
-
-	CellsBoard cells(5, 5);
-	cells.print(std::cout);
 
 	return 0;
 }
