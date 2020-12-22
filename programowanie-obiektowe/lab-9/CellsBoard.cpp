@@ -68,6 +68,7 @@ void CellsBoard::next_cycle()
 			if (change_state[i * width + j]) 
 				board->get_position(i, j)->getAlive() = !board->get_position(i, j)->getAlive();
 
+	delete[] change_state;
 	cycle++;
 }
 
