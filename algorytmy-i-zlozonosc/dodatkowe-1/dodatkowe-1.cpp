@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdio.h>
+#include <limits.h>
 #include <ctime>
 
 // Rozwiazanie problemu znalezienia podzbioru o najwiekszej sumie
@@ -73,14 +74,41 @@ int max_sum_subset_it(int start, int stop, int *arr) {
 // element jest "warty" wziecia go
 int max_sum_subset_it2(int start, int stop, int* arr) {
     int max_with_last_taken = arr[start], max_with_last_not_taken = 0, curr_max;
+    bool* taken = new bool[stop - start + 1];
+    for (int i = 0; i < stop - start + 1; i++)
+        taken[i] = false;
 
     for(int i = start + 1; i <= stop; i++) {
-        curr_max = (max_with_last_taken > max_with_last_not_taken) ? max_with_last_taken : max_with_last_not_taken;
+        if (max_with_last_taken > max_with_last_not_taken) {
+            curr_max = max_with_last_taken;
+            taken[i - 1] = true;
+            taken[i - 2] = false;
+        }
+        else {
+            curr_max = max_with_last_not_taken;
+	    taken[i - 2] = true;
+        }
         max_with_last_taken = max_with_last_not_taken + arr[i];
         max_with_last_not_taken = curr_max;
     }
 
-    return ((max_with_last_taken > max_with_last_not_taken) ? max_with_last_taken : max_with_last_not_taken);
+
+    if (max_with_last_taken > max_with_last_not_taken) {
+        curr_max = max_with_last_taken;
+        taken[stop] = true;
+        taken[stop - 1] = false;
+    }
+    else {
+        curr_max = max_with_last_not_taken;
+    }
+
+    std::cout << "Taken elements: ";
+    for (int i = 0; i < stop - start + 1; i++)
+        if (taken[i])
+            std::cout << arr[start + i] << " ";
+    std::cout << "\n";
+
+    return curr_max;
 }
 
 
@@ -122,6 +150,10 @@ int main() {
     std::cout << max_sum_subset_it2(0, 4, arr5) << '\n';
     std::cout << max_sum_subset_it2(0, 1, arr6) << "\n";
     std::cout << max_sum_subset_it2(0, 2, arr8) << "\n";
+    int arr10[] = { 1, 7 };
+    std::cout << max_sum_subset_it2(0, 1, arr10) << "\n";
+    int arr11[] = {1,2,3,4,5};
+    std::cout << max_sum_subset_it2(0, 4, arr11) << "\n";
 
     // stress test wersji rekurencyjnej
     // std::cout << "Stress testing recurrence solution: \n";

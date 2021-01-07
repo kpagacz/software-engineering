@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
+<<<<<<< Updated upstream
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cwiczenia-8", "cwiczenia-8.vcxproj", "{92230BCA-878C-4640-BBA3-3DDFA3148FCC}"
+=======
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cwiczenia-8", "cwiczenia-8.vcxproj", "{D26E2747-8DFB-4258-A774-F627151B8156}"
+>>>>>>> Stashed changes
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +19,7 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< Updated upstream
 		{92230BCA-878C-4640-BBA3-3DDFA3148FCC}.Debug|x64.ActiveCfg = Debug|x64
 		{92230BCA-878C-4640-BBA3-3DDFA3148FCC}.Debug|x64.Build.0 = Debug|x64
 		{92230BCA-878C-4640-BBA3-3DDFA3148FCC}.Debug|x86.ActiveCfg = Debug|Win32
@@ -21,11 +28,25 @@ Global
 		{92230BCA-878C-4640-BBA3-3DDFA3148FCC}.Release|x64.Build.0 = Release|x64
 		{92230BCA-878C-4640-BBA3-3DDFA3148FCC}.Release|x86.ActiveCfg = Release|Win32
 		{92230BCA-878C-4640-BBA3-3DDFA3148FCC}.Release|x86.Build.0 = Release|Win32
+=======
+		{D26E2747-8DFB-4258-A774-F627151B8156}.Debug|x64.ActiveCfg = Debug|x64
+		{D26E2747-8DFB-4258-A774-F627151B8156}.Debug|x64.Build.0 = Debug|x64
+		{D26E2747-8DFB-4258-A774-F627151B8156}.Debug|x86.ActiveCfg = Debug|Win32
+		{D26E2747-8DFB-4258-A774-F627151B8156}.Debug|x86.Build.0 = Debug|Win32
+		{D26E2747-8DFB-4258-A774-F627151B8156}.Release|x64.ActiveCfg = Release|x64
+		{D26E2747-8DFB-4258-A774-F627151B8156}.Release|x64.Build.0 = Release|x64
+		{D26E2747-8DFB-4258-A774-F627151B8156}.Release|x86.ActiveCfg = Release|Win32
+		{D26E2747-8DFB-4258-A774-F627151B8156}.Release|x86.Build.0 = Release|Win32
+>>>>>>> Stashed changes
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+<<<<<<< Updated upstream
 		SolutionGuid = {2DAFC0B2-362D-4894-8D9F-3A8C26A1BE5F}
+=======
+		SolutionGuid = {158502F6-E0C7-444C-BFA3-925D98E96909}
+>>>>>>> Stashed changes
 	EndGlobalSection
 EndGlobal
