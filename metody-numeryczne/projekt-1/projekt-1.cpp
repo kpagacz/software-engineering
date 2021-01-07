@@ -18,7 +18,7 @@ double equation_11_sol(double x) {
 }
 
 double algebraic_equation(double x) {
-    return (x - 1.7) * (x + 0.3) * (x - 1.1);
+    return (x - 1.71) * (x + 0.3) * (x - 1.11);
 }
 
 double algebraic_equation_der(double x) {
@@ -27,10 +27,10 @@ double algebraic_equation_der(double x) {
 
 double algebraic_equation_sol(double x) {
     // I will be checking only two roots, not three
-    if (x > 1.7)
-        return 1.7;
-    else if (x < -0.3)
-        return -0.3;
+    if (x > 1.71)
+        return 1.71;
+    else if (x < -0.31)
+        return -0.31;
 }
 
 double multipoint_formula_N(double x, double func(double), double diff(double)) {
@@ -76,45 +76,113 @@ void run_experiment(std::ofstream& results_file, double x_start, double eps, dou
         std::scientific << std::setprecision(2) << eps << "," <<
         multi_res.second << "," <<
         std::fixed << std::setprecision(16) << multi_res.first << "," <<
-        std::scientific << std::setprecision(3) << abs(multi_res.first - sol) << "," <<
-        std::scientific << std::setprecision(3) << abs(multi_res.first - sol) / abs(multi_res.first) << "\n";
+        std::fixed << std::setprecision(16) << abs(multi_res.first - sol) << "," <<
+        std::fixed << std::setprecision(16) << abs(multi_res.first - sol) / abs(multi_res.first) << "\n";
 
     results_file << "Newtona," <<
         std::fixed << std::setprecision(3) << x_start << "," <<
         std::scientific << std::setprecision(2) << eps << "," <<
         newton_res.second << "," <<
         std::fixed << std::setprecision(16) << newton_res.first << "," <<
-        std::scientific << std::setprecision(3) << abs(newton_res.first - sol) << "," <<
-        std::scientific << std::setprecision(3) << abs(newton_res.first - sol) / abs(newton_res.first) << "\n";
+        std::fixed << std::setprecision(16) << abs(newton_res.first - sol) << "," <<
+        std::fixed<< std::setprecision(16) << abs(newton_res.first - sol) / abs(newton_res.first) << "\n";
+}
+
+double order_sequence(double previous, double current, double solution, int p) {
+    return abs(current - solution) / pow(abs(previous - solution), p);
+}
+
+void newton_order(std::ofstream& results_file, double x_start, double eps, double func(double), double diff(double), double solution(double)) {
+    results_file << "Element no, p = 1, p = 2, p = 3, p = 4\n";
+    double sol = solution(x_start);
+
+    int counter = 0;
+    double h, new_x;
+    do {
+        h = -(func(x_start) / diff(x_start));
+        new_x = x_start + h;
+        
+        results_file << ++counter << ","
+            << order_sequence(x_start, new_x, sol, 1) << ","
+            << order_sequence(x_start, new_x, sol, 2) << ","
+            << order_sequence(x_start, new_x, sol, 3) << ","
+            << order_sequence(x_start, new_x, sol, 4) << ","
+            << "\n";
+
+        x_start = new_x;
+    } while (abs(h) > eps);
+}
+
+void multipoint_order(std::ofstream& results_file, double x_start, double eps, double func(double), double diff(double), double solution(double)) {
+    results_file << "Element no, p = 1, p = 2, p = 3, p = 4\n";
+    int counter = 0;
+    double new_x, difference, sol = solution(x_start);
+    do {
+        new_x = multipoint_formula_N(x_start, func, diff);
+        difference = abs(new_x - x_start);
+
+        results_file << ++counter << ","
+            << order_sequence(x_start, new_x, sol, 1) << ","
+            << order_sequence(x_start, new_x, sol, 2) << ","
+            << order_sequence(x_start, new_x, sol, 3) << ","
+            << order_sequence(x_start, new_x, sol, 4) << ","
+            << order_sequence(x_start, new_x, sol, 5) << ","
+            << "\n";
+
+        x_start = new_x;
+    } while (difference > eps);
+
 }
 
 int main() {
-    std::string file_name = "output.csv";
-    std::ofstream results;
-    results.open(file_name, std::ofstream::out);
-    results << "Metoda,Poczatkowe x,Epsilon,Liczba iteracji,Wynik,Blad bezwzgledny,Blad wzgledny\n";
+    // point A and C: speed of convergence and precision depending on the starting x (with a constant epsilon)
+    std::string file_name = "results/pointAC-algebraic.csv";
+    std::ofstream algebraic_results;
+    algebraic_results.open(file_name, std::ofstream::out);
+    algebraic_results << "Metoda,Poczatkowe x,Epsilon,Liczba iteracji,Wynik,Blad bezwzgledny,Blad wzgledny\n";
 
-    double x_start = 10, eps = 0.001;
-    //auto res = root_multipoint(x_start, eps, equation_11, equation_11_der);
-    //std::cout << res.first << " " << res.second << "\n";
+    std::string file_name2 = "results/pointAC-eq11.csv";
+    std::ofstream eq11_results;
+    eq11_results.open(file_name2, std::ofstream::out);
+    eq11_results<< "Metoda,Poczatkowe x,Epsilon,Liczba iteracji,Wynik,Blad bezwzgledny,Blad wzgledny\n";
 
-    run_experiment(results, x_start, eps, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 10, 0.1, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 100, 0.1, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 1000, 0.1, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 10000, 0.1, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 100000, 0.1, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 10, 0.001, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 100, 0.001, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 1000, 0.001, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 10000, 0.001, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 100000, 0.001, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 10, 0.0000001, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 100, 0.0000001, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 1000, 0.0000001, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 10000, 0.0000001, equation_11, equation_11_der, equation_11_sol);
-    run_experiment(results, 100000, 0.0000001, equation_11, equation_11_der, equation_11_sol);
+    double epsilon = 0.001;
+    for (double x = 10; x <= 100; x += 10)
+        run_experiment(eq11_results, x, epsilon, equation_11, equation_11_der, equation_11_sol);
+    for(double x = 10; x <= pow(10,10); x*=10)
+        run_experiment(algebraic_results, x, epsilon, algebraic_equation, algebraic_equation_der, algebraic_equation_sol);
 
-    results.close();
+    algebraic_results.close();
+    eq11_results.close();
+
+    // point B and D: speed of convergence and precision depending on the epsilon (with a constant starting x)
+    file_name = "results/pointBD-algebraic.csv";
+    algebraic_results.open(file_name, std::ofstream::out);
+    algebraic_results << "Metoda,Poczatkowe x,Epsilon,Liczba iteracji,Wynik,Blad bezwzgledny,Blad wzgledny\n";
+
+    file_name2 = "results/pointBD-eq11.csv";
+    eq11_results.open(file_name2, std::ofstream::out);
+    eq11_results << "Metoda,Poczatkowe x,Epsilon,Liczba iteracji,Wynik,Blad bezwzgledny,Blad wzgledny\n";
+
+    double start_x = 10;
+    for (double epsilon = 1; epsilon >= pow(10, -16); epsilon /= 10) {
+        run_experiment(algebraic_results, start_x, epsilon, algebraic_equation, algebraic_equation_der, algebraic_equation_sol);
+        run_experiment(eq11_results, start_x, epsilon, equation_11, equation_11_der, equation_11_sol);
+    }
+    algebraic_results.close();
+    eq11_results.close();
+
+    // Supplementary objectives: order of convergence of both methods
+    file_name = "results/convergence-order-newton.csv";
+    file_name2 = "results/convergence-order-multipoint.csv";
+    std::ofstream newton_out;
+    std::ofstream multi_out;
+    newton_out.open(file_name);
+    multi_out.open(file_name2);
+    double order_x_start = 100, order_eps = 0.00000000001;
+    newton_order(newton_out, order_x_start, order_eps, equation_11, equation_11_der, equation_11_sol);
+    multipoint_order(multi_out, order_x_start, order_eps, equation_11, equation_11_der, equation_11_sol);
+    newton_out.close();
+    multi_out.close();
 	return 0;
 }
