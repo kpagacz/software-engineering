@@ -26,32 +26,32 @@ void Word::set_word(const std::string& new_word)
     word = new_word;
 }
 
-bool Word::operator==(const Word& other)
+bool Word::operator==(const Word& other) const
 {
     return word.compare(other.get_word()) == 0;
 }
 
-bool Word::operator!=(const Word& other)
+bool Word::operator!=(const Word& other) const
 {
     return !(*this == other);
 }
 
-bool Word::operator>(const Word& other)
+bool Word::operator>(const Word& other) const
 {
     return word.compare(other.get_word()) > 0;
 }
 
-bool Word::operator>=(const Word& other)
+bool Word::operator>=(const Word& other) const
 {
     return word.compare(other.get_word()) >= 0;
 }
 
-bool Word::operator<(const Word& other)
+bool Word::operator<(const Word& other) const
 {
     return !(*this >= other);
 }
 
-bool Word::operator<=(const Word& other)
+bool Word::operator<=(const Word& other) const
 {
     return !(*this > other);
 }
@@ -90,6 +90,6 @@ Word Word::operator--(int)
 
 std::ostream& operator<<(std::ostream& out, const Word& word)
 {
-    out << word.get_word();
+    out << word.get_word() << "  Occurences: " << word.count;
     return out;
 }

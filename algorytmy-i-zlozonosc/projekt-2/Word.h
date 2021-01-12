@@ -15,12 +15,12 @@ public:
 	void set_word(const std::string&);
 
 	// relational operators
-	bool operator==(const Word& other);
-	bool operator!=(const Word& other);
-	bool operator>(const Word& other);
-	bool operator>=(const Word& other);
-	bool operator<(const Word& other);
-	bool operator<=(const Word& other);
+	bool operator==(const Word& other) const;
+	bool operator!=(const Word& other) const;
+	bool operator>(const Word& other) const;
+	bool operator>=(const Word& other) const;
+	bool operator<(const Word& other) const;
+	bool operator<=(const Word& other) const;
 
 	// arithmetic operators
 	Word& operator+(int);

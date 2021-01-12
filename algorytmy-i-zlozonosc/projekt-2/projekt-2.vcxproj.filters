@@ -21,6 +21,9 @@
     <ClInclude Include="Word.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SplayTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BinaryTree.cpp">
@@ -30,6 +33,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Word.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SplayTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
