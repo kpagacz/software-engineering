@@ -20,6 +20,7 @@ public:
 	virtual T min() const;
 	virtual T find_next(T value);
 	void flat_print() const;
+	void remove(const T&);
 
 	// overloaded operators
 	friend std::ostream& operator<< <T>(std::ostream& out, const BinarySearchTree<T>& tree);
@@ -37,6 +38,9 @@ protected:
 
 	// finding nodes
 	Node* find_node(T, Node*) const; // find value
+
+	// deleting nodes
+	void delete_node(Node*);
 
 	// adding nodes
 	Node* add_node(const T&);
@@ -106,6 +110,13 @@ inline void BinarySearchTree<T>::flat_print() const
 }
 
 template<typename T>
+inline void BinarySearchTree<T>::remove(const T& elem)
+{
+	Node* found = find_node(elem, root);
+	delete_node(found);
+}
+
+template<typename T>
 inline BinarySearchTree<T>::~BinarySearchTree()
 {
 	if (root) {
@@ -126,6 +137,35 @@ inline typename BinarySearchTree<T>::Node* BinarySearchTree<T>::find_node(T elem
 		return find_node(elem, node->right);
 	else
 		return find_node(elem, node->left);
+}
+
+// TODO(konrad.pagacz@gmail.com): fix this delete_node
+template<typename T>
+inline void BinarySearchTree<T>::delete_node(Node* node) {
+	if (node->left == nullptr && node->right == nullptr) {
+		if (node->parent->left == node)
+			node->parent->left = nullptr;
+		else
+			node->parent->right = nullptr;
+		delete node;
+		return;
+	}
+
+	if (node->left != nullptr || node->right != nullptr) {
+		Node* only_child = node->left;
+		if (only_child == nullptr) only_child = node->right;
+		if (node->parent->left == node)
+			node->parent->left = only_child;
+		else
+			node->parent->right = only_child;
+		only_child->parent = node->parent;
+		delete node;
+		return;
+	}
+
+	Node* succ = find_succ(node);
+	node->value = succ->value;
+	delete_node(succ);
 }
 
 template<typename T>
