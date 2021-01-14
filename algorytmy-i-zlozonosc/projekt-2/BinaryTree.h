@@ -1,5 +1,5 @@
-#ifndef BTREE
-#define BTREE
+#ifndef BTREE__
+#define BTREE__
 #include <iostream>
 #include <stdexcept>
 
@@ -15,12 +15,14 @@ public:
 	virtual ~BinarySearchTree();
 
 	// other methods
-	virtual T* add(const T& new_elem);
-	virtual T* find(const T&) const;
+	virtual T* add(const T&);
+	virtual T* find(const T&);
 	virtual T min() const;
-	virtual T find_next(T value);
+	virtual T find_next(const T&);
 	void flat_print() const;
 	void remove(const T&);
+	int depth(const T&) const;
+	int height() const;
 
 	// overloaded operators
 	friend std::ostream& operator<< <T>(std::ostream& out, const BinarySearchTree<T>& tree);
@@ -56,6 +58,10 @@ private:
 	// finding successor
 	Node* find_succ(Node*) const; // find successor
 	Node* min(Node*) const; // find minimum
+
+	// depth
+	int depth_util(const T&, int, Node*) const;
+	int height_util(int, Node*) const;
 };
 
 template<typename T>
@@ -74,7 +80,7 @@ inline T* BinarySearchTree<T>::add(const T& new_elem)
 }
 
 template<typename T>
-inline T* BinarySearchTree<T>::find(const T& elem) const
+inline T* BinarySearchTree<T>::find(const T& elem)
 {
 	Node* found = find_node(elem, root);
 	if (found)
@@ -92,7 +98,7 @@ inline T BinarySearchTree<T>::min() const
 }
 
 template<typename T>
-inline T BinarySearchTree<T>::find_next(T value)
+inline T BinarySearchTree<T>::find_next(const T& value)
 {
 	Node* found = find_node(value, root);
 	if (!found)
@@ -114,6 +120,18 @@ inline void BinarySearchTree<T>::remove(const T& elem)
 {
 	Node* found = find_node(elem, root);
 	delete_node(found);
+}
+
+template<typename T>
+inline int BinarySearchTree<T>::depth(const T& val) const
+{
+	return depth_util(val, 0, root);
+}
+
+template<typename T>
+inline int BinarySearchTree<T>::height() const
+{
+	return height_util(0, root);
 }
 
 template<typename T>
@@ -142,22 +160,32 @@ inline typename BinarySearchTree<T>::Node* BinarySearchTree<T>::find_node(T elem
 // TODO(konrad.pagacz@gmail.com): fix this delete_node
 template<typename T>
 inline void BinarySearchTree<T>::delete_node(Node* node) {
+	if (node == nullptr) return;
+
 	if (node->left == nullptr && node->right == nullptr) {
-		if (node->parent->left == node)
-			node->parent->left = nullptr;
-		else
-			node->parent->right = nullptr;
+		if (root == node) 
+			root = nullptr;
+		else {
+			if (node->parent->left == node)
+				node->parent->left = nullptr;
+			else
+				node->parent->right = nullptr;
+		}
 		delete node;
 		return;
 	}
 
-	if (node->left != nullptr || node->right != nullptr) {
+	if (node->left == nullptr || node->right == nullptr) {
 		Node* only_child = node->left;
 		if (only_child == nullptr) only_child = node->right;
-		if (node->parent->left == node)
-			node->parent->left = only_child;
-		else
-			node->parent->right = only_child;
+		if (root == node) 
+			root = only_child;
+		else {
+			if (node->parent->left == node)
+				node->parent->left = only_child;
+			else
+				node->parent->right = only_child;
+		}
 		only_child->parent = node->parent;
 		delete node;
 		return;
@@ -303,6 +331,27 @@ inline typename BinarySearchTree<T>::Node* BinarySearchTree<T>::min(Node* node) 
 }
 
 template<typename T>
+inline int BinarySearchTree<T>::depth_util(const T& val, int depth, Node* node) const
+{
+	if (node == nullptr) 
+		throw std::runtime_error("value not found in the tree.");
+	if (node->value == val)
+		return depth;
+	if (val > node->value)
+		return depth_util(val, depth + 1, node->right);
+	else
+		return depth_util(val, depth + 1, node->left);
+}
+
+template<typename T>
+inline int BinarySearchTree<T>::height_util(int curr_height, Node* node) const
+{
+	if (node == nullptr)
+		return curr_height;
+	return std::max(height_util(curr_height + 1, node->left), height_util(curr_height + 1, node->right));
+}
+
+template<typename T>
 std::ostream& operator<<(std::ostream& out, const BinarySearchTree<T>& tree)
 {
 	tree.print(out);
@@ -310,4 +359,4 @@ std::ostream& operator<<(std::ostream& out, const BinarySearchTree<T>& tree)
 	return out;
 }
 
-#endif // BTREE
+#endif // BTREE__

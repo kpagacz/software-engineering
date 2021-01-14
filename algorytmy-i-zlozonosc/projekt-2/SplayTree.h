@@ -31,8 +31,12 @@ template<typename T>
 inline T* SplayTree<T>::find(const T& elem)
 {
     Node* found = this->find_node(elem, this->root);
-    splay(found);
-    return &found->value;
+    if (found != nullptr) {
+        splay(found);
+        return &found->value;
+    }
+    else
+        return nullptr;
 }
 
 template<typename T>
