@@ -8,6 +8,7 @@
 
 #include "BinaryTree.h"
 #include "SplayTree.h"
+#include "AVL.h"
 #include "Word.h"
 
 std::vector<std::string> sequence_to_words(std::string& sequence) {
@@ -110,27 +111,48 @@ void analyzeNovel(const std::string& novel, std::ofstream& out_file) {
 	
 	// finding
 	for(const auto& word : sampled_words) {
-		out_file << "BST," << novel << "," << word << "," << bst->depth(word) << "\n";
-		out_file << "Splay," << novel << "," << word << "," << splay->depth(word) << "\n";
+		int occurences = bst->find(word)->get_count();
+		out_file << "BST," << novel << "," << word << "," << bst->depth(word) << "," << occurences << "\n";
+		out_file << "Splay," << novel << "," << word << "," << splay->depth(word) << "," << occurences << "\n";
 		splay->find(word);
 	}
 }
 
 int main() {
-	std::vector<std::string> novels {
-		std::string("novels/1.txt"),
-		std::string("novels/2.txt"),
-		std::string("novels/3.txt"),
-		std::string("novels/4.txt"),
-		std::string("novels/5.txt"),
-	};
+	// std::vector<std::string> novels {
+	// 	std::string("novels/1.txt"),
+	// 	std::string("novels/2.txt"),
+	// 	std::string("novels/3.txt"),
+	// 	std::string("novels/4.txt"),
+	// 	std::string("novels/5.txt"),
+	// };
 
-	std::ofstream results_file;
-	results_file.open("results.csv");
-	for(const auto& novel : novels) {
-		analyzeNovel(novel, results_file);
-	}
-	results_file.close();
+	// std::ofstream results_file;
+	// results_file.open("results.csv");
+	// for(const auto& novel : novels) {
+	// 	analyzeNovel(novel, results_file);
+	// }
+	// results_file.close();
+
+	AVL<int> tree;
+	tree.add(1);
+	std::cout << tree;
+	tree.add(3);
+	std::cout << tree;
+	tree.add(5);
+	std::cout << tree;
+	tree.add(7);
+	std::cout << tree;
+	tree.add(0);
+	std::cout << tree;
+	tree.add(11);
+	std::cout << tree;
+	tree.add(12);
+	std::cout << tree;
+	tree.add(13);
+	std::cout << tree;
+	tree.add(14);
+	std::cout << tree;
 
 	return 0;
 }

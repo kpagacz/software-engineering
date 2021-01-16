@@ -13,6 +13,7 @@ public:
 	// getters, setters
 	std::string get_word() const;
 	void set_word(const std::string&);
+	int get_count() const;
 
 	// relational operators
 	bool operator==(const Word& other) const;
