@@ -4,6 +4,7 @@
 #include <fstream>
 #include <algorithm>
 #include <random>
+#include <ctime>
 
 #include "BinaryTree.h"
 #include "SplayTree.h"
@@ -85,56 +86,51 @@ std::vector<std::string> reservoir_sampling(const std::string& file_name, unsign
 	return random_words;
 }
 
-int main() {
-	//BinarySearchTree<Word>* tree = new SplayTree<Word>;
-	//read_novel("novels/1.txt", nullptr);
-	//tree->flat_print();
+void analyzeNovel(const std::string& novel, std::ofstream& out_file) {
+	BinarySearchTree<Word>* bst = new BinarySearchTree<Word>;
+	BinarySearchTree<Word>* splay = new SplayTree<Word>;
 
-	//std::vector<std::string> random_words = reservoir_sampling("novels/1.txt");
-	//for (const auto& word : random_words)
-	//	std::cout << word << "\n";
+	// Output
+	std::cout << "Novel: " << novel << '\n';
 
-	BinarySearchTree<int> *tree = new SplayTree<int>;
-	tree->add(1);
-	tree->add(2);
-	tree->add(3);
-	tree->add(11);
-	tree->add(5);
-	tree->add(6);
-	tree->add(20);
-	tree->add(8);
-	std::cout << *tree;
-	std::cout << tree->height();
+	// measure time of loading data into trees
+	std::clock_t s_clock, e_clock;
+	s_clock = std::clock();
+	read_novel(novel, bst);
+	e_clock = std::clock();
+	std::cout << "Populating BST took: " << std::setprecision(6) << std::fixed << ((double)(e_clock) - (double)(s_clock)) / CLOCKS_PER_SEC << " seconds\n";
+
+	s_clock = std::clock();
+	read_novel(novel, splay);
+	e_clock = std::clock();
+	std::cout << "Populating splay tree took: " << std::setprecision(6) << std::fixed << ((double)(e_clock) - (double)(s_clock)) / CLOCKS_PER_SEC << " seconds\n";
+
+	// choosing words to find
+	std::vector<std::string> sampled_words = reservoir_sampling(novel);
 	
+	// finding
+	for(const auto& word : sampled_words) {
+		out_file << "BST," << novel << "," << word << "," << bst->depth(word) << "\n";
+		out_file << "Splay," << novel << "," << word << "," << splay->depth(word) << "\n";
+		splay->find(word);
+	}
+}
 
-	//std::cout << tree.min() << "\n";
-	//std::cout << *tree.find(4) << "\n";
-	//std::cout << tree.find_next(7) << "\n";
+int main() {
+	std::vector<std::string> novels {
+		std::string("novels/1.txt"),
+		std::string("novels/2.txt"),
+		std::string("novels/3.txt"),
+		std::string("novels/4.txt"),
+		std::string("novels/5.txt"),
+	};
 
-	//Word w1(std::string("Hello1"));
-	//std::cout << w1.get_word() << "\n";
-	//Word w2("Hello2");
-	//std::cout << w2.get_word() << "\n";
-	//Word w3("a");
-	//Word w4("b");
+	std::ofstream results_file;
+	results_file.open("results.csv");
+	for(const auto& novel : novels) {
+		analyzeNovel(novel, results_file);
+	}
+	results_file.close();
 
-	//BinarySearchTree<Word> tree2;
-	//tree2.add(w3);
-	//tree2.add(w2);
-	//tree2.add(w4);
-	//tree2.add(w1);
-	//std::cout << tree2;
-
-
-	//SplayTree<int> splay;
-	//splay.add(10);
-	//std::cout << splay;
-	//splay.add(7);
-	//std::cout << splay;
-	//splay.add(1);
-	//std::cout << splay;
-	//splay.add(3);
-	//std::cout << splay;
-	//splay.flat_print();
-	//return 0;
+	return 0;
 }

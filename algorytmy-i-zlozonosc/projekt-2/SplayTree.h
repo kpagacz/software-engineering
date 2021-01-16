@@ -14,7 +14,7 @@ public:
     T* find(const T&);
 
 private:
-    typedef BinarySearchTree<T>::Node Node;
+    typedef typename BinarySearchTree<T>::Node Node;
     void splay(Node*);
 };
 
