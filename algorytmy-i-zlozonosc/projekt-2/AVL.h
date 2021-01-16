@@ -83,7 +83,7 @@ T* AVL<T>::find(const T& elem) const {
     if(found == nullptr)
         return nullptr;
     else
-        return &found->value;
+        return &(found->value);
 };
 
 template <typename T>
@@ -170,7 +170,11 @@ template<typename T>
 T* AVL<T>::add(const T& new_elem)
 {
 	Node* it = add_node(new_elem);
-	return &it->value;
+    if(it)
+	    return &it->value;
+    else
+        return nullptr;
+    
 }
 
 template<typename T>
@@ -230,8 +234,11 @@ void AVL<T>::balance(Node* node, Node* child, Node* grandchild) {
     if((node->left == child) == (child->left == grandchild)) {
         rotate(child);
     } else {
-        rotate(child);
+        print(std::cout);
         rotate(grandchild);
+        print(std::cout);
+        rotate(grandchild);
+        print(std::cout);
     }
 }
 

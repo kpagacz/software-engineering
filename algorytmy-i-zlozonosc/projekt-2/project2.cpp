@@ -54,6 +54,28 @@ BinarySearchTree<Word>* read_novel(const std::string& file_name, BinarySearchTre
 	return tree;
 }
 
+AVL<Word>* read_novel_avl(const std::string& file_name, AVL<Word>* tree) {
+	std::ifstream file(file_name, std::ios::in);
+	std::string sequence;
+	while (file >> sequence) {
+		std::vector<std::string> words = sequence_to_words(sequence);
+
+		for (const auto& word : words)
+			if (word != "") {
+				Word elem(word);
+				if (tree != nullptr) {
+					Word* found = tree->find(elem);
+					if (found != nullptr)
+						(*found)++;
+					else
+						tree->add(elem);
+				}
+			}
+	}
+
+	return tree;
+}
+
 std::vector<std::string> reservoir_sampling(const std::string& file_name, unsigned int sample_size = 100) {
 	std::vector<std::string> random_words;
 	std::ifstream file(file_name, std::ios::in);
@@ -90,6 +112,7 @@ std::vector<std::string> reservoir_sampling(const std::string& file_name, unsign
 void analyzeNovel(const std::string& novel, std::ofstream& out_file) {
 	BinarySearchTree<Word>* bst = new BinarySearchTree<Word>;
 	BinarySearchTree<Word>* splay = new SplayTree<Word>;
+	AVL<Word>* avl = new AVL<Word>;
 
 	// Output
 	std::cout << "Novel: " << novel << '\n';
@@ -99,12 +122,17 @@ void analyzeNovel(const std::string& novel, std::ofstream& out_file) {
 	s_clock = std::clock();
 	read_novel(novel, bst);
 	e_clock = std::clock();
-	std::cout << "Populating BST took: " << std::setprecision(6) << std::fixed << ((double)(e_clock) - (double)(s_clock)) / CLOCKS_PER_SEC << " seconds\n";
+	std::cout << "Populating a BST took: " << std::setprecision(6) << std::fixed << ((double)(e_clock) - (double)(s_clock)) / CLOCKS_PER_SEC << " seconds\n";
 
 	s_clock = std::clock();
 	read_novel(novel, splay);
 	e_clock = std::clock();
-	std::cout << "Populating splay tree took: " << std::setprecision(6) << std::fixed << ((double)(e_clock) - (double)(s_clock)) / CLOCKS_PER_SEC << " seconds\n";
+	std::cout << "Populating a splay tree took: " << std::setprecision(6) << std::fixed << ((double)(e_clock) - (double)(s_clock)) / CLOCKS_PER_SEC << " seconds\n";
+
+	// s_clock = std::clock();
+	// read_novel(novel, avl);
+	// e_clock = std::clock();
+	// std::cout << "Populating an AVL tree took: " << std::setprecision(6) << std::fixed << ((double)(e_clock) - (double)(s_clock)) / CLOCKS_PER_SEC << " seconds\n";
 
 	// choosing words to find
 	std::vector<std::string> sampled_words = reservoir_sampling(novel);
@@ -134,25 +162,25 @@ int main() {
 	// }
 	// results_file.close();
 
-	AVL<int> tree;
-	tree.add(1);
-	std::cout << tree;
-	tree.add(3);
-	std::cout << tree;
-	tree.add(5);
-	std::cout << tree;
-	tree.add(7);
-	std::cout << tree;
-	tree.add(0);
-	std::cout << tree;
-	tree.add(11);
-	std::cout << tree;
-	tree.add(12);
-	std::cout << tree;
-	tree.add(13);
-	std::cout << tree;
-	tree.add(14);
-	std::cout << tree;
+	// AVL<Word>* tree = new AVL<Word>;
+	// read_novel_avl("novels/1.txt", tree);
+	// tree->flat_print();
+
+	// AVL<Word>* tree = new AVL<Word>;
+	// Word w1("a");
+	// Word w2("christmas");
+	// Word w3("carol");
+	// tree->add(w1);
+	// std::cout << *tree;
+	// tree->add(w2);
+	// std::cout << *tree;
+	// tree->add(w3);
+	// std::cout << *tree;
+
+	AVL<int> * tree = new AVL<int>;
+	for(int i = 0; i < 100; i++)
+		tree->add(i);
+	std::cout << *tree;
 
 	return 0;
 }
