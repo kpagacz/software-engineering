@@ -162,9 +162,9 @@ int main() {
 	// }
 	// results_file.close();
 
-	// AVL<Word>* tree = new AVL<Word>;
-	// read_novel_avl("novels/1.txt", tree);
-	// tree->flat_print();
+	AVL<Word>* tree = new AVL<Word>;
+	read_novel_avl("novels/1.txt", tree);
+	tree->flat_print();
 
 	// AVL<Word>* tree = new AVL<Word>;
 	// Word w1("a");
@@ -177,10 +177,10 @@ int main() {
 	// tree->add(w3);
 	// std::cout << *tree;
 
-	AVL<int> * tree = new AVL<int>;
-	for(int i = 0; i < 100; i++)
-		tree->add(i);
-	std::cout << *tree;
+	// AVL<int> * tree = new AVL<int>;
+	// for(int i = 0; i < 100; i++)
+	// 	tree->add(i);
+	// std::cout << *tree;
 
 	return 0;
 }

@@ -24,7 +24,8 @@ private:
         Node* parent, *left, *right;
         T value;
         int balance;
-        Node(const T& new_val, Node* _parent) : parent(_parent), value(new_val), balance(0) {}
+        Node(const T& new_val, Node* _parent) :
+            parent(_parent), value(new_val), balance(0), right(nullptr), left(nullptr) {}
     };
 
     Node* root;
@@ -34,6 +35,7 @@ private:
     void print_util(std::ostream& out, Node* node, int depth = 0, int depth_inc = 1) const;
     int depth_util(const T&, int, Node*) const;
     void delete_util(Node*);
+    void flat_print_util(Node* node) const;
 
     Node* find_node(const T&, Node*) const;
     Node* add_node(const T&);
@@ -74,8 +76,17 @@ void AVL<T>::print_util(std::ostream& out, Node* node, int depth, int depth_inc)
 
 template <typename T>
 void AVL<T>::flat_print() const {
-    print_util(std::cout, root, 0, 0);
+    flat_print_util(root);
 };
+
+template <typename T>
+void AVL<T>::flat_print_util(Node* node) const {
+    if(node) {
+        flat_print_util(node->left);
+        std::cout << node->value << "\n";
+        flat_print_util(node->right);
+    }
+}
 
 template <typename T>
 T* AVL<T>::find(const T& elem) const {
@@ -174,7 +185,6 @@ T* AVL<T>::add(const T& new_elem)
 	    return &it->value;
     else
         return nullptr;
-    
 }
 
 template<typename T>
@@ -203,7 +213,7 @@ typename AVL<T>::Node* AVL<T>::add_node(const T& new_elem)
 		root = it;
 	}
 
-    adjust_balance(it);
+//    adjust_balance(it);
 
 	return it;
 }
@@ -234,11 +244,8 @@ void AVL<T>::balance(Node* node, Node* child, Node* grandchild) {
     if((node->left == child) == (child->left == grandchild)) {
         rotate(child);
     } else {
-        print(std::cout);
         rotate(grandchild);
-        print(std::cout);
         rotate(grandchild);
-        print(std::cout);
     }
 }
 
