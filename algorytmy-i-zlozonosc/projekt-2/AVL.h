@@ -2,6 +2,7 @@
 #define AVL__
 
 #include <iostream>
+#include <cassert>
 
 template <typename T> class AVL;
 template <typename T> std::ostream& operator<<(std::ostream& out, const AVL<T>& tree);
@@ -25,7 +26,7 @@ private:
         T value;
         int balance;
         Node(const T& new_val, Node* _parent) :
-            parent(_parent), value(new_val), balance(0), right(nullptr), left(nullptr) {}
+            parent(_parent), left(nullptr), right(nullptr), value(new_val), balance(0) {}
     };
 
     Node* root;
@@ -35,7 +36,6 @@ private:
     void print_util(std::ostream& out, Node* node, int depth = 0, int depth_inc = 1) const;
     int depth_util(const T&, int, Node*) const;
     void delete_util(Node*);
-    void flat_print_util(Node* node) const;
 
     Node* find_node(const T&, Node*) const;
     Node* add_node(const T&);
@@ -69,24 +69,15 @@ void AVL<T>::print_util(std::ostream& out, Node* node, int depth, int depth_inc)
     if(node != nullptr) {
         print_util(out, node->right, depth + depth_inc, depth_inc);
         for(int i = 0; i < depth; i++) out << " ";
-        out << node->value << "\n";
+        out << node->value << " bal: " << node->balance << "\n";
         print_util(out, node->left, depth + depth_inc, depth_inc);
     }
 };
 
 template <typename T>
 void AVL<T>::flat_print() const {
-    flat_print_util(root);
+    print_util(std::cout, root, 0, 0);
 };
-
-template <typename T>
-void AVL<T>::flat_print_util(Node* node) const {
-    if(node) {
-        flat_print_util(node->left);
-        std::cout << node->value << "\n";
-        flat_print_util(node->right);
-    }
-}
 
 template <typename T>
 T* AVL<T>::find(const T& elem) const {
@@ -137,10 +128,6 @@ void AVL<T>::rotate(Node* pivot) {
 
 	if (pivot == pivot->parent->right) {
 		// left rotation
-
-        pivot->parent->balance = pivot->parent->balance - 1 - std::max(pivot->balance, 0);
-        pivot->balance = pivot->balance - 1 + std::min(pivot->parent->balance, 0);
-		
 		mover = pivot->left;
 		pivot->left = pivot->parent;
 		pivot->parent = pivot->left->parent;
@@ -153,13 +140,13 @@ void AVL<T>::rotate(Node* pivot) {
 		pivot->left->parent = pivot;
 		pivot->left->right = mover;
 		if(mover) mover->parent = pivot->left;
+
+		// change balance factors
+		pivot->left->balance -= pivot->balance * (pivot->balance >= 0) + 1;
+		pivot->balance += pivot->left->balance * (pivot->left->balance < 0) - 1;
 	}
 	else {
 		// right rotation
-
-        pivot->parent->balance = pivot->parent->balance + 1 - std::min(pivot->balance, 0);
-        pivot->balance = pivot->balance + 1 - std::max(pivot->parent->balance, 0);
-
 		mover = pivot->right;
 		pivot->right = pivot->parent;
 		pivot->parent = pivot->right->parent;
@@ -172,6 +159,11 @@ void AVL<T>::rotate(Node* pivot) {
 		pivot->right->parent = pivot;
 		pivot->right->left = mover;
 		if(mover) mover->parent = pivot->right;
+
+		// change balance factors
+		pivot->right->balance -= pivot->balance * (pivot->balance < 0) - 1;
+		pivot->balance += pivot->right->balance * (pivot->right->balance >= 0) + 1;
+
 	}
 	if (pivot->parent == nullptr)
 		root = pivot;
@@ -213,7 +205,7 @@ typename AVL<T>::Node* AVL<T>::add_node(const T& new_elem)
 		root = it;
 	}
 
-//    adjust_balance(it);
+    adjust_balance(it);
 
 	return it;
 }
@@ -236,6 +228,9 @@ void AVL<T>::adjust_balance(Node* node) {
             balance(node, child, grandchild);
             break;
         }
+
+        if(node->balance == 0)
+            break;
     }
 }
 
@@ -247,6 +242,9 @@ void AVL<T>::balance(Node* node, Node* child, Node* grandchild) {
         rotate(grandchild);
         rotate(grandchild);
     }
+    assert(std::abs(node->balance) < 2);
+    assert(std::abs(child->balance) < 2);
+    assert(std::abs(grandchild->balance) < 2);
 }
 
 template <typename T>
