@@ -1,9 +1,9 @@
 #include "LCG_generator.h"
 
-int LCG_generator::random()
+double LCG_generator::random()
 {
 	x = (mult * x + add) % mod;
-	return x;
+	return (double)(x) / mod;
 }
 
 void LCG_generator::reset()
