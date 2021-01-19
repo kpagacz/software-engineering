@@ -8,3 +8,5 @@
 *.pdf
 *.app
 *.7z
+*.o
+*.DS_Store

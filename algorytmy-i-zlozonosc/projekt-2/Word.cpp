@@ -88,6 +88,10 @@ Word Word::operator--(int)
     return copy;
 }
 
+int Word::get_count() const {
+    return count;
+}
+
 std::ostream& operator<<(std::ostream& out, const Word& word)
 {
     out << word.get_word() << "  Occurences: " << word.count;
