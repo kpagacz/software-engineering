@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <CheckBox fx:id="check_student" layoutX="24.0" layoutY="127.0" mnemonicParsing="false" onAction="#show_major" text="student" />
+            <Label layoutX="24.0" layoutY="31.0" text="name:" />
+            <Label layoutX="24.0" layoutY="65.0" text="surname:" />
+            <TextField fx:id="text_name" layoutX="85.0" layoutY="27.0" prefHeight="25.0" prefWidth="269.0" />
+            <TextField fx:id="text_surname" layoutX="85.0" layoutY="61.0" prefHeight="25.0" prefWidth="269.0" />
+            <TextField fx:id="text_major" disable="true" layoutX="85.0" layoutY="165.0" prefHeight="25.0" prefWidth="269.0" />
+            <Label layoutX="24.0" layoutY="169.0" text="major:" />
+            <TextArea fx:id="text_output" editable="false" layoutX="20.0" layoutY="252.0" prefHeight="119.0" prefWidth="360.0" />
+            <Button layoutX="20.0" layoutY="208.0" mnemonicParsing="false" onAction="#add_person" prefHeight="25.0" prefWidth="360.0" text="Add" />
+         </children></Pane>
+   </children>
+</GridPane>
