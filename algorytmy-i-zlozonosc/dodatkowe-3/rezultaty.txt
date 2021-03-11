@@ -1,0 +1,14 @@
+Liczba hetmanow: 1Plansza: 1x1 Rozwiazania: 1
+Liczba hetmanow: 2Plansza: 2x2 Rozwiazania: 0
+Liczba hetmanow: 3Plansza: 3x3 Rozwiazania: 0
+Liczba hetmanow: 4Plansza: 4x4 Rozwiazania: 2
+Liczba hetmanow: 5Plansza: 5x5 Rozwiazania: 10
+Liczba hetmanow: 6Plansza: 6x6 Rozwiazania: 4
+Liczba hetmanow: 7Plansza: 7x7 Rozwiazania: 40
+Liczba hetmanow: 8Plansza: 8x8 Rozwiazania: 92
+Liczba hetmanow: 9Plansza: 9x9 Rozwiazania: 352
+Liczba hetmanow: 10Plansza: 10x10 Rozwiazania: 724
+Liczba hetmanow: 11Plansza: 11x11 Rozwiazania: 2680
+Liczba hetmanow: 12Plansza: 12x12 Rozwiazania: 14200
+Liczba hetmanow: 13Plansza: 13x13 Rozwiazania: 73712
+Liczba hetmanow: 14Plansza: 14x14 Rozwiazania: 365596
