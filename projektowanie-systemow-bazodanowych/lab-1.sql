@@ -87,3 +87,28 @@ where instr(nazwisko, 'B') != 0;
 
 /* PD
 od 17 do 23 bez 21 i 22 */
+
+/* Zadanie 20 */
+select upper(substr(nazwisko, 1, instr(lower(nazwisko), 'l') - 1) 
+|| 'r' || substr(nazwisko, instr(lower(nazwisko), 'l') + 1)) nazwisko from pracownicy
+where instr(lower(nazwisko), 'l') <> 0;
+
+/* Zadanie 21 */
+select imie, nazwisko, pensja, width_bucket(pensja, 0, 7000, 14) as kategoria
+from pracownicy
+order by kategoria desc;
+
+/* Zadanie 22 */
+select id_pracownika, case when pensja<2500 then 'Zbyt niska pensja'
+                           when pensja>=2500 then to_char(pensja)
+                           end informacja
+from pracownicy;
+
+select id_pracownika, decode(sign(pensja - 2500), -1, 'Zbyt niska pensja', to_char(pensja)) informacja
+from pracownicy;
+
+/* Zadanie 23 */
+select initcap(imie) || ' ' || initcap(nazwisko) || ', ' || lower(zawod) 
+|| ', ' || 'wiek: ' || trunc(months_between(sysdate, data_urodzenia) / 12) || '.' dane
+from pracownicy
+order by data_urodzenia asc;
