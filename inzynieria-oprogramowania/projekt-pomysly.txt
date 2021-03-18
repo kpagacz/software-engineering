@@ -1,0 +1,11 @@
+Engine do gier planszowych
+Apka do przypominania o zabraniu parasola
+Apka do kalkulacji medycznych (równowagi zasadowe, etc)
+AI do jakiejś gry planszowej
+Szyfrowanie plików
+Blockchain voting system
+Platforma do pozyczania bitcoinow z blockchain verification
+Apka do wizualizacji sieci i ruchu sieci
+Aplikacja do wizualizacji pogody w Polsce
+
+
