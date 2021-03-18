@@ -144,15 +144,44 @@ def power_it(a, b):
     result = 1
 
     while b > 0:
+        counter += 1
+        # a0^b0 = result * (a^b)
         if b % 2 == 0:
             a *= a
             b = b / 2
         else:
             result *= a
             b = b - 1
-    
-    return temp
+        # a0^b0 = result * (a^b)
+    return result # a0^b0 = result * (a^b) = result * a^0 = result
 
 power_it(3, 4)
 
+
+counter = 0
+def f():
+    global counter
+    counter += 1
+
+def g(n): # kwadratowa zlozonosc
+    for i in range(n):
+        for j in range(n):
+            f()
+
+def liniowa2(n):
+    for i in range(n):
+        f()
+    for j in range(n):
+        f()
+
+x = []
+y = []
+for n in range(1, 1001):
+    counter = 0
+    g(n)
+    x.append(n)
+    y.append(counter)
+
+plt.plot(x, y)
+plt.show()
 
