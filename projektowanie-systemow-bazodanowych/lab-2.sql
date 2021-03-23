@@ -72,4 +72,44 @@ where exists (select 1 from pracownicy where id_szefa = p.id_pracownika)
 order by nazwisko asc;
 
 /* Zadanie 13 */
+select imie, nazwisko, plec
+from pracownicy
+where id_pracownika not in (select distinct id_szefa
+                            from pracownicy
+                            where id_szefa is not null)
+order by nazwisko asc, imie asc;            
 
+/* Zadanie 14 */
+select imie, nazwisko
+from pracownicy p
+where exists (select 1
+              from pracownicy
+              where id_szefa = p.id_pracownika)
+order by nazwisko asc, imie asc;
+
+/* Zadanie 15 */
+select nazwisko
+from pracownicy p
+where plec='K' and exists (select 1
+                           from pracownicy
+                           where id_szefa = p.id_pracownika)
+order by nazwisko asc;   
+
+
+/* Zadanie 16 */
+select nazwisko
+from pracownicy p
+where p.id_szefa in (select id_pracownika
+                     from pracownicy
+                     where plec='K' and zawod='SPRZEDAWCA')
+order by nazwisko asc;   
+
+/* Zadanie 17 */
+select nazwisko, pensja, (select count(id_pracownika)
+                          from pracownicy
+                          where p.zawod = zawod) "liczba osób w zawodzie",
+                          (select round(avg(pensja), 2)
+                          from pracownicy
+                          where p.zawod = zawod) "średnia pensja w zawodzie"
+from pracownicy p
+order by nazwisko asc;
