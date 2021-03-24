@@ -80,7 +80,7 @@ where id_pracownika not in (select distinct id_szefa
 order by nazwisko asc, imie asc;            
 
 /* Zadanie 14 */
-select imie, nazwisko
+select p.imie, p.nazwisko
 from pracownicy p
 where exists (select 1
               from pracownicy
@@ -97,7 +97,7 @@ order by nazwisko asc;
 
 
 /* Zadanie 16 */
-select nazwisko
+select  p.nazwisko
 from pracownicy p
 where p.id_szefa in (select id_pracownika
                      from pracownicy
@@ -113,3 +113,18 @@ select nazwisko, pensja, (select count(id_pracownika)
                           where p.zawod = zawod) "średnia pensja w zawodzie"
 from pracownicy p
 order by nazwisko asc;
+
+/* Zadanie 18 */
+select nazwisko, imie, level
+from pracownicy
+where id_pracownika <= 30 or id_pracownika >= 40
+start with id_szefa is nullconnect by id_szefa = prior id_pracownika
+order by level, nazwisko;
+
+
+/* Zadanie 19 */
+select nazwisko, imie, level 
+from pracownicy
+start with id_szefa is null
+connect by id_szefa = prior id_pracownika and (id_pracownika <> 18)
+order by level, nazwisko;
