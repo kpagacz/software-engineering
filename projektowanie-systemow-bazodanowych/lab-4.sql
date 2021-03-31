@@ -1,3 +1,11 @@
+create table OBIEKTY_KOMPLEKSU(
+    id number(2) constraint id_PK primary key,
+    symbol varchar(4) not null,
+    nazwa varchar(30) not null,
+    geometria sdo_geometry not null,
+    constraint symbol_unique unique(symbol)
+);
+
 insert into OBIEKTY_KOMPLEKSU values(
                                      1,
                                      'L1',
