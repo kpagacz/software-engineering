@@ -1,5 +1,6 @@
 package project;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -35,7 +36,6 @@ public class PatternSearch {
 
         return last_position;
     }
-
     /**
      * Implementation of the Sunday algorithm (searching a pattern in a text).
      *
@@ -53,8 +53,7 @@ public class PatternSearch {
                 matched_positions.add(curr_position);
             curr_position += pattern.length();
             if (curr_position < text.length()) {
-                int last_pos = last_positions.get(text.charAt(curr_position)) == null ?
-                        -1 : last_positions.get(text.charAt(curr_position));
+                int last_pos = last_positions.getOrDefault(text.charAt(curr_position), -1);
                 curr_position -= last_pos;
             }
         }
@@ -80,10 +79,8 @@ public class PatternSearch {
             partial_match_table[i] = prefix_suffix_length;
         }
 
-
         return partial_match_table;
     }
-
     /**
      * Implementation of the Morris-Pratt algorithm
      *
@@ -134,6 +131,13 @@ public class PatternSearch {
         return kmp_table;
     }
 
+    /**
+     * Implementation of the Knuth-Morris-Pratt algorithm
+     *
+     * @param pattern pattern to look for in the text
+     * @param text    text
+     * @return indices of text; each index begins a match of the pattern in the text
+     */
     public static ArrayList<Integer> kmpSearch(String pattern, String text) {
         ArrayList<Integer> matched_positions = new ArrayList<>();
         int[] partial_match_table = kmpTable(pattern);
@@ -152,6 +156,49 @@ public class PatternSearch {
                 // characters don't match
                 text_index += pattern_index - partial_match_table[pattern_index];
                 pattern_index = partial_match_table[pattern_index] == -1 ? 0 : partial_match_table[pattern_index];
+            }
+        }
+        return matched_positions;
+    }
+
+
+    private static HashMap<String, Integer> sundayPairsPreprocess(String pattern) {
+        HashMap<String, Integer> last_position = new HashMap<>();
+        for (int i = 0; i < pattern.length() - 1; i++) {
+            last_position.put(pattern.substring(i, i + 2), i);
+        }
+
+        return last_position;
+    }
+
+    /**
+     * Implementation of the Sunday algorithm (searching a pattern in a text).
+     *
+     * This version uses substrings of length two to check if the algorithm can skip not-yet compared positions
+     * between the pattern and the text.
+     *
+     * @param pattern Pattern to look for in the text.
+     * @param text    Text.
+     * @return ArrayList of positions. Each position begins a match of the pattern in the text.
+     */
+    public static ArrayList<Integer> sundayPairsSearch(String pattern, String text) {
+        if(pattern.length() < 2) {
+            throw new RuntimeException("Pattern length must be >= 2");
+        }
+
+        HashMap<String, Integer> last_positions = sundayPairsPreprocess(pattern);
+        ArrayList<Integer> matched_positions = new ArrayList<>();
+
+        int current_position = 0;
+        while(current_position <= text.length() - pattern.length()) {
+            if(matchesAt(pattern, text, current_position))
+                matched_positions.add(current_position);
+            current_position += pattern.length() - 1;
+
+            if(current_position < text.length() - 1) {
+                int last_position = last_positions.getOrDefault(text.substring(current_position, current_position + 2),
+                        -1);
+                current_position -= last_position;
             }
         }
         return matched_positions;
