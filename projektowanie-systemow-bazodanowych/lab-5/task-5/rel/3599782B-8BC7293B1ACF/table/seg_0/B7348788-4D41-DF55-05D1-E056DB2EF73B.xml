@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B7348788-4D41-DF55-05D1-E056DB2EF73B" name="PRACOWNIK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:42:16 UTC</createdTime>
+<generatorID>444383B9-2BB6-7F13-3384-977416F5C90A</generatorID>
+<ownerDesignName>task-6</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="B5596551-2825-9A48-5041-22DE968261A6">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:42:16 UTC</createdTime>
+<generatorID>571014AB-B87B-D05C-8BD4-161A3B4C1552</generatorID>
+<ownerDesignName>task-6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="imie" id="1916E033-D080-2F48-32E5-E4D53A0C3480">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:42:16 UTC</createdTime>
+<generatorID>7F65D621-1B40-686E-516F-5E258F993BB7</generatorID>
+<ownerDesignName>task-6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwisko" id="314C04B0-98F6-DED4-94C0-738780FC20E8">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:42:16 UTC</createdTime>
+<generatorID>9891B241-5C3A-73E2-7D68-B73BCE7702CB</generatorID>
+<ownerDesignName>task-6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pesel" id="DB957823-690C-435C-9D93-DF6234DC41C4">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:42:16 UTC</createdTime>
+<generatorID>4CE466BE-9E71-8C85-DC2E-B0BBC65ED741</generatorID>
+<ownerDesignName>task-6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11 CHAR</dataTypeSize>
+<ownDataTypeParameters>11 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefon" id="95A17E96-17EE-98E3-1600-3DA3E5DEA2AC">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:42:16 UTC</createdTime>
+<generatorID>1DD034EA-DCE0-17A7-D8E2-64CADFA47FC2</generatorID>
+<ownerDesignName>task-6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="83C554E8-3AE3-2387-0671-3FE92B3B4F95" name="PRACOWNIK_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:42:16 UTC</createdTime>
+<generatorID>D855EBDB-738B-A683-24DA-BD4EA15FC6E8</generatorID>
+<ownerDesignName>task-6</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5596551-2825-9A48-5041-22DE968261A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="05FFF491-436A-639D-CEEB-22D7EE1CA618" name="PRACOWNIK_id_UN">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:42:16 UTC</createdTime>
+<generatorID>76AACC23-0FA0-32C2-F7DE-5FCF79317752</generatorID>
+<ownerDesignName>task-6</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5596551-2825-9A48-5041-22DE968261A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC1D3D7C-A3F1-A7F4-C998-584A5D52B3E0" name="PRACOWNIK_pesel_UN">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:42:16 UTC</createdTime>
+<generatorID>010B622B-FA86-1D8E-13F0-EE076C9BF59C</generatorID>
+<ownerDesignName>task-6</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB957823-690C-435C-9D93-DF6234DC41C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

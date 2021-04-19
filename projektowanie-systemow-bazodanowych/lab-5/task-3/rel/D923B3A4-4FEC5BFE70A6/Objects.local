@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="87D85AD1-F405-2F00-DC49-44D682014670" name="INTERAKCJA" seqName="seg_0"/>
+   <object objectType="Table" objectID="6EEB7FFF-5DA9-3AE8-B06C-22DD10AF39E4" name="LEK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="23832AD7-1CFF-2A25-CAFB-063CEAD43A0E" name="FK_ASS_3" seqName="seg_0" containerID="87D85AD1-F405-2F00-DC49-44D682014670" refContainerID="6EEB7FFF-5DA9-3AE8-B06C-22DD10AF39E4"/>
+   <object objectType="FKIndexAssociation" objectID="E3A574D3-8C1E-8F43-8FDC-63A455910084" name="FK_ASS_4" seqName="seg_0" containerID="87D85AD1-F405-2F00-DC49-44D682014670" refContainerID="6EEB7FFF-5DA9-3AE8-B06C-22DD10AF39E4"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

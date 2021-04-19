@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="640218DD-CB2B-C318-2E39-29232715388C" name="PRZELEW">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:17:01 UTC</createdTime>
+<ownerDesignName>task-4</ownerDesignName>
+<engineerTo>
+<item key="3A0EC413-D7F8-B5A2-6152-68A140B73117" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="CC92F81F-86C3-95D7-28F8-BFD86E27F3E2">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:17:30 UTC</createdTime>
+<ownerDesignName>task-4</ownerDesignName>
+<engineerTo>
+<item key="3A0EC413-D7F8-B5A2-6152-68A140B73117" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rachunek_cel" id="5BB12A8E-BF23-D93B-6D18-0EF4052083F4">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:17:41 UTC</createdTime>
+<ownerDesignName>task-4</ownerDesignName>
+<engineerTo>
+<item key="3A0EC413-D7F8-B5A2-6152-68A140B73117" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>26 CHAR</dataTypeSize>
+<ownDataTypeParameters>26 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data" id="99DA002B-034C-C02D-CEED-FFA68A8CAC33">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:17:43 UTC</createdTime>
+<ownerDesignName>task-4</ownerDesignName>
+<engineerTo>
+<item key="3A0EC413-D7F8-B5A2-6152-68A140B73117" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cel" id="E49A0F12-9ADA-B11A-0194-172FC2214B17">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:17:56 UTC</createdTime>
+<ownerDesignName>task-4</ownerDesignName>
+<engineerTo>
+<item key="3A0EC413-D7F8-B5A2-6152-68A140B73117" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="kwota" id="BCC135AA-8550-13CC-1694-1F4CD38EF3FD">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:18:11 UTC</createdTime>
+<ownerDesignName>task-4</ownerDesignName>
+<engineerTo>
+<item key="3A0EC413-D7F8-B5A2-6152-68A140B73117" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="C676FA8C-13F4-4245-8FAF-6356A53E306E">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:19:20 UTC</createdTime>
+<generatorID>6B80518A-72F5-CCB8-87F3-8ECE98C6701E</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<engineerTo>
+<item key="3A0EC413-D7F8-B5A2-6152-68A140B73117" value="true"/>
+</engineerTo>
+<referedAttribute>EA01366F-AC73-26E0-ECFB-9F3138F12317</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C0C230FE-62F9-E938-D0A1-18C2464D23E9" name="PRZELEW PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:18:22 UTC</createdTime>
+<ownerDesignName>task-4</ownerDesignName>
+<engineerTo>
+<item key="3A0EC413-D7F8-B5A2-6152-68A140B73117" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CC92F81F-86C3-95D7-28F8-BFD86E27F3E2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

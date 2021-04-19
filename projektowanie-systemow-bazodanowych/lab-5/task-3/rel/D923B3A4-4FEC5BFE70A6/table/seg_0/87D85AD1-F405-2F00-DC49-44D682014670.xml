@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="87D85AD1-F405-2F00-DC49-44D682014670" name="INTERAKCJA">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:08:41 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LEK_id" id="AC724EC5-42FB-9709-264A-D1F12136BA9E">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:08:41 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="23832AD7-1CFF-2A25-CAFB-063CEAD43A0E" referredColumn="5A10EC01-CD29-7E0F-E76D-0203169B4325"/>
+</associations>
+</Column>
+<Column name="LEK_id1" id="8777ADA7-864D-55C7-0F45-2419B6E0B42F">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:08:41 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E3A574D3-8C1E-8F43-8FDC-63A455910084" referredColumn="5A10EC01-CD29-7E0F-E76D-0203169B4325"/>
+</associations>
+</Column>
+<Column name="stopien" id="E46B97D5-C582-263E-87A5-58B7B17DE2A9">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:08:41 UTC</createdTime>
+<generatorID>B1F6A5E1-A1BE-FCC5-DCB5-E7797C865709</generatorID>
+<ownerDesignName>task-3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="74A69873-33B4-8CBC-12BF-ABA4B7E0A9B8" name="INTERAKCJA_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:08:41 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC724EC5-42FB-9709-264A-D1F12136BA9E"/>
+<colUsage columnID="8777ADA7-864D-55C7-0F45-2419B6E0B42F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D2083DD1-F445-A0F0-4390-AA77B1CCEA85" name="FK_ASS_3">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:08:41 UTC</createdTime>
+<generatorID>D964D379-FF9A-DC1B-D08E-671D94961CB0</generatorID>
+<ownerDesignName>task-3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC724EC5-42FB-9709-264A-D1F12136BA9E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5E1FF93A-59F6-2A41-3737-3AC63F7C7E48" name="FK_ASS_4">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:08:41 UTC</createdTime>
+<generatorID>D964D379-FF9A-DC1B-D08E-671D94961CB0</generatorID>
+<ownerDesignName>task-3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8777ADA7-864D-55C7-0F45-2419B6E0B42F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

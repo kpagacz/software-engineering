@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="95311C2D-9299-5CCD-8DED-0189BB2E1CE3" name="FIRMA" seqName="seg_0"/>
+   <object objectType="Entity" objectID="5E220EB1-2857-3A7F-8FBD-EDA443058F03" name="KONTO" seqName="seg_0"/>
+   <object objectType="Entity" objectID="A6FA371E-C16E-917B-4DCF-0352F7EF31BB" name="OSOBA" seqName="seg_0"/>
+   <object objectType="Relation" objectID="41C84771-AB40-F152-B295-43F622084C10" name="Relation_7" seqName="seg_0"/>
+   <object objectType="Relation" objectID="B6F33391-3264-8760-AF57-C9DB1D3EB2C2" name="Relation_8" seqName="seg_0"/>
+   <object objectType="Arc" objectID="66F539B1-6F1D-559B-EF82-F8024C82E76F" name="Arc_1" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

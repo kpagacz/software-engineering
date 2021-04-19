@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.relational.DPVRelational" name="Relational_1" id="B77B6C58-0689-1145-90B1-815B8FC7246E">
+<createdBy>pagaczk</createdBy>
+<modifiedBy>pagaczk</modifiedBy>
+<createdTime>2021-04-14 13:09:14 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="2C9D8161-1E2B-F3FB-290A-1A32242578DB" otype="Table" vid="EA34BE5A-FA08-6243-F13A-16E94C7EB3FF">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="182" y="200" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="789B3B12-099F-F5C8-0A0B-80E223E64A5B" otype="Table" vid="B33CAD9D-5958-C78F-37D2-6135F3C4E36E">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="513" y="205" width="248" height="215"/>
+</OView>
+</objectViews>
+<connectors>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="7DC70A93-4A3E-8BC8-3C05-6265BC725D73" otype="FKIndexAssociation" vid_source="EA34BE5A-FA08-6243-F13A-16E94C7EB3FF" vid_target="B33CAD9D-5958-C78F-37D2-6135F3C4E36E">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="352" y="247"/>
+<point x="513" y="247"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="A899B13E-E5A3-A5FE-123F-EE13D5C5D6AD" otype="FKIndexAssociation" vid_source="EA34BE5A-FA08-6243-F13A-16E94C7EB3FF" vid_target="B33CAD9D-5958-C78F-37D2-6135F3C4E36E">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="352" y="277"/>
+<point x="513" y="277"/>
+</points>
+</Connector>
+</connectors>
+</Diagram>

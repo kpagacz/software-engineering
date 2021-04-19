@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="704718A2-4737-823B-0657-408D98A2A4A0" name="LEK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:59:50 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<engineerTo>
+<item key="D923B3A4-20A9-44E0-78BD-4FEC5BFE70A6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="6AFEA69C-9AFD-0505-7464-5947A0E27201">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:59:56 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<engineerTo>
+<item key="D923B3A4-20A9-44E0-78BD-4FEC5BFE70A6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa_polska" id="35F3247A-D192-D63F-3B3A-5717370F9EAF">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:00:03 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<engineerTo>
+<item key="D923B3A4-20A9-44E0-78BD-4FEC5BFE70A6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa_lacinska" id="218440DD-B4FE-A8FF-4AEB-0FF0E063858B">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:00:19 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<engineerTo>
+<item key="D923B3A4-20A9-44E0-78BD-4FEC5BFE70A6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="ED526C4C-F793-B79D-DCB2-91660F06BF1B" name="LEK PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:00:02 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<engineerTo>
+<item key="D923B3A4-20A9-44E0-78BD-4FEC5BFE70A6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6AFEA69C-9AFD-0505-7464-5947A0E27201</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

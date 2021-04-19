@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.relational.DPVRelational" name="Relational_1" id="D3ACB773-1933-DCA6-0C5E-980FD9A18374">
+<createdBy>pagaczk</createdBy>
+<modifiedBy>pagaczk</modifiedBy>
+<createdTime>2021-04-14 12:26:15 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="1952E7A9-6A35-70CF-79A3-FFE1E0ABC54F" otype="Table" vid="A1651DDC-348E-47F6-0E26-89BC6F60F34E">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="19" y="81" width="271" height="203"/>
+</OView>
+</objectViews>
+<connectors>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="6F89AA01-87BB-C77B-3D72-CE70127F4285" otype="FKIndexAssociation" vid_source="A1651DDC-348E-47F6-0E26-89BC6F60F34E" vid_target="A1651DDC-348E-47F6-0E26-89BC6F60F34E">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="290" y="124"/>
+<point x="320" y="124"/>
+<point x="322" y="307"/>
+<point x="131" y="308"/>
+<point x="131" y="284"/>
+</points>
+</Connector>
+</connectors>
+</Diagram>

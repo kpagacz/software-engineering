@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EF54323C-DEB8-8249-EC76-F806AAB66696" name="KATEGORIA_PRODUKTOW">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:23:11 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="C239D2CC-7E67-985F-6554-29469118C43D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="F63AED4B-4BDF-4191-0BDD-1CC83A650D85">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:23:34 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="C239D2CC-7E67-985F-6554-29469118C43D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa" id="85E494FF-A7E4-F09D-94C8-896EAC84965A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:24:27 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="C239D2CC-7E67-985F-6554-29469118C43D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="47C457FD-BB0E-14DE-FF49-07A937C9BD44">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:25:33 UTC</createdTime>
+<generatorID>68315BFC-F4E0-D0AD-3DB5-7027AC4F99D0</generatorID>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="C239D2CC-7E67-985F-6554-29469118C43D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>F63AED4B-4BDF-4191-0BDD-1CC83A650D85</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D19F9355-B244-A02F-16B1-387A6061A9FC" name="Kategoria PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:23:58 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="C239D2CC-7E67-985F-6554-29469118C43D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F63AED4B-4BDF-4191-0BDD-1CC83A650D85</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

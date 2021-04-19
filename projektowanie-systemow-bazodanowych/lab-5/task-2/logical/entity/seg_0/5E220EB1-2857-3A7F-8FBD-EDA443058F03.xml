@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5E220EB1-2857-3A7F-8FBD-EDA443058F03" name="KONTO">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:37:54 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="CFEC9975-2CAA-908C-41E2-086C35BD79B7">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:43:41 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numer" id="CD0D6211-8D63-1C08-2E85-CA9B22E85CFD">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:43:47 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>26 CHAR</dataTypeSize>
+<ownDataTypeParameters>26 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_zalozenia" id="1BE5147D-6FC7-5FD4-AC98-AE72FCBD485D">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:44:07 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="stan_konta" id="FAFBBFD3-0112-4860-BBA4-F685023BD944">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:44:24 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="2003CA87-4421-B02D-D9A1-4FFCF2329E05">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:51:13 UTC</createdTime>
+<generatorID>41C84771-AB40-F152-B295-43F622084C10</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<referedAttribute>27D01FBD-3BCF-1E3E-E70A-7D196D96F425</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="F1A831D1-C379-EE79-8110-60FF5366910A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:51:42 UTC</createdTime>
+<generatorID>B6F33391-3264-8760-AF57-C9DB1D3EB2C2</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<referedAttribute>1C500378-8788-5788-FCA4-B00E7FA3B261</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6809683A-ADD8-0201-E067-22A2F2F03EB1" name="KONTO PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:43:46 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CFEC9975-2CAA-908C-41E2-086C35BD79B7</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="1B82E03E-1475-CA46-434C-EE24DA6E0D1E" name="KONTO_NUMER_U">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:46:29 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<newElementsIDs>CD0D6211-8D63-1C08-2E85-CA9B22E85CFD</newElementsIDs>
+<usedAttributes>
+<attributeRef>CD0D6211-8D63-1C08-2E85-CA9B22E85CFD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

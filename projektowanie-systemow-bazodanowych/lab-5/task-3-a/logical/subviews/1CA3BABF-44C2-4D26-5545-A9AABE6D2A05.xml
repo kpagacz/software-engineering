@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.logical.DPVLogical" name="Logical" id="1CA3BABF-44C2-4D26-5545-A9AABE6D2A05">
+<createdBy>pagaczk</createdBy>
+<modifiedBy>pagaczk</modifiedBy>
+<createdTime>2021-04-14 13:04:05 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="90C09AFD-AAEB-0B16-2F32-1B5F850CE16D" otype="Entity" vid="42C03823-F60C-F71C-5A23-A49D0F7F7176">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="513" y="205" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="E72A8BFE-D394-28A6-0D21-57EE274B2A91" otype="Entity" vid="4CFC374A-638D-E9AF-2155-B98CBFA123C0">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="182" y="200" width="170" height="110"/>
+</OView>
+</objectViews>
+<connectors>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="85EE965E-B4EF-3B16-D1E4-4EC1613CED8D" otype="Relation" vid_source="4CFC374A-638D-E9AF-2155-B98CBFA123C0" vid_target="42C03823-F60C-F71C-5A23-A49D0F7F7176">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="352" y="237"/>
+<point x="513" y="237"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="A012D183-87F5-5C03-0BFE-6FDA25995D9D" otype="Relation" vid_source="4CFC374A-638D-E9AF-2155-B98CBFA123C0" vid_target="42C03823-F60C-F71C-5A23-A49D0F7F7176">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="352" y="227"/>
+<point x="513" y="227"/>
+</points>
+</Connector>
+</connectors>
+</Diagram>

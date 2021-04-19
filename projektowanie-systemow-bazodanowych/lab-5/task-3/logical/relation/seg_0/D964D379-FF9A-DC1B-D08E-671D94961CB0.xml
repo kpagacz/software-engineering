@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="INTERAKCJA" directorySegmentName="seg_0" id="D964D379-FF9A-DC1B-D08E-671D94961CB0">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:01:07 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<engineerTo>
+<item key="D923B3A4-20A9-44E0-78BD-4FEC5BFE70A6" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>704718A2-4737-823B-0657-408D98A2A4A0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>704718A2-4737-823B-0657-408D98A2A4A0</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="stopien" id="B1F6A5E1-A1BE-FCC5-DCB5-E7797C865709">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:07:46 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<engineerTo>
+<item key="D923B3A4-20A9-44E0-78BD-4FEC5BFE70A6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

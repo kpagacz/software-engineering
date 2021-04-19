@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="444383B9-2BB6-7F13-3384-977416F5C90A" name="PRACOWNIK" seqName="seg_0"/>
+   <object objectType="Entity" objectID="3E8F2DB9-E75C-0C9A-ABAF-C92BCE387007" name="SAMOCHOD" seqName="seg_0"/>
+   <object objectType="Relation" objectID="B5A47867-2A6D-B580-5CD1-0750D474C9F8" name="Relation_1" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

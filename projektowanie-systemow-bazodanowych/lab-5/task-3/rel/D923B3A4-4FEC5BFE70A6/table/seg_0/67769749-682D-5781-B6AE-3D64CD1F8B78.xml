@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="67769749-682D-5781-B6AE-3D64CD1F8B78" name="LEK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:01:38 UTC</createdTime>
+<generatorID>704718A2-4737-823B-0657-408D98A2A4A0</generatorID>
+<ownerDesignName>task-3</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="881C21BA-DEB0-CB62-EA77-A2B1A81EF8C4">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:01:38 UTC</createdTime>
+<generatorID>6AFEA69C-9AFD-0505-7464-5947A0E27201</generatorID>
+<ownerDesignName>task-3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwa_polska" id="E9B80745-7982-654C-A78C-B8CD8C0ABB94">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:01:38 UTC</createdTime>
+<generatorID>35F3247A-D192-D63F-3B3A-5717370F9EAF</generatorID>
+<ownerDesignName>task-3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwa_lacinska" id="16BB1C39-13E9-517A-D3CD-54FC89643C18">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:01:38 UTC</createdTime>
+<generatorID>218440DD-B4FE-A8FF-4AEB-0FF0E063858B</generatorID>
+<ownerDesignName>task-3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D76E983B-72D1-8131-0906-BFAC5505E510" name="LEK_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:01:38 UTC</createdTime>
+<generatorID>ED526C4C-F793-B79D-DCB2-91660F06BF1B</generatorID>
+<ownerDesignName>task-3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="881C21BA-DEB0-CB62-EA77-A2B1A81EF8C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
