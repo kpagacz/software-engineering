@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2B88058C-BF16-DFFF-1228-6B607F8D00B9" name="FIRMA">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>95311C2D-9299-5CCD-8DED-0189BB2E1CE3</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="E71BAD3A-0C86-8FF3-215A-2DC2CC26A2FF">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>27D01FBD-3BCF-1E3E-E70A-7D196D96F425</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwa" id="D07FF939-10B4-3697-C4DA-DFED5B1A464D">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>6BB2E2E6-D936-9556-787A-F444B58DAAE1</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="miejscowosc" id="D2DC80F4-D478-C7D9-54E0-2832A3C79B8A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>B5D312FD-83DA-9014-E2EF-26E777E5FA9B</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kod_pocztowy" id="A8B555E5-BB44-4F66-1BBF-F159081619F8">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>B064DA91-9DBB-33A5-4499-3B89FDC793C4</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 CHAR</dataTypeSize>
+<ownDataTypeParameters>6 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numer_domu" id="D2C7EF44-DDCA-74DC-A9E1-41A2F0030BC5">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>0B694FEC-BA5A-21C9-9276-D59B0E5D189C</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ulica" id="A6EEC390-32B2-4E28-C29A-99D92BF99A92">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>EA35A024-CA22-EB9F-8942-A7BB690F1A8F</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numer_lokalu" id="CB43E283-77F7-A16B-7E14-57F4F1AA2B43">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>E449C637-D58F-B3D5-81E9-0A368A42FBD0</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nip" id="B82BF467-472D-110F-B8A7-8AA51C75C0B0">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>57E579D2-37DA-2BD8-C7DC-AA304BBEB1FC</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A4344E09-3ECA-2927-894C-C1CF65CED388" name="FIRMA_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>54B46AF6-EE1E-E0B4-6581-DCD212AD7FA7</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E71BAD3A-0C86-8FF3-215A-2DC2CC26A2FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C4356648-E388-70B0-4442-F4AD948E10BF" name="FIRMA_nip_UN">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>C277F1E7-5750-6245-DE52-CD424F6792CC</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B82BF467-472D-110F-B8A7-8AA51C75C0B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

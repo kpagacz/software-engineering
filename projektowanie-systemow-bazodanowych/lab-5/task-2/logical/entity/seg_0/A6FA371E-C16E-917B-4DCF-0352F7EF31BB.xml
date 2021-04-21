@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A6FA371E-C16E-917B-4DCF-0352F7EF31BB" name="OSOBA">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:37:49 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="1C500378-8788-5788-FCA4-B00E7FA3B261">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:41:51 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="imie" id="151E2B7B-D633-06E1-D1AC-186CE124F78B">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:42:09 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwisko" id="613D91D3-7EF6-FBCC-9797-FDEB530CFC95">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:42:19 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plec" id="4AC7304C-D98A-7BA0-2144-98E406DB10F9">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:42:29 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pesel" id="FDE07C91-01D1-B48C-08C8-9CDEC2961D22">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:42:40 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11 CHAR</dataTypeSize>
+<ownDataTypeParameters>11 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefon" id="1505A67B-A25A-2546-C17A-025A51A2F237">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:42:53 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="17D4C3BF-665A-8DF5-25A2-6BE7A2F1DBB4" name="OSOBA PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:42:05 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1C500378-8788-5788-FCA4-B00E7FA3B261</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="85DEE821-5121-D923-84AF-3C131FA216C6" name="OSOBY_PESEL_U">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:44:52 UTC</createdTime>
+<ownerDesignName>task-2</ownerDesignName>
+<engineerTo>
+<item key="1BDC4176-EBA8-F415-BB2C-74BBD9E53577" value="true"/>
+</engineerTo>
+<newElementsIDs>FDE07C91-01D1-B48C-08C8-9CDEC2961D22</newElementsIDs>
+<usedAttributes>
+<attributeRef>FDE07C91-01D1-B48C-08C8-9CDEC2961D22</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

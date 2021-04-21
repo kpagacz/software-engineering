@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="85675E98-E080-EBB8-7A0B-8AB5EF1147A6" name="PRACOWNIK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>0A7D0145-9FA1-45CE-EB04-C8462E23103A</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="E01CCC72-E9F6-8357-C976-B8940EDA7C16">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>EA01366F-AC73-26E0-ECFB-9F3138F12317</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="imie" id="5417939D-F8EE-C494-2777-82E5684DDC9B">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>777C4E69-4D9C-DF63-7682-46238CEA3F7F</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwisko" id="5B1410E9-B3F4-04BB-CB87-FEC1816C5263">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>5438BBEA-465E-6821-33EC-116433BEBD9D</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pesel" id="BA74DC86-B3F1-DB8B-34B6-D377D10C550C">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>A483BC1F-4A87-C39C-E658-57D8B7F2C15E</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11 CHAR</dataTypeSize>
+<ownDataTypeParameters>11 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3E552653-DEC5-F499-9858-2CF9230D4BED" name="PRACOWNIK_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>0A571634-7A3D-C0DC-A52E-2664085D7288</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E01CCC72-E9F6-8357-C976-B8940EDA7C16"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

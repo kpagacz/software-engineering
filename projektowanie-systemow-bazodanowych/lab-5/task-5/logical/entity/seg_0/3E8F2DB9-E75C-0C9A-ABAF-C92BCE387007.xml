@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3E8F2DB9-E75C-0C9A-ABAF-C92BCE387007" name="SAMOCHOD">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:31:50 UTC</createdTime>
+<ownerDesignName>task-6</ownerDesignName>
+<engineerTo>
+<item key="3599782B-C2E8-1E6A-9091-8BC7293B1ACF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="CF9E3874-A5B4-1A3C-C935-0D6D1A5BC4B7">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:40:36 UTC</createdTime>
+<ownerDesignName>task-6</ownerDesignName>
+<engineerTo>
+<item key="3599782B-C2E8-1E6A-9091-8BC7293B1ACF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vin" id="4B4149D8-35CC-9820-7502-EE282C369769">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:32:16 UTC</createdTime>
+<ownerDesignName>task-6</ownerDesignName>
+<engineerTo>
+<item key="3599782B-C2E8-1E6A-9091-8BC7293B1ACF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>17 CHAR</dataTypeSize>
+<ownDataTypeParameters>17 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numer_rejestracyjny" id="DD70008F-E976-C12E-9029-2FC9F5B7C5B6">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:33:11 UTC</createdTime>
+<ownerDesignName>task-6</ownerDesignName>
+<engineerTo>
+<item key="3599782B-C2E8-1E6A-9091-8BC7293B1ACF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7 CHAR</dataTypeSize>
+<ownDataTypeParameters>7 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="marka" id="8A808BA5-3586-718A-64DD-E0B9C88D85EC">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:33:24 UTC</createdTime>
+<ownerDesignName>task-6</ownerDesignName>
+<engineerTo>
+<item key="3599782B-C2E8-1E6A-9091-8BC7293B1ACF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="AFC12D51-D9D4-97C0-4F71-4820917177A9">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:42:03 UTC</createdTime>
+<generatorID>B5A47867-2A6D-B580-5CD1-0750D474C9F8</generatorID>
+<ownerDesignName>task-6</ownerDesignName>
+<engineerTo>
+<item key="3599782B-C2E8-1E6A-9091-8BC7293B1ACF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>571014AB-B87B-D05C-8BD4-161A3B4C1552</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AEAE32AA-98C1-5436-0E6C-94E083A438C4" name="SAMOCHOD PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:33:34 UTC</createdTime>
+<ownerDesignName>task-6</ownerDesignName>
+<engineerTo>
+<item key="3599782B-C2E8-1E6A-9091-8BC7293B1ACF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CF9E3874-A5B4-1A3C-C935-0D6D1A5BC4B7</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="BD00DAB1-5E00-C77D-4BB8-3DAE7390E47D" name="SAMOCHOD_VIN_U">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:37:13 UTC</createdTime>
+<ownerDesignName>task-6</ownerDesignName>
+<engineerTo>
+<item key="3599782B-C2E8-1E6A-9091-8BC7293B1ACF" value="true"/>
+</engineerTo>
+<newElementsIDs>4B4149D8-35CC-9820-7502-EE282C369769</newElementsIDs>
+<usedAttributes>
+<attributeRef>4B4149D8-35CC-9820-7502-EE282C369769</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="3476A9EF-1229-22D2-9B88-51C0B20399BA" name="SAMOCHOD_NUMER_REJESTRACYJNY_U">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:37:29 UTC</createdTime>
+<ownerDesignName>task-6</ownerDesignName>
+<engineerTo>
+<item key="3599782B-C2E8-1E6A-9091-8BC7293B1ACF" value="true"/>
+</engineerTo>
+<newElementsIDs>DD70008F-E976-C12E-9029-2FC9F5B7C5B6</newElementsIDs>
+<usedAttributes>
+<attributeRef>DD70008F-E976-C12E-9029-2FC9F5B7C5B6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

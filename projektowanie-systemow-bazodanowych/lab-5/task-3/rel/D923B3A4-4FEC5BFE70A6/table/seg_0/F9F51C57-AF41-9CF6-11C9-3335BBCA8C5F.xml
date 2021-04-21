@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F9F51C57-AF41-9CF6-11C9-3335BBCA8C5F" name="INTERAKCJE">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:01:38 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<ordsAlias>relation_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="lek1" id="D024925F-B10E-3C51-2340-11DFB79B9F3A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:01:38 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1A069F8F-E5C8-9307-AAE7-55171B79C0D9" referredColumn="881C21BA-DEB0-CB62-EA77-A2B1A81EF8C4"/>
+</associations>
+</Column>
+<Column name="lek2" id="FA706212-ABA5-C19C-8DEF-599C179D7F4A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:01:38 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="20D1602D-7DC9-5505-8204-73E449F56868" referredColumn="881C21BA-DEB0-CB62-EA77-A2B1A81EF8C4"/>
+</associations>
+</Column>
+<Column name="stopien" id="F2B2A71C-25B5-0D57-6A54-65342816A690">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:02:07 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="05234DAD-0CE7-372E-543E-90BD9AF5D43D" name="Relation_1_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:01:38 UTC</createdTime>
+<ownerDesignName>task-3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D024925F-B10E-3C51-2340-11DFB79B9F3A"/>
+<colUsage columnID="FA706212-ABA5-C19C-8DEF-599C179D7F4A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="26CBEFF2-D925-EEF0-41F3-A2F5659DF61F" name="FK_ASS_1">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:01:38 UTC</createdTime>
+<generatorID>D964D379-FF9A-DC1B-D08E-671D94961CB0</generatorID>
+<ownerDesignName>task-3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D024925F-B10E-3C51-2340-11DFB79B9F3A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8A688BB1-D43E-E359-4F8D-B5433A0DE0AE" name="FK_ASS_2">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:01:38 UTC</createdTime>
+<generatorID>D964D379-FF9A-DC1B-D08E-671D94961CB0</generatorID>
+<ownerDesignName>task-3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA706212-ABA5-C19C-8DEF-599C179D7F4A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

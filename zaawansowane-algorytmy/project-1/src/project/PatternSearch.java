@@ -121,7 +121,7 @@ public class PatternSearch {
                 prefix_suffix = kmp_table[prefix_suffix];
             }
             prefix_suffix++;
-            if(i == pattern.length() || pattern.charAt(i) == pattern.charAt(prefix_suffix)) {
+            if(i == pattern.length() || pattern.charAt(i) != pattern.charAt(prefix_suffix)) {
                 kmp_table[i] = prefix_suffix;
             } else {
                 kmp_table[i] = kmp_table[prefix_suffix];

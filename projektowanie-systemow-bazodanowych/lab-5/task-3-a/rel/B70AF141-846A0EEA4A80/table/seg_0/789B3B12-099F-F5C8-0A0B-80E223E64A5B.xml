@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="789B3B12-099F-F5C8-0A0B-80E223E64A5B" name="INTERAKCJA">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:09:39 UTC</createdTime>
+<generatorID>90C09AFD-AAEB-0B16-2F32-1B5F850CE16D</generatorID>
+<ownerDesignName>task-3-a</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="stopien" id="C6E1DFF9-3B66-4DA7-1605-0396BC91E33B">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:09:39 UTC</createdTime>
+<generatorID>911F8380-619C-27EC-8714-F3BBBC038FC1</generatorID>
+<ownerDesignName>task-3-a</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEK_id" id="B42A9F7F-D353-96EA-9234-94E734ABF29C">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:09:39 UTC</createdTime>
+<generatorID>9C8FDCDA-8A6D-A10E-C31A-7078E19D3D47</generatorID>
+<ownerDesignName>task-3-a</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7DC70A93-4A3E-8BC8-3C05-6265BC725D73" referredColumn="F8FD9136-D1FF-B810-73F5-7AF480C95B90"/>
+</associations>
+</Column>
+<Column name="LEK_id1" id="2CF6D485-3661-83FE-5DBE-998399A51E5B">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:09:39 UTC</createdTime>
+<generatorID>A3061CC7-E71C-7B0F-815F-985DC82DBD31</generatorID>
+<ownerDesignName>task-3-a</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A899B13E-E5A3-A5FE-123F-EE13D5C5D6AD" referredColumn="F8FD9136-D1FF-B810-73F5-7AF480C95B90"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="50CCA0F5-FDC5-1AD3-B531-C643444C46EC" name="INTERAKCJA_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:09:39 UTC</createdTime>
+<generatorID>0A334602-9409-5B1E-18D0-BEE3C7258A95</generatorID>
+<ownerDesignName>task-3-a</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B42A9F7F-D353-96EA-9234-94E734ABF29C"/>
+<colUsage columnID="2CF6D485-3661-83FE-5DBE-998399A51E5B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="86CE78BF-7CE9-9223-CE69-7612BBF0B6F6" name="INTERAKCJA_LEK_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:09:39 UTC</createdTime>
+<generatorID>85EE965E-B4EF-3B16-D1E4-4EC1613CED8D</generatorID>
+<ownerDesignName>task-3-a</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B42A9F7F-D353-96EA-9234-94E734ABF29C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D55A08B6-2121-97E0-48C6-B347D9AE5D75" name="INTERAKCJA_LEK_FKv1">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:09:39 UTC</createdTime>
+<generatorID>A012D183-87F5-5C03-0BFE-6FDA25995D9D</generatorID>
+<ownerDesignName>task-3-a</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2CF6D485-3661-83FE-5DBE-998399A51E5B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

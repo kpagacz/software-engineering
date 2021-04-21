@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="09044FB8-7CAF-EBFF-1D83-A010F476A693" name="Kategoria">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:26:15 UTC</createdTime>
+<generatorID>EF54323C-DEB8-8249-EC76-F806AAB66696</generatorID>
+<ownerDesignName>task-1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="2A05366F-235A-9013-2537-FF419DA1A208">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:26:15 UTC</createdTime>
+<generatorID>F63AED4B-4BDF-4191-0BDD-1CC83A650D85</generatorID>
+<ownerDesignName>task-1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwa" id="DFC00CDE-2A81-6B56-62F1-43AC26929D1F">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:26:15 UTC</createdTime>
+<generatorID>85E494FF-A7E4-F09D-94C8-896EAC84965A</generatorID>
+<ownerDesignName>task-1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kategoria_id" id="77B9ECD6-765A-3DCE-E9E1-79740D91ADF1">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:26:15 UTC</createdTime>
+<generatorID>47C457FD-BB0E-14DE-FF49-07A937C9BD44</generatorID>
+<ownerDesignName>task-1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="036858B6-EFAF-5FEA-20A0-4D5E4799D0F0" referredColumn="2A05366F-235A-9013-2537-FF419DA1A208"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="752CFA48-1BF9-0E22-46EE-A60E1E136AD4" name="Kategoria_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:26:15 UTC</createdTime>
+<generatorID>D19F9355-B244-A02F-16B1-387A6061A9FC</generatorID>
+<ownerDesignName>task-1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2A05366F-235A-9013-2537-FF419DA1A208"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4213A891-F32A-8C13-9DD7-6634614C57F3" name="Kategoria_Kategoria_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:26:15 UTC</createdTime>
+<generatorID>68315BFC-F4E0-D0AD-3DB5-7027AC4F99D0</generatorID>
+<ownerDesignName>task-1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77B9ECD6-765A-3DCE-E9E1-79740D91ADF1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

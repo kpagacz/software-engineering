@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="2B88058C-BF16-DFFF-1228-6B607F8D00B9" name="FIRMA" seqName="seg_0"/>
+   <object objectType="Table" objectID="340B8FB1-50C4-142A-8FF6-38755258A022" name="KONTO" seqName="seg_0"/>
+   <object objectType="Table" objectID="92800DDB-C15D-4862-299F-FBED71537A1B" name="OSOBA" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="85CE1043-5E3C-9EA6-E1A3-2FFDE1703D02" name="KONTO_FIRMA_FK" seqName="seg_0" containerID="340B8FB1-50C4-142A-8FF6-38755258A022" refContainerID="2B88058C-BF16-DFFF-1228-6B607F8D00B9"/>
+   <object objectType="FKIndexAssociation" objectID="3E104BA4-2737-8610-3133-8F09E552EF99" name="KONTO_OSOBA_FK" seqName="seg_0" containerID="340B8FB1-50C4-142A-8FF6-38755258A022" refContainerID="92800DDB-C15D-4862-299F-FBED71537A1B"/>
+   <object objectType="FKArc" objectID="29D07D96-365C-12AC-FF81-241E59483476" name="Arc_1" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

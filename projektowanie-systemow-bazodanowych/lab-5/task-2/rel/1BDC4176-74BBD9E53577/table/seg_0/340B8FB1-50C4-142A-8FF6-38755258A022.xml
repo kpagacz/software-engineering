@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="340B8FB1-50C4-142A-8FF6-38755258A022" name="KONTO">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>5E220EB1-2857-3A7F-8FBD-EDA443058F03</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="AA2BB332-426C-81A4-1A93-E22C0E85CDE5">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>CFEC9975-2CAA-908C-41E2-086C35BD79B7</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numer" id="2BBD8272-22BA-F2D3-C105-4297E1F7664D">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>CD0D6211-8D63-1C08-2E85-CA9B22E85CFD</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>26 CHAR</dataTypeSize>
+<ownDataTypeParameters>26 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_zalozenia" id="71557747-75C9-8469-7E1C-E97F978ED0FC">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>1BE5147D-6FC7-5FD4-AC98-AE72FCBD485D</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stan_konta" id="07780E1D-C0B4-1BB1-A909-0772D7181DB2">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>FAFBBFD3-0112-4860-BBA4-F685023BD944</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIRMA_id" id="53BB665E-D5D8-1060-90D8-A922F720BF6C">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>2003CA87-4421-B02D-D9A1-4FFCF2329E05</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="85CE1043-5E3C-9EA6-E1A3-2FFDE1703D02" referredColumn="E71BAD3A-0C86-8FF3-215A-2DC2CC26A2FF"/>
+</associations>
+</Column>
+<Column name="OSOBA_id" id="29F0253A-679A-2043-5103-4962ACAEF22D">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>F1A831D1-C379-EE79-8110-60FF5366910A</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3E104BA4-2737-8610-3133-8F09E552EF99" referredColumn="21758E5E-D45F-A080-3EE4-FC40DBDE62DE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7569AC20-0427-517E-18B0-53A300F24722" name="KONTO_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>6809683A-ADD8-0201-E067-22A2F2F03EB1</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA2BB332-426C-81A4-1A93-E22C0E85CDE5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F650DD10-88D1-1675-5AA1-1C8238E67213" name="KONTO_numer_UN">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>1B82E03E-1475-CA46-434C-EE24DA6E0D1E</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2BBD8272-22BA-F2D3-C105-4297E1F7664D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="74F32ACC-46ED-86C7-043C-D661D10A5E1A" name="KONTO_FIRMA_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>41C84771-AB40-F152-B295-43F622084C10</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53BB665E-D5D8-1060-90D8-A922F720BF6C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="119D2AA2-2EB8-D108-6326-29756D8B90A9" name="KONTO_OSOBA_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 12:52:28 UTC</createdTime>
+<generatorID>B6F33391-3264-8760-AF57-C9DB1D3EB2C2</generatorID>
+<ownerDesignName>task-2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29F0253A-679A-2043-5103-4962ACAEF22D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

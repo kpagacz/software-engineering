@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="baza" Class="lab_6_dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pagaczk\Desktop\projects\software-engineering\programowanie-komponentowe\lab-6-db\baza.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="lab_6.Properties.Settings" SettingsPropertyName="bazaConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.People" Member="People">
+    <Type Name="People">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="surname" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="birth_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="height" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="People_Address" Member="Address" ThisKey="Id" OtherKey="people_id" Type="Address" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Address" Member="Address">
+    <Type Name="Address">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="street" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="number" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="people_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="People_Address" Member="People" ThisKey="people_id" OtherKey="Id" Type="People" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4C3011C8-13F9-FF12-ACFD-1AF4E6D2C7A1" name="PRZELEW">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>640218DD-CB2B-C318-2E39-29232715388C</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="A10F9DD3-363F-C7F4-8D79-B8F108FA1213">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>CC92F81F-86C3-95D7-28F8-BFD86E27F3E2</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rachunek_cel" id="588C5B08-44F7-D0FF-1D6C-B1F4E010CCF6">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>5BB12A8E-BF23-D93B-6D18-0EF4052083F4</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>26 CHAR</dataTypeSize>
+<ownDataTypeParameters>26 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data" id="A7B921BC-4557-8DFE-0731-5E1BF75B2646">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>99DA002B-034C-C02D-CEED-FFA68A8CAC33</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cel" id="4A2CC7F4-98E5-C8F2-81C0-79A684AE14D9">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>E49A0F12-9ADA-B11A-0194-172FC2214B17</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kwota" id="611FDBD9-C8C7-B999-843B-6AF0FDB9936B">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>BCC135AA-8550-13CC-1694-1F4CD38EF3FD</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRACOWNIK_id" id="495414BB-A792-5C8E-BC64-932D20EB9000">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>C676FA8C-13F4-4245-8FAF-6356A53E306E</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DECAC44C-A391-5105-46D2-4A988CFCB6DE" referredColumn="E01CCC72-E9F6-8357-C976-B8940EDA7C16"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9932B71D-999C-83E1-D48E-76CE12A0BC3B" name="PRZELEW_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>C0C230FE-62F9-E938-D0A1-18C2464D23E9</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A10F9DD3-363F-C7F4-8D79-B8F108FA1213"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DE51D403-0211-528C-27BB-70F2CB709D37" name="PRZELEW_PRACOWNIK_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-04-14 13:24:18 UTC</createdTime>
+<generatorID>6B80518A-72F5-CCB8-87F3-8ECE98C6701E</generatorID>
+<ownerDesignName>task-4</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="495414BB-A792-5C8E-BC64-932D20EB9000"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
