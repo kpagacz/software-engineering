@@ -1,3 +1,5 @@
+import java.util.Dictionary;
+
 /** Hash map.
  *
  * Implements open addressing as a tool for solving conflicts.
@@ -11,17 +13,20 @@ public class DictionaryOpen<K, V> {
     public K key;
     public V value;
     public boolean isEmpty;
+    public int distanceFromOrigin;
 
     DictionaryElement(K key, V value) {
       this.key = key;
       this.value = value;
       isEmpty = false;
+      distanceFromOrigin = 0;
     }
 
     DictionaryElement() {
-      this.key = null;
-      this.value = null;
+      this.key = key;
+      this.value = value;
       isEmpty = true;
+      distanceFromOrigin = 0;
     }
   }
 
@@ -88,13 +93,29 @@ public class DictionaryOpen<K, V> {
     return dictSize;
   }
 
+  @Override
+  public final String toString() {
+    StringBuilder buffer = new StringBuilder();
+    for(DictionaryElement<K, V> element : data) {
+      if(element.key != null)
+      buffer.append("(" + element.key + " : " + element.value + ")");
+    }
+    return buffer.toString();
+  }
+
+
   // Private methods
   private int hash(K key) {
     return Math.floorMod(key.hashCode(), dictCapacity);
   }
 
   private int delta(K key) {
-    return 2 * Math.floorMod(key.hashCode(), 17) + 1;
+    return 2 * Math.floorMod(key.hashCode(), 13) + 1;
+  }
+
+  private int distance(K key, int occupiedIndex) {
+    int originalIndex = hash(key);
+    return (occupiedIndex + dictCapacity - originalIndex) % dictCapacity;
   }
 
   private K key(DictionaryElement<K, V> element) {
@@ -110,10 +131,10 @@ public class DictionaryOpen<K, V> {
     int distanceToNextIndex = delta(key);
     int currentIndex = firstIndex;
 
-    while(firstIndex != currentIndex && !key(data[currentIndex]).equals(key) && !data[currentIndex].isEmpty) {
+    while(!data[currentIndex].isEmpty) {
+      if(key(data[currentIndex]).equals(key)) return currentIndex;
       currentIndex = (currentIndex + distanceToNextIndex) % dictCapacity;
     }
-
     return currentIndex;
   }
 
@@ -130,8 +151,10 @@ public class DictionaryOpen<K, V> {
                 new DictionaryElement<K, V>(key(data[i]), value(data[i]));
         int currentIndex = hash(key(copiedElement));
         int distanceToNextIndex = delta(key(copiedElement));
+        int distanceFromOrigin = 0;
         while (!newData[currentIndex].isEmpty) {
           currentIndex = (currentIndex + distanceToNextIndex) % dictCapacity;
+          distanceFromOrigin += 1;
         }
         newData[currentIndex] = copiedElement;
       }
