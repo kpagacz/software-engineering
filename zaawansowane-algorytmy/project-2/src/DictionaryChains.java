@@ -1,7 +1,9 @@
 import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.RandomAccess;
 
-public abstract class DictionaryLinear<K, V> {
-  private static class DictionaryElement<K, V> {
+public class DictionaryChains<K, V> implements RandomAccess {
+  public static class DictionaryElement<K, V> {
     public K key;
     public V value;
 
@@ -23,12 +25,12 @@ public abstract class DictionaryLinear<K, V> {
   private int growCoefficient = 2;
 
   // Constructors
-  public DictionaryLinear() {
+  public DictionaryChains() {
     currentBucketsNumber = 128;
     currentElementsNumber = 0;
     data = new ArrayList[currentBucketsNumber];
-    for(ArrayList<DictionaryElement<K, V>> list : data) {
-      list = new ArrayList<DictionaryElement<K, V>>();
+    for(int i = 0; i < currentBucketsNumber; i++) {
+      data[i] = new ArrayList<DictionaryElement<K, V>>();
     }
   }
 
@@ -46,7 +48,7 @@ public abstract class DictionaryLinear<K, V> {
     Pair<Integer, Integer> indices = findIndex(key);
     if(indices.second == -1) {
       data[indices.first].add(new DictionaryElement<>(key, value));
-      ++currentElementsNumber;
+      currentElementsNumber += 1;
       if (currentElementsNumber > currentBucketsNumber * dictCoefficient) {
         rehash(growCoefficient * currentBucketsNumber);
       }
@@ -55,20 +57,47 @@ public abstract class DictionaryLinear<K, V> {
     }
   }
 
-  public final void delete(K key) {}
+  public final void delete(K key) {
+    Pair<Integer, Integer> indices = findIndex(key);
+    if (indices.second != -1) {
+      data[indices.first].remove(indices.second);
+      --currentElementsNumber;
+      if(currentBucketsNumber > 1 && growCoefficient * growCoefficient * currentElementsNumber < currentBucketsNumber * dictCoefficient) {
+        rehash(currentBucketsNumber / growCoefficient);
+      }
+    }
+  }
 
   public final int size() {
     return currentElementsNumber;
   }
 
+  public final ArrayList<K> getKeys() {
+    ArrayList<K> keys = new ArrayList<>();
+    for(ArrayList<DictionaryElement<K, V>> chain : data) {
+      for(DictionaryElement<K, V> element : chain) {
+        keys.add(element.key);
+      }
+    }
+
+    return keys;
+  }
+
   @Override
   public final String toString() {
-    return "";
+    StringBuilder buffer = new StringBuilder();
+    for(ArrayList<DictionaryElement<K, V>> chain : data) {
+      for(DictionaryElement<K, V> element : chain) {
+        buffer.append("(" + element.key + " : " + element.value + ") ");
+      }
+    }
+
+    return buffer.toString();
   }
 
   // Private methods
   private int hash(K key) {
-    return key.hashCode() % currentBucketsNumber;
+    return Math.floorMod(key.hashCode(), currentBucketsNumber);
   }
 
   private K key(DictionaryElement<K, V> element) {
@@ -82,7 +111,7 @@ public abstract class DictionaryLinear<K, V> {
   private Pair<Integer, Integer> findIndex(K key) {
     for(int i = 0; i < data[hash(key)].size(); i++) {
       DictionaryElement<K, V> element = data[hash(key)].get(i);
-      if (key(element) == key) {
+      if (key(element).equals(key)) {
         return new Pair<>(hash(key), i);
       }
     }
@@ -91,11 +120,14 @@ public abstract class DictionaryLinear<K, V> {
 
   private void rehash(int newSize) {
     currentBucketsNumber = newSize;
+
+    // initialize the new container for the data
     ArrayList<DictionaryElement<K, V>>[] newData = new ArrayList[currentBucketsNumber];
-    for(ArrayList<DictionaryElement<K, V>> list : newData) {
-      list = new ArrayList<DictionaryElement<K, V>>();
+    for(int i = 0; i < currentBucketsNumber; i++) {
+      newData[i] = new ArrayList<DictionaryElement<K, V>>();
     }
 
+    // fill up the new container
     for(ArrayList<DictionaryElement<K, V>> list : data) {
       for(DictionaryElement<K, V> element : list) {
         newData[hash(key(element))].add(element);
