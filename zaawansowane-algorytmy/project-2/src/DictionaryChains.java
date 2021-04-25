@@ -2,6 +2,11 @@ import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.RandomAccess;
 
+/** Hashmap.
+* Implements chains as a solution to hash conflicts.
+* @param <K>
+* @param <V>
+*/
 public class DictionaryChains<K, V> implements RandomAccess {
   public static class DictionaryElement<K, V> {
     public K key;

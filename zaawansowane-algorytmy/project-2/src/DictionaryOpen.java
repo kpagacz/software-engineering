@@ -1,9 +1,10 @@
 import java.util.Dictionary;
 
-/** Hash map.
+/**
+ * Hash map.
  *
- * Implements open addressing as a tool for solving conflicts.
- * Supports double hashing, deleting elements with a shift and Robin-Hood hashing.
+ * <p>Implements open addressing as a tool for solving conflicts. Supports double hashing, deleting
+ * elements with a shift and Robin-Hood hashing.
  *
  * @param <K> the type of keys
  * @param <V> the type of values
@@ -23,8 +24,8 @@ public class DictionaryOpen<K, V> {
     }
 
     DictionaryElement() {
-      this.key = key;
-      this.value = value;
+      key = null;
+      value = null;
       isEmpty = true;
       distanceFromOrigin = 0;
     }
@@ -33,28 +34,43 @@ public class DictionaryOpen<K, V> {
   private DictionaryElement<K, V>[] data;
   private int dictCapacity = 128;
   private int dictSize = 0;
-  private int dictCoefficientNominator = 7;
-  private int dictCoefficientDenominator = 10;
-  private int growCoefficient = 2;
+  private final int dictCoefficientNominator = 7;
+  private final int dictCoefficientDenominator = 10;
+  private final int growCoefficient = 2;
 
   // Public methods
   DictionaryOpen() {
     data = new DictionaryElement[dictCapacity];
-    for(int i = 0; i < dictCapacity; i++) {
+    for (int i = 0; i < dictCapacity; i++) {
       data[i] = new DictionaryElement<K, V>();
     }
   }
 
   public void insert(K key, V value) {
-    int index = scanFor(key);
-    if (data[index].isEmpty) {
-      data[index] =  new DictionaryElement<K, V>(key, value);
-      dictSize += 1;
-      if (dictSize * dictCoefficientDenominator > dictCapacity * dictCoefficientNominator) {
-        rehash(growCoefficient * dictCapacity);
+    DictionaryElement<K, V> element = new DictionaryElement<K, V>(key, value);
+    int currentIndex = hash(key(element));
+    int distanceToNextIndex = delta(key(element));
+    while (!data[currentIndex].isEmpty) {
+      if (element.distanceFromOrigin > data[currentIndex].distanceFromOrigin) {
+        // Robin-Hood swap
+        DictionaryElement<K, V> temp = element;
+        element = data[currentIndex];
+        data[currentIndex] = temp;
+        distanceToNextIndex = delta(key(element));
       }
-    } else {
-      data[index] = new DictionaryElement<K, V>(key, value);
+      currentIndex = (currentIndex + distanceToNextIndex) % dictCapacity;
+      element.distanceFromOrigin += 1;
+      if (currentIndex == hash(key(element))) {
+        // no free positions - overwrite
+        element.distanceFromOrigin = 0;
+        data[hash(key(element))] = element;
+        return;
+      }
+    }
+    data[currentIndex] = element;
+    dictSize += 1;
+    if (dictSize * dictCoefficientDenominator > dictCapacity * dictCoefficientNominator) {
+      rehash(dictCapacity * growCoefficient);
     }
   }
 
@@ -64,7 +80,7 @@ public class DictionaryOpen<K, V> {
     if (!data[originalIndex].isEmpty) {
       int previousIndex = originalIndex;
       int nextIndex = (originalIndex + distanceToNextIndex) % dictCapacity;
-      while(nextIndex != originalIndex && !data[nextIndex].isEmpty) {
+      while (nextIndex != originalIndex && !data[nextIndex].isEmpty) {
         data[previousIndex] = data[nextIndex];
         data[nextIndex] = new DictionaryElement<>();
         previousIndex = nextIndex;
@@ -82,7 +98,7 @@ public class DictionaryOpen<K, V> {
 
   public V find(K key) {
     int index = scanFor(key);
-    if(!data[index].isEmpty) {
+    if (!data[index].isEmpty) {
       return value(data[index]);
     } else {
       return null;
@@ -96,13 +112,11 @@ public class DictionaryOpen<K, V> {
   @Override
   public final String toString() {
     StringBuilder buffer = new StringBuilder();
-    for(DictionaryElement<K, V> element : data) {
-      if(element.key != null)
-      buffer.append("(" + element.key + " : " + element.value + ")");
+    for (DictionaryElement<K, V> element : data) {
+      if (element.key != null) buffer.append("(" + element.key + " : " + element.value + ")");
     }
     return buffer.toString();
   }
-
 
   // Private methods
   private int hash(K key) {
@@ -131,34 +145,45 @@ public class DictionaryOpen<K, V> {
     int distanceToNextIndex = delta(key);
     int currentIndex = firstIndex;
 
-    while(!data[currentIndex].isEmpty) {
-      if(key(data[currentIndex]).equals(key)) return currentIndex;
+    while (!data[currentIndex].isEmpty) {
+      if (key(data[currentIndex]).equals(key)) return currentIndex;
       currentIndex = (currentIndex + distanceToNextIndex) % dictCapacity;
+      if (currentIndex == firstIndex) {
+        return -1;
+      }
     }
     return currentIndex;
   }
 
   private void rehash(int newCapacity) {
     DictionaryElement<K, V>[] newData = new DictionaryElement[newCapacity];
-    for(int i = 0; i < newCapacity; i++) {
+    for (int i = 0; i < newCapacity; i++) {
       newData[i] = new DictionaryElement<>();
     }
     int oldCapacity = dictCapacity;
     dictCapacity = newCapacity;
     for (int i = 0; i < oldCapacity; i++) {
       if (!data[i].isEmpty) {
-        DictionaryElement<K, V> copiedElement =
-                new DictionaryElement<K, V>(key(data[i]), value(data[i]));
-        int currentIndex = hash(key(copiedElement));
-        int distanceToNextIndex = delta(key(copiedElement));
-        int distanceFromOrigin = 0;
-        while (!newData[currentIndex].isEmpty) {
-          currentIndex = (currentIndex + distanceToNextIndex) % dictCapacity;
-          distanceFromOrigin += 1;
-        }
-        newData[currentIndex] = copiedElement;
+        robinHoodInsert(newData, key(data[i]), value(data[i]));
       }
     }
     this.data = newData;
+  }
+
+  private void robinHoodInsert(DictionaryElement<K, V>[] newData, K key, V value) {
+    DictionaryElement<K, V> element = new DictionaryElement<K, V>(key, value);
+    int currentIndex = hash(key(element));
+    int distanceToNextIndex = delta(key(element));
+    while (!newData[currentIndex].isEmpty) {
+      if (element.distanceFromOrigin > newData[currentIndex].distanceFromOrigin) {
+        DictionaryElement<K, V> temp = element;
+        element = newData[currentIndex];
+        newData[currentIndex] = temp;
+        distanceToNextIndex = delta(key(element));
+      }
+      currentIndex = (currentIndex + distanceToNextIndex) % dictCapacity;
+      element.distanceFromOrigin += 1;
+    }
+    newData[currentIndex] = element;
   }
 }
