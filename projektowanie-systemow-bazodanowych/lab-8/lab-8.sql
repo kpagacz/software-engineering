@@ -233,10 +233,10 @@ select * from osoby;
 commit;
 
 /* Part 2 Exc 3 */
--- DROP TABLE ubrania;
--- DROP TABLE ubrania_nowe;
--- DROP SEQUENCE ubrania_sekw;
--- DROP SEQUENCE ubrania_nowe_sekw;
+DROP TABLE ubrania;
+DROP TABLE ubrania_nowe;
+DROP SEQUENCE ubrania_sekw;
+DROP SEQUENCE ubrania_nowe_sekw;
 CREATE TABLE ubrania(
 id NUMBER CONSTRAINT ubrania_PK PRIMARY KEY,
 kod VARCHAR2(20) NOT NULL CONSTRAINT ubrania_kod_U UNIQUE,
@@ -275,8 +275,128 @@ COMMIT;
 SELECT * FROM ubrania ORDER BY id;
 SELECT * FROM ubrania_nowe ORDER BY id;
 
-merge into ubrania u1 using ubrania_nowe u2
+merge into ubrania u1
+    using ((select ubrania_nowe.*, 'WIOSNA-LATO-2021' kolekcja from ubrania_nowe) union (select * from ubrania where kolekcja='JESIEŃ-ZIMA 2020')) u2
 on (u1.kod = u2.kod)
-when matched then
-insert (u1.id, u1.kod, u1.nazwa, u1.opis, u1.typ, u1.cena, u1.kolekcja)
+when not matched then insert (u1.id, u1.kod, u1.nazwa, u1.opis, u1.typ, u1.cena, u1.kolekcja) values(
+    ubrania_sekw.nextval, u2.kod, u2.nazwa, u2.opis, u2.typ, u2.cena, u2.kolekcja
+)
+when matched then update set u1.cena=0.85 * u2.cena;
 
+select * from ubrania;
+
+/* Part 2 exc 4 */
+DROP TABLE ubezpieczeni;
+DROP SEQUENCE ubezpieczeni_sekw;
+CREATE TABLE ubezpieczeni
+(
+ id NUMBER(5) CONSTRAINT ubezpieczeni_PK PRIMARY KEY,
+ nazwisko VARCHAR2(25) NOT NULL,
+ imie VARCHAR2(15) NOT NULL,
+ pesel VARCHAR2(11) NOT NULL,
+ data_urodzenia DATE NOT NULL,
+ numer_ubezpieczenia VARCHAR2(20) CONSTRAINT ubezpieczeni_numer_U UNIQUE,
+ kwota_ubezpieczenia NUMBER NOT NULL
+);
+
+CREATE SEQUENCE ubezpieczeni_sekw
+START WITH 1
+INCREMENT BY 1;
+INSERT INTO ubezpieczeni VALUES(ubezpieczeni_sekw.NEXTVAL, 'Nowak', 'Jan',
+'67110512816',TO_DATE('05/11/1967','DD/MM/YYYY'),'2021/1', 20000);
+INSERT INTO ubezpieczeni VALUES(ubezpieczeni_sekw.NEXTVAL, 'Tracz', 'Alicja', '76071509449',
+TO_DATE('15/07/1976','DD/MM/YYYY'), '2021/2', 10000);
+INSERT INTO ubezpieczeni VALUES(ubezpieczeni_sekw.NEXTVAL, 'Sosnowski', 'Wojciech',
+'58122478773', TO_DATE('24/12/1958','DD/MM/YYYY'), '2021/3', 10000);
+COMMIT;
+
+SELECT * FROM pracownicy ORDER BY id;
+SELECT * FROM ubezpieczeni ORDER BY id;
+select ubezpieczeni_sekw.nextval from dual;
+select ubezpieczeni_sekw.currval from dual;
+select to_char(ubezpieczeni_sekw.currval) from dual;
+
+merge into ubezpieczeni u using pracownicy p on (p.id=u.id)
+when matched then update set u.kwota_ubezpieczenia=3*u.kwota_ubezpieczenia
+when not matched then insert (u.id, u.nazwisko, u.imie, u.pesel, u.data_urodzenia, u.numer_ubezpieczenia, u.kwota_ubezpieczenia) values(
+                                                                                                                                        ubezpieczeni_sekw.nextval,
+                                                                                                                                        p.pierwsze_imie,
+                                                                                                                                        p.nazwisko,
+                                                                                                                                        p.pesel,
+                                                                                                                                        p.data_urodzenia,
+                                                                                                                                        '2021/'||ubezpieczeni_sekw.nextval,
+                                                                                                                                        10000
+                                                                                                                                       );
+select * from pracownicy;
+select * from ubezpieczeni;
+
+/* Part 2 exc 5 */
+-- DROP TABLE zuzycie_ostatni_okres;
+-- DROP TABLE odczyty;
+-- DROP TABLE liczniki;
+-- DROP SEQUENCE odczyty_sekw;
+CREATE TABLE liczniki(
+numer VARCHAR2(20) CONSTRAINT liczniki_PK PRIMARY KEY,
+data_zalozenia DATE NOT NULL,
+id_klienta NUMBER NOT NULL);
+CREATE TABLE odczyty(
+id NUMBER CONSTRAINT odczyty_PK PRIMARY KEY,
+id_pracownika NUMBER(2) NOT NULL,
+numer_licznika VARCHAR2(20) NOT NULL CONSTRAINT odczyty_liczniki_FK REFERENCES liczniki(numer),
+stan NUMBER NOT NULL,
+data DATE NOT NULL,
+uwagi VARCHAR2(200) NULL);
+CREATE TABLE zuzycie_ostatni_okres(
+numer_licznika VARCHAR2(20) NOT NULL CONSTRAINT zuzycie_ostatni_okres_PK PRIMARY KEY CONSTRAINT
+zuzycie_liczniki_FK REFERENCES liczniki(numer),
+data_od date NOT NULL,
+data_do date NOT NULL,
+stan_od NUMBER NOT NULL,
+stan_do NUMBER NOT NULL,
+CONSTRAINT zuzycie_daty_CH CHECK (data_od<data_do),
+CONSTRAINT zuzycie_stan_CH CHECK (stan_od<=stan_do));
+INSERT INTO liczniki VALUES ('01863-54653456-11-0', TO_DATE('13/04/2019', 'DD/MM/YYYY'), 1);
+INSERT INTO liczniki VALUES ('01763-54983456-12-1', TO_DATE('01/06/2019', 'DD/MM/YYYY'), 2);
+INSERT INTO liczniki VALUES ('01963-59853456-01-2', TO_DATE('15/01/2020', 'DD/MM/YYYY'), 5);
+INSERT INTO liczniki VALUES ('02863-54653458-07-3', TO_DATE('17/11/2020', 'DD/MM/YYYY'), 7);
+COMMIT;
+SELECT * FROM liczniki;
+CREATE SEQUENCE odczyty_sekw START WITH 1 INCREMENT BY 1;
+-- CREATE SEQUENCE odczyty_sekw START WITH 0 INCREMENT BY 1 MINVALUE 0; -- w EE
+-- odczyty wykonane w lipcu 2019 roku
+INSERT INTO odczyty VALUES (odczyty_sekw.NEXTVAL, 3, '01863-54653456-11-0', 364.3,
+TO_DATE('05/07/2019', 'DD/MM/YYYY'), NULL);
+INSERT INTO odczyty VALUES (odczyty_sekw.NEXTVAL, 3, '01763-54983456-12-1', 200.9,
+TO_DATE('05/07/2019', 'DD/MM/YYYY'), NULL);
+-- odczyty wykonane w styczniu 2020 roku
+INSERT INTO odczyty VALUES (odczyty_sekw.NEXTVAL, 4, '01863-54653456-11-0', 1456.4,
+TO_DATE('05/01/2020', 'DD/MM/YYYY'), NULL);
+INSERT INTO odczyty VALUES (odczyty_sekw.NEXTVAL, 5, '01763-54983456-12-1', 1100.8,
+TO_DATE('06/01/2020', 'DD/MM/YYYY'), NULL);
+-- odczyty wykonane w lipcu 2020 roku
+INSERT INTO odczyty VALUES (odczyty_sekw.NEXTVAL, 3, '01863-54653456-11-0', 2640.9,
+TO_DATE('03/07/2020', 'DD/MM/YYYY'), NULL);
+INSERT INTO odczyty VALUES (odczyty_sekw.NEXTVAL, 5, '01763-54983456-12-1', 2100.9,
+TO_DATE('06/07/2020', 'DD/MM/YYYY'), NULL);
+INSERT INTO odczyty VALUES (odczyty_sekw.NEXTVAL, 5, '01963-59853456-01-2',1106.1,TO_DATE('06/07/2020', 'DD/MM/YYYY'), NULL);
+-- odczyty wykonane w styczniu 2021 roku
+INSERT INTO odczyty VALUES (odczyty_sekw.NEXTVAL, 4, '01863-54653456-11-0', 3648.9,
+TO_DATE('07/01/2021', 'DD/MM/YYYY'), NULL);
+INSERT INTO odczyty VALUES (odczyty_sekw.NEXTVAL, 4, '01763-54983456-12-1',
+3400.2,TO_DATE('07/01/2021', 'DD/MM/YYYY'), NULL);
+INSERT INTO odczyty VALUES (odczyty_sekw.NEXTVAL, 4, '01963-59853456-01-2', 2186.1,
+TO_DATE('07/01/2021', 'DD/MM/YYYY'), NULL);
+INSERT INTO odczyty VALUES (odczyty_sekw.NEXTVAL, 4, '02863-54653458-07-3', 386.1,
+TO_DATE('08/01/2021', 'DD/MM/YYYY'), NULL);
+COMMIT;
+SELECT * FROM odczyty;
+-- stan za okres styczeń 2020 - lipiec 2020
+INSERT INTO zuzycie_ostatni_okres VALUES ('01863-54653456-11-0', TO_DATE('05/01/2020',
+'DD/MM/YYYY'), TO_DATE('03/07/2020', 'DD/MM/YYYY'), 1456.4, 2640.9);
+INSERT INTO zuzycie_ostatni_okres VALUES ('01763-54983456-12-1', TO_DATE('06/01/2020',
+'DD/MM/YYYY'), TO_DATE('06/07/2020', 'DD/MM/YYYY'), 1100.8, 2100.9);
+-- tu rozpoczęciem okresu jest data założenia licznika
+INSERT INTO zuzycie_ostatni_okres VALUES ('01963-59853456-01-2', TO_DATE('15/01/2020',
+'DD/MM/YYYY'), TO_DATE('06/07/2020', 'DD/MM/YYYY'), 0, 1106.1);
+COMMIT;
+SELECT * FROM zuzycie_ostatni_okres;
