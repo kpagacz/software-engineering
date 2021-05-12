@@ -1,0 +1,16 @@
+# Instaluje serwer dhcp
+sudo apt install isc-dhcp-server -y
+
+
+# Otwiera plik konfiguracyjny usługi dhcp
+sudo vim /etc/dhcp/dhcpd.conf
+
+
+# Restartuje usługę z nową konfiguracją
+sudo systemctl restart isc-dhcp-server.service
+
+# Na których interfejsach nasłuchuje usługa
+sudo vim /etc/default/isc-dhcp-server
+
+# Klienci
+dhcp-lease-list
