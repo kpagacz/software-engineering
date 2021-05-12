@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DatabaseWorkers">
+  <DataContextMoniker Name="/DatabaseWorkersDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e928aacc-dfa5-4e0f-a26a-3a47eb566bab" absoluteBounds="3.5, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DatabaseWorkersDataContext/Reprimand" />
+      <nestedChildShapes>
+        <elementListCompartment Id="57a32ad9-d62e-470e-8625-671ad7f48811" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9bf0f16-5d6f-49df-a689-ffb8fc2aacf2" absoluteBounds="0.75, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DatabaseWorkersDataContext/Worker" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95cf2001-f4bd-4de5-80a2-12ddf28607bd" absoluteBounds="0.765, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.88544840494792); (3.5 : 1.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseWorkersDataContext/Worker/Worker_Reprimand" />
+      <nodes>
+        <classShapeMoniker Id="a9bf0f16-5d6f-49df-a689-ffb8fc2aacf2" />
+        <classShapeMoniker Id="e928aacc-dfa5-4e0f-a26a-3a47eb566bab" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
