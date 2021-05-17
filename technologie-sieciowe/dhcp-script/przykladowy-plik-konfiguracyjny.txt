@@ -1,12 +1,17 @@
 default-lease-time 600;
 max-lease-time 7200;
 
-option domain-name "technologie-sieciowe.com";
-option domain-name-servers 10.0.0.2;
-
 authoritative;
 
 subnet 10.0.0.0 netmask 255.255.255.0 {
   range 10.0.0.100 10.0.0.200;
   option routers 10.0.0.1;
+  option domain-name "technologie-sieciowe.com";
+  option domain-name-servers 10.0.0.2;
 }
+
+# Konfiguracja statycznych adresów dla klientów
+host printer {
+  hardware ethernet 00:0c:29:c0:a0:19;
+  fixed-address 10.0.0.201;
+} 

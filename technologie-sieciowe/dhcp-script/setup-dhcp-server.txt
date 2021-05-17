@@ -12,5 +12,5 @@ sudo systemctl restart isc-dhcp-server.service
 # Na których interfejsach nasłuchuje usługa
 sudo vim /etc/default/isc-dhcp-server
 
-# Klienci
+# Wyświetlenie listy klientów
 dhcp-lease-list
