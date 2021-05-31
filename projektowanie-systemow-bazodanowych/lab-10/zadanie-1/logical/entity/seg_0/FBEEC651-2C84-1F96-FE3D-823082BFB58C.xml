@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FBEEC651-2C84-1F96-FE3D-823082BFB58C" name="LEK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:47:17 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="8C587EDF-1644-C8F0-C8DF-08AE0F7C0255">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:47:21 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa" id="3C3738C1-7419-EB3F-B9DB-03EA054FC86C">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:48:16 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pojemnosc" id="8E3ECEBA-0269-40C5-017C-7F4262FFD99D">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:48:36 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bez_recepty" id="D7C70E80-84A0-6D0F-385F-003CD73F0AC7">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:48:47 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="refundacja" id="BCB414D1-CDA5-67AA-17AB-E61868C11BC1">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:48:59 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2F62C1F9-CA98-0509-72EA-760A4B6581B2" name="LEK PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:48:15 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8C587EDF-1644-C8F0-C8DF-08AE0F7C0255</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

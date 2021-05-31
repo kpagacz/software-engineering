@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B399FBBB-2918-A533-9C8D-507C8EF22AF1" name="PACJENT">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:44:18 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="C5E160EF-09E9-FD6A-6E16-3D88E42FE2F3">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:44:26 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="imie" id="38B11E65-4AAD-68E0-C1C7-9493E65759BF">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:44:29 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwisko" id="5CD71179-A072-E9A6-FA66-B4656E086716">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:44:35 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plec" id="09C72AA0-6602-41F1-97AF-E994B532FCA2">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:44:39 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_urodzenia" id="66B5E54B-A2C6-0424-10DD-842BAC42C52D">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:44:45 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pesel" id="6C765053-6BB6-7FE3-F58A-8C2817ED61A4">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:44:56 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ulica" id="005A1C01-B89F-24C0-D947-C0E471B0E76B">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:45:04 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="kod_pocztowy" id="7F9960AF-9D62-921F-7CDE-6344EB47C23B">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:45:12 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="miejscowosc" id="1550C6ED-5F0A-00E0-6A83-6CA95B4D4554">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:45:19 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefon" id="B8B0B7E0-E42B-63A8-4235-CA0633721EA7">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:45:24 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="254AD296-8FB8-86E2-C81B-CBD150617A8B">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:46:24 UTC</createdTime>
+<generatorID>FBDED9E3-57C6-F45C-83B2-C6C736FEEF01</generatorID>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<referedAttribute>1933953D-FB7C-DB2F-31E8-3783B793E8F5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AC86D0D7-0AD8-CD76-D39F-E73A4CD04A08" name="PACJENT PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:44:28 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C5E160EF-09E9-FD6A-6E16-3D88E42FE2F3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

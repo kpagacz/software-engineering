@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3CDEE644-2222-9F05-B2BB-8CEFA3A88DA1" name="ODDZIAL_NFZ">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:41:59 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="1933953D-FB7C-DB2F-31E8-3783B793E8F5">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:42:13 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="kod_oddzialu" id="1AE181B0-37A1-39EF-C899-48FA45D4E23C">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:42:23 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa" id="CDB29290-0142-8DBF-DBCA-47BA303479A0">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:42:39 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ulica" id="0481B5AF-0CFF-036D-F326-E5E038F59589">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:42:44 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="kod_pocztowy" id="5F099DDB-E96D-43B8-710B-51DCFCE96B5F">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:42:50 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="miejscowosc" id="010AC469-3929-1F3C-10A8-2A05F4C40446">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:42:55 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="faks" id="5C24774F-ED5D-FBC6-6436-894DEF8F265F">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:43:07 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefon" id="A148C41D-7E4D-DD3F-DE60-ED4F9C9FAB2A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:43:11 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="strona_www" id="0A08E504-9257-B70A-1D7A-CCB3EE5FE884">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:43:12 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1C47D054-228B-E4CA-AE50-F9A745C5E80A" name="ODDZIAL_NFZ PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:42:19 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1933953D-FB7C-DB2F-31E8-3783B793E8F5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

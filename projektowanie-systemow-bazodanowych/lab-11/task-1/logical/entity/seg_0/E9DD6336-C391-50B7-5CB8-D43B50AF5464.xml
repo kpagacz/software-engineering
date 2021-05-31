@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E9DD6336-C391-50B7-5CB8-D43B50AF5464" name="PRZELOZONY">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:34:12 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="FAAE7DAB-B089-8B9F-E6A3-9CB56564145A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:34:39 UTC</createdTime>
+<generatorID>94F37F9A-5148-78DA-7340-A3C7EC933A73</generatorID>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<referedAttribute>0091A3BD-21BF-4048-C674-22A4AB526E35</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="7372860D-8CC9-CC22-61E0-0C7F9343EC2D">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:34:50 UTC</createdTime>
+<generatorID>D5EC4166-4629-E0DF-6F23-1A382296FBEB</generatorID>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<referedAttribute>0091A3BD-21BF-4048-C674-22A4AB526E35</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FE0E9B40-5C9E-5732-8420-DCB016460389" name="PRZELOZONY PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:34:39 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FAAE7DAB-B089-8B9F-E6A3-9CB56564145A</attributeRef>
+<attributeRef>7372860D-8CC9-CC22-61E0-0C7F9343EC2D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

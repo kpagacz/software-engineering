@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3F528E5B-E4A5-0261-AEF8-7DEBE03D2EF6" name="KATEDRA">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:13:37 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nazwa" id="2EEC6F95-328E-EE8A-83BC-698F129F8ABC">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:13:59 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="66AB35AD-1B63-48ED-40FE-3545CF7E4519">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:17:19 UTC</createdTime>
+<generatorID>B969370A-EF36-BEFB-FC41-C6FA03994E24</generatorID>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<referedAttribute>F2396853-4C31-E604-84C6-04AB8CD7E871</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_pokoju" id="3D74DD17-4DF1-6B53-7AE8-9C75D38E348A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:17:19 UTC</createdTime>
+<generatorID>B969370A-EF36-BEFB-FC41-C6FA03994E24</generatorID>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<referedAttribute>E0A285F5-A69F-4601-AB18-45D4812F98A2</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="169DE6B0-1B74-6972-DFB4-2C385B81DEDB">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:20:55 UTC</createdTime>
+<generatorID>3FA2F3B3-0D81-C583-5105-B1CA860BF1E3</generatorID>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<referedAttribute>0091A3BD-21BF-4048-C674-22A4AB526E35</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="47174004-4A76-992D-0A5F-487930DD71EB" name="KATEDRA PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:14:02 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2EEC6F95-328E-EE8A-83BC-698F129F8ABC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

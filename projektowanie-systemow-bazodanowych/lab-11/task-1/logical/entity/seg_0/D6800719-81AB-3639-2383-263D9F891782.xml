@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D6800719-81AB-3639-2383-263D9F891782" name="PLAN_ZAJEC">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:53:53 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="data" id="A14E98BE-2781-7255-1AE9-BA8C478AFAA7">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:54:02 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="godzina" id="F81547A2-4222-B8CF-C51B-8D17947812AD">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:54:07 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sala" id="C2EBE870-000B-5D7B-F51E-C92BF3F7D662">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:54:11 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="2577EB53-6832-FC6B-6879-4E92A16B21DD">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:54:22 UTC</createdTime>
+<generatorID>3A8450C6-A9DD-E2F0-C616-D1535298068B</generatorID>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<referedAttribute>6A279106-03A1-D06F-AEA4-7F8CE9259099</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_2" id="09F487B1-0B64-4AB8-ABD9-C89947D5AE6A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:56:26 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3C55CE97-FAF4-BE2C-FEE7-6E17480EA6FA" name="PLAN_ZAJEC PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 12:56:29 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>09F487B1-0B64-4AB8-ABD9-C89947D5AE6A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

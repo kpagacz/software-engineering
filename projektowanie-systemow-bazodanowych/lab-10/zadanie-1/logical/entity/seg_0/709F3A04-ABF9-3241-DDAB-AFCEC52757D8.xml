@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="709F3A04-ABF9-3241-DDAB-AFCEC52757D8" name="PRZEPISANY_LEK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:50:15 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="A56BCC74-F16C-2DA2-F590-465182C9981F">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:50:58 UTC</createdTime>
+<generatorID>0B6C7832-970F-612B-3523-E1BDB5EBA86C</generatorID>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<referedAttribute>8C587EDF-1644-C8F0-C8DF-08AE0F7C0255</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="2C64591D-3511-3F2A-B1F4-CC74FA75A857">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:51:05 UTC</createdTime>
+<generatorID>BBAA3EE6-3183-165B-0F62-7160D775BEFE</generatorID>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<referedAttribute>A96D2F8D-DCFC-1EEE-A65C-90A3D32CD21D</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="liczba_opakowan" id="D9045DF7-1AB5-F606-A686-809F2E26D509">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:51:11 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dawkowanie" id="79826AA3-514F-9EA3-3F3D-479F00506C52">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 13:03:23 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="31850022-DBA7-62BA-B61D-EDDBB7364E6B" name="PRZEPISANY_LEK PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:50:58 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A56BCC74-F16C-2DA2-F590-465182C9981F</attributeRef>
+<attributeRef>2C64591D-3511-3F2A-B1F4-CC74FA75A857</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

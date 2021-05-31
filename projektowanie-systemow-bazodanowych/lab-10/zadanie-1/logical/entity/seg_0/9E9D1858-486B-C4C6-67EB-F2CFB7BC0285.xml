@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9E9D1858-486B-C4C6-67EB-F2CFB7BC0285" name="PRODUCENT_LEKU">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 13:12:01 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="FBF14D38-8693-0B95-FF9F-0D88B3664A72">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 13:12:24 UTC</createdTime>
+<generatorID>553E5ED2-DB03-11D6-326D-D708DA146CD4</generatorID>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<referedAttribute>8C587EDF-1644-C8F0-C8DF-08AE0F7C0255</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="producent" id="C44DE120-B824-A497-94B7-32B69B84ECC7">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 13:12:56 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="postac" id="766CE5AE-582F-5ADF-13A7-EA9F8EC34876">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 13:13:04 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C798B16B-E974-3D0C-0C20-B59CA655E34C" name="PRODUCENT_LEKU PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 13:12:24 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FBF14D38-8693-0B95-FF9F-0D88B3664A72</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

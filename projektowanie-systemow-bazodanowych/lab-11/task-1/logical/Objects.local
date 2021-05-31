@@ -1,0 +1,32 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="31A7F298-9D9C-7952-FF07-237A6D4BF52B" name="STUDENT" seqName="seg_0"/>
+   <object objectType="Entity" objectID="3F528E5B-E4A5-0261-AEF8-7DEBE03D2EF6" name="KATEDRA" seqName="seg_0"/>
+   <object objectType="Entity" objectID="8B6A8C01-9903-26B2-C5E9-89DF709EB6BB" name="PRZYPISANIE_GRUP" seqName="seg_0"/>
+   <object objectType="Entity" objectID="94ED2636-2B38-756F-E304-72498C6EB455" name="OSOBA" seqName="seg_0"/>
+   <object objectType="Entity" objectID="9572DF6A-2FDC-D020-6855-61A7BC328826" name="STOPIEN_TYTUL" seqName="seg_0"/>
+   <object objectType="Entity" objectID="ACC05BBA-C452-06A1-8468-EDA35BC263D5" name="PRZEDMIOT" seqName="seg_0"/>
+   <object objectType="Entity" objectID="B91B73A3-70AF-6010-D5D6-F5FA0ADD096A" name="REALIZACJA_PRZEDMIOTU" seqName="seg_0"/>
+   <object objectType="Entity" objectID="BEF3AC00-02B2-3AF0-5EA1-410226CCE4F3" name="NAUCZYCIEL" seqName="seg_0"/>
+   <object objectType="Entity" objectID="D6800719-81AB-3639-2383-263D9F891782" name="PLAN_ZAJEC" seqName="seg_0"/>
+   <object objectType="Entity" objectID="E9DD6336-C391-50B7-5CB8-D43B50AF5464" name="PRZELOZONY" seqName="seg_0"/>
+   <object objectType="Entity" objectID="EE54EDF8-028E-D956-E36A-7A7E336ED894" name="GRUPA" seqName="seg_0"/>
+   <object objectType="Entity" objectID="F1636BD7-53D2-70BC-B493-3E351DC3291B" name="POKOJ" seqName="seg_0"/>
+   <object objectType="Relation" objectID="01611662-DD00-98B4-853E-ED8197594712" name="Relation_5" seqName="seg_0"/>
+   <object objectType="Relation" objectID="04FCE609-E628-FC35-D4A8-E65C32C7FFA1" name="Relation_1" seqName="seg_0"/>
+   <object objectType="Relation" objectID="3A8450C6-A9DD-E2F0-C616-D1535298068B" name="Relation_22" seqName="seg_0"/>
+   <object objectType="Relation" objectID="3FA2F3B3-0D81-C583-5105-B1CA860BF1E3" name="Relation_8" seqName="seg_0"/>
+   <object objectType="Relation" objectID="50638451-7189-C5BF-97E3-8883948A9596" name="Relation_7" seqName="seg_0"/>
+   <object objectType="Relation" objectID="94F37F9A-5148-78DA-7340-A3C7EC933A73" name="Relation_10" seqName="seg_0"/>
+   <object objectType="Relation" objectID="9A8C5D86-C801-F214-A90D-44333E5CADFE" name="Relation_14" seqName="seg_0"/>
+   <object objectType="Relation" objectID="9BBE341D-3ADF-4DE3-2814-DBAF29228131" name="Relation_18" seqName="seg_0"/>
+   <object objectType="Relation" objectID="AE9D6E23-9A92-8FA4-A968-114FB0D15263" name="Relation_20" seqName="seg_0"/>
+   <object objectType="Relation" objectID="B969370A-EF36-BEFB-FC41-C6FA03994E24" name="Relation_6" seqName="seg_0"/>
+   <object objectType="Relation" objectID="BC76E74B-7AC3-5EA3-0824-00EC81B95E83" name="Relation_17" seqName="seg_0"/>
+   <object objectType="Relation" objectID="CC23A326-9C39-C705-4A6A-C9F38149FA97" name="Relation_15" seqName="seg_0"/>
+   <object objectType="Relation" objectID="D5EC4166-4629-E0DF-6F23-1A382296FBEB" name="Relation_11" seqName="seg_0"/>
+   <object objectType="Relation" objectID="DAE7FA8D-9827-4FC6-E827-045EE2DCFEF0" name="Relation_21" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="83310AF9-B9D2-09DA-89C1-CB908671DE6E" name="Hierarchy_2" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="995497A6-A659-F2A2-6D13-CA3A979E604D" name="Hierarchy_1" seqName="seg_0"/>
+   <object objectType="Arc" objectID="DA9E6B7A-7BE3-3EA6-77C1-80FE6BA15DA5" name="Arc_2" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>
