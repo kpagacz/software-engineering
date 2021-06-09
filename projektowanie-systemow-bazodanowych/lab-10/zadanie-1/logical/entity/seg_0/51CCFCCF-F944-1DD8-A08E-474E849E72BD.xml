@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="51CCFCCF-F944-1DD8-A08E-474E849E72BD" name="SPECJALIZACJA_LEKARZA">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:40:58 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="63AB5CDF-009F-259E-3659-9B5429FA5CD8">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:41:19 UTC</createdTime>
+<generatorID>E30696D0-540A-1642-B6CD-C447F7979624</generatorID>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<referedAttribute>6F9DAF61-4647-0878-C457-8C88FB4DC253</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="D7CE9A5C-D5D7-578E-0EB1-8931D3A498E5">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:41:46 UTC</createdTime>
+<generatorID>06533D34-3303-B211-D87D-C5E26F03E8E3</generatorID>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<referedAttribute>09916ADC-B9F4-4BB4-156E-0BF8B953C9C4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7F5CADDC-1F9D-4E5B-BC3C-2DDD90009037" name="SPECJALIZACJA_LEKARZA PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:41:35 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>63AB5CDF-009F-259E-3659-9B5429FA5CD8</attributeRef>
+<attributeRef>D7CE9A5C-D5D7-578E-0EB1-8931D3A498E5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CA16C825-7CD9-5335-1849-80A3062053ED" containerWithKeyObject="E7C88AD9-4A5D-5FBB-FEE9-84281BABA260" localFKIndex="B3FE0588-921A-AB34-A250-41C1E381B53F" name="ULUBIONY_SERIAL_MIŁOŚNIK_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>F832F5F8-1D32-E543-55C8-DC658052A7BF</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>19F572DA-541F-E34B-B70E-135789489653</referredTableID>
+<keyObject>1946D730-BA42-CE72-7652-12EE483B5DDA</keyObject>
+<referredKeyID>1946D730-BA42-CE72-7652-12EE483B5DDA</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

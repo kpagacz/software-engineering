@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4738466D-CE4D-C325-2E36-47A58975C073" name="OCENA_SERIALU">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>EA1CBCE6-C0BD-933E-88F3-6FBDF77A9AC5</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SERIAL_id" id="43016FA8-CC06-9351-A2C3-B1A482FFF9EA">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>3DCA2B17-785E-52D4-900A-953644F00D19</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8E9EEFCB-B6F9-6FB6-00BF-7FA927D5EE3F" referredColumn="45F9DA0A-E6C3-A7E4-2CAD-041BE0A43968"/>
+</associations>
+</Column>
+<Column name="MIŁOŚNIK_id" id="8B36DFEB-C5F6-3FB2-2154-B9626439AD54">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>423A6D4B-4A92-C1BC-6935-6ECC9E23D55D</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3500AAF7-A319-87A9-5874-A5B9F9378DB4" referredColumn="6B717BAD-8542-6939-879A-182EE1F8FA96"/>
+</associations>
+</Column>
+<Column name="ocena" id="8931662A-CFCA-3BB3-C6AD-FF975DBB3E3A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>BD613EEF-50AB-F991-94BD-301369C55F59</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="92235A1C-F853-BB3B-46D0-A8ECC68A77E0" name="OCENA_SERIALU_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>272D0D8A-4178-ADF6-2944-C52604999578</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="43016FA8-CC06-9351-A2C3-B1A482FFF9EA"/>
+<colUsage columnID="8B36DFEB-C5F6-3FB2-2154-B9626439AD54"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3C305BF9-BD4A-1D82-4A0C-D39064CA1126" name="OCENA_SERIALU_SERIAL_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>0DF31EE0-974E-ED87-2D48-6640749D05DF</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="43016FA8-CC06-9351-A2C3-B1A482FFF9EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A9BA34D6-692D-C575-F5F5-68DCB39B185A" name="OCENA_SERIALU_MIŁOŚNIK_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>AC476139-FB76-F973-277D-2EDFC499827F</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8B36DFEB-C5F6-3FB2-2154-B9626439AD54"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

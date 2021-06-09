@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="976181A8-03C0-2294-C29A-2DEE1B725303" name="KANAŁ">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>8538BAAD-E0E4-3CC4-B713-05C45F95DBD6</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="97B564E9-1D35-2CA6-D3E3-D20F674B57AF">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>42E731F0-BF3D-C26D-CD18-90450F95B7B4</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwa" id="3127FEF4-7095-07E3-EED0-65652EE8DAF3">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>2A313EA6-7920-29B0-3279-58414670F3C1</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_uruchomienia" id="FCD31304-AFA6-72B2-F554-F5C5BFA9A286">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>7C5A6C43-9726-CAEA-CD16-0B7881BAB422</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STACJA_id" id="27C52E7A-6287-4E7E-72D5-332F6EB0C384">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>D84CB791-CE16-6A1E-8774-5FA20653234B</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F6357574-FF15-95B4-11B4-7D6986D06AB8" referredColumn="3DB605EE-6C41-CD8D-A181-8F954FC71FC8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="12A38565-9945-7926-962A-C6EABA6F40BA" name="KANAŁ_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>6C69048B-D5E5-26B2-A4D2-457797730AC1</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97B564E9-1D35-2CA6-D3E3-D20F674B57AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C0098A1D-C947-3F4B-4945-3CCD2C9D1071" name="KANAŁ_STACJA_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>09FEF17B-ACF1-99EB-F029-FF57CFE3DA7D</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="27C52E7A-6287-4E7E-72D5-332F6EB0C384"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

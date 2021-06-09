@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F0250EC4-0485-96FF-4FB1-E0018DAEB5F5" name="WYKONANE_BADANIE">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:54:41 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id2" id="AF6CF997-A680-1B5D-6A37-656FEA4A7F9C">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:55:50 UTC</createdTime>
+<generatorID>B0A08E13-2905-0705-FE70-08E8DBD4DFB6</generatorID>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<referedAttribute>C5E160EF-09E9-FD6A-6E16-3D88E42FE2F3</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data" id="F3118FA4-01F4-B40C-6D8B-3D138EE1B3F1">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:55:55 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="platnik" id="233D0F69-501E-2177-6874-2F1F5EF17D92">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:56:05 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="5DA9D929-B43F-D3C4-1C38-10E7FCE62FCC">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 13:05:31 UTC</createdTime>
+<generatorID>7CD9EA54-F5F7-BFA9-2AFA-18E8EFCC00E3</generatorID>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<referedAttribute>427ED7CC-C5FF-36B1-21BC-81AB224A2A7B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="0AF33E84-AB6E-BFB9-41D8-48A17663F6A5">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 13:05:31 UTC</createdTime>
+<generatorID>7CD9EA54-F5F7-BFA9-2AFA-18E8EFCC00E3</generatorID>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<referedAttribute>F3EA3434-AFCE-BC0E-8FC7-4AA05189CCF9</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C80FA6AD-5753-38F2-2E32-658B556ADC56" name="WYKONANE_BADANIE PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:55:16 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AF6CF997-A680-1B5D-6A37-656FEA4A7F9C</attributeRef>
+<attributeRef>F3118FA4-01F4-B40C-6D8B-3D138EE1B3F1</attributeRef>
+<attributeRef>5DA9D929-B43F-D3C4-1C38-10E7FCE62FCC</attributeRef>
+<attributeRef>0AF33E84-AB6E-BFB9-41D8-48A17663F6A5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

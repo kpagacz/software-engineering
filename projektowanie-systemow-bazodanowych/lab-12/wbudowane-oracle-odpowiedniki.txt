@@ -1,0 +1,19 @@
+1) ORACLE: DECODE
+MySql: nie ma dokładnego odpowiednika. Jest IF(), ale działa tylko dla wyrażeń zwracających prawdę/fałsz,
+a nie dla dowolnej liczby możliwości.
+Postgresql: jest funkcja DECODE, ale robi ona zupełnie co innego. Nie ma odpowiednika.
+Microsoft SQL Server: nie ma odpowiednika
+W każdej wersji można korzystać z konstrukcji CASE ... when ..., która działa jak decode.
+
+2) Oracle: RAND - zwraca liczbę typu podwójnej precyzji pomiędzy 0 a 1
+MySql: RAND
+Postgresql: random
+SQL Server: RAND
+
+3) Oracle: operator złączania łańcuchów znakowych ||
+MySql: CONCAT, ale inaczej zachowuje się, gdy łańcuchy są NULL:
+	Oracle: jeżeli jeden lub więcej łańcuchów jest nie NULL, to łańcuchy NULL są traktowane jako ""
+	jeżeli wszystkie argumenty są NULL, to zwraca NULL
+	MySql: jeżeli co najmniej jeden argument jest NULL, to zwraca NULL
+Postgresql: ||, ale zachowuje się tak jak CONCAT w MySql, jeśli chodzi o argumenty NULL (jest też funkcja CONCAT)
+SQL Server: CONCAT i zachowuje się jak || w Oracle, jeśli chodzi o NULL

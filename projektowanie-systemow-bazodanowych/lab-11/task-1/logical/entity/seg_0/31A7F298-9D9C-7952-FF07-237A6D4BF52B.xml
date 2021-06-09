@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="31A7F298-9D9C-7952-FF07-237A6D4BF52B" name="STUDENT">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 11:48:35 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>94ED2636-2B38-756F-E304-72498C6EB455</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nr_legitymacji" id="80E79F4A-982F-339D-636A-25A130D8666B">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 11:48:52 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rok_studiow" id="248D3B57-5156-6599-EAF5-4E714F1DACFF">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 11:49:05 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_ukonczenia" id="D586A9B5-3B0D-D3E9-2A47-5998E8A43247">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 11:49:14 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EA99659A-DF56-9A93-D8C7-32C47AF243B0" name="nr_legitymacji_unique">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-26 11:49:31 UTC</createdTime>
+<ownerDesignName>task-1</ownerDesignName>
+<engineerTo>
+<item key="BED96E0E-D8D9-00D9-4626-5F505A4668C2" value="true"/>
+</engineerTo>
+<newElementsIDs>80E79F4A-982F-339D-636A-25A130D8666B</newElementsIDs>
+<usedAttributes>
+<attributeRef>80E79F4A-982F-339D-636A-25A130D8666B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

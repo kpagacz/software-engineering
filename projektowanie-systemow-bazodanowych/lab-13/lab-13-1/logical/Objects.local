@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="3C04A1AB-DF81-CEA0-E7A6-A2F256C92BD9" name="AKTOR" seqName="seg_0"/>
+   <object objectType="Entity" objectID="9753F206-85D8-6DB2-AC5E-7D2EFC733FE9" name="GATUNEK" seqName="seg_0"/>
+   <object objectType="Entity" objectID="5969A70E-83EA-61CD-76DA-12AFCCA87792" name="GATUNEK_SERIALU" seqName="seg_0"/>
+   <object objectType="Entity" objectID="8538BAAD-E0E4-3CC4-B713-05C45F95DBD6" name="KANAÅ�" seqName="seg_0"/>
+   <object objectType="Entity" objectID="5F57DDBE-E044-291D-B1C1-B2E71B1CF3EB" name="KOMENTARZ" seqName="seg_0"/>
+   <object objectType="Entity" objectID="C179304A-808A-4D5A-D085-0DBA6194F824" name="MIÅ�OÅšNIK" seqName="seg_0"/>
+   <object objectType="Entity" objectID="EA1CBCE6-C0BD-933E-88F3-6FBDF77A9AC5" name="OCENA_SERIALU" seqName="seg_0"/>
+   <object objectType="Entity" objectID="4342FAB2-E2DD-4451-1D97-2E2EE8A1FBF8" name="ODCINEK" seqName="seg_0"/>
+   <object objectType="Entity" objectID="09D6808A-850D-D708-773B-DB87C9D2620C" name="SERIAL" seqName="seg_0"/>
+   <object objectType="Entity" objectID="83948547-354E-F095-1A38-B89180ECF7EC" name="SEZON" seqName="seg_0"/>
+   <object objectType="Entity" objectID="66BA0703-546B-EFBA-3859-9CB7677B21A1" name="STACJA" seqName="seg_0"/>
+   <object objectType="Entity" objectID="2A42CD9A-A37E-97A5-224D-AFE2F36B270F" name="TYP" seqName="seg_0"/>
+   <object objectType="Entity" objectID="62194CAF-9123-CBB2-93A0-AB1AC27FEA2D" name="TYP_SERIALU" seqName="seg_0"/>
+   <object objectType="Entity" objectID="48049300-6C2F-DFA7-20F6-F797AF877DE0" name="ULUBIONY_SERIAL" seqName="seg_0"/>
+   <object objectType="Entity" objectID="8F95ACC7-1072-6C28-172F-286BF869ADA4" name="WYSTAPIENIE_ODCINKOWE" seqName="seg_0"/>
+   <object objectType="Entity" objectID="2F3D1D5F-F431-408B-EB08-A251393F21A1" name="WYSTAPIENIE_SERIALOWE" seqName="seg_0"/>
+   <object objectType="Relation" objectID="09FEF17B-ACF1-99EB-F029-FF57CFE3DA7D" name="Relation_1" seqName="seg_0"/>
+   <object objectType="Relation" objectID="2CBEB48E-37FD-B245-96FA-5862CF065072" name="Relation_10" seqName="seg_0"/>
+   <object objectType="Relation" objectID="BBEEAF52-E822-2466-4592-44C7DB92EA7F" name="Relation_11" seqName="seg_0"/>
+   <object objectType="Relation" objectID="F6727181-543D-E86F-DA4C-774E199E3467" name="Relation_12" seqName="seg_0"/>
+   <object objectType="Relation" objectID="F832F5F8-1D32-E543-55C8-DC658052A7BF" name="Relation_13" seqName="seg_0"/>
+   <object objectType="Relation" objectID="0DF31EE0-974E-ED87-2D48-6640749D05DF" name="Relation_14" seqName="seg_0"/>
+   <object objectType="Relation" objectID="AC476139-FB76-F973-277D-2EDFC499827F" name="Relation_15" seqName="seg_0"/>
+   <object objectType="Relation" objectID="5D559D02-521A-21D0-9801-1D4C3E277463" name="Relation_16" seqName="seg_0"/>
+   <object objectType="Relation" objectID="96244CC2-15DB-A1CA-805A-FA9407C13F6A" name="Relation_17" seqName="seg_0"/>
+   <object objectType="Relation" objectID="32352682-6FEE-DE88-C7B2-D2B757CAA743" name="Relation_18" seqName="seg_0"/>
+   <object objectType="Relation" objectID="288FC00F-8A46-723D-247E-E9D859EB72B9" name="Relation_19" seqName="seg_0"/>
+   <object objectType="Relation" objectID="683A396B-C172-A5AD-882B-5931E5824247" name="Relation_2" seqName="seg_0"/>
+   <object objectType="Relation" objectID="4E31A934-7BDC-0ED6-3EDB-3033D39A201B" name="Relation_20" seqName="seg_0"/>
+   <object objectType="Relation" objectID="C5232ABC-E6EC-DFC3-4016-287EE6BECB21" name="Relation_21" seqName="seg_0"/>
+   <object objectType="Relation" objectID="11F9B09D-00E9-B26B-9AAC-417042E60363" name="Relation_22" seqName="seg_0"/>
+   <object objectType="Relation" objectID="C944FEB2-FA9D-B0C9-E1EF-C818650E2680" name="Relation_23" seqName="seg_0"/>
+   <object objectType="Relation" objectID="89D2AAD7-2F60-19C5-2DCA-BAA56670324F" name="Relation_3" seqName="seg_0"/>
+   <object objectType="Relation" objectID="158BC68C-3A81-7637-81EA-58FAAB7781FF" name="Relation_4" seqName="seg_0"/>
+   <object objectType="Relation" objectID="9F21133D-0641-7A90-A73F-DEF8975B929F" name="Relation_8" seqName="seg_0"/>
+   <object objectType="Relation" objectID="25A1B80B-110F-AA4A-1DAA-B0EBCF610E4C" name="Relation_9" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

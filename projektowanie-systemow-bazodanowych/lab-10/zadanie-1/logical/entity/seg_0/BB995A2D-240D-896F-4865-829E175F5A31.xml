@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BB995A2D-240D-896F-4865-829E175F5A31" name="KONSULTACJA">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:49:25 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="A96D2F8D-DCFC-1EEE-A65C-90A3D32CD21D">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:49:35 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data" id="9FAB27B8-BED6-0DB7-CE1F-FB6F7948A942">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:49:40 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="opis" id="9FC412E5-CBC6-5433-1B80-EF33BAB315E1">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:49:47 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="3F70A35C-7DB4-5BAC-E2AD-3A1367D031F2">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:57:16 UTC</createdTime>
+<generatorID>AC5E771E-6EEF-3F6C-EA75-EAD42EE77829</generatorID>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<referedAttribute>C5E160EF-09E9-FD6A-6E16-3D88E42FE2F3</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="FD5B0799-E892-5563-FE9D-307FD7A5EC12">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:57:30 UTC</createdTime>
+<generatorID>21777417-999D-0543-BB99-0EE90F9EECEF</generatorID>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<referedAttribute>09916ADC-B9F4-4BB4-156E-0BF8B953C9C4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="373DADE2-E9F9-A66C-C7B9-68B0935D0F62" name="KONSULTACJA PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 12:49:39 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A96D2F8D-DCFC-1EEE-A65C-90A3D32CD21D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

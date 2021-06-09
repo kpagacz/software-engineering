@@ -1,0 +1,32 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="04AA1005-EFAD-D192-35C7-11D6836B00DA" name="AKTOR" seqName="seg_0"/>
+   <object objectType="Table" objectID="F30AB422-E224-7441-03B3-E7C29C694D82" name="GATUNEK" seqName="seg_0"/>
+   <object objectType="Table" objectID="D4C95F47-9D95-6AB3-E379-F5D997FBC717" name="GATUNEK_SERIALU" seqName="seg_0"/>
+   <object objectType="Table" objectID="976181A8-03C0-2294-C29A-2DEE1B725303" name="KANAÅ�" seqName="seg_0"/>
+   <object objectType="Table" objectID="39837967-8C93-70A6-FED0-0FBFA2BD0BA8" name="KOMENTARZ" seqName="seg_0"/>
+   <object objectType="Table" objectID="19F572DA-541F-E34B-B70E-135789489653" name="MIÅ�OÅšNIK" seqName="seg_0"/>
+   <object objectType="Table" objectID="4738466D-CE4D-C325-2E36-47A58975C073" name="OCENA_SERIALU" seqName="seg_0"/>
+   <object objectType="Table" objectID="4C9FD7B4-2763-FF9D-FAE8-9EEF6F9F44FC" name="ODCINEK" seqName="seg_0"/>
+   <object objectType="Table" objectID="E5CE00B3-BECA-1EB4-8393-DD32832CF3E5" name="SERIAL" seqName="seg_0"/>
+   <object objectType="Table" objectID="75C8243A-559B-AAD9-119E-83F2A0799495" name="STACJA" seqName="seg_0"/>
+   <object objectType="Table" objectID="E7C88AD9-4A5D-5FBB-FEE9-84281BABA260" name="ULUBIONY_SERIAL" seqName="seg_0"/>
+   <object objectType="Table" objectID="84D5E0C4-B459-2986-2172-D6B10BDA47CB" name="WYSTAPIENIE_ODCINKOWE" seqName="seg_0"/>
+   <object objectType="Table" objectID="ABF9BC4F-477E-751C-0C4C-F3E330F74787" name="WYSTAPIENIE_SERIALOWE" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="940FC41D-B5B7-894F-33E9-E0C326AD6A9C" name="GATUNEK_SERIALU_GATUNEK_FK" seqName="seg_0" containerID="D4C95F47-9D95-6AB3-E379-F5D997FBC717" refContainerID="F30AB422-E224-7441-03B3-E7C29C694D82"/>
+   <object objectType="FKIndexAssociation" objectID="17B0EB93-50AA-58A2-E8E7-1EA0E1E3A0D4" name="GATUNEK_SERIALU_SERIAL_FK" seqName="seg_0" containerID="D4C95F47-9D95-6AB3-E379-F5D997FBC717" refContainerID="E5CE00B3-BECA-1EB4-8393-DD32832CF3E5"/>
+   <object objectType="FKIndexAssociation" objectID="F6357574-FF15-95B4-11B4-7D6986D06AB8" name="KANAÅ�_STACJA_FK" seqName="seg_0" containerID="976181A8-03C0-2294-C29A-2DEE1B725303" refContainerID="75C8243A-559B-AAD9-119E-83F2A0799495"/>
+   <object objectType="FKIndexAssociation" objectID="0C7DAED4-B061-D506-F063-639454B5EF1B" name="KOMENTARZ_KOMENTARZ_FK" seqName="seg_0" containerID="39837967-8C93-70A6-FED0-0FBFA2BD0BA8" refContainerID="39837967-8C93-70A6-FED0-0FBFA2BD0BA8"/>
+   <object objectType="FKIndexAssociation" objectID="13E9DC37-2B01-86B4-5878-C29D1E10308C" name="KOMENTARZ_MIÅ�OÅšNIK_FK" seqName="seg_0" containerID="39837967-8C93-70A6-FED0-0FBFA2BD0BA8" refContainerID="19F572DA-541F-E34B-B70E-135789489653"/>
+   <object objectType="FKIndexAssociation" objectID="A5136235-D65C-3FCE-0FBA-E50D3343124C" name="KOMENTARZ_ODCINEK_FK" seqName="seg_0" containerID="39837967-8C93-70A6-FED0-0FBFA2BD0BA8" refContainerID="4C9FD7B4-2763-FF9D-FAE8-9EEF6F9F44FC"/>
+   <object objectType="FKIndexAssociation" objectID="3500AAF7-A319-87A9-5874-A5B9F9378DB4" name="OCENA_SERIALU_MIÅ�OÅšNIK_FK" seqName="seg_0" containerID="4738466D-CE4D-C325-2E36-47A58975C073" refContainerID="19F572DA-541F-E34B-B70E-135789489653"/>
+   <object objectType="FKIndexAssociation" objectID="8E9EEFCB-B6F9-6FB6-00BF-7FA927D5EE3F" name="OCENA_SERIALU_SERIAL_FK" seqName="seg_0" containerID="4738466D-CE4D-C325-2E36-47A58975C073" refContainerID="E5CE00B3-BECA-1EB4-8393-DD32832CF3E5"/>
+   <object objectType="FKIndexAssociation" objectID="D9B6220D-117F-1A55-CA76-F67838F38EAE" name="ODCINEK_SERIAL_FK" seqName="seg_0" containerID="4C9FD7B4-2763-FF9D-FAE8-9EEF6F9F44FC" refContainerID="E5CE00B3-BECA-1EB4-8393-DD32832CF3E5"/>
+   <object objectType="FKIndexAssociation" objectID="261716E5-F30A-E502-8A5D-AE7B2F35699F" name="SERIAL_KANAÅ�_FK" seqName="seg_0" containerID="E5CE00B3-BECA-1EB4-8393-DD32832CF3E5" refContainerID="976181A8-03C0-2294-C29A-2DEE1B725303"/>
+   <object objectType="FKIndexAssociation" objectID="CA16C825-7CD9-5335-1849-80A3062053ED" name="ULUBIONY_SERIAL_MIÅ�OÅšNIK_FK" seqName="seg_0" containerID="E7C88AD9-4A5D-5FBB-FEE9-84281BABA260" refContainerID="19F572DA-541F-E34B-B70E-135789489653"/>
+   <object objectType="FKIndexAssociation" objectID="CDA156EC-7869-90E3-2AFE-488E9B1629E4" name="ULUBIONY_SERIAL_SERIAL_FK" seqName="seg_0" containerID="E7C88AD9-4A5D-5FBB-FEE9-84281BABA260" refContainerID="E5CE00B3-BECA-1EB4-8393-DD32832CF3E5"/>
+   <object objectType="FKIndexAssociation" objectID="9629D8B8-B405-AACB-8B7F-ECF69D0E2568" name="WYSTAPIENIE_ODCINKOWE_ODCINEK_FK" seqName="seg_0" containerID="84D5E0C4-B459-2986-2172-D6B10BDA47CB" refContainerID="4C9FD7B4-2763-FF9D-FAE8-9EEF6F9F44FC"/>
+   <object objectType="FKIndexAssociation" objectID="90915A6C-60B1-596D-86FE-BD00BA2541DF" name="WYSTAPIENIE_ODCINKOWE_WYSTAPIENIE_SERIALOWE_FK" seqName="seg_0" containerID="84D5E0C4-B459-2986-2172-D6B10BDA47CB" refContainerID="ABF9BC4F-477E-751C-0C4C-F3E330F74787"/>
+   <object objectType="FKIndexAssociation" objectID="C76E199C-BEAF-78BF-D8E1-7449659669D7" name="WYSTAPIENIE_SERIALOWE_AKTOR_FK" seqName="seg_0" containerID="ABF9BC4F-477E-751C-0C4C-F3E330F74787" refContainerID="04AA1005-EFAD-D192-35C7-11D6836B00DA"/>
+   <object objectType="FKIndexAssociation" objectID="C40C864B-5A96-1B29-DA7D-EF63C2FBB173" name="WYSTAPIENIE_SERIALOWE_SERIAL_FK" seqName="seg_0" containerID="ABF9BC4F-477E-751C-0C4C-F3E330F74787" refContainerID="E5CE00B3-BECA-1EB4-8393-DD32832CF3E5"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

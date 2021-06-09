@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4283880F-1860-66D6-AAC7-2AF13054B380" name="UŻYTKOWNIK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 13:19:58 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="902DF51D-6A39-FCD6-34A7-B62D69CC3624">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 13:20:11 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="login" id="190C4A8D-A758-B390-CBC7-8A87C3FE1DCD">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 13:20:15 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="haslo" id="138AF65A-AAC9-0B4C-98EA-5537D343ED03">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 13:20:18 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="72DFB2ED-EB74-C29A-7ECE-9FAAA39F3CFE" name="UŻYTKOWNIK PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-05-19 13:20:23 UTC</createdTime>
+<ownerDesignName>zadanie-1</ownerDesignName>
+<engineerTo>
+<item key="3A842A6A-EE16-9CE8-5144-1459D6DA9655" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>902DF51D-6A39-FCD6-34A7-B62D69CC3624</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

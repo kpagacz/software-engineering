@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2F3D1D5F-F431-408B-EB08-A251393F21A1" name="WYSTAPIENIE_SERIALOWE">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:34:51 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="67827297-47DB-5659-9536-4354D88CF96A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:37:06 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rodzaj_roli" id="E87E0628-CD97-E1FE-04EE-CD1E01AD5344">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:35:54 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa_roli" id="1F6E42E1-A47B-96AC-2FDB-15E81B2D4224">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:36:11 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="1D8EFD13-1F63-4E67-E014-483684E64271">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:38:41 UTC</createdTime>
+<generatorID>9F21133D-0641-7A90-A73F-DEF8975B929F</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<referedAttribute>FAFA8858-9A6E-D8B0-C296-1D9539E54EEF</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="9D5395D8-7AC4-82A4-024E-F6B51B08ABB9">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:38:45 UTC</createdTime>
+<generatorID>25A1B80B-110F-AA4A-1DAA-B0EBCF610E4C</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<referedAttribute>163A85F1-46CC-B6D3-F77E-33A205C9F184</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="09E606C0-A6B8-CCEE-0484-93C6BEEE1BA0" name="WYSTAPIENIE_SERIALOWE PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:35:02 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>67827297-47DB-5659-9536-4354D88CF96A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5F57DDBE-E044-291D-B1C1-B2E71B1CF3EB" name="KOMENTARZ">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:51:07 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_1" id="BDE7B1E4-E6F7-8121-5FB7-F2BF2E138DFA">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:51:29 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="0DDCD7CB-7FD3-27E7-C7CE-368ED3D0A032">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:51:20 UTC</createdTime>
+<generatorID>5D559D02-521A-21D0-9801-1D4C3E277463</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<referedAttribute>05D92BFE-CAE0-65EF-055F-E995B3020994</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="AFD7DBD6-D3D6-A064-0E8D-720144B50902">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:51:24 UTC</createdTime>
+<generatorID>96244CC2-15DB-A1CA-805A-FA9407C13F6A</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<referedAttribute>E07FB0F6-AED3-7F22-99A8-5936650BF3D5</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="treść" id="5589782D-FF28-E68E-82FD-2C23D9CFB6DC">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:51:36 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_wystawienia" id="A41A7EF2-7E9B-B94A-E8E8-BECBDC60C361">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:51:43 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_11" id="94418A87-641B-BCFE-A066-F95BAA7BF2D3">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:53:52 UTC</createdTime>
+<generatorID>32352682-6FEE-DE88-C7B2-D2B757CAA743</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>BDE7B1E4-E6F7-8121-5FB7-F2BF2E138DFA</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="367B951B-0B0C-C7DB-9D4F-4385DB18F5E2" name="KOMENTARZ PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:51:31 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BDE7B1E4-E6F7-8121-5FB7-F2BF2E138DFA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

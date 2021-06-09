@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8F95ACC7-1072-6C28-172F-286BF869ADA4" name="WYSTAPIENIE_ODCINKOWE">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:39:10 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="2FFC94A6-ABE3-2DED-E137-CBEACCC19750">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:39:23 UTC</createdTime>
+<generatorID>2CBEB48E-37FD-B245-96FA-5862CF065072</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<referedAttribute>67827297-47DB-5659-9536-4354D88CF96A</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="5EC56A9B-986B-44A8-87E9-89FD7C724FFE">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:39:28 UTC</createdTime>
+<generatorID>BBEEAF52-E822-2466-4592-44C7DB92EA7F</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<referedAttribute>05D92BFE-CAE0-65EF-055F-E995B3020994</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B7A0ACBA-6B80-CD96-5B78-58403352FA90" name="WYSTAPIENIE_ODCINKOWE PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:39:23 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2FFC94A6-ABE3-2DED-E137-CBEACCC19750</attributeRef>
+<attributeRef>5EC56A9B-986B-44A8-87E9-89FD7C724FFE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
