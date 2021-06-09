@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MinHeapTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-09T23:45:24" hostname="konrads-macbook-pro.home" time="0.019">
+  <properties/>
+  <testcase name="testCreatingHeap()" classname="MinHeapTest" time="0.019"/>
+  <system-out><![CDATA[-2 0 3 
+0 3 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
