@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="09D6808A-850D-D708-773B-DB87C9D2620C" name="SERIAL">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:27:33 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="163A85F1-46CC-B6D3-F77E-33A205C9F184">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:27:39 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa" id="5A8A818F-3130-2B22-0D85-D21067830B08">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:27:43 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="opis" id="75C03EE0-20ED-68F6-9D16-884A69556B11">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:27:46 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rok_rozpoczęcia" id="D93FB2F0-9B4B-4A5A-2D94-CB17C6575E42">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:27:50 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rok_zakończenia" id="7343F417-F9BE-551B-E7AA-E24C133D8392">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:28:00 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="czas_odcinka" id="6498859B-AD1C-28F6-469C-6E03088D657A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:28:06 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_premiery" id="04F5A027-4F75-A661-924D-4DF10D7442E4">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:28:17 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="5FF66A3B-B5D8-1704-1B34-92C61033F5DA">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:30:24 UTC</createdTime>
+<generatorID>158BC68C-3A81-7637-81EA-58FAAB7781FF</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<referedAttribute>42E731F0-BF3D-C26D-CD18-90450F95B7B4</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="typ_serialu" id="C0D936AC-D5B0-D4A2-302B-98684294B8A0">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:31:02 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="liczba_odcinkow" id="29F1FDD2-E9B0-4D6D-13C1-5E967799E07E">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:31:12 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7D66A5B9-35FF-1F81-9967-6543961B6095" name="SERIAL PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:27:42 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>163A85F1-46CC-B6D3-F77E-33A205C9F184</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

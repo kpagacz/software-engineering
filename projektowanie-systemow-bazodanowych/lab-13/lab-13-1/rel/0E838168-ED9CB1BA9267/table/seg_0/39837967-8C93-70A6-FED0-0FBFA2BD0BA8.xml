@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="39837967-8C93-70A6-FED0-0FBFA2BD0BA8" name="KOMENTARZ">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>5F57DDBE-E044-291D-B1C1-B2E71B1CF3EB</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_1" id="3A81DDCC-EB08-B682-8BB2-1E167794773E">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>BDE7B1E4-E6F7-8121-5FB7-F2BF2E138DFA</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ODCINEK_id" id="3773BE1D-3BE4-CD3A-9C77-1DFD0D19845C">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>0DDCD7CB-7FD3-27E7-C7CE-368ED3D0A032</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A5136235-D65C-3FCE-0FBA-E50D3343124C" referredColumn="89090D30-2725-AED8-3756-9F0A3B4CFFA5"/>
+</associations>
+</Column>
+<Column name="MIŁOŚNIK_id" id="2DBD5D0B-C4EB-BC3C-4D01-99DCB28FE7E3">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>AFD7DBD6-D3D6-A064-0E8D-720144B50902</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="13E9DC37-2B01-86B4-5878-C29D1E10308C" referredColumn="6B717BAD-8542-6939-879A-182EE1F8FA96"/>
+</associations>
+</Column>
+<Column name="treść" id="6ED7BA05-CBF7-F288-E9DD-B468546363FD">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>5589782D-FF28-E68E-82FD-2C23D9CFB6DC</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_wystawienia" id="2430A732-0F5E-E146-B83C-D38DCFEA7DB8">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>A41A7EF2-7E9B-B94A-E8E8-BECBDC60C361</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="KOMENTARZ_id_1" id="4BEAE796-F99B-B924-22BF-C3A256DAA64F">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>94418A87-641B-BCFE-A066-F95BAA7BF2D3</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0C7DAED4-B061-D506-F063-639454B5EF1B" referredColumn="3A81DDCC-EB08-B682-8BB2-1E167794773E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CDA517B9-C560-BCE3-8690-C8385B2BA4A3" name="KOMENTARZ_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>367B951B-0B0C-C7DB-9D4F-4385DB18F5E2</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A81DDCC-EB08-B682-8BB2-1E167794773E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="83CF3A47-35B5-5E1C-005C-65A1267EBA47" name="KOMENTARZ_ODCINEK_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>5D559D02-521A-21D0-9801-1D4C3E277463</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3773BE1D-3BE4-CD3A-9C77-1DFD0D19845C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="67A8B57B-DEF9-6F99-FC19-E7A32242A76C" name="KOMENTARZ_MIŁOŚNIK_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>96244CC2-15DB-A1CA-805A-FA9407C13F6A</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DBD5D0B-C4EB-BC3C-4D01-99DCB28FE7E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="79B6CC7F-BDE4-B38A-9F34-A235B5CBA956" name="KOMENTARZ_KOMENTARZ_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>32352682-6FEE-DE88-C7B2-D2B757CAA743</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4BEAE796-F99B-B924-22BF-C3A256DAA64F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

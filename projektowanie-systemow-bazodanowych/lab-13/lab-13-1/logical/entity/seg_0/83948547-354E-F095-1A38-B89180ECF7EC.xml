@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="83948547-354E-F095-1A38-B89180ECF7EC" name="SEZON">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 13:16:36 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="40926391-20CA-7AFD-C808-3E0FDC6F5A7F">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 13:16:41 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="opis" id="317F8520-0A13-C311-84F3-0B1DFAA377E9">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 13:16:46 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="liczba_odcinków" id="292C6D87-ABC8-B831-6BFC-001D0EACEA9A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 13:16:54 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="A6F0C8CB-7CE5-7E68-49AA-84D98327D0BD">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 13:17:10 UTC</createdTime>
+<generatorID>288FC00F-8A46-723D-247E-E9D859EB72B9</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<referedAttribute>163A85F1-46CC-B6D3-F77E-33A205C9F184</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4D27E4F1-4CA0-2D5F-52A4-772F81CA0BE5" name="SEZON PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 13:16:44 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>40926391-20CA-7AFD-C808-3E0FDC6F5A7F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="75C8243A-559B-AAD9-119E-83F2A0799495" name="STACJA">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>66BA0703-546B-EFBA-3859-9CB7677B21A1</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="3DB605EE-6C41-CD8D-A181-8F954FC71FC8">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>87FC51A0-CF33-3D48-B384-EF086AD46616</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwa" id="DA8B2F74-95BD-C907-B57F-AA0D2F484F5B">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>C738B6A0-EC9E-A309-CDD5-B5A214015720</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="adres" id="4A044D08-D7C3-19E2-190E-626D0B5A3142">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>7620F03F-3DF9-408F-5220-D75DDC82FEFC</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kod_pocztowy" id="7A74693B-971E-90E0-ED12-187B06AFA66D">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>F9BC2678-A991-6F6E-4177-AA65F84B26D8</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="miejscowość" id="480C5061-6A87-5647-3AF5-5A841AC7DB83">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>F4FFD03D-72B1-9830-8A24-25A5BB8D1988</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rodzaj_stacji" id="4D4B62B7-8E05-D00C-4875-EFFACD620F50">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>CA385115-F6F2-EE1C-49F3-FF74C995B70D</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="31AD0C16-7AAF-AADD-1709-349336B91857" name="STACJA_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>7A2B8D4C-609F-0753-B496-1824F73186ED</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3DB605EE-6C41-CD8D-A181-8F954FC71FC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

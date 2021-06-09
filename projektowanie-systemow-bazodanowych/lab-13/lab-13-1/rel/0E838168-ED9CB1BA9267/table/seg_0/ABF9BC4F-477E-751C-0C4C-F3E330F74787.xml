@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ABF9BC4F-477E-751C-0C4C-F3E330F74787" name="WYSTAPIENIE_SERIALOWE">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>2F3D1D5F-F431-408B-EB08-A251393F21A1</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="6684360D-23F1-0D07-0AF3-FEB01CE737A4">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>67827297-47DB-5659-9536-4354D88CF96A</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rodzaj_roli" id="148AB0D6-4C8B-1E07-6A97-4483704FE7B3">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>E87E0628-CD97-E1FE-04EE-CD1E01AD5344</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwa_roli" id="AA58ADC6-391D-DDD7-846C-96829D864ED6">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>1F6E42E1-A47B-96AC-2FDB-15E81B2D4224</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AKTOR_id" id="1B6100B1-C316-DC6C-B77B-098755C61A94">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>1D8EFD13-1F63-4E67-E014-483684E64271</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C76E199C-BEAF-78BF-D8E1-7449659669D7" referredColumn="64FD63BD-4873-C18C-D20A-B7521DB9324A"/>
+</associations>
+</Column>
+<Column name="SERIAL_id" id="40DCB501-9D0C-70C9-2752-9EBBFEFC6F47">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>9D5395D8-7AC4-82A4-024E-F6B51B08ABB9</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C40C864B-5A96-1B29-DA7D-EF63C2FBB173" referredColumn="45F9DA0A-E6C3-A7E4-2CAD-041BE0A43968"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="81D49445-417A-2F46-94EF-9BCC47301E3A" name="WYSTAPIENIE_SERIALOWE_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>09E606C0-A6B8-CCEE-0484-93C6BEEE1BA0</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6684360D-23F1-0D07-0AF3-FEB01CE737A4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="646F7E37-481D-4940-87EF-5E0D8B116909" name="WYSTAPIENIE_SERIALOWE_AKTOR_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>9F21133D-0641-7A90-A73F-DEF8975B929F</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1B6100B1-C316-DC6C-B77B-098755C61A94"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0BC39150-8C50-B692-CD83-C57EB2D61592" name="WYSTAPIENIE_SERIALOWE_SERIAL_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>25A1B80B-110F-AA4A-1DAA-B0EBCF610E4C</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="40DCB501-9D0C-70C9-2752-9EBBFEFC6F47"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

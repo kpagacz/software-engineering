@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="84D5E0C4-B459-2986-2172-D6B10BDA47CB" name="WYSTAPIENIE_ODCINKOWE">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>8F95ACC7-1072-6C28-172F-286BF869ADA4</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="WYSTAPIENIE_SERIALOWE_id" id="618D2D88-930F-CBB6-71D5-A2FD4B782805">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>2FFC94A6-ABE3-2DED-E137-CBEACCC19750</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="90915A6C-60B1-596D-86FE-BD00BA2541DF" referredColumn="6684360D-23F1-0D07-0AF3-FEB01CE737A4"/>
+</associations>
+</Column>
+<Column name="ODCINEK_id" id="A84754BD-4811-1646-DE97-C4F58B7B2341">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>5EC56A9B-986B-44A8-87E9-89FD7C724FFE</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9629D8B8-B405-AACB-8B7F-ECF69D0E2568" referredColumn="89090D30-2725-AED8-3756-9F0A3B4CFFA5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BB4F0BC5-D302-AFD9-EC58-C190D56C2478" name="WYSTAPIENIE_ODCINKOWE_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>B7A0ACBA-6B80-CD96-5B78-58403352FA90</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="618D2D88-930F-CBB6-71D5-A2FD4B782805"/>
+<colUsage columnID="A84754BD-4811-1646-DE97-C4F58B7B2341"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1C89A7C3-2EEE-28F2-95E0-8847E8576E69" name="WYSTAPIENIE_ODCINKOWE_WYSTAPIENIE_SERIALOWE_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>2CBEB48E-37FD-B245-96FA-5862CF065072</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="618D2D88-930F-CBB6-71D5-A2FD4B782805"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AE4667CF-B051-573C-7369-9B78DDEC6333" name="WYSTAPIENIE_ODCINKOWE_ODCINEK_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>BBEEAF52-E822-2466-4592-44C7DB92EA7F</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A84754BD-4811-1646-DE97-C4F58B7B2341"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

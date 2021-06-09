@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E5CE00B3-BECA-1EB4-8393-DD32832CF3E5" name="SERIAL">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>09D6808A-850D-D708-773B-DB87C9D2620C</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="45F9DA0A-E6C3-A7E4-2CAD-041BE0A43968">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>163A85F1-46CC-B6D3-F77E-33A205C9F184</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwa" id="B60F174D-D71D-20AC-E8EC-3EB57D27BF53">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>5A8A818F-3130-2B22-0D85-D21067830B08</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="opis" id="E7830103-E0A7-D57C-E112-E90C14E8A2DF">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>75C03EE0-20ED-68F6-9D16-884A69556B11</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rok_rozpoczęcia" id="941E09B0-CAA0-DADB-4D8E-EBDF39E903DA">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>D93FB2F0-9B4B-4A5A-2D94-CB17C6575E42</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rok_zakończenia" id="4A578CF0-9684-3DB8-F1A5-0AFBE693A844">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>7343F417-F9BE-551B-E7AA-E24C133D8392</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="czas_odcinka" id="F3050210-212F-9656-495C-34294A4C150A">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>6498859B-AD1C-28F6-469C-6E03088D657A</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_premiery" id="41D27A7F-E8BF-9C0A-627B-0D7863590439">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>04F5A027-4F75-A661-924D-4DF10D7442E4</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="KANAŁ_id" id="1D42C171-238D-5194-3FB1-C39D0A94B970">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>5FF66A3B-B5D8-1704-1B34-92C61033F5DA</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="261716E5-F30A-E502-8A5D-AE7B2F35699F" referredColumn="97B564E9-1D35-2CA6-D3E3-D20F674B57AF"/>
+</associations>
+</Column>
+<Column name="typ_serialu" id="BFAA5BC0-6758-41CF-9C42-4D876F6C5BE4">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>C0D936AC-D5B0-D4A2-302B-98684294B8A0</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="liczba_odcinkow" id="08D66138-26F0-31C5-93F5-6D87CA68667E">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>29F1FDD2-E9B0-4D6D-13C1-5E967799E07E</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3333E8A4-EFFA-3AF6-4DAA-46CDAB474DEA" name="SERIAL_PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>7D66A5B9-35FF-1F81-9967-6543961B6095</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="45F9DA0A-E6C3-A7E4-2CAD-041BE0A43968"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A620F0F9-29F3-5670-F075-B1E6A792852B" name="SERIAL_KANAŁ_FK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:56:08 UTC</createdTime>
+<generatorID>158BC68C-3A81-7637-81EA-58FAAB7781FF</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D42C171-238D-5194-3FB1-C39D0A94B970"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

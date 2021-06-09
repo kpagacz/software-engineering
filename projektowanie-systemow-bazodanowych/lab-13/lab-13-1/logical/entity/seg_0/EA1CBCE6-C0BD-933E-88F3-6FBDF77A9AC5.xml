@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EA1CBCE6-C0BD-933E-88F3-6FBDF77A9AC5" name="OCENA_SERIALU">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:50:11 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="3DCA2B17-785E-52D4-900A-953644F00D19">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:50:19 UTC</createdTime>
+<generatorID>0DF31EE0-974E-ED87-2D48-6640749D05DF</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<referedAttribute>163A85F1-46CC-B6D3-F77E-33A205C9F184</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="423A6D4B-4A92-C1BC-6935-6ECC9E23D55D">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:50:25 UTC</createdTime>
+<generatorID>AC476139-FB76-F973-277D-2EDFC499827F</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<referedAttribute>E07FB0F6-AED3-7F22-99A8-5936650BF3D5</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ocena" id="BD613EEF-50AB-F991-94BD-301369C55F59">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:50:31 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="272D0D8A-4178-ADF6-2944-C52604999578" name="OCENA_SERIALU PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:50:19 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3DCA2B17-785E-52D4-900A-953644F00D19</attributeRef>
+<attributeRef>423A6D4B-4A92-C1BC-6935-6ECC9E23D55D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

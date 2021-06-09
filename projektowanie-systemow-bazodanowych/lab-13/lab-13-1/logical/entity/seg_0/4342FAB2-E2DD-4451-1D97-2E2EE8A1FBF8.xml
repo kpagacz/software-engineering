@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4342FAB2-E2DD-4451-1D97-2E2EE8A1FBF8" name="ODCINEK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:31:49 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="05D92BFE-CAE0-65EF-055F-E995B3020994">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:31:54 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numer" id="B5768167-B6B0-56E0-0F53-A248DD50232D">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:31:57 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tytuł" id="B4632B26-03B3-459B-1599-19698857ED3C">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:32:02 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="streszczenie" id="4E731CDB-9BB6-86A2-418D-DADD84AA0AF0">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:32:20 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_premiery" id="3FAB329F-95E8-2FC5-87A0-972928EE4F7E">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:32:28 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="51F56CBA-127E-BE60-78DF-5DD440AB8DBF">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 13:17:18 UTC</createdTime>
+<generatorID>4E31A934-7BDC-0ED6-3EDB-3033D39A201B</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>40926391-20CA-7AFD-C808-3E0FDC6F5A7F</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="0CF7F605-7B78-F008-AC86-B9DE71C41274">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 13:21:15 UTC</createdTime>
+<generatorID>C5232ABC-E6EC-DFC3-4016-287EE6BECB21</generatorID>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<referedAttribute>163A85F1-46CC-B6D3-F77E-33A205C9F184</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4B3E250A-6FE1-5313-88CF-267CCC782EF9" name="ODCINEK PK">
+<createdBy>pagaczk</createdBy>
+<createdTime>2021-06-09 12:31:56 UTC</createdTime>
+<ownerDesignName>lab-13-1</ownerDesignName>
+<engineerTo>
+<item key="0E838168-7A85-1B14-150D-ED9CB1BA9267" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>05D92BFE-CAE0-65EF-055F-E995B3020994</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
