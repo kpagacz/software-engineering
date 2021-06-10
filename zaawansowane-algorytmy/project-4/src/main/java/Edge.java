@@ -1,6 +1,6 @@
 public class Edge {
-    int weight;
-    Node[] connectedNodes;
+    final int weight;
+    final Node[] connectedNodes;
 
     public Edge(Node firstNode, Node secondNode, int weight) {
         connectedNodes = new Node[2];

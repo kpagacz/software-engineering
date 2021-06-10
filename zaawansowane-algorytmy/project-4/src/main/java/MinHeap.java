@@ -68,7 +68,7 @@ public class MinHeap<T extends Edge> {
     }
   }
 
-  public T remove() {
+  public T pop() {
     T removedEdge = array[0];
     array[0] = array[--heapSize];
     array[heapSize] = null;

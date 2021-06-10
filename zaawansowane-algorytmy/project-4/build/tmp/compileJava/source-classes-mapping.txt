@@ -4,3 +4,7 @@ Edge.java
  Edge
 MinHeap.java
  MinHeap
+PrimAlgorithm.java
+ PrimAlgorithm
+UndirectedGraph.java
+ UndirectedGraph

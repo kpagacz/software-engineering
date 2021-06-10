@@ -1,2 +1,4 @@
 MinHeapTest.java
  MinHeapTest
+PrimAlgorithmTest.java
+ PrimAlgorithmTest

@@ -1,7 +1,5 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class MinHeapTest {
     MinHeap<Edge> heap;
     @Test
@@ -12,7 +10,7 @@ class MinHeapTest {
         heap.insert(new Edge(null, null, 3));
         System.out.println(heap.toString());
 
-        heap.remove();
+        heap.pop();
         System.out.println(heap.toString());
     }
 }
