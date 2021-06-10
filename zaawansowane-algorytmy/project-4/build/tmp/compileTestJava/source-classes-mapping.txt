@@ -1,4 +1,10 @@
-MinHeapTest.java
- MinHeapTest
+DisjointSetsTest.java
+ DisjointSetsTest
+KruskalAlgorithmTest.java
+ KruskalAlgorithmTest
 PrimAlgorithmTest.java
  PrimAlgorithmTest
+MinHeapTest.java
+ MinHeapTest
+MazeTest.java
+ MazeTest

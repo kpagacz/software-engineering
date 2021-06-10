@@ -1,16 +1,11 @@
 import java.util.ArrayList;
 
-public class Node {
+public class Vertex {
   ArrayList<Edge> edges;
   final int index;
 
-  public Node(int index) {
+  public Vertex(int index) {
     edges = new ArrayList<>();
-    this.index = index;
-  }
-
-  public Node(int index, ArrayList<Edge> edges) {
-    this.edges = edges;
     this.index = index;
   }
 
@@ -22,6 +17,6 @@ public class Node {
 
   @Override
   public boolean equals(Object obj) {
-    return this.index == ((Node)obj).index;
+    return this.index == ((Vertex)obj).index;
   }
 }

@@ -1,24 +1,37 @@
 import java.util.ArrayList;
 import java.util.HashSet;
 
+/**
+ * Vertices are assumed to have indices from 0 to number of vertices in the graph minus one.
+ * */
 public class UndirectedGraph {
-  ArrayList<Node> nodes;
+  ArrayList<Vertex> vertices;
 
   public UndirectedGraph() {
-    nodes = new ArrayList<>();
+    vertices = new ArrayList<>();
   }
 
-  public int getNodesNumber() {
-    return nodes.size();
+  public int getVerticesCount() {
+    return vertices.size();
   }
 
-  public void addNode(Node node) {
-    nodes.add(node);
+  public void addVertex(Vertex vertex) {
+    vertices.add(vertex);
+  }
+
+  public void addVertex() {
+    vertices.add(new Vertex(vertices.size()));
+  }
+
+  public void addEdge(int source, int destination, int weight) {
+    Edge newEdge = new Edge(vertices.get(source), vertices.get(destination), weight);
+    vertices.get(source).addEdge(newEdge);
+    vertices.get(destination).addEdge(newEdge);
   }
 
   public HashSet<Edge> getAllEdges() {
     HashSet<Edge> edges = new HashSet<>();
-    for (Node n : nodes) {
+    for (Vertex n : vertices) {
       for (Edge e : n.edges) {
         edges.add(e);
       }
@@ -30,9 +43,9 @@ public class UndirectedGraph {
     for (Edge e : edges) {
       System.out.println(
           "Edge: "
-              + e.connectedNodes[0].index
+              + e.connectedVertices[0].index
               + " -> "
-              + e.connectedNodes[1].index
+              + e.connectedVertices[1].index
               + " weight: "
               + e.weight);
     }

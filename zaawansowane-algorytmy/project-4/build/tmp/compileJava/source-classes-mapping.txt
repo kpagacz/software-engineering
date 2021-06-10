@@ -1,10 +1,17 @@
-Node.java
- Node
-Edge.java
- Edge
-MinHeap.java
- MinHeap
+DisjointSets.java
+ DisjointSets
+ DisjointSets$DisjointSetsNode
 PrimAlgorithm.java
  PrimAlgorithm
+Edge.java
+ Edge
 UndirectedGraph.java
  UndirectedGraph
+MinHeap.java
+ MinHeap
+Vertex.java
+ Vertex
+KruskalAlgorithm.java
+ KruskalAlgorithm
+Maze.java
+ Maze

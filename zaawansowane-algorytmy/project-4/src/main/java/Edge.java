@@ -1,11 +1,11 @@
 public class Edge {
     final int weight;
-    final Node[] connectedNodes;
+    final Vertex[] connectedVertices;
 
-    public Edge(Node firstNode, Node secondNode, int weight) {
-        connectedNodes = new Node[2];
-        connectedNodes[0] = firstNode;
-        connectedNodes[1] = secondNode;
+    public Edge(Vertex firstVertex, Vertex secondVertex, int weight) {
+        connectedVertices = new Vertex[2];
+        connectedVertices[0] = firstVertex;
+        connectedVertices[1] = secondVertex;
         this.weight = weight;
     }
 

@@ -4,7 +4,7 @@ import java.util.List;
 public class MinHeap<T extends Edge> {
   private final int heapCapacity;
   private int heapSize;
-  private T[] array;
+  private final T[] array;
 
   public MinHeap(Class<T> tClass, int heapCapacity) {
     this.heapCapacity = heapCapacity;
@@ -13,8 +13,16 @@ public class MinHeap<T extends Edge> {
 
   public MinHeap(Class<T> tClass, List<T> array) {
     this.heapCapacity = array.size();
-    this.array = (T[]) array.toArray();
+    this.heapSize = array.size();
+    this.array = (T[]) Array.newInstance(tClass, array.size());
+    for(int i = 0; i < heapCapacity; i++) {
+      this.array[i] = (T) array.get(i);
+    }
     minHeap();
+  }
+
+  public int size() {
+    return this.heapSize;
   }
 
   private int parent(int pos) {
@@ -42,9 +50,9 @@ public class MinHeap<T extends Edge> {
   private void minHeapify(int pos) {
     if (!hasChildren(pos)) return;
     if (Edge.compareEdges(array[pos], array[leftChild(pos)]) == 1
-        || (array[rightChild(pos)] != null
+        || (rightChild(pos) < heapSize
             && Edge.compareEdges(array[pos], array[rightChild(pos)]) == 1)) {
-      if (array[rightChild(pos)] == null
+      if (rightChild(pos) >= heapSize
           || Edge.compareEdges(array[leftChild(pos)], array[rightChild(pos)]) <= 0) {
         swapEdges(pos, leftChild(pos));
         minHeapify(leftChild(pos));
@@ -77,7 +85,7 @@ public class MinHeap<T extends Edge> {
   }
 
   private void minHeap() {
-    for (int pos = (heapSize / 2); pos >= 0; pos--) {
+    for (int pos = (heapSize / 2) - 1; pos >= 0; pos--) {
       minHeapify(pos);
     }
   }

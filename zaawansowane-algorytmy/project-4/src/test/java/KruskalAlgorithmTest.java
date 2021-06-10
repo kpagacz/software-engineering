@@ -2,8 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-class PrimAlgorithmTest {
-
+class KruskalAlgorithmTest {
     @Test
     void getMst() {
         Vertex vertex0 = new Vertex(0);
@@ -40,7 +39,7 @@ class PrimAlgorithmTest {
         graph.addVertex(vertex3);
         graph.addVertex(vertex4);
 
-        ArrayList<Edge> mst = PrimAlgorithm.getMst(graph);
+        ArrayList<Edge> mst = KruskalAlgorithm.getMst(graph);
         UndirectedGraph.printEdges(mst);
     }
 }
