@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+</head>
+  <html>
+  <body>
+    <p id = "hello"></p>
+    <p id = "var demo"></p>
+    <br>
+    <br>
+    <br>
+    <p id = "date demo"></p>
+    <p id = "loop demo"></p>
+    <p id = "loop demo2"></p>
+    <p id = "const demo"></p>
+    <script>
+    // var and hello demo
+
+    let x = "new_window";
+    document.getElementById("hello").innerHTML = "hello world!";
+    document.getElementById("var demo").innerHTML = "hello " + x + " !";
+
+    // date demo
+    const date = new Date();
+    const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    document.getElementById("date demo").innerHTML = weekDays[date.getDay()];
+
+    // loop demo
+    let text = "";
+    for (let i = 1; i < 6; i++) {
+      text += "#" + i + " ";
+    };
+    document.getElementById("loop demo").innerHTML = text;
+
+    // loop demo2
+    let text2 = "";
+    for (let i = 10; i > 0; i--) {
+      text2 += "*".repeat(i) + "<br>";
+    };
+    document.getElementById("loop demo2").innerHTML = text2;
+
+    // const demo
+    document.getElementById("const demo").innerHTML =
+      "The value of PI is " + Math.PI;
+    </script>
+
+  </body>
+</html>
