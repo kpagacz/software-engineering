@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      var canvas;
+      var squares;
+
+      function draw() {
+        canvas = document.getElementById("squares-canvas");
+        if (!canvas.getContext) return;
+        squares = canvas.getContext("2d");
+        squares.fillStyle = "rgb(200, 0, 0)";
+        squares.fillRect(10, 10, 50, 50);
+        squares.fillStyle = "rgba(0, 0, 200, 0.5)";
+        squares.fillRect(30, 30, 50, 50);
+      }
+
+      function clearCanvas() {
+        canvas = document.getElementById("squares-canvas");
+        if (!canvas.getContext) {
+          console.log("no context found");
+          return;
+        }
+        console.log("clearing!");
+        squares = canvas.getContext("2d");
+        squares.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    </script>
+  </head>
+
+  <body>
+    <canvas id = "squares-canvas" width="150" height="150"></canvas>
+    <br>
+    <button onclick="draw();">Draw squares</button>
+    <button onclick="clearCanvas();">Clear canvas</button>
+  </body>
+</html>
