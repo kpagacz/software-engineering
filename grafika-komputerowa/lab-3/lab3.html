@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    var canvas;
+    var graphics;
+
+    function line(a, b) {
+      canvas = document.getElementById("canvas");
+      if (!canvas.getContext) return;
+      graphics = canvas.getContext("2d");
+      graphics.beginPath();
+      graphics.moveTo(a[0], a[1]);
+      graphics.lineTo(b[0], b[1]);
+      graphics.stroke()
+    }
+
+    function translateVertices(array, b) {
+      for (var i = 0; i < array.length; i++) {
+        array[i][0] += b[0];
+        array[i][1] += b[1];
+      }
+
+      return array;
+    }
+
+    function clearCanvas() {
+      canvas = document.getElementById("canvas");
+      if (!canvas.getContext) return;
+      graphics = canvas.getContext("2d");
+      graphics.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    // Draws a polyline with vertices from the array
+    function polyline(array) {
+      for(var i = 1; i < array.length; i++) {
+        line(array[i - 1], array[i]);
+      }
+    }
+
+    // Draws a polygone given vertices in the array
+    function polygon(array) {
+      canvas = document.getElementById("canvas");
+      if (!canvas.getContext) return;
+      graphics = canvas.getContext("2d");
+      graphics.beginPath();
+      graphics.moveTo(array[0][0], array[0][1]);
+      for (var i = 1; i < array.length; i++) graphics.lineTo(array[i][0], array[i][1]);
+      graphics.closePath();
+      graphics.stroke();
+    }
+
+    // Draws a polygon given vertinces in the array and filled with the color
+    function filledPolygon(array, color) {
+      canvas = document.getElementById("canvas");
+      if (!canvas.getContext) return;
+      graphics = canvas.getContext("2d");
+
+      graphics.beginPath();
+      graphics.moveTo(array[0][0], array[0][1]);
+      for (var i = 1; i < array.length; i++) graphics.lineTo(array[i][0], array[i][1]);
+      graphics.closePath();
+      graphics.fillStyle = color;
+      graphics.fill();
+    }
+
+    // rotates vertices around the point for angle degrees
+    function rotateVertices(vertices, middle, angle) {
+      angle = (Math.PI / 180) * angle;
+      for (var i = 0; i < vertices.length; i++) {
+        var x = vertices[i][0];
+        var y = vertices[i][1];
+        vertices[i][0] = (x - middle[0]) * Math.cos(angle) - (y - middle[1]) * Math.sin(angle) + middle[0];
+        vertices[i][1] = (x - middle[0]) * Math.sin(angle) + (y - middle[1]) * Math.cos(angle) + middle[1];
+      }
+
+      return vertices;
+    }
+
+    // rotates the polygon around its first vertex
+    function rotatePolygon(vertices, angle, color) {
+      rotateVertices(vertices, vertices[0], angle);
+      clearCanvas();
+      filledPolygon(vertices, color);
+    }
+
+    // animation setup
+    square = [[200, 200], [300, 200], [300, 300], [200, 300]];
+    var animation;
+    function startAnimation() {
+      animation = setInterval("rotatePolygon(square, 10, 'blue')", 150);
+    }
+    function stopAnimation() {
+      clearInterval(animation);
+    }
+
+    // key press handler
+    function keyDownHandler(keypress) {
+      keypress = keypress || event;
+      var keyCode = keypress.keyCode;
+      letter = (String.fromCharCode(keypress.keyCode) || '').toLowerCase();
+
+      switch(keyCode) {
+        case 37:
+          translateVertices(square, [-5, 0]);
+          clearCanvas();
+          filledPolygon(square, "blue");
+          break;
+        case 38:
+          translateVertices(square, [0, -5]);
+          clearCanvas();
+          filledPolygon(square, "blue");
+          break;
+        case 39:
+          translateVertices(square, [5, 0]);
+          clearCanvas();
+          filledPolygon(square, "blue");
+          break;
+        case 40:
+          translateVertices(square, [0, 5]);
+          clearCanvas();
+          filledPolygon(square, "blue");
+          break;
+        default:
+          return false;
+      }
+    }
+  </script>
+</head>
+<body onkeyup="keyDownHandler(event)">
+  <canvas id="canvas" width=600 height=400>
+    <p>Sorry: Browser does not support canvas</p>
+  </canvas>
+  <br>
+  <button id="segment1" onclick="line([0, 0], [40, 40]);">Draw segment no 1</button>
+  <button id="segment2" onclick="line([40, 40], [80, 0]);">Draw segment no 2</button>
+  <button id="polyline" onclick="polyline([[1,1],[1,30],[30,30],[100,100]]);">Draw polyline</button>
+  <button id="triangle" onclick="polygon([[1, 1], [1, 30], [100, 30]]);">Draw a triangle</button>
+  <button id="filled-square" onclick="filledPolygon(square, 'blue');">Show the blue square</button>
+  <button id="start-animation" onclick="startAnimation();">Start spinning</button>
+  <button id="stop-animation" onclick="stopAnimation();">Stop spinning</button>
+  <button id="clear" onclick="clearCanvas()">Clear canvas</button>
+  <br>
+  Move the square using arrow keys.
+</body>
+</html>
