@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<script>
+    var canvas;
+    var graphics;
+
+    function clearCanvas() {
+        canvas = document.getElementById("canvas");
+        if (!canvas.getContext) return;
+        graphics = canvas.getContext("2d");
+        graphics.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function line(a, b, style) {
+        canvas = document.getElementById("canvas");
+        if (!canvas.getContext) return;
+        graphics = canvas.getContext("2d");
+        graphics.beginPath();
+        graphics.moveTo(a[0], a[1]);
+        graphics.lineTo(b[0], b[1]);
+        graphics.strokeStyle = style || "rgb(200, 0, 0)";
+        graphics.stroke();
+    }
+
+    function projectXY(point, d, observer) {
+        var projected = []
+        projected[0] = (point[0] - observer[0]) * d / (d + point[2]) + observer[0];
+        projected[1] = (point[1] - observer[1]) * d / (d + point[2]) + observer[1];
+        return projected;
+    }
+
+    function line3d(a, b, style, d, observer) {
+        line(projectXY(a, d, observer), projectXY(b, d, observer), style);
+    }
+
+    function degreeToRadian(angle) {
+        return (Math.PI / 180) * angle;
+    }
+
+    var cube = [
+        [1, 1, 1],
+        [2, 1, 1],
+        [2, 1, 2],
+        [1, 1, 2],
+
+        [1, 2, 1],
+        [2, 2, 1],
+        [2, 2, 2],
+        [1, 2, 2]
+    ];
+    var scale = 200;
+    var d = 700;
+    var observer = [320, 240];
+    var additional_vertices = [[1.5, 0.5, 1.5], [1.5, 2.5, 1.5]]
+
+    function drawCube(vertices, scale, d, observer) {
+        vertices = scaleXYZ(vertices, scale);
+        for(var i = 1; i < 4; i++) 
+            line3d(vertices[i - 1], vertices[i], "blue", d, observer);
+        line3d(vertices[3], vertices[0], 'blue', d, observer);
+
+        for (var i = 5; i < 8; i++)
+            line3d(vertices[i - 1], vertices[i], "red", d, observer);
+        line3d(vertices[7], vertices[4], 'red', d, observer);
+
+        for (var i = 0; i < 4; i++)
+            line3d(vertices[i], vertices[i + 4], "green", d, observer);
+
+        draw_additional_vertices();
+    }
+
+    function draw_additional_vertices() {
+        for(var i = 0; i < 4; i++) line3d(cube[i], additional_vertices[0], 'purple', d, observer);
+        for(var i = 4; i < 8; i++) line3d(cube[i], additional_vertices[1], 'purple', d, observer);
+    }
+
+    function scaleXYZ(vertices, scale) {
+        for(var j = 0; j < vertices.length; j++) 
+            for (var i = 0; i < 3; i++) vertices[j][i] *= scale;
+        return vertices;
+    }
+
+    // rotate around the axis parellel to the X axis and crossing point q
+    function rotateX(p, q, angle) {
+        var rotateAngle = degreeToRadian(angle);
+        var p_y = p[1];
+
+        p[1] = (p[1] - q[1]) * Math.cos(rotateAngle) - (p[2] - q[2]) * Math.sin(rotateAngle) + q[1];
+        p[2] = (p_y - q[1]) * Math.sin(rotateAngle) + (p[2] - q[2]) * Math.cos(rotateAngle) + q[2];
+        return p;
+    }
+
+    // rotate around the axis parallel to the Y axis and crossing point q
+    function rotateY(p, q, angle) {
+        var rotateAngle = degreeToRadian(angle);
+        var p_x = p[0];
+
+        p[0] = (p[0] - q[0]) * Math.cos(rotateAngle) - (p[2] - q[2]) * Math.sin(rotateAngle) + q[0];
+        p[2] = (p_x - q[0]) * Math.sin(rotateAngle) + (p[2] - q[2]) * Math.cos(rotateAngle) + q[2];
+        return p;
+    }
+
+    // rotate around the axis parallel to the Z axis and crossing point q
+    function rotateZ(p, q, angle) {
+        var rotateAngle = degreeToRadian(angle);
+        var p_x = p[0];
+
+        p[0] = (p[0] - q[0]) * Math.cos(rotateAngle) - (p[1] - q[1]) * Math.sin(rotateAngle) + q[0];
+        p[1] = (p_x - q[0]) * Math.sin(rotateAngle) + (p[1] - q[1]) * Math.cos(rotateAngle) + q[1];
+        return p;
+    }
+</script>
+</head>
+
+<body>
+    <canvas id = "canvas" width = 600 height = 600>Browser does not support canvas</canvas>
+    <br>
+    <button id = "clear" onclick = "clearCanvas()">Clear canvas</button>
+    <button id = "draw-cube" onclick = "drawCube(cube, scale, d, observer)">Draw cube</button>
+    <button id ="line-test" onclick = "line3d([1, 1,], [50, 50], 'blue', d, observer)">Draw test line</button>
+</body>
