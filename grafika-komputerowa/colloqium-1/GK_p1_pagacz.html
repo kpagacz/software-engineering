@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<script>
+    var canvas;
+    var graphics;
+
+    function clearCanvas() {
+        canvas = document.getElementById("canvas");
+        if (!canvas.getContext) return;
+        graphics = canvas.getContext("2d");
+        graphics.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function line(a, b, style) {
+        canvas = document.getElementById("canvas");
+        if (!canvas.getContext) return;
+        graphics = canvas.getContext("2d");
+        graphics.beginPath();
+        graphics.moveTo(a[0], a[1]);
+        graphics.lineTo(b[0], b[1]);
+        graphics.strokeStyle = style || "rgb(200, 0, 0)";
+        graphics.stroke();
+    }
+
+    function projectXY(point, d, observer) {
+        var projected = []
+        projected[0] = (point[0] - observer[0]) * d / (d + point[2]) + observer[0];
+        projected[1] = (point[1] - observer[1]) * d / (d + point[2]) + observer[1];
+        return projected;
+    }
+
+    function line3d(a, b, style, d, observer) {
+        line(projectXY(a, d, observer), projectXY(b, d, observer), style);
+    }
+
+    function degreeToRadian(angle) {
+        return (Math.PI / 180) * angle;
+    }
+
+    var scale = 50;
+    var Plane = scaleXYZ([
+        [0, 0, 0], // middle of the rotor
+        // upper rotor
+        [0, -Math.sqrt(3) / 2, 0.5],
+        [0, -Math.sqrt(3) / 2, -0.5],
+        // left rotor
+        [0, 0, -1],
+        [0, Math.sqrt(3) / 2, -0.5],
+        // right rotor
+        [0, 0, 1],
+        [0, Math.sqrt(3) / 2, 0.5],
+
+        // body
+        [0.1, 0, 0], // #7
+        [0.1, -1, -1], // #8
+        [0.1, 1, -1],
+        [0.1, 1, 1],
+        [0.1, -1, 1],
+        [8, -1, -1], // #12
+        [8, 1, -1],
+        [8, 1, 1],
+        [8, -1, 1],
+
+        // upper wing
+        [2, -1, -4], // #16
+        [3.5, -1, -4],
+        [3.5, -1, 4],
+        [2, -1, 4],
+        // lower wing
+        [2.5, 1, -4], // #20
+        [4, 1, -4],
+        [4, 1, 4],
+        [2.5, 1, 4]
+    ], scale);
+
+    var d = 700;
+    var observer = [0, 0];
+
+    function drawPlane(vertices, scale, d, observer) {
+        // rotors
+        line3d(vertices[0], vertices[1], "blue", d, observer);
+        line3d(vertices[1], vertices[2], "blue", d, observer);
+        line3d(vertices[2], vertices[0], "blue", d, observer);
+        line3d(vertices[0], vertices[1], "blue", d, observer);
+        line3d(vertices[0], vertices[3], "blue", d, observer);
+        line3d(vertices[0], vertices[4], "blue", d, observer);
+        line3d(vertices[3], vertices[4], "blue", d, observer);
+        line3d(vertices[0], vertices[5], "blue", d, observer);
+        line3d(vertices[0], vertices[6], "blue", d, observer);
+        line3d(vertices[5], vertices[6], "blue", d, observer);
+
+        // body
+        line3d(vertices[0], vertices[7], "blue", d, observer);
+        line3d(vertices[8], vertices[9], "blue", d, observer);
+        line3d(vertices[9], vertices[10], "blue", d, observer);
+        line3d(vertices[10], vertices[11], "blue", d, observer);
+        line3d(vertices[11], vertices[8], "blue", d, observer);
+
+        for(var i = 8; i < 12; i++) line3d(vertices[i], vertices[i + 4], "blue", d, observer);
+        for(var i = 12; i < 15; i++) line3d(vertices[i], vertices[i + 1], "blue", d, observer);
+        line3d(vertices[15], vertices[12], "blue", d, observer);
+
+        // upper wing
+        for(var i = 16; i < 19; i++) line3d(vertices[i], vertices[i + 1], "red", d, observer);
+        line3d(vertices[19], vertices[16], "red", d, observer);
+
+        // lower wing
+        for(var i = 20; i < 23; i++) line3d(vertices[i], vertices[i + 1], "red", d, observer);
+        line3d(vertices[23], vertices[20], "red", d, observer);
+
+    }
+
+    function scaleXYZ(vertices, scale) {
+        for(var j = 0; j < vertices.length; j++)
+            for (var i = 0; i < 3; i++) vertices[j][i] *= scale;
+        return vertices;
+    }
+
+    function scalePlane(scale_change) {
+        console.log("scaling");
+        var rotorMiddle = Plane[0];
+        for(var j = 1; j < Plane.length; j++) {
+            for(var k = 0; k < 3; k++) Plane[j][k] -= rotorMiddle[k];
+            for (var i = 0; i < 3; i++) Plane[j][i] *= scale_change;
+            for(var k = 0; k < 3; k++) Plane[j][k] += rotorMiddle[k];
+        }
+        clearCanvas();
+        drawPlane(Plane, scale, d, observer);
+    }
+
+    // rotate around the axis parellel to the X axis and crossing point q
+    function rotateX(p, q, angle) {
+        var rotateAngle = degreeToRadian(angle);
+        var p_y = p[1];
+
+        p[1] = (p[1] - q[1]) * Math.cos(rotateAngle) - (p[2] - q[2]) * Math.sin(rotateAngle) + q[1];
+        p[2] = (p_y - q[1]) * Math.sin(rotateAngle) + (p[2] - q[2]) * Math.cos(rotateAngle) + q[2];
+        return p;
+    }
+
+    // rotate around the axis parallel to the Y axis and crossing point q
+    function rotateY(p, q, angle) {
+        var rotateAngle = degreeToRadian(angle);
+        var p_x = p[0];
+
+        p[0] = (p[0] - q[0]) * Math.cos(rotateAngle) - (p[2] - q[2]) * Math.sin(rotateAngle) + q[0];
+        p[2] = (p_x - q[0]) * Math.sin(rotateAngle) + (p[2] - q[2]) * Math.cos(rotateAngle) + q[2];
+        return p;
+    }
+
+    // rotate around the axis parallel to the Z axis and crossing point q
+    function rotateZ(p, q, angle) {
+        var rotateAngle = degreeToRadian(angle);
+        var p_x = p[0];
+
+        p[0] = (p[0] - q[0]) * Math.cos(rotateAngle) - (p[1] - q[1]) * Math.sin(rotateAngle) + q[0];
+        p[1] = (p_x - q[0]) * Math.sin(rotateAngle) + (p[1] - q[1]) * Math.cos(rotateAngle) + q[1];
+        return p;
+    }
+
+    function getPlaneMiddle(vertices) {
+        var middle = [];
+        middle[0] = (vertices[0][0] + vertices[6][0]) / 2;
+        middle[1] = (vertices[0][1] + vertices[6][1]) / 2;
+        middle[2] = (vertices[0][2] + vertices[6][2]) / 2;
+        return middle;
+    }
+
+    function rotatePlaneY(scale, d, observer) {
+        var angle = 6;
+        var middle = getPlaneMiddle(Plane);
+        for (var i = 0; i < Plane.length; i++) rotateY(Plane[i], middle, angle);
+        clearCanvas();
+        drawPlane(Plane, scale, d, observer);
+    }
+
+    function rotateRotor(scale, d, observer) {
+        var angle = 6;
+        var middle = Plane[0];
+        for(var i = 0; i < 7; i++) rotateX(Plane[i], middle, angle);
+        clearCanvas();
+        drawPlane(Plane, scale, d, observer);
+    }
+
+    // animations
+    var aniY, aniRotor;
+    function stopAnimation() {
+        clearInterval(aniY);
+        clearInterval(aniRotor);
+    }
+    function startAniY() {
+        stopAnimation();
+        aniY = setInterval("rotatePlaneY(scale, d, observer)", 50);
+    }
+
+    function startRotorAni() {
+        stopAnimation();
+        aniRotor = setInterval("rotateRotor(scale, d, observer)", 50);
+    }
+
+    // focal changes
+    function changeFocal(delta) {
+        if (d > 100 && d < 3000) d += delta;
+        clearCanvas();
+        drawPlane(Plane, scale, d, observer);
+    }
+
+    // translations
+    function translate(point, change) {
+        for (var i = 0; i < point.length; i++) point[i] += change[i];
+        return point;
+    }
+
+    function translatePlane(change) {
+        for (var i = 0; i < Plane.length; i++) translate(Plane[i], change);
+        clearCanvas();
+        drawPlane(Plane, scale, d, observer);
+    }
+
+    // Handle key presses
+    function handleKeyUp(keypress) {
+        stopAnimation();
+        keypress = keypress || event;
+        var keyCode = keypress.keyCode;
+
+        switch(keyCode) {
+            case 37:
+                translatePlane([-10, 0, 0]);
+                break;
+            case 38:
+                translatePlane([0, -10, 0]);
+                break;
+            case 39:
+                translatePlane([10, 0, 0]);
+                break;
+            case 40:
+                translatePlane([0, 10, 0]);
+                break;
+            case 104:
+                translatePlane([0, 0, 10]);
+                break;
+            case 98:
+                translatePlane([0, 0, -10]);
+                break;
+            default:
+                break;
+        }
+    }
+</script>
+</head>
+
+<body onkeyup = "handleKeyUp(event)">
+    <canvas id = "canvas" width = 600 height = 600>Browser does not support canvas</canvas>
+    <br>
+    <button id = "clear" onclick = "clearCanvas()">Clear canvas</button>
+    <button id = "draw-Plane" onclick = "drawPlane(Plane, scale, d, observer)">Draw plane</button>
+    <button id = "rotateRotor" onclick = "startRotorAni()">Rotate rotor</button>
+    <button id = "rotateY" onclick = "startAniY()">Rotate around OY</button>
+    <button id = "stop-animation" onclick = "stopAnimation()">Stop rotations</button>
+    <button id = "focal-close" onclick = "changeFocal(50)">Zoom in</button>
+    <button id = "focal-far" onclick = "changeFocal(-50)">Zoom out</button>
+    <button id = "scale-plus" onclick = "scalePlane(1.1)">Scale plane 1.1x</button>
+    <button id = "scale-minus" onclick = "scalePlane(0.9)">Scale plane 0.9x</button>
+    <br>
+    Controls: arrow keys to move the model up/down/left/right. NumPad8 to move model further away, NumPad2 to move model closer.
+</body>
