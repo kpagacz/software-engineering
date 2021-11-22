@@ -1,0 +1,140 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Parameters:
+  env:
+    Type: String
+    Default: dev
+    AllowedValues:
+      - dev
+      - prod
+      - test
+    Description: Choose environments
+
+Mappings:
+  env:
+    test:
+      cidr: 10.0.0.0/16
+      subnetA: 10.0.1.0/24
+      subnetB: 10.0.2.0/24
+    dev:
+      cidr: 10.10.0.0/16
+      subnetA: 10.10.1.0/24
+      subnetB: 10.10.2.0/24
+
+Resources:
+  myVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: !FindInMap [env, !Ref env, cidr]
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+      Tags:
+      - Key: Name
+        Value: !Sub ${env}-vpc
+
+  IGW:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+      - Key: Name
+        Value: !Sub ${env}-igw
+
+  IGWAttach:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      InternetGatewayId: !Ref IGW
+      VpcId: !Ref myVPC
+
+  SubnetA:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: !Sub ${AWS::Region}a
+      CidrBlock: !FindInMap [env, !Ref env, subnetA]
+      MapPublicIpOnLaunch: "true"
+      Tags:
+      - Key: Name
+        Value: !Sub ${env}-subnetA
+      VpcId: !Ref myVPC
+
+  SubnetB:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: !Sub ${AWS::Region}b
+      CidrBlock: !FindInMap [env, !Ref env, subnetB]
+      MapPublicIpOnLaunch: "true"
+      Tags:
+      - Key: Name
+        Value: !Sub ${env}-subnetB
+      VpcId: !Ref myVPC
+
+  MainRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      Tags:
+      - Key: Name
+        Value: !Sub ${env}-routeTable
+      VpcId: !Ref myVPC
+
+  Route:
+    Type: AWS::EC2::Route
+    Properties:
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref IGW
+      RouteTableId: !Ref MainRouteTable
+
+  SubnetARouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref MainRouteTable
+      SubnetId: !Ref SubnetA
+
+  SubnetBRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref MainRouteTable
+      SubnetId: !Ref SubnetB
+
+  PublicSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+        GroupDescription: Allow http to client host
+        VpcId: !Ref myVPC
+        SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+
+  HttpdServer:
+    Type: AWS::EC2::Instance
+    Properties:d
+      ImageId: ami-04ad2567c9e3d7893
+      SecurityGroups:
+        - !Ref PublicSecurityGroup
+      SubnetId: !Ref SubnetB
+      Tags:
+        - Key: Name
+          Value: !Sub ${env}-routeTable
+      UserData:
+        Fn::Base64:
+          !Sub |
+            #!/bin/bash
+            yum update -y
+            service httpd start
+            chkconfig httpd on
+
+Outputs:
+  vpcID:
+    Description: myVPC id
+    Value: !Ref myVPC
+    Export:
+      Name: !Sub ${env}-VPCID
+
+  publicSubnetsIds:
+    Description: Public subnets IDs
+    Value: !Join
+      - ','
+      - - !Ref SubnetA
+        - !Ref SubnetB
+    Export:
+      Name: !Sub ${env}-publicSubnetsIds
