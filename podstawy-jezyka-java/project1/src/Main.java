@@ -18,6 +18,8 @@ public class Main {
           line = sc.nextLine();
           figures.add(Figure.fromString(line));
           break;
+        } catch (FigureParseException e) {
+          System.out.println("Error parsing a figure: " + e.getMessage());
         } catch (Exception e) {
           System.out.println("Error while parsing");
         }
