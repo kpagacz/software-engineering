@@ -18,7 +18,7 @@ public class Circle extends Figure {
       Scanner sc = new Scanner(vertexAndRadius[1]);
       this.radius = sc.nextDouble();
     } catch(VertexParseException e) {
-      throw new FigureParseException("Error parsing circle's center:\n" + e.getMessage());
+      throw new FigureParseException("Error parsing circle's center", e);
     } catch(Exception error) {
       throw new FigureParseException("Line:\n    " + line + "\ndoes not describe a circle");
     }
@@ -32,7 +32,7 @@ public class Circle extends Figure {
    */
   public static boolean isCircle(String line) {
     return Pattern.matches(
-            "^\\(" + doubleNumberPatter + "," + doubleNumberPatter + "\\) " + doubleNumberPatter + "$",
+            "^\\(" + doubleNumberPattern + "," + doubleNumberPattern + "\\) " + doubleNumberPattern + "$",
             line);
   }
 

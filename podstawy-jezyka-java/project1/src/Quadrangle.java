@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class Quadrangle extends Polygon {
-    public Quadrangle(ArrayList<Vertex> vertices) {
-
+    public Quadrangle(ArrayList<Vertex> vertices) throws ImpossiblePolygonException {
+        super(vertices);
     }
 
     @Override

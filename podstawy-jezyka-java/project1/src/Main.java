@@ -19,9 +19,10 @@ public class Main {
           figures.add(Figure.fromString(line));
           break;
         } catch (FigureParseException e) {
-          System.out.println("Error parsing a figure: " + e.getMessage());
+          System.err.println("Error parsing a figure");
+          e.printStackTrace();
         } catch (Exception e) {
-          System.out.println("Error while parsing");
+          System.err.println("Error while parsing");
         }
       }
     }

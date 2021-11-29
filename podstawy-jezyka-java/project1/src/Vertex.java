@@ -15,7 +15,7 @@ public class Vertex {
    * @param vertex the string describing this Vertex of format: (<x_coordinate>,<y_coordinate>)
    */
   public Vertex(String vertex) throws VertexParseException {
-    if (!Pattern.matches("^\\(\\p{Digit}*\\.?\\p{Digit},\\p{Digit}*\\.?\\p{Digit}\\)$", vertex))
+    if (!Pattern.matches("^\\(" + Figure.doubleNumberPattern + "," + Figure.doubleNumberPattern + "\\)$", vertex))
       throw new VertexParseException("Could not parse vertex: " + vertex);
     try {
       vertex = vertex.replace("(", "");
@@ -25,7 +25,7 @@ public class Vertex {
       this.x = sc.nextDouble();
       this.y = sc.nextDouble();
     } catch (Exception e) {
-      throw new VertexParseException("Could not parse vertex: " + vertex);
+      throw new VertexParseException("Could not parse vertex: " + vertex, e);
     }
   }
 
@@ -39,5 +39,9 @@ public class Vertex {
 class VertexParseException extends Exception {
   public VertexParseException(String msg) {
     super(msg);
+  }
+
+  public VertexParseException(String msg, Throwable e) {
+    super(msg, e);
   }
 }
