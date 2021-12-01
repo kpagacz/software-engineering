@@ -2,28 +2,54 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class Circle extends Figure {
+  // Fields
   double radius;
   Vertex center;
 
+  // Constructors
+  public Circle(Vertex center, double radius) throws ImpossibleCircleException {
+    this.center = center;
+    this.radius = radius;
+    validateCircle();
+    calculateArea();
+    calculatePerimeter();
+  }
   /**
    * @param line the string describing this circle written in the following format:
    *     `(<x_coordinate>,<y_coordinate>) <radius>`
    */
-  public Circle(String line) throws FigureParseException {
+  public static Circle fromString(String line) throws FigureParseException {
     String[] vertexAndRadius = line.split(" ");
+    Vertex center;
+    double radius;
 
     try {
       if (vertexAndRadius.length != 2) throw new Exception();
-      this.center = new Vertex(vertexAndRadius[0]);
+      center = new Vertex(vertexAndRadius[0]);
       Scanner sc = new Scanner(vertexAndRadius[1]);
-      this.radius = sc.nextDouble();
+      radius = sc.nextDouble();
     } catch(VertexParseException e) {
       throw new FigureParseException("Error parsing circle's center", e);
     } catch(Exception error) {
       throw new FigureParseException("Line:\n    " + line + "\ndoes not describe a circle");
     }
+
+    try{
+      return new Circle(center, radius);
+    } catch (ImpossibleCircleException e) {
+      throw new FigureParseException("Circle parsing failed.", e);
+    }
   }
 
+  private void calculateArea() {
+    setArea(Math.PI * radius * radius);
+  }
+
+  private void calculatePerimeter() {
+    setPerimeter(2 * Math.PI * radius);
+  }
+
+  // Public methods
   /**
    * Checks whether a String describes a Circle object.
    *
@@ -39,5 +65,16 @@ public class Circle extends Figure {
   @Override
   public String toString() {
     return "Circle";
+  }
+
+  // Private methods
+  private void validateCircle() throws ImpossibleCircleException {
+    if (radius <= 0) throw new ImpossibleCircleException("Circle's radius must be non-negative");
+  }
+}
+
+class ImpossibleCircleException extends Exception {
+  public ImpossibleCircleException(String msg) {
+    super(msg);
   }
 }

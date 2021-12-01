@@ -1,10 +1,14 @@
 public class Figure {
+  // Fields
   public static final String doubleNumberPattern = "(\\p{Digit}*\\.)?\\p{Digit}+";
+  private double area;
+  private double perimeter;
 
+  // Constructors
   public static Figure fromString(String input) throws FigureParseException {
     Figure fig;
     if (Circle.isCircle(input)) {
-      fig = new Circle(input);
+      fig = Circle.fromString(input);
     } else {
       fig = Polygon.fromString(input);
     }
@@ -15,6 +19,22 @@ public class Figure {
   @Override
   public String toString() {
     return "Figure";
+  }
+
+  double getArea() {
+    return area;
+  }
+
+  void setArea(double area) {
+    this.area = area;
+  }
+
+  double getPerimeter() {
+    return perimeter;
+  }
+
+  void setPerimeter(double perimeter) {
+    this.perimeter = perimeter;
   }
 }
 

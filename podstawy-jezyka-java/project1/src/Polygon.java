@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class Polygon extends Figure {
   // Fields
   private final ArrayList<Vertex> vertices;
-  private double area;
 
   // Constructors
   public Polygon() {
@@ -14,6 +13,7 @@ public class Polygon extends Figure {
     this.vertices = vertices;
     validatePolygon();
     calculateArea();
+    calculatePerimeter();
   }
 
   public static Polygon fromString(String input) throws FigureParseException {
@@ -48,12 +48,15 @@ public class Polygon extends Figure {
   public Vertex getVertex(int vertexNumber) {
     return vertices.get(vertexNumber);
   }
-  public double getArea() {
-    return area;
-  }
   // Setters
 
-  // Methods
+  // Public methods
+  void calculatePerimeter() {
+    double perimeter = 0;
+    for (int i = 0; i < vertices.size(); i++)
+      perimeter += Vertex.distance(getVertex(i), getVertex((i + 1) % vertices.size()));
+    setPerimeter(perimeter);
+  }
 
   /**
    * Calculates the area of this Polygon.
@@ -61,7 +64,7 @@ public class Polygon extends Figure {
    * The formula assume this Polygon is simple:
    * [https://en.wikipedia.org/wiki/Simple_polygon]
    */
-  private void calculateArea() {
+  void calculateArea() {
     double sumA = 0, sumB = 0;
     for(int i = 0; i < vertices.size() - 1; i++) {
       sumA += vertices.get(i).x * vertices.get(i + 1).y;
@@ -69,9 +72,19 @@ public class Polygon extends Figure {
     }
     sumA += vertices.get(vertices.size() - 1).x * vertices.get(0).y;
     sumB += vertices.get(0).x * vertices.get(vertices.size() - 1).y;
-    area = Math.abs(sumA - sumB) / 2;
+    setArea(Math.abs(sumA - sumB) / 2);
   }
 
+  @Override
+  public String toString() {
+    StringBuilder out = new StringBuilder();
+    out.append("Type: Polygon\n");
+    out.append("Perimeter: ").append(getPerimeter()).append("\n");
+    out.append("Area ").append(getArea()).append("\n");
+    return out.toString();
+  }
+
+  // Private methods
   private void validatePolygon() throws ImpossiblePolygonException {
     if (anyThreeVerticesCollinear())
       throw new ImpossiblePolygonException("Polygon cannot have collinear consecutive vertices");
@@ -88,13 +101,10 @@ public class Polygon extends Figure {
   }
 
   private boolean areThreeVerticesCollinear(Vertex v1, Vertex v2, Vertex v3) {
-    return v1.x * (v2.y - v3.y) + v2.x * (v1.y - v3.y) + v3.x * (v1.y - v2.y) == 0;
+    double precision = 1E-15;
+    return Math.abs(v1.x * (v2.y - v3.y) + v2.x * (v3.y - v1.y) + v3.x * (v1.y - v2.y)) < precision;
   }
 
-  @Override
-  public String toString() {
-    return "Polygon";
-  }
 }
 
 class ImpossiblePolygonException extends Exception {
