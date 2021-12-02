@@ -1,4 +1,9 @@
+import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.TreeSet;
+import java.util.stream.IntStream;
 
 public class Polygon extends Figure {
   // Fields
@@ -88,7 +93,47 @@ public class Polygon extends Figure {
   private void validatePolygon() throws ImpossiblePolygonException {
     if (anyThreeVerticesCollinear())
       throw new ImpossiblePolygonException("Polygon cannot have collinear consecutive vertices");
+    if (isPolygonComplex()) throw new ImpossiblePolygonException("Complex polygons not supported");
+  }
 
+  private boolean isPolygonComplex() {
+    return areAnySegmentsIntersecting(vertices);
+  }
+
+  /**
+  * Implements a naive approach to determine whether any segments intersect with one another.
+  *
+  * @param vertices the list of vertices of segments. Vertices define segments of a polygon.
+  *                 Two neighbouring vertices are part of the same segment.
+  * @return true if any segment defined by vertices intersects another segment; false otherwise
+  */
+  private boolean areAnySegmentsIntersecting(ArrayList<Vertex> vertices) {
+    for(int i = 0; i < vertices.size(); i++) {
+      for(int j = i + 2; j < (i == 0 ? vertices.size() - 1 : vertices.size()); j++) {
+        if (doSegmentsIntersect(vertices.get(i), vertices.get((i + 1) % vertices.size()), vertices.get(j), vertices.get((j + 1) % vertices.size()))) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+
+  /**
+  * Implements algorithm described in:
+  * https://stackoverflow.com/a/3842157/8580062
+  * @param line1V1 the first vertex of the first line
+  * @param line1V2 the second vertex of the first line
+  * @param line2V1 the first vertex of the second line
+  * @param line2V2 the second vertex of the second line
+  * @return true if the two segments intersect; false otherwise
+  */
+  private boolean doSegmentsIntersect(Vertex line1V1, Vertex line1V2, Vertex line2V1, Vertex line2V2) {
+    double cOrientationAB = (line1V1.x - line2V1.x) * (line1V2.y - line2V1.y) - (line1V2.x - line2V1.x) * (line1V1.y - line2V1.y);
+    double dOrientationAB = (line1V1.x - line2V2.x) * (line1V2.y - line2V2.y) - (line1V2.x - line2V2.x) * (line1V1.y - line2V2.y);
+    double aOrientationCD = (line2V1.x - line1V1.x) * (line2V2.y - line1V1.y) - (line2V2.x - line1V1.x) * (line2V1.y - line1V1.y);
+    double bOrientationCD = (line2V1.x - line1V2.x) * (line2V2.y - line1V2.y) - (line2V2.x - line1V2.x) * (line2V1.y - line1V2.y);
+    return Math.signum(cOrientationAB) != Math.signum(dOrientationAB) && Math.signum(aOrientationCD) != Math.signum(bOrientationCD);
   }
 
   private boolean anyThreeVerticesCollinear() {
