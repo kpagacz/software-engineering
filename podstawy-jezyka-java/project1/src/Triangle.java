@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.function.DoublePredicate;
+import java.util.logging.Logger;
 
 public class Triangle extends Polygon {
   // Fields
@@ -18,6 +18,12 @@ public class Triangle extends Polygon {
 
   private TriangleSideType triangleSideType;
   private TriangleAngleType triangleAngleType;
+
+  private static final Logger logger;
+
+  static {
+    logger =  Logger.getLogger("Main.Triangle");
+  }
 
   // Constructors
   public Triangle(ArrayList<Vertex> vertices) throws ImpossiblePolygonException {
@@ -56,6 +62,11 @@ public class Triangle extends Polygon {
     out.append("Area: ").append(getArea()).append("\n");
     out.append("Perimeter: ").append(getPerimeter());
     return out.toString();
+  }
+
+  @Override
+  Logger getLogger() {
+    return logger;
   }
 
   // Private methods
@@ -97,10 +108,4 @@ public class Triangle extends Polygon {
     }
   }
 
-}
-
-class ImpossibleTriangleException extends Exception {
-  public ImpossibleTriangleException(String msg) {
-    super(msg);
-  }
 }

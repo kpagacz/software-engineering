@@ -1,6 +1,6 @@
 public class Figure {
   // Fields
-  public static final String doubleNumberPattern = "(\\p{Digit}*\\.)?\\p{Digit}+";
+  public static final String doubleNumberPattern = "-?(\\p{Digit}*\\.)?\\p{Digit}+";
   private double area;
   private double perimeter;
 

@@ -1,10 +1,17 @@
+import java.util.NoSuchElementException;
 import java.util.Scanner;
+import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
 public class Circle extends Figure {
   // Fields
   double radius;
   Vertex center;
+  private static final Logger logger;
+
+  static {
+    logger = Logger.getLogger("Main.Circle");
+  }
 
   // Constructors
   public Circle(Vertex center, double radius) throws ImpossibleCircleException {
@@ -13,6 +20,8 @@ public class Circle extends Figure {
     validateCircle();
     calculateArea();
     calculatePerimeter();
+
+    logger.info("Circle initialized. Center: " + center.toString() + " radius: " + radius);
   }
   /**
    * @param line the string describing this circle written in the following format:
@@ -23,18 +32,19 @@ public class Circle extends Figure {
     Vertex center;
     double radius;
 
+    if (vertexAndRadius.length != 2)
+      throw new FigureParseException("Line: \n     " + line + "\ndoes not describe a circle");
     try {
-      if (vertexAndRadius.length != 2) throw new Exception();
       center = new Vertex(vertexAndRadius[0]);
       Scanner sc = new Scanner(vertexAndRadius[1]);
       radius = sc.nextDouble();
-    } catch(VertexParseException e) {
+    } catch (VertexParseException e) {
       throw new FigureParseException("Error parsing circle's center", e);
-    } catch(Exception error) {
+    } catch (NoSuchElementException | IllegalStateException error) {
       throw new FigureParseException("Line:\n    " + line + "\ndoes not describe a circle");
     }
 
-    try{
+    try {
       return new Circle(center, radius);
     } catch (ImpossibleCircleException e) {
       throw new FigureParseException("Circle parsing failed.", e);
@@ -58,13 +68,23 @@ public class Circle extends Figure {
    */
   public static boolean isCircle(String line) {
     return Pattern.matches(
-            "^\\(" + doubleNumberPattern + "," + doubleNumberPattern + "\\) " + doubleNumberPattern + "$",
-            line);
+        "^\\("
+            + doubleNumberPattern
+            + ","
+            + doubleNumberPattern
+            + "\\) "
+            + doubleNumberPattern
+            + "$",
+        line);
   }
 
   @Override
   public String toString() {
-    return "Circle";
+    StringBuilder out = new StringBuilder();
+    out.append("Type: Circle\n");
+    out.append("Perimeter: ").append(getPerimeter()).append("\n");
+    out.append("Area ").append(getArea()).append("\n");
+    return out.toString();
   }
 
   // Private methods

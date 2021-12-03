@@ -1,3 +1,5 @@
+import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -15,7 +17,8 @@ public class Vertex {
    * @param vertex the string describing this Vertex of format: (<x_coordinate>,<y_coordinate>)
    */
   public Vertex(String vertex) throws VertexParseException {
-    if (!Pattern.matches("^\\(" + Figure.doubleNumberPattern + "," + Figure.doubleNumberPattern + "\\)$", vertex))
+    if (!Pattern.matches(
+        "^\\(" + Figure.doubleNumberPattern + "," + Figure.doubleNumberPattern + "\\)$", vertex))
       throw new VertexParseException("Could not parse vertex: " + vertex);
     try {
       vertex = vertex.replace("(", "");
@@ -24,7 +27,7 @@ public class Vertex {
       Scanner sc = new Scanner(vertex);
       this.x = sc.nextDouble();
       this.y = sc.nextDouble();
-    } catch (Exception e) {
+    } catch (NoSuchElementException | IllegalStateException e) {
       throw new VertexParseException("Could not parse vertex: " + vertex, e);
     }
   }
@@ -33,6 +36,11 @@ public class Vertex {
     return Math.sqrt(
         (vertex1.x - vertex2.x) * (vertex1.x - vertex2.x)
             + (vertex1.y - vertex2.y) * (vertex1.y - vertex2.y));
+  }
+
+  @Override
+  public String toString() {
+    return "(" + x + "," + y + ")";
   }
 }
 

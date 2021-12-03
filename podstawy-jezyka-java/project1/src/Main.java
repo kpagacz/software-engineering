@@ -1,8 +1,18 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.*;
 
 public class Main {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
+    // logging configuration
+    Logger globalLogger = Logger.getLogger("");
+    for (Handler h : globalLogger.getHandlers())
+      if (h instanceof ConsoleHandler) globalLogger.removeHandler(h);
+    Logger logger = Logger.getLogger("Main");
+    logger.addHandler(new FileHandler("logs-figures.log"));
+    logger.info("Main entrypoint reached.");
+
     int figuresNumber;
     Scanner sc = new Scanner(System.in);
     System.out.println("Input number of figures:");

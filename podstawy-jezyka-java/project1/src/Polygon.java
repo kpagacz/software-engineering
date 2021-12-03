@@ -1,17 +1,12 @@
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.TreeSet;
-import java.util.stream.IntStream;
+import java.util.logging.Logger;
 
 public class Polygon extends Figure {
   // Fields
   private final ArrayList<Vertex> vertices;
-
-  // Constructors
-  public Polygon() {
-    this.vertices = new ArrayList<>();
+  private static final Logger logger;
+  static {
+     logger = Logger.getLogger("Main.Polygon");
   }
 
   public Polygon(ArrayList<Vertex> vertices) throws ImpossiblePolygonException {
@@ -19,6 +14,19 @@ public class Polygon extends Figure {
     validatePolygon();
     calculateArea();
     calculatePerimeter();
+    logConstructor();
+  }
+
+  private void logConstructor() {
+    Logger classLogger = getLogger();
+    StringBuilder stringVertices = new StringBuilder();
+    stringVertices.append("Vertices: ");
+    for(Vertex v : vertices) stringVertices.append(v.toString()).append(" ");
+    classLogger.info(this.getClass().getSimpleName() + " created. " + stringVertices);
+  }
+
+  Logger getLogger() {
+    return logger;
   }
 
   public static Polygon fromString(String input) throws FigureParseException {
@@ -39,7 +47,7 @@ public class Polygon extends Figure {
         case 1 -> throw new FigureParseException("Can't create a polygon from one vertex");
         case 2 -> throw new FigureParseException("Can't create a polygon from two vertices");
         case 3 -> polygon = new Triangle(vertices);
-        case 4 -> polygon = new Quadrangle(vertices);
+        case 4 -> polygon = Quadrangle.fromVertices(vertices);
         default -> polygon = new Polygon(vertices);
       }
     } catch (ImpossiblePolygonException e) {
@@ -83,7 +91,7 @@ public class Polygon extends Figure {
   @Override
   public String toString() {
     StringBuilder out = new StringBuilder();
-    out.append("Type: Polygon\n");
+    out.append("Type: " + this.getClass().getSimpleName() + "\n");
     out.append("Perimeter: ").append(getPerimeter()).append("\n");
     out.append("Area ").append(getArea()).append("\n");
     return out.toString();
