@@ -1,147 +1,142 @@
 AWSTemplateFormatVersion: "2010-09-09"
-
 Parameters:
   env:
     Type: String
     Default: dev
     AllowedValues:
       - dev
-      - test
-    Description: Choose environments
-
+      - qa
+    Description: Which one it is env?
 Mappings:
   env:
-    test:
-      cidr: 10.0.0.0/16
-      subnetA: 10.0.1.0/24
-      subnetB: 10.0.2.0/24
     dev:
       cidr: 10.10.0.0/16
-      subnetA: 10.10.1.0/24
-      subnetB: 10.10.2.0/24
-
+      subneta: 10.10.1.0/24
+      subnetb: 10.10.2.0/24
+    qa:
+      cidr: 10.0.0.0/16
+      subneta: 10.0.1.0/24
+      subnetb: 10.0.2.0/24
 Resources:
   myVPC:
     Type: AWS::EC2::VPC
     Properties:
       CidrBlock: !FindInMap [env, !Ref env, cidr]
-      EnableDnsSupport: 'true'
-      EnableDnsHostnames: 'true'
+      EnableDnsHostnames: "true"
+      EnableDnsSupport: "true"
       Tags:
-      - Key: Name
-        Value: !Sub ${env}-vpc
-
+        - Key: Name
+          Value: !Sub ${env}-vpc
   IGW:
     Type: AWS::EC2::InternetGateway
     Properties:
       Tags:
-      - Key: Name
-        Value: !Sub ${env}-igw
-
+        - Key: Name
+          Value: !Sub ${env}-IGW
   IGWAttach:
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
       InternetGatewayId: !Ref IGW
       VpcId: !Ref myVPC
-
-  SubnetA:
+  PubSubnetA:
     Type: AWS::EC2::Subnet
     Properties:
       AvailabilityZone: !Sub ${AWS::Region}a
-      CidrBlock: !FindInMap [env, !Ref env, subnetA]
+      CidrBlock: !FindInMap [env, !Ref env, subneta]
       MapPublicIpOnLaunch: "true"
       Tags:
-      - Key: Name
-        Value: !Sub ${env}-subnetA
+        - Key: Name
+          Value: !Sub ${env}-subnetA
       VpcId: !Ref myVPC
-
-  SubnetB:
+  PubSubnetB:
     Type: AWS::EC2::Subnet
     Properties:
       AvailabilityZone: !Sub ${AWS::Region}b
-      CidrBlock: !FindInMap [env, !Ref env, subnetB]
+      CidrBlock: !FindInMap [env, !Ref env, subnetb]
       MapPublicIpOnLaunch: "true"
       Tags:
-      - Key: Name
-        Value: !Sub ${env}-subnetB
+        - Key: Name
+          Value: !Sub ${env}-subnetB
       VpcId: !Ref myVPC
-
-  MainRouteTable:
+  MainRT:
     Type: AWS::EC2::RouteTable
     Properties:
       Tags:
-      - Key: Name
-        Value: !Sub ${env}-routeTable
+        - Key: Name
+          Value: !Sub ${env}-rt
       VpcId: !Ref myVPC
-
-  Route:
+  MainRTRoute:
     Type: AWS::EC2::Route
     Properties:
       DestinationCidrBlock: 0.0.0.0/0
       GatewayId: !Ref IGW
-      RouteTableId: !Ref MainRouteTable
-
-  SubnetARouteTableAssociation:
+      RouteTableId: !Ref MainRT
+  MainRTRouteSubnetAAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      RouteTableId: !Ref MainRouteTable
-      SubnetId: !Ref SubnetA
-
-  SubnetBRouteTableAssociation:
+      RouteTableId: !Ref MainRT
+      SubnetId: !Ref PubSubnetA
+  MainRTRouteSubnetBAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      RouteTableId: !Ref MainRouteTable
-      SubnetId: !Ref SubnetB
-
-  PublicSecurityGroup:
+      RouteTableId: !Ref MainRT
+      SubnetId: !Ref PubSubnetB
+  WebSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
-        GroupDescription: Allow http to client host
-        VpcId: !Ref myVPC
-        GroupName: !Sub ${env}-web-sg
-        SecurityGroupIngress:
-        - IpProtocol: tcp
+      GroupDescription: Web SG
+      GroupName: !Sub ${env}-sg-web
+      SecurityGroupIngress:
+        # -
+        #   CidrIp: 0.0.0.0/0
+        #   FromPort: 80
+        #   ToPort: 80
+        #   IpProtocol: tcp
+        -
+          CidrIp: 0.0.0.0/0
           FromPort: 22
           ToPort: 22
-          CidrIp: 0.0.0.0/0
-
+          IpProtocol: tcp
+      VpcId: !Ref myVPC
   # WebServer:
-  #     Type: AWS::EC2::Instance
-  #     Properties:
-  #       ImageId: ami-04ad2567c9e3d7893
-  #       InstanceType: t2.micro
-  #       SecurityGroupIds:
-  #         - !Ref PublicSecurityGroup
-  #       SubnetId: !Ref SubnetA
-  #       Tags:
-  #         - Key: Name
-  #           Value: !Sub ${env}-webServer
-  #       UserData:
-  #         !Base64 |
-  #           #!/bin/bash
-  #           yum update -y
-  #           amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
-  #           yum install -y httpd mariadb-server
-  #           systemctl start httpd
-  #           systemctl enable httpd
-  #           usermod -a -G apache ec2-user
-  #           chown -R ec2-user:apache /var/www
-  #           chmod 2775 /var/www
-  #           find /var/www -type d -exec chmod 2775 {} \;
-  #           find /var/www -type f -exec chmod 0664 {} \;
-  #           echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
-  #       KeyName: lab-7
-
+  #   Type: AWS::EC2::Instance
+  #   Properties:
+  #     ImageId: ami-04902260ca3d33422
+  #     InstanceType: t2.micro
+  #     SecurityGroupIds:
+  #       - !Ref WebSG
+  #     SubnetId: !Ref PubSubnetA
+  #     # KeyName: ds
+  #     Tags:
+  #       - Key: Name
+  #         Value: !Sub ${env}-webServer
+  #     UserData:
+  #       !Base64 |
+  #         #!/bin/bash
+  #         yum update -y
+  #         amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+  #         yum install -y httpd mariadb-server
+  #         systemctl start httpd
+  #         systemctl enable httpd
+  #         usermod -a -G apache ec2-user
+  #         chown -R ec2-user:apache /var/www
+  #         chmod 2775 /var/www
+  #         find /var/www -type d -exec chmod 2775 {} \;
+  #         find /var/www -type f -exec chmod 0664 {} \;
+  #         echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+  #         echo "<?php phpinfo(); ?>" > /var/www/html/index.php
+  #         systemctl restart httpd
   WebServerLT:
     Type: AWS::EC2::LaunchTemplate
     Properties:
       LaunchTemplateName: !Sub ${env}-webServer-lt
       LaunchTemplateData:
-        ImageId: ami-04ad2567c9e3d7893
+        ImageId: ami-04902260ca3d33422
         InstanceType: t2.micro
         SecurityGroupIds:
-          - !Ref PublicSecurityGroup
-        KeyName: lab-7
+          - !Ref WebSG
+        # SubnetId: !Ref PubSubnetA
+        KeyName: ds
         UserData:
           !Base64 |
             #!/bin/bash
@@ -163,35 +158,23 @@ Resources:
             Tags:
               - Key: Name
                 Value: !Sub ${env}-webServer
-
   WebServerASG:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
       AutoScalingGroupName: !Sub ${env}-webServerASG
-      DesiredCapacity: 1
+      MinSize: 1
       MaxSize: 3
-      MinSize: 0
+      DesiredCapacity: 1
       HealthCheckGracePeriod: 60
       HealthCheckType: EC2
       LaunchTemplate:
         LaunchTemplateId: !Ref WebServerLT
         Version: !GetAtt WebServerLT.LatestVersionNumber
       VPCZoneIdentifier:
-        - !Ref SubnetA
-        - !Ref SubnetB
+        - !Ref PubSubnetA
+        - !Ref PubSubnetB
       TargetGroupARNs:
         - !Ref WebServerTG
-
-  myCPUPolicy:
-    Type: AWS::AutoScaling::ScalingPolicy
-    Properties:
-      AutoScalingGroupName: !Ref WebServerASG
-      PolicyType: TargetTrackingScaling
-      TargetTrackingConfiguration:
-        PredefinedMetricSpecification:
-          PredefinedMetricType: ASGAverageCPUUtilization
-        TargetValue: 60
-
   WebServerTG:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
@@ -202,6 +185,7 @@ Resources:
       HealthCheckProtocol: HTTP
       HealthCheckTimeoutSeconds: 5
       HealthyThresholdCount: 3
+      UnhealthyThresholdCount: 3
       Matcher:
         HttpCode: 200
       Name: !Sub ${env}-webServerTG
@@ -209,37 +193,34 @@ Resources:
       Protocol: HTTP
       TargetType: instance
       VpcId: !Ref myVPC
-
-  LBSecurityGroup:
+  LBSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
-        GroupDescription: Web SG
-        GroupName: !Sub ${env}-sg-lb
-        VpcId: !Ref myVPC
-        SecurityGroupIngress:
-        - IpProtocol: tcp
+      GroupDescription: Web SG
+      GroupName: !Sub ${env}-sg-lb
+      SecurityGroupIngress:
+        -
+          CidrIp: 0.0.0.0/0
           FromPort: 80
           ToPort: 80
-          CidrIp: 0.0.0.0/0
-
-  PublicSG2LBSG:
+          IpProtocol: tcp
+      VpcId: !Ref myVPC
+  LBSG2Web:
     Type: AWS::EC2::SecurityGroupIngress
     Properties:
       FromPort: 80
       ToPort: 80
-      GroupId: !Ref LBSecurityGroup
+      GroupId: !Ref LBSG
       IpProtocol: "-1"
-      SourceSecurityGroupId: !Ref PublicSecurityGroup
-
-  LBSG2PublicSG:
+      SourceSecurityGroupId: !Ref WebSG
+  WebSG2LB:
     Type: AWS::EC2::SecurityGroupIngress
     Properties:
       FromPort: 80
       ToPort: 80
-      GroupId: !Ref PublicSecurityGroup
+      GroupId: !Ref WebSG
       IpProtocol: "-1"
-      SourceSecurityGroupId: !Ref LBSecurityGroup
-
+      SourceSecurityGroupId: !Ref LBSG
   WebServerLB:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
     Properties:
@@ -247,25 +228,23 @@ Resources:
       Name: !Sub ${env}-webServerLB
       Scheme: internet-facing
       SecurityGroups:
-        - !Ref LBSecurityGroup
+        - !Ref LBSG
       Subnets:
-        - !Ref SubnetA
-        - !Ref SubnetB
+        - !Ref PubSubnetA
+        - !Ref PubSubnetB
       Type: application
-
   WebListener:
     Type: AWS::ElasticLoadBalancingV2::Listener
     Properties:
       DefaultActions:
-        - Type: fixed-response
-          FixedResponseConfig:
-            ContentType: text/html
-            StatusCode: "404"
-            MessageBody: "No page"
+          - Type: fixed-response
+            FixedResponseConfig:
+                ContentType: text/html
+                StatusCode: "404"
+                MessageBody: "No page"
       LoadBalancerArn: !Ref WebServerLB
       Port: 80
       Protocol: "HTTP"
-
   WebListenerRule:
     Type: AWS::ElasticLoadBalancingV2::ListenerRule
     Properties:
@@ -275,22 +254,30 @@ Resources:
       Conditions:
         - Field: path-pattern
           Values:
-          - "/*"
+            - "/"
+            - "/*"
       ListenerArn: !Ref WebListener
       Priority: 1
-
+  myCPUPolicy:
+    Type: AWS::AutoScaling::ScalingPolicy
+    Properties:
+      AutoScalingGroupName: !Ref WebServerASG
+      PolicyType: TargetTrackingScaling
+      TargetTrackingConfiguration:
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ASGAverageCPUUtilization
+        TargetValue: 60
 Outputs:
   vpcID:
-    Description: myVPC id
+    Description: My VPC ID
     Value: !Ref myVPC
     Export:
       Name: !Sub ${env}-VPCID
-
   publicSubnetsIds:
-    Description: Public subnets IDs
+    Description: Public IDs
     Value: !Join
       - ','
-      - - !Ref SubnetA
-        - !Ref SubnetB
+      - - !Ref PubSubnetA
+        - !Ref PubSubnetB
     Export:
       Name: !Sub ${env}-publicSubnetsIds
