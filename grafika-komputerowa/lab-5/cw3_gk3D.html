@@ -1,0 +1,417 @@
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript">
+
+    var canvas;     //deklaracja obiektu "płótno" 
+    var c;			//na płótnie wyświetlana jest grafika
+
+    function clearCanvas() {		  //czyszczenie płótna
+        canvas = document.getElementById("canvas");
+        if (!canvas.getContext) { return; }
+        c = canvas.getContext("2d");
+        c.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function line(a, b, style) {	        //rysowanie odcinka
+        canvas = document.getElementById("canvas");
+        if (!canvas.getContext) { return; }
+        c = canvas.getContext("2d");
+		c.lineWidth=3;
+        c.beginPath();
+        c.moveTo(a[0], a[1]);
+        c.lineTo(b[0], b[1]);
+        c.strokeStyle = style || "rgb(200,0,0)";
+        c.stroke();
+	
+    }
+
+
+    var E = [300, 200]; 		// położenie obserwatora
+	var d=1000;					// d = ogniskowa (odległość obserwatora od rzutni)
+    
+	function projectXY(p, d) {	// rzutowanie perpektywiczne, 
+								// obrazem punktu p (w przestrzeni 3D) jest punkt q (na płaszczyźnie XY)
+        var q = [];
+        q[0] = (p[0]-E[0]) * d / (d + p[2]) + E[0];
+        q[1] = (p[1]-E[1]) * d / (d + p[2]) + E[1];
+        return q;
+    }
+    
+
+	
+	function line3D(a, b, color) {  					 //rysowanie odcinka w 3 wymiarach
+		line(projectXY(a,d), projectXY(b,d), color);			
+	 }
+    
+	function scale(v, s) {           //skalowanie, v=tablica wierzchołków, s=skala
+        for (var i = 0; i < v.length; i++) {
+            for (var j = 0; j < v[i].length; j++) {
+                v[i][j] *= s;
+            }
+        }
+        return v;
+    }
+
+								
+    var cube = scale([			//deklaracja zmiennej "cube" (sześcian), skala=200
+        [1, 1, 1], //wierzchołki górne
+		[2, 1, 1],
+        [2, 1, 2], 
+		[1, 1, 2],
+		
+		[1, 2, 1], //wierzchołki dolne
+		[2, 2, 1],
+        [2, 2, 2], 
+		[1, 2, 2],
+		
+		[1.5, 0.2, 1.5], //v8
+		[1.5, 2.8, 1.5], //v9
+		
+		[0.2, 1.5, 1.5], //v10
+		[2.8, 1.5, 1.5], //v11
+		
+		[1.5, 1.5, 2.8], //v12
+		[1.5, 1.5, 0.2] //v13
+		
+    ], 200);
+
+	function tekst3D(a, napis) {	        //tekst "napis" nad punktem a
+        canvas = document.getElementById("canvas");
+        if (!canvas.getContext) { return; }
+        c = canvas.getContext("2d");
+		var b=[0,0];
+		b=projectXY(a,d);
+		
+		c.lineWidth=0.5;
+		c.strokeStyle = "rgb(77,77,77)";
+		c.font = '18px arial';
+		c.strokeText(napis,b[0]-5, b[1]-5);	    
+    }
+	
+	function kolo3D(a,r){		//koło o sroku a i promieniu r
+		canvas = document.getElementById("canvas");
+        if (!canvas.getContext) { return; }
+        c = canvas.getContext("2d");
+		var b=[0,0];
+		b=projectXY(a,d);
+		c.strokeStyle = "rgb(0,0,0)";
+		c.beginPath();
+		c.arc(b[0], b[1], r, 0, 2*Math.PI);
+		c.fill();
+	}
+	
+	function etykiety(v) {		//zaznaczenie wierzcholkow, wstawienie numerow wierzcholkow
+		for(var i =0; i<v.length; i++){
+			tekst3D(v[i],"v"+i);
+			kolo3D(v[i], 5);
+		}
+	
+	}
+	
+    function drawCube() {				
+        for (var i = 0; i < 3; i++) {				//krawędzie górne
+            line3D(cube[i], cube[i + 1], "blue");}
+			
+        line3D(cube[3], cube[0], "blue");
+		
+		for (var i = 4; i < 7; i++) {       		//krawędzie dolne
+            line3D(cube[i], cube[i + 1],"red");}
+			
+        line3D(cube[7], cube[4], "red");
+		
+		for (var i = 0; i < 4; i++) {     			//krawędzie pionowe
+            line3D(cube[i], cube[i + 4], "green");}
+			
+		for (var i = 0; i < 4; i++) {     			
+            line3D(cube[i], cube[8], "lightblue");
+			line3D(cube[i+4], cube[9], "lightblue");
+			}
+		line3D(cube[0], cube[10], "lightblue");
+		line3D(cube[3], cube[10], "lightblue");
+		line3D(cube[4], cube[10], "lightblue");
+		line3D(cube[7], cube[10], "lightblue");
+		
+		line3D(cube[1], cube[11], "lightblue");
+		line3D(cube[2], cube[11], "lightblue");
+		line3D(cube[5], cube[11], "lightblue");
+		line3D(cube[6], cube[11], "lightblue");
+		
+		line3D(cube[0], cube[13], "lightblue");
+		line3D(cube[1], cube[13], "lightblue");
+		line3D(cube[4], cube[13], "lightblue");
+		line3D(cube[5], cube[13], "lightblue");
+		
+		line3D(cube[2], cube[12], "lightblue");
+		line3D(cube[3], cube[12], "lightblue");
+		line3D(cube[6], cube[12], "lightblue");
+		line3D(cube[7], cube[12], "lightblue");
+		
+		/*
+		for (var i = 0; i < 4; i++) {     			
+            line3D(cube[8], cube[10+i], "brown");
+			line3D(cube[9], cube[10+i], "brown");
+			}
+		for (var i = 0; i < 2; i++) {     			
+            line3D(cube[10], cube[12+i], "brown");
+			line3D(cube[11], cube[12+i], "brown");
+			}
+		*/
+		
+		etykiety(cube);
+    }
+
+	
+	
+    function degreesToRadians(angle) {  
+        return radians = (Math.PI / 180) * angle;
+    }	
+    
+	function rotateX(p,q,angle){  // obrót punktu "p" o kąt "angle" wokół prostej równoległej do osi X i przechodzącej przez punkt "q"
+	 var pom=p[1];
+	 var f=degreesToRadians(angle);
+	 
+	 p[1]= ((p[1]-q[1])*Math.cos(f)-(p[2]-q[2])*Math.sin(f))+q[1];
+	 p[2]= ((pom-q[1])*Math.sin(f)+(p[2]-q[2])*Math.cos(f))+q[2];
+	 return p;
+	 }
+	 
+	 function rotateY(p,q,angle){   // obrót punktu "p" o kąt "angle" wokół prostej równoległej do osi Y i przechodzącej przez punkt "q"
+	 var pom=p[2];
+	 var f=degreesToRadians(angle);
+	 
+	 p[2]= ((p[2]-q[2])*Math.cos(f)-(p[0]-q[0])*Math.sin(f))+q[2];
+	 p[0]= ((pom-q[2])*Math.sin(f)+(p[0]-q[0])*Math.cos(f))+q[0];
+	 return p;
+	 }
+	function rotateZ(p,q,angle){	// obrót punktu "p" o kąt "angle" wokół prostej równoległej do osi Z i przechodzącej przez punkt "q"
+	 var pom=p[0];
+	 var f=degreesToRadians(angle);
+	 
+	 p[0]= ((p[0]-q[0])*Math.cos(f)-(p[1]-q[1])*Math.sin(f))+q[0];
+	 p[1]= ((pom-q[0])*Math.sin(f)+(p[1]-q[1])*Math.cos(f))+q[1];
+	 return p;
+    }	
+	
+
+      
+    function rotateVertex(v,q,angle,axis) {  
+	
+	if(axis==0){
+        for (i = 0; i < v.length; i++)
+       { rotateX(v[i],q, angle); }
+	   }
+    if(axis==1){
+        for (i = 0; i < v.length; i++)
+       { rotateY(v[i],q, angle); }
+	   }
+	if(axis==2){
+        for (i = 0; i < v.length; i++)
+       { rotateZ(v[i],q, angle); } 
+	   }	   
+
+    return v;
+    }
+
+
+// obroty
+   function rotateCubeX() {
+   var q=[(cube[0][0]+cube[6][0])/2,(cube[0][1]+cube[6][1])/2,(cube[0][2]+cube[6][2])/2]; //q = środek kostki
+   rotateVertex(cube, q,6,0);
+   clearCanvas();
+   drawCube();
+   }
+   function rotateCubeY() {
+   var q=[(cube[0][0]+cube[6][0])/2,(cube[0][1]+cube[6][1])/2,(cube[0][2]+cube[6][2])/2];
+   rotateVertex(cube, q,6,1);
+   clearCanvas();
+   drawCube();
+   }
+   function rotateCubeZ() {
+   var q=[(cube[0][0]+cube[6][0])/2,(cube[0][1]+cube[6][1])/2,(cube[0][2]+cube[6][2])/2];
+   rotateVertex(cube, q,6,2);
+   clearCanvas();
+   drawCube();
+   }
+
+    var rotX,rotY,rotZ;  // zmienne używane do animacji
+    
+	function stopAnimation() {
+        clearInterval(rotX);
+		clearInterval(rotY);
+		clearInterval(rotZ);
+    }
+
+    function startRotationX() {
+        stopAnimation();
+        rotX = setInterval('rotateCubeX()', 50);
+    }
+	function startRotationY() {
+        stopAnimation();
+        rotY = setInterval('rotateCubeY()', 50);
+    }
+	function startRotationZ() {
+        stopAnimation();
+        rotZ = setInterval('rotateCubeZ()', 50);
+    }
+
+
+    function translate(a, b) {		//przesunięcie punktu a o wektor b (w przestrzeni 3D)
+        a[0] = a[0] + b[0];
+        a[1] = a[1] + b[1];
+		a[2] = a[2] + b[2];
+        return a;
+    }
+    function translateVertex(v, b) {    //przesunięcie tablicy punktów "v"(wierzchołków) wektor "b" (w przestrzeni 3D)
+        for (i = 0; i < v.length; i++)
+        { translate(v[i], b); }
+        return v;
+    }
+   
+
+   function keyDownHandler(e) 			//obsługa zdarzeń za pomoca klawiatury
+   {											 
+		stopAnimation();
+		
+		e = e || event;
+        var keyCode = e.keyCode,
+    letter = (String.fromCharCode(e.keyCode) || '').toLowerCase();
+    
+        if (37 == keyCode) {			//stzrałka w lewo
+            translateVertex(cube, [-10, 0,0]);
+            clearCanvas();
+			drawCube(); 
+        }
+        if (38 == keyCode) {      //stzrałka w górę
+            translateVertex(cube, [0, -10,0]);
+            clearCanvas();
+			drawCube();
+        }
+        if (39 == keyCode) {    //strzałka w prawo
+            translateVertex(cube, [10, 0,0]);
+            clearCanvas();
+			drawCube();
+        }
+        if (40 == keyCode) {  //stzrałka w dół
+            translateVertex(cube, [0, 10,0]);
+            clearCanvas();
+			drawCube();
+        }
+		 if (33 == keyCode) {  //[page up] = przybliżanie
+            translateVertex(cube, [0, 0,-10]);
+            clearCanvas();
+			drawCube();
+        }
+		 if (34 == keyCode) {  //[page down] = oddalanie
+            translateVertex(cube, [0, 0,10]);
+            clearCanvas();
+			drawCube();
+        }
+		if (88== keyCode) {  //[X] - obrót wokół osi x
+            rotateCubeX();
+        }
+		if (89 == keyCode) {  //[Y] - rotacja wokół osi y
+            rotateCubeY();
+        }
+		if (90 == keyCode) {  //[Z] - rotacja wokół osi z
+            rotateCubeZ();
+        } 
+		if (65 == keyCode) {  //[A] 
+            E[0]+=20;
+			clearCanvas();
+			drawCube();
+        } 
+		if (68 == keyCode) {  //[D] 
+            E[0]-=20;
+			clearCanvas();
+			drawCube();
+        } 
+		if (87 == keyCode) {  //[W] 
+            E[1]+=20;
+			clearCanvas();
+			drawCube();
+        } 
+		if (83 == keyCode) {  //[S] 
+            E[1]-=20;
+			clearCanvas();
+			drawCube();
+        } 
+        return false;
+    }
+	
+	// pzrywrócenie stanu początkowego
+	function resetCube(){
+	stopAnimation();
+	cube = scale([			
+        [1, 1, 1], 
+		[2, 1, 1],
+        [2, 1, 2], 
+		[1, 1, 2],
+		
+		[1, 2, 1], 
+		[2, 2, 1],
+        [2, 2, 2], 
+		[1, 2, 2],
+		
+		[1.5, 0.2, 1.5], //v8
+		[1.5, 2.8, 1.5], //v9
+		
+		[0.2, 1.5, 1.5], //v10
+		[2.8, 1.5, 1.5], //v11
+		
+		[1.5, 1.5, 2.8], //v12
+		[1.5, 1.5, 0.2] //v13
+		
+    ], 200);
+	d=700;
+	E = [300, 200];
+	clearCanvas();
+	drawCube();
+	}
+	
+	function focalPlus(){ //zoom d++
+	stopAnimation();
+	if(d<3000){	d=d+100;}
+	clearCanvas();
+	drawCube();
+	}	
+	function focalMinus(){ //zoom d--
+	stopAnimation();
+	if(d>100){	d=d-100;}
+	clearCanvas();
+	drawCube();
+	}	
+</script>
+</head>
+
+
+<body onkeydown="keyDownHandler(event)"> 		<!-- usatwienie obsługi klawiatury -->
+
+<!-- Ustawienie rozmiarów płótna: 640x480 -->
+<canvas id="canvas" width='640' height='480' style='background:rgb(222,222,222)'>
+<p>Sorry: Browser does not support Graphics Canvas</p></canvas>
+<br /><br />
+
+    <button onclick="drawCube();">Rysuj</button>
+	<button onclick="startRotationX();">Animacja X</button> 
+	<button onclick="startRotationY();">Animacja Y</button> 
+	<button onclick="startRotationZ();">Animacja Z</button> 
+	<button onclick="stopAnimation();">STOP</button> 
+	<button onclick="resetCube();">RESET</button> 
+	<button onclick="focalPlus();">d++</button> 
+	<button onclick="focalMinus();">d--</button> 
+
+	
+<br /><br />
+ Przesunięcia - klawisze strzałek oraz [PageUp], [PageDown]
+ <br />
+Obroty - klawisze [X],[Y],[Z]
+<br />
+Przesuwanie obserwatora w płaszczyźnie XY - klawisze [A],[W],[S],[D]
+
+
+</body>
+</html>
