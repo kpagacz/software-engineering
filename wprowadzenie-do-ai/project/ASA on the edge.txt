@@ -1,0 +1,78 @@
+﻿ASA on the edge!
+1:1 by Pawel :)
+
+
+Go to portal.azure.com and create virtual machine in dedicated RG. It doesn’t has to be big or expensive. Standard_D2s_v2 is enough
+
+
+Connect to it using terminal
+
+
+Install docker:
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get update
+
+sudo apt-get install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+
+
+Add Docker official GPG key:
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+
+Setup stable repositiry:
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+
+Install engine:
+sudo apt-get update
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+
+
+Check:)
+sudo docker run docker/whalesay cowsay Azure rox AWS sox!
+
+
+
+
+Install Edge framework on our VM:
+
+
+curl https://packages.microsoft.com/config/ubuntu/18.04/multiarch/prod.list > ./microsoft-prod.list
+sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo cp ./microsoft.gpg /etc/apt/trusted.gpg.d/
+
+
+Install Moby
+sudo apt-get update
+sudo apt-get install -y moby-engine
+
+
+Install IoT edge security deamon
+sudo apt-get update
+sudo apt-get install -y iotedge
+
+
+Configure IoT Edge
+sudo nano /etc/iotedge/config.yaml
+CTRL + X, Y, Enter
+sudo systemctl restart iotedge
+
+
+Config Routing on Azure Edge from portal:
+To upstream:
+        FROM /messages/modules/moduleName/* INTO $upstream
+From one module to another:
+        FROM /messages/modules/moduleName/* INTO  BrokeredEndpoint(“/modules/moduleName/inputs/inputName”)
+
+
+iotedge logs <container name>
+Received message: SequenceNumber:463 Body:{"machine":{"temperature":30.509116479199893,"pressure":2.0833170672506207},"ambient":{"temperature":21.325271651533093,"humidity":26},"timeCreated":"2020-12-09T10:59:49.0489849Z"}
