@@ -1,4 +1,7 @@
 # Floating island
+<p align="center">
+  <img src="https://github.com/kpagacz/software-engineering/blob/main/grafika-komputerowa/project/images/island.png" />
+</p>
 ## Introduction
 This work was done as part of the Computer Graphics course during 3rd year of my Computer Science Bachelor's Degree.
 
