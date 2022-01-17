@@ -2,7 +2,7 @@ from azure.servicebus import ServiceBusClient, ServiceBusMessage
 import time
 
 # Add the connection string!
-CONNECTION_STR = ""
+CONNECTION_STR = "Endpoint=sb://kpagacz-ai.servicebus.windows.net/;SharedAccessKeyName=iothubroutes_UL-ai;SharedAccessKey=fZ0wcw1D2gygqFFzlgV5AU7MvjItPumvVqDgUqCV39M=;EntityPath=edge-queue"
 QUEUE_NAME = "edge-queue"
 
 if CONNECTION_STR == "":
@@ -32,15 +32,15 @@ def send_batch_message(sender):
 
 servicebus_client = ServiceBusClient.from_connection_string(conn_str=CONNECTION_STR, logging_enable=True)
 
-with servicebus_client:
-    sender = servicebus_client.get_queue_sender(queue_name=QUEUE_NAME)
-    with sender:
-        send_single_message(sender)
-        send_a_list_of_messages(sender)
-        send_batch_message(sender)
+# with servicebus_client:
+#     sender = servicebus_client.get_queue_sender(queue_name=QUEUE_NAME)
+#     with sender:
+#         send_single_message(sender)
+#         send_a_list_of_messages(sender)
+#         send_batch_message(sender)
 
-print("Done sending messages")
-print("-----------------------")
+# print("Done sending messages")
+# print("-----------------------")
 
 while(True):
   with servicebus_client:
