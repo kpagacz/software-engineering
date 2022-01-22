@@ -9,7 +9,7 @@ public class Participant {
   public enum Gender {
     MALE,
     FEMALE
-  };
+  }
 
   public Participant(String name, String surname, Calendar birthday) {
     this.name = name;
@@ -18,9 +18,40 @@ public class Participant {
     this.pesel = Pesel.fromBirthday(birthday, getGender());
   }
 
+  public Calendar getBirthday() {
+    return birthday;
+  }
+
   public Gender getGender() {
-    if (surname.charAt(surname.length() - 1) == 'a') return Gender.MALE;
-    else return Gender.FEMALE;
+    if (name.charAt(name.length() - 1) == 'a') return Gender.FEMALE;
+    else return Gender.MALE;
+  }
+
+  public int getAgeCategory() {
+    int age = Calendar.getInstance().get(Calendar.YEAR) - getBirthday().get(Calendar.YEAR);
+    if (age < 20) return 1;
+    if (age < 30) return 2;
+    if (age < 40) return 3;
+    return 4;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getSurname() {
+    return surname;
+  }
+
+  /**
+   * Returns the competition category (including gender and the age category).
+   *
+   * <p>E.g. M1, F2.
+   *
+   * @return the category including gender and age category
+   */
+  public String getCategory() {
+    return (getGender() == Gender.FEMALE ? "F" : "M") + getAgeCategory();
   }
 
   @Override

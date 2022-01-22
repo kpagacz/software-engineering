@@ -25,7 +25,7 @@ class PeselTest {
 
   @Test
   @DisplayName(
-      "fromBirthday adds 20 to the month parth of the number for people born after year 1999")
+      "fromBirthday adds 20 to the month part of the number for people born after year 1999")
   void fromBirthdayForLaterThan2k() {
     Calendar date = new GregorianCalendar(2000, 1, 1);
     assertEquals("00210100004", Pesel.fromBirthday(date, Participant.Gender.FEMALE));
