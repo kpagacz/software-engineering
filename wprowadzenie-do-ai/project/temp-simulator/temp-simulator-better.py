@@ -2,6 +2,7 @@ from azure.iot.device import IoTHubDeviceClient
 import time
 import json
 import random
+import keyboard
 
 # Add the connection string!
 CONNECTION_STR = "HostName=UL-ai-iot-hub.azure-devices.net;DeviceId=test;SharedAccessKey=yI0vNS/0MhUS9RKEISjhM+l7wqhL/U4lmUEgbplxgGo="
@@ -16,15 +17,15 @@ def send_single_message(sender, value):
     "value": value
   }
   sender.send_message(json.dumps(load))
+  print("Normal value sent")
 
 device_client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STR)
-counter = 0
+
+def callback(event):
+  send_single_message(device_client, 700)
+  print("Anomalous value sent")
+
+keyboard.on_press_key("s", callback)
 while (True):
-  counter += 1
-  if (counter < 15):
-    send_single_message(device_client, random.randrange(30, 40))
-  else:
-    send_single_message(device_client, random.randrange(100, 700))
-    counter = 0
-  print("Message sent")
-  time.sleep(4)
+  send_single_message(device_client, random.randrange(30, 40))
+  time.sleep(2)
