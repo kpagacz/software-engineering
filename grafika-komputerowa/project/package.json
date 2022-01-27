@@ -10,7 +10,7 @@
   "author": "Konrad Pagacz (konrad.pagacz@gmail.com)",
   "license": "ISC",
   "dependencies": {
-    "three": "^0.136.0"
+    "three": "^0.137.0"
   },
   "devDependencies": {
     "webpack": "^5.66.0",
