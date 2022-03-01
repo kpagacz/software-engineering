@@ -1,0 +1,20 @@
+These classes are pointless...
+
+All the sources are available online, we are not being graded for knowing
+the stuff presented during the classes, they are presented in the form
+of a lecture, which is the worst form of teaching (I will remember
+10% at most after the class).
+
+The only thing we are graded for are the tasks given during classes, a presentation
+and the project. I foresee a scenario in which tasks are too long to complete
+during classes, so everyone will finish them at home anway.
+
+So I assume what will happen is:
+* people will ignore what is being said and be bored for an hour
+* start the task
+* finish the task at home
+
+So student engagement is actally like 30% of all the classes.
+Why are they obligatory then?
+
+It's another questionable design for the classes.
