@@ -30,3 +30,15 @@
 
     - name: Rename directory
       command: mv -T /var/www/srodowisko-wielokanalowej-platformy-komunikacyjnej /var/www/webapp
+
+    - name: Configure nginx
+      copy:
+        dest: /etc/nginx/nginx.conf
+        src: nginx.conf
+      become: yes
+
+    - name: Restart service nginx
+      service:
+        name: nginx
+        state: restarted
+      become: yes
