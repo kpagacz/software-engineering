@@ -26,4 +26,4 @@
     - name: Clone project
       copy:
         dest: /var/www/webapp
-        src: ../*
+        src: ../../srodowisko-wielokanalowej-platformy-komunikacyjnej
