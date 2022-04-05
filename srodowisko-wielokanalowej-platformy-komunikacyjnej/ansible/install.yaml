@@ -55,3 +55,14 @@
       shell: "npm run build"
       args:
         chdir: "/var/www/webapp/frontend"
+
+    - name: Install PM2 globally
+      shell: "npm install -g pm2"
+
+    - name: Install backend dependencies
+      npm:
+        ci: yes
+        path: "/var/www/webapp/backend"
+
+    - name: Start the backend
+      shell: "pm2 start app.js"
