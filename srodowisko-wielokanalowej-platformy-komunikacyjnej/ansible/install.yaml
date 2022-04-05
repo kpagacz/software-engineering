@@ -42,3 +42,13 @@
         name: nginx
         state: restarted
       become: yes
+
+    - name: install dependencies front
+      npm:
+        ci: yes
+        path: "/var/www/webapp/front"
+
+    - name: Build front
+      shell: "npm run build"
+      args:
+        chdir: "/var/www/webapp/front"
