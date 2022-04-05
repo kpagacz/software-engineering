@@ -11,6 +11,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import * as config from "../../../backend/config.js";
 
 export default defineComponent({
   data: () => ({
@@ -18,15 +19,15 @@ export default defineComponent({
   }),
   methods: {
     async call() {
-      const responseStream = await fetch("http://localhost:3000/call", {
-        method: "POST",
+      const responseStream = await fetch( `${config.api.url}${config.api.prefix}/call`, {
+        method: 'POST',
         headers: {
-          "Content-type": "application/json; charset=UTF-8",
+          'Content-type': 'application/json; charset=UTF-8',
         },
         body: JSON.stringify({ number: this.number }),
-      });
-      const response = await responseStream.json();
-      this.$router.push({ name: "ringing", params: { callsId: response.id } });
+      })
+      const response = await responseStream.json()
+      this.$router.push({ name: 'ringing', params: { callsId: response.id } })
     },
   },
 });

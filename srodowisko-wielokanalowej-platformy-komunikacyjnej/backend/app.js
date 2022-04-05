@@ -1,24 +1,21 @@
 const express = require("express");
 const middleware = require("./middleware/index.js");
 const {Server} = require("socket.io");
+const config = rqeuire("./config.js");
+const Dialer = require("dialer").Dialer;
 
 // middleware
 const app = express();
 middleware(app);
 
-const Dialer = require("dialer").Dialer;
-
-const config = {
-  url: "https://uni-call.fcc-online.pl",
-  login: "focus09",
-  password: "89o2hjbfdgd",
-};
-Dialer.configure(config);
+Dialer.configure(config.dialer);
 
 const server = app.listen(3000, () => {
   console.log("app listening on port 3000");
 });
-const io = new Server(server);
+const io = new Server(server, {
+  path: config.api.prefix + "/socket"
+});
 
 io.on("connection", (socket) => {
   console.log("Socket connected");
@@ -35,12 +32,12 @@ app.get("/test", async (req, res) => {
   res.json({ test: "test" });
 });
 
-app.post("/call/", async (req, res) => {
+app.post(config.api.prefix + "/call/", async (req, res) => {
   try {
     console.log(req.body);
     const body = req.body;
     const number1 = body.number;
-    const number2 = "794949545";
+    const number2 = config.agent_number;
     bridge = await Dialer.call(number1, number2);
     var oldStatus = null;
     var interval = setInterval(async () => {

@@ -1,5 +1,6 @@
 import router from '../router'
 import io from 'socket.io-client'
+import * as config from '../../../backend/config.js'
 type SocketIoType = ReturnType<typeof io>
 
 interface IViewManager {
@@ -24,11 +25,12 @@ class ViewManager implements IViewManager {
     }
   }
   checkStatus() {
-    this.socket = io('http://localhost:3000', {
+    this.socket = io(config.api.url, {
       reconnection: false,
-      transports: ["websocket", "polling"]
+      transports: ["websocket", "polling"],
+      path: config.api.prefix + "/socket"
     });
-    this.socket.on('status', (status) => {
+    this.socket.on('status', (status: any) => {
       console.log(status)
       this.status = status
       this.changeView()
