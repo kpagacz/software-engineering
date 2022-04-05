@@ -1,5 +1,11 @@
 import React from "react";
+import ListElement from "../components/ListElement";
 
 export default () => {
-  return <h1>Test react</h1>;
+  return (
+    <div>
+      <div>Title</div>
+      <ListElement />
+    </div>
+  );
 };

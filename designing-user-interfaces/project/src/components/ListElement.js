@@ -1,9 +1,10 @@
 import React from "react";
+import Checkbox from "./Checkbox";
 
 export default () => {
   return (
     <div>
-      <div className="box"></div>
+      <Checkbox />
       <form>
         <input type="text"></input>
       </form>
