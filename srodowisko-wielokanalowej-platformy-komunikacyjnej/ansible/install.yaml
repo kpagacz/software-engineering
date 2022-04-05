@@ -1,0 +1,16 @@
+---
+- name: Install web servers
+  hosts: "{{target}}" # ip s2
+  user: ubuntu
+  tasks:
+    - name: Add nodejs 16 repository
+      shell: "curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -"
+
+    - name: Install nodejs packages
+      become: yes
+      apt:
+        pkg:
+          - nodejs
+          - nginx
+        update_cache: yes
+        state: latest
