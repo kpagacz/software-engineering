@@ -9,6 +9,7 @@ public class PrimeValidator implements Runnable {
   public void run() {
     if (number < 2) {
       System.out.println(number + " is not prime");
+      return;
     }
     int square = (int) (Math.sqrt(number));
     boolean prime = true;
