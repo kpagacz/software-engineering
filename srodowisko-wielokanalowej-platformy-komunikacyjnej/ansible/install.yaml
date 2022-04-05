@@ -49,9 +49,9 @@
     - name: install dependencies front
       npm:
         ci: yes
-        path: "/var/www/webapp/front"
+        path: "/var/www/webapp/frontend"
 
     - name: Build front
       shell: "npm run build"
       args:
-        chdir: "/var/www/webapp/front"
+        chdir: "/var/www/webapp/frontend"
