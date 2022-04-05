@@ -51,6 +51,11 @@
         ci: yes
         path: "/var/www/webapp/frontend"
 
+    - name: Copy the config
+      copy:
+        dest: ../backend/config.js
+        src: config.js
+
     - name: Build front
       shell: "npm run build"
       args:
