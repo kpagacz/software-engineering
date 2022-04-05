@@ -28,6 +28,9 @@
         dest: /var/www
         src: ../../srodowisko-wielokanalowej-platformy-komunikacyjnej
 
+    - name: Delete previous instane
+      command: rm -rf /var/www/webapp
+
     - name: Rename directory
       command: mv -Tf /var/www/srodowisko-wielokanalowej-platformy-komunikacyjnej /var/www/webapp
 
