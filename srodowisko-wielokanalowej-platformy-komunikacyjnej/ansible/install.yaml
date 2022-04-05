@@ -29,7 +29,7 @@
         src: ../../srodowisko-wielokanalowej-platformy-komunikacyjnej
 
     - name: Rename directory
-      command: mv -T /var/www/srodowisko-wielokanalowej-platformy-komunikacyjnej /var/www/webapp
+      command: mv -Tf /var/www/srodowisko-wielokanalowej-platformy-komunikacyjnej /var/www/webapp
 
     - name: Configure nginx
       copy:
