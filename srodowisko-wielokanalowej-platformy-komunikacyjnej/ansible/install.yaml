@@ -14,3 +14,16 @@
           - nginx
         update_cache: yes
         state: latest
+
+    - name: Create directories
+      file:
+        path: "/var/www/webapp"
+        state: directory
+        owner: 'ubuntu'
+        group: 'ubuntu'
+      become: yes
+
+    - name: Clone project
+      copy:
+        dest: /var/www/webapp
+        src: ../*
