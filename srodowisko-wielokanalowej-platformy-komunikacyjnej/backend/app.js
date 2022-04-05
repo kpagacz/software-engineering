@@ -1,7 +1,7 @@
 const express = require("express");
 const middleware = require("./middleware/index.js");
 const {Server} = require("socket.io");
-const config = rqeuire("./config.js");
+const config = require("./config.js");
 const Dialer = require("dialer").Dialer;
 
 // middleware

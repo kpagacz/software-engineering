@@ -7,7 +7,7 @@ module.exports = {
   agent_number: '',
   api: {
       prefix: '/api',
-      url: '',
+      url: 'http://ec2-54-93-213-15.eu-central-1.compute.amazonaws.com',
   },
   front: {
       url: ''
