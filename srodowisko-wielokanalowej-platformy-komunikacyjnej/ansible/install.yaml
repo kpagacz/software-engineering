@@ -17,7 +17,7 @@
 
     - name: Create directories
       file:
-        path: "/var/www/webapp"
+        path: "/var/www"
         state: directory
         owner: 'ubuntu'
         group: 'ubuntu'
@@ -25,5 +25,8 @@
 
     - name: Clone project
       copy:
-        dest: /var/www/webapp
+        dest: /var/www
         src: ../../srodowisko-wielokanalowej-platformy-komunikacyjnej
+
+    - name: Rename directory
+      command: mv /var/www/srodowisko-wielokanalowej-platformy-komunikacyjnej /var/www/webapp
