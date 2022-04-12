@@ -22,8 +22,9 @@ public class Main {
   public static void main(String[] args) throws Exception {
     // establish the connection
     Connection conn;
+    Class.forName("com.mysql.jdbc.Driver");
     try {
-      conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "root");
+      conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pracownicy", "root", "root");
     } catch (SQLException e) {
       throw new Exception("Error connecting to the database.", e);
     }
