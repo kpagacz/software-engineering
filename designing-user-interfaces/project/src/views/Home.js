@@ -1,11 +1,19 @@
 import React from "react";
-import ListElement from "../components/ListElement";
+import List from "../components/List.js";
+import ListElement from "../components/ListElement.js";
 
 export default () => {
+  const onCheckboxChangeHandler = () => {
+    console.log("checkbox clicked");
+  };
+
+  const onTextChangeHandler = (event) => {
+    console.log(event.target.value);
+  };
   return (
     <div>
-      <div>Title</div>
-      <ListElement />
+      <div>Lists Overview</div>
+      <List />
     </div>
   );
 };

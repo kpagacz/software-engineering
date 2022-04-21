@@ -1,13 +1,15 @@
 import React from "react";
-import Checkbox from "./Checkbox";
 
-export default () => {
+
+const ListElement = (props) => {
   return (
     <div>
-      <Checkbox />
       <form>
-        <input type="text"></input>
+        <input type="checkbox" checked={props.checked} onChange={props.onCheckboxChange}/>
+        <input type="text" onChange={props.onTextChange}></input>
       </form>
     </div>
   );
 };
+
+export default ListElement;
