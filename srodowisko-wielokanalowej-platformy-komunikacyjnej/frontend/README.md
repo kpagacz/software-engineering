@@ -1,4 +1,5 @@
-# front
+# Introduction
+This is the frontend part of the application.
 
 ## Project setup
 ```
