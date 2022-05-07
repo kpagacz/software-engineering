@@ -2,6 +2,8 @@
 - name: Install web servers
   hosts: "{{target}}" # ip s2
   user: ubuntu
+  vars:
+    environment: "/dev"
   tasks:
     - name: Add nodejs 16 repository
       shell: "curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -"
@@ -28,7 +30,7 @@
         dest: /var/www
         src: ../../srodowisko-wielokanalowej-platformy-komunikacyjnej
 
-    - name: Delete previous instane
+    - name: Delete previous instance
       command: rm -rf /var/www/webapp
 
     - name: Rename directory
@@ -52,9 +54,9 @@
         path: "/var/www/webapp/frontend"
 
     - name: Copy the config
-      copy:
+      template:
+        src: config.js.j2
         dest: ../backend/config.js
-        src: config.js
 
     - name: Build front
       shell: "npm run build"

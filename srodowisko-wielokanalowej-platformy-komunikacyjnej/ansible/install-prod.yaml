@@ -1,0 +1,75 @@
+---
+- name: Install web servers
+  hosts: "{{target}}" # ip s2
+  user: ubuntu
+  vars:
+    environment: ""
+  tasks:
+    - name: Add nodejs 16 repository
+      shell: "curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -"
+
+    - name: Install nodejs packages
+      become: yes
+      apt:
+        pkg:
+          - nodejs
+          - nginx
+        update_cache: yes
+        state: latest
+
+    - name: Create directories
+      file:
+        path: "/var/www"
+        state: directory
+        owner: 'ubuntu'
+        group: 'ubuntu'
+      become: yes
+
+    - name: Clone project
+      copy:
+        dest: /var/www
+        src: ../../srodowisko-wielokanalowej-platformy-komunikacyjnej
+
+    - name: Delete previous instance
+      command: rm -rf /var/www/webapp
+
+    - name: Rename directory
+      command: mv -Tf /var/www/srodowisko-wielokanalowej-platformy-komunikacyjnej /var/www/webapp
+
+    - name: Configure nginx
+      copy:
+        dest: /etc/nginx/nginx.conf
+        src: nginx.conf
+      become: yes
+
+    - name: Restart service nginx
+      service:
+        name: nginx
+        state: restarted
+      become: yes
+
+    - name: install dependencies front
+      npm:
+        ci: yes
+        path: "/var/www/webapp/frontend"
+
+    - name: Copy the config
+      template:
+        src: config.js.j2
+        dest: ../backend/config.js
+
+    - name: Build front
+      shell: "npm run build"
+      args:
+        chdir: "/var/www/webapp/frontend"
+
+    - name: Install PM2 globally
+      shell: "npm install -g pm2"
+
+    - name: Install backend dependencies
+      npm:
+        ci: yes
+        path: "/var/www/webapp/backend"
+
+    - name: Start the backend
+      shell: "pm2 start app.js"
