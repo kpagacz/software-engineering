@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import ListElement from "./ListElement";
+import ListElement from "../ListElement";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
@@ -29,26 +29,32 @@ const List = () => {
 
   const newListHandler = (event) => {
     event.preventDefault();
-    setChecked([false, ...checked]);
-    setTexts([event.target[0].value, ...texts]);
+    setChecked([...checked, false]);
+    setTexts([...texts, event.target[0].value]);
     event.target[0].value = "";
   };
 
   const getItemsToDo = () => {
+    let checkedCopy = [...checked];
     return (
       <TransitionGroup className="todo-items">
-        {checked.map((check, index) => {
+        {checkedCopy.reverse().map((check, index) => {
           if (!check) {
-            const textHandler = onTextChangeHandler(index);
-            const checkboxHandler = onCheckboxChangeHandler(index);
+            let reverse_index = checked.length - 1 - index;
+            const textHandler = onTextChangeHandler(reverse_index);
+            const checkboxHandler = onCheckboxChangeHandler(reverse_index);
             return (
-              <CSSTransition key={index} timeout={300} classNames="todo-item">
+              <CSSTransition
+                key={reverse_index}
+                timeout={300}
+                classNames="todo-item"
+              >
                 <ListElement
                   onTextChange={textHandler}
                   onCheckboxChange={checkboxHandler}
                   checked={check}
-                  text={texts[index]}
-                  key={index}
+                  text={texts[reverse_index]}
+                  key={reverse_index}
                 />
               </CSSTransition>
             );
@@ -59,17 +65,19 @@ const List = () => {
   };
 
   const getDoneItems = () => {
-    return checked.map((check, index) => {
+    let checkedCopy = [...checked];
+    return checkedCopy.reverse().map((check, index) => {
       if (check) {
-        const textHandler = onTextChangeHandler(index);
-        const checkboxHandler = onCheckboxChangeHandler(index);
+        let reverse_index = checked.length - 1 - index;
+        const textHandler = onTextChangeHandler(reverse_index);
+        const checkboxHandler = onCheckboxChangeHandler(reverse_index);
         return (
           <ListElement
             onTextChange={textHandler}
             onCheckboxChange={checkboxHandler}
             checked={check}
-            text={texts[index]}
-            key={index}
+            text={texts[reverse_index]}
+            key={reverse_index}
             readOnly="readonly"
           />
         );
