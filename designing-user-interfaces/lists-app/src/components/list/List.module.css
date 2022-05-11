@@ -1,0 +1,36 @@
+.items-container {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.todo-item-enter {
+  opacity: 0;
+}
+.todo-item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.todo-item-exit {
+  opacity: 1;
+}
+.todo-item-exit-active {
+  opacity: 0;
+  transform: translateX(2rem);
+  transition: all 500ms ease-in-out;
+}
+
+.done-item-enter {
+  opacity: 0;
+}
+.done-item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.done-item-exit {
+  opacity: 1;
+}
+.done-item-exit-active {
+  opacity: 0;
+  transform: translateX(-2rem);
+  transition: all 500ms ease-in-out;
+}
