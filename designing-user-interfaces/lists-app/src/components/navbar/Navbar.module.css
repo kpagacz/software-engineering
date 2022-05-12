@@ -4,6 +4,30 @@
   border: 4px solid red;
 }
 
+.navlist {
+  list-style-type: none;
+}
+
 .navlink {
+  color: black;
   text-decoration: none;
+  border-left: 4px solid transparent;
+}
+
+.navlink--active {
+  text-decoration: none;
+  border-left: 4px solid lightblue;
+  color: black;
+}
+
+.navlink:hover {
+  text-decoration: none;
+  border-left: 4px solid grey;
+
+  transition: border-left-color 0.4s;
+}
+
+.navlink:active {
+  text-decoration: none;
+  border-left: 4px solid grey;
 }
