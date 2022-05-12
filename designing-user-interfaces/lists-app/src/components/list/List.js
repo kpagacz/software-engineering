@@ -1,6 +1,6 @@
 import React, { createRef } from "react";
 import { useState } from "react";
-import ListElement from "../ListElement";
+import ListElement from "../listElement/ListElement";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
