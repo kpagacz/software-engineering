@@ -1,0 +1,4 @@
+.sharebar-container {
+  display: grid;
+  grid-auto-flow: row;
+}
