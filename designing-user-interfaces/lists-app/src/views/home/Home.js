@@ -1,21 +1,26 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import ListPreview from "../../components/listPreview/ListPreview";
 import Navbar from "../../components/navbar/Navbar";
 import styles from "./Home.module.css";
 
-const Home = () => {
+const Home = ({ lists }) => {
+  const navigate = useNavigate();
+  const onclickHandler = (index) => {
+    return (event) => {
+      event.preventDefault();
+      navigate("../lists/" + index);
+    };
+  };
   return (
     <div className={styles["home-container"]}>
       <div>
         <Navbar />
       </div>
       <div className={styles["lists-preview"]}>
-        <div>ListPreview</div>
-        <div>ListPreview</div>
-        <div>ListPreview</div>
-        <div>ListPreview</div>
-        <div>ListPreview</div>
-        <div>ListPreview</div>
-        <div>ListPreview</div>
+        {lists.map((list, index) => (
+          <ListPreview key={index} list={list} onclickHandler={onclickHandler(index)} />
+        ))}
       </div>
     </div>
   );

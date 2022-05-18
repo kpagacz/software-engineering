@@ -1,11 +1,10 @@
 class ToDoList {
-  todoItems = [];
-  doneItems = [];
+  items = [];
+  checked = [];
 
-  constructor() {}
-
-  addItem(item) {
-    this.todoItems = [...this.todoItems, item];
+  constructor(items, checked) {
+    this.items = items;
+    this.checked = checked;
   }
 }
 

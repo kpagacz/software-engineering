@@ -12,6 +12,8 @@
   text-decoration: none;
   border-left: 4px solid transparent;
   padding-left: 0.5rem;
+
+  transition: border-left-color ease-in-out 0.4s;
 }
 
 .navlink--active {
@@ -25,7 +27,7 @@
   text-decoration: none;
   border-left: 4px solid grey;
 
-  transition: border-left-color 0.4s;
+  transition: border-left-color ease-in-out 0.4s;
 }
 
 .navlink:active {

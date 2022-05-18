@@ -1,47 +1,40 @@
 import React, { createRef } from "react";
-import { useState } from "react";
 import ListElement from "../listElement/ListElement";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styles from "./List.module.css";
 
-const List = () => {
-  const [checked, setChecked] = useState([]);
-  const [texts, setTexts] = useState([]);
-
-  const onCheckboxChangeHandler = (index) => {
+const List = ({ list, index, updateList }) => {
+  const onCheckboxChangeHandler = (id) => {
     return () => {
-      setChecked(updateList(checked, index, !checked[index]));
+      list.checked[id] = !list.checked[id];
+      updateList(list, index);
     };
   };
 
-  const updateList = (list, index, value) => {
-    const copy = [...list];
-    copy[index] = value;
-    return copy;
-  };
-
-  const onTextChangeHandler = (index) => {
+  const onTextChangeHandler = (id) => {
     return (event) => {
-      setTexts(updateList(texts, index, event.target.value));
+      list.items[id] = event.target.value;
+      updateList(list, index);
     };
   };
 
-  const newListHandler = (event) => {
+  const newListElementHandler = (event) => {
     event.preventDefault();
-    setChecked([...checked, false]);
-    setTexts([...texts, event.target[0].value]);
+    list.checked = [...list.checked, false];
+    list.items = [...list.items, event.target[0].value];
     event.target[0].value = "";
+    updateList(list, index);
   };
 
   const getItemsToDo = () => {
-    let checkedCopy = [...checked];
+    let checkedCopy = [...list.checked];
     return (
-      <TransitionGroup>
+      <TransitionGroup component={null}>
         {checkedCopy.reverse().map((check, index) => {
           if (!check) {
-            let reverse_index = checked.length - 1 - index;
+            let reverse_index = list.checked.length - 1 - index;
             const textHandler = onTextChangeHandler(reverse_index);
             const checkboxHandler = onCheckboxChangeHandler(reverse_index);
 
@@ -63,7 +56,7 @@ const List = () => {
                     onTextChange={textHandler}
                     onCheckboxChange={checkboxHandler}
                     checked={check}
-                    text={texts[reverse_index]}
+                    text={list.items[reverse_index]}
                     key={reverse_index}
                   />
                 </div>
@@ -76,12 +69,12 @@ const List = () => {
   };
 
   const getDoneItems = () => {
-    let checkedCopy = [...checked];
+    let checkedCopy = [...list.checked];
     return (
-      <TransitionGroup>
+      <TransitionGroup component={null}>
         {checkedCopy.reverse().map((check, index) => {
           if (check) {
-            let reverse_index = checked.length - 1 - index;
+            let reverse_index = list.checked.length - 1 - index;
             const textHandler = onTextChangeHandler(reverse_index);
             const checkboxHandler = onCheckboxChangeHandler(reverse_index);
 
@@ -104,7 +97,7 @@ const List = () => {
                     onTextChange={textHandler}
                     onCheckboxChange={checkboxHandler}
                     checked={check}
-                    text={texts[reverse_index]}
+                    text={list.items[reverse_index]}
                     key={reverse_index}
                     readOnly="readonly"
                   />
@@ -120,22 +113,22 @@ const List = () => {
   return (
     <div>
       <div className={styles["items-container"]}>
-        <div className="todo-container">
+        <div className={styles["todo-container"]}>
           <div>To Do:</div>
-          <form onSubmit={newListHandler}>
+          <form onSubmit={newListElementHandler}>
             <input
               type="text"
               placeholder="Add another item..."
               autoFocus
               required="required"
             ></input>
-            <button type="submit">
+            <button type="submit" className={styles["new-list-element-button"]}>
               <FontAwesomeIcon icon={faArrowRight} />
             </button>
           </form>
           {getItemsToDo()}
         </div>
-        <div className="done-container">
+        <div className={styles["todo-container"]}>
           <div>Done:</div>
           {getDoneItems()}
         </div>
