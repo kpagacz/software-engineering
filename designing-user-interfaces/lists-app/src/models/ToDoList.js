@@ -2,7 +2,7 @@ class ToDoList {
   items = [];
   checked = [];
 
-  constructor(items, checked) {
+  constructor(items = [], checked = []) {
     this.items = items;
     this.checked = checked;
   }

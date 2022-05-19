@@ -1,7 +1,6 @@
 import React from "react";
 
-const ListElement = (props) => {
-  const { checked, text, onCheckboxChange, onTextChange, readOnly } = props;
+const ListElement = ({ checked, text, onCheckboxChange, onTextChange, readOnly }) => {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <input type="checkbox" checked={checked} onChange={onCheckboxChange} />

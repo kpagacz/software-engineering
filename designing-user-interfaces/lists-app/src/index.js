@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import ToDoList from "./models/ToDoList.js";
 import ArchiveView from "./views/archive/ArchiveView.js";
 import Home from "./views/home/Home.js";
@@ -9,6 +9,7 @@ import SettingsView from "./views/settings/SettingsView.js";
 
 const App = () => {
   const [lists, setLists] = useState([]);
+  const navigate = useNavigate();
 
   const updateList = (newList, index) => {
     const newLists = lists.map((list, id) => {
@@ -16,6 +17,11 @@ const App = () => {
       else return newList;
     });
     setLists(newLists);
+  };
+
+  const addList = (list) => {
+    setLists([...lists, list]);
+    // setTimeout(() => navigate("../lists/" + lists.length - 1, {replace: true}), 500);
   };
 
   useEffect(() => {
@@ -26,7 +32,7 @@ const App = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Home lists={lists} />} />
+      <Route path="/" element={<Home lists={lists} addList={addList} />} />
       <Route
         path="/lists/:id"
         element={<ListView lists={lists} updateList={updateList} />}

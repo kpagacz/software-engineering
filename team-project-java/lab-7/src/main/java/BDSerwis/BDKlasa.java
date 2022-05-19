@@ -8,10 +8,6 @@ import java.util.Properties;
 public class BDKlasa {
     private static Connection conn = null;
 
-  public static void main(String[] args) throws SQLException, ClassNotFoundException {
-    polaczBD();
-  }
-
     public static void polaczBD() throws SQLException, ClassNotFoundException {
       String url = "jdbc:mysql://localhost:3306/pracownicy";
         Properties prop = new Properties();
