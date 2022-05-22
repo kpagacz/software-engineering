@@ -20,10 +20,10 @@ const AddList = ({ addList }) => {
   return (
     <div className={styles["add-list-container"]}>
       <form onSubmit={onSubmitNewListHandler}>
-        <input type="text" placeholder="Start your list here..." autoFocus required/>
+        <input type="text" placeholder="Start your list here..." autoFocus required className={styles["add-list-input"]}/>
       </form>
       <p>...or click...</p>
-      <button onClick={onButtonClickHandler}>
+      <button onClick={onButtonClickHandler} className={styles["add-button"]}>
         <FontAwesomeIcon icon={faPlusCircle} />
       </button>
     </div>

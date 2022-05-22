@@ -1,4 +1,2 @@
-* Make the list elements div contenteditable
 * Navigate to the new list after adding the new list
 * Fix the flickering animation
-* Enhance ListPreview

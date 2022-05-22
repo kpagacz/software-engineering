@@ -15,7 +15,7 @@ const List = ({ list, index, updateList }) => {
 
   const onTextChangeHandler = (id) => {
     return (event) => {
-      list.items[id] = event.target.value;
+      list.items[id] = event.target.innerText;
       updateList(list, index);
     };
   };
@@ -114,7 +114,6 @@ const List = ({ list, index, updateList }) => {
     <div>
       <div className={styles["items-container"]}>
         <div className={styles["todo-container"]}>
-          <div>To Do:</div>
           <form onSubmit={newListElementHandler}>
             <input
               type="text"
@@ -129,7 +128,6 @@ const List = ({ list, index, updateList }) => {
           {getItemsToDo()}
         </div>
         <div className={styles["todo-container"]}>
-          <div>Done:</div>
           {getDoneItems()}
         </div>
       </div>

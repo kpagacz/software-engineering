@@ -5,3 +5,16 @@
   justify-content: center;
   align-items: center;
 }
+
+.add-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: hsl(0, 0%, 40%);
+  transform: scale(1.5);
+}
+
+.add-list-input:focus-visible {
+  box-shadow: none;
+  border: none;
+}

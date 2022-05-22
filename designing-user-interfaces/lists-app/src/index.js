@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ToDoList from "./models/ToDoList.js";
 import ArchiveView from "./views/archive/ArchiveView.js";
 import Home from "./views/home/Home.js";
 import ListView from "./views/list/ListView";
 import SettingsView from "./views/settings/SettingsView.js";
+import "./index.css";
 
 const App = () => {
   const [lists, setLists] = useState([]);
-  const navigate = useNavigate();
 
   const updateList = (newList, index) => {
     const newLists = lists.map((list, id) => {

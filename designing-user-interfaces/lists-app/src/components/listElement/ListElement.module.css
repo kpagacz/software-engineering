@@ -1,0 +1,48 @@
+.list-element-text-input {
+  display: inline;
+  width: 100%;
+  border: none;
+  word-break: break-all;
+}
+
+.list-element-text-input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.list-element-text-input--strikethrough {
+  display: inline;
+  width: 100%;
+  border: none;
+  word-break: break-all;
+  text-decoration: line-through;
+}
+
+.list-element-text-input--strikethrough:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.list-element-checkbox {
+  color: hsl(0,0%,75%);
+  margin: 0;
+}
+
+.list-element-checkbox:checked {
+  accent-color: hsl(0, 0%, 25%);
+}
+
+.form-default-style {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 2px;
+  border-top: hsl(0, 0%, 100%) solid 1px;
+  border-bottom: hsl(0, 0%, 100%) solid 1px;
+}
+
+.form-default-style:focus-within {
+  border-top:hsl(0, 0%, 25%) solid 1px;
+  border-bottom:hsl(0, 0%, 25%) solid 1px;
+}
