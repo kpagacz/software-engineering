@@ -1,0 +1,81 @@
+{
+  "k20d21508277536715": {
+    "active": true,
+    "address": "localhost",
+    "port": 8157,
+    "username": "",
+    "password": "",
+    "type": 3,
+    "proxyDNS": true,
+    "title": "emr-socks-proxy",
+    "color": "#0055E5",
+    "index": 9007199254740991,
+    "whitePatterns": [
+      {
+        "title": "*ec2*.amazonaws.com*",
+        "active": true,
+        "pattern": "*ec2*.amazonaws.com*",
+        "importedPattern": "*ec2*.amazonaws.com*",
+        "type": 1,
+        "protocols": 1
+      },
+      {
+        "title": "*ec2*.compute*",
+        "active": true,
+        "pattern": "*ec2*.compute*",
+        "importedPattern": "*ec2*.compute*",
+        "type": 1,
+        "protocols": 1
+      },
+      {
+        "title": "10.*",
+        "active": true,
+        "pattern": "10.*",
+        "importedPattern": "http://10.*",
+        "type": 1,
+        "protocols": 2
+      },
+      {
+        "title": "*10*.amazonaws.com*",
+        "active": true,
+        "pattern": "*10*.amazonaws.com*",
+        "importedPattern": "*10*.amazonaws.com*",
+        "type": 1,
+        "protocols": 1
+      },
+      {
+        "title": "*10*.compute*",
+        "active": true,
+        "pattern": "*10*.compute*",
+        "importedPattern": "*10*.compute*",
+        "type": 1,
+        "protocols": 1
+      },
+      {
+        "title": "*.compute.internal*",
+        "active": true,
+        "pattern": "*.compute.internal*",
+        "importedPattern": "*.compute.internal*",
+        "type": 1,
+        "protocols": 1
+      },
+      {
+        "title": "*.ec2.internal* ",
+        "active": true,
+        "pattern": "*.ec2.internal*",
+        "importedPattern": "*.ec2.internal*",
+        "type": 1,
+        "protocols": 1
+      }
+    ],
+    "blackPatterns": []
+  },
+  "logging": {
+    "size": 100,
+    "active": false
+  },
+  "mode": "patterns",
+  "browserVersion": "68.12.0",
+  "foxyProxyVersion": "7.5.1",
+  "foxyProxyEdition": "standard"
+}
