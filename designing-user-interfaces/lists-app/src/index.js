@@ -32,7 +32,15 @@ const App = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Home lists={lists} addList={addList} />} />
+      <Route
+        path="/"
+        element={
+          <Home
+            lists={lists.filter((list) => !list.archived)}
+            addList={addList}
+          />
+        }
+      />
       <Route
         path="/lists/:id"
         element={<ListView lists={lists} updateList={updateList} />}

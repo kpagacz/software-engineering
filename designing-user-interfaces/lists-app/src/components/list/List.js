@@ -1,7 +1,8 @@
 import React, { createRef } from "react";
 import ListElement from "../listElement/ListElement";
+import ListTitle from "../listTitle/ListTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styles from "./List.module.css";
 
@@ -112,6 +113,7 @@ const List = ({ list, index, updateList }) => {
 
   return (
     <div>
+      <ListTitle list={list} index={index} updateList={updateList} />
       <div className={styles["items-container"]}>
         <div className={styles["todo-container"]}>
           <form onSubmit={newListElementHandler}>
@@ -122,14 +124,12 @@ const List = ({ list, index, updateList }) => {
               required="required"
             ></input>
             <button type="submit" className={styles["new-list-element-button"]}>
-              <FontAwesomeIcon icon={faArrowRight} />
+              <FontAwesomeIcon icon={faPlus} />
             </button>
           </form>
           {getItemsToDo()}
         </div>
-        <div className={styles["todo-container"]}>
-          {getDoneItems()}
-        </div>
+        <div className={styles["todo-container"]}>{getDoneItems()}</div>
       </div>
     </div>
   );

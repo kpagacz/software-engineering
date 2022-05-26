@@ -18,11 +18,6 @@ const Navbar = () => {
             Archived
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/settings" className={navlinkCssClass}>
-            Settings
-          </NavLink>
-        </li>
       </ul>
     </nav>
   );

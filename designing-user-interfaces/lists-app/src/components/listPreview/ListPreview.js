@@ -18,8 +18,9 @@ const ListPreview = ({ list, onclickHandler }) => {
           );
         })}
       </div>
-      <div className={styles["label"]}>
-        {list.title}
+      <div className={styles["list-description-container"]}>
+        <span className={styles["label"]}>{list.title}</span>
+        <span className={styles.date}>Created at: {list.formatDate()}</span>
       </div>
     </div>
   );

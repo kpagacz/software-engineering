@@ -1,0 +1,7 @@
+.list-title {
+  display: flex;
+  justify-content: center;
+  word-break: break-all;
+  margin: 0.5rem;
+  font-size: large;
+}

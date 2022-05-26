@@ -3,6 +3,8 @@
   display: grid;
   grid-auto-flow: row;
   border-right: hsl(0, 0%, 50%) solid 2px;
+  max-height: 100px;
+  padding-right: 1rem;
 }
 
 .navlist {

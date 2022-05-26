@@ -1,5 +1,5 @@
 .archive-container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: auto 1fr;
   gap: 1rem;
 }

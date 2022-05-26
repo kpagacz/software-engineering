@@ -1,2 +1,6 @@
 * Navigate to the new list after adding the new list
 * Fix the flickering animation
+* style sticky on the navbar
+* show archived lists
+* button to archive a list
+* button to unarchive a list
