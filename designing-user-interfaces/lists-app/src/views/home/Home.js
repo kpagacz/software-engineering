@@ -17,19 +17,20 @@ const Home = ({ lists, addList }) => {
 
   return (
     <div className={styles["home-container"]}>
-      <div>
-        <Navbar />
-      </div>
+      <Navbar />
       <div>
         <AddList addList={addList} />
         <div className={styles["list-previews-container"]}>
-          {lists.map((list, index) => (
-            <ListPreview
-              key={index}
-              list={list}
-              onclickHandler={onPreviewClickHandler(index)}
-            />
-          ))}
+          {lists.map((list, index) => {
+            if (!list.archived)
+              return (
+                <ListPreview
+                  key={index}
+                  list={list}
+                  onclickHandler={onPreviewClickHandler(index)}
+                />
+              );
+          })}
         </div>
       </div>
     </div>

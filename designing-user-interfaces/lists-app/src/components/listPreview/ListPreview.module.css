@@ -8,6 +8,7 @@
   border-radius: 0.5rem;
   box-shadow: -1px 8px 19px -12px rgba(9, 9, 9, 1);
   transition: all ease-in-out 0.3s;
+  overflow:hidden;
 }
 
 .list-preview-container:hover {
@@ -31,8 +32,9 @@
 
 .label {
   display: flex;
-  align-items: center;
   font-size: large;
+  max-height: 1.5rem;
+  overflow: hidden;
 }
 
 .preview-list-element {
@@ -47,4 +49,8 @@
 
 .date {
   font-size: x-small;
+}
+
+.items-container {
+  padding: 1rem;
 }

@@ -6,7 +6,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styles from "./List.module.css";
 
-const List = ({ list, index, updateList }) => {
+const List = ({ list, index, updateList, archiveList, deleteList }) => {
   const onCheckboxChangeHandler = (id) => {
     return () => {
       list.checked[id] = !list.checked[id];
@@ -28,6 +28,15 @@ const List = ({ list, index, updateList }) => {
     event.target[0].value = "";
     updateList(list, index);
   };
+
+  const onNewElementUnfocus = (event) => {
+    event.preventDefault();
+    if (event.target.value === "") return;
+    list.checked = [...list.checked, false];
+    list.items = [...list.items, event.target.value];
+    event.target.value = "";
+    updateList(list, index);
+  }
 
   const getItemsToDo = () => {
     let checkedCopy = [...list.checked];
@@ -113,7 +122,13 @@ const List = ({ list, index, updateList }) => {
 
   return (
     <div>
-      <ListTitle list={list} index={index} updateList={updateList} />
+      <ListTitle
+        list={list}
+        index={index}
+        updateList={updateList}
+        archiveList={archiveList}
+        deleteList={deleteList}
+      />
       <div className={styles["items-container"]}>
         <div className={styles["todo-container"]}>
           <form onSubmit={newListElementHandler}>
@@ -122,6 +137,7 @@ const List = ({ list, index, updateList }) => {
               placeholder="Add another item..."
               autoFocus
               required="required"
+              onBlur={onNewElementUnfocus}
             ></input>
             <button type="submit" className={styles["new-list-element-button"]}>
               <FontAwesomeIcon icon={faPlus} />

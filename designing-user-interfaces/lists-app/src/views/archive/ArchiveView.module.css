@@ -3,3 +3,16 @@
   grid-template-columns: auto 1fr;
   gap: 1rem;
 }
+
+.unArchiveButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: hsl(0, 0%, 40%);
+  transform: scale(1.5);
+}
+
+.archivedListRow > td {
+  text-align: center;
+  overflow: hidden;
+}

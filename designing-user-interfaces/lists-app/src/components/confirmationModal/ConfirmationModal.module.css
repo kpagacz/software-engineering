@@ -1,0 +1,55 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsla(0, 0%, 90%, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation-box {
+  min-width: 200px;
+  min-height: 50px;
+  border: 2px solid hsl(38, 79%, 25%);
+  background-color: hsl(38, 21%, 88%);
+  border-radius: 3px;
+  padding: 1rem;
+}
+
+.invisible {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-button {
+  background-color: hsla(0, 75%, 39%, 0.815);
+  border-radius: 3px;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.confirm-button:hover {
+  background-color: hsla(0, 71%, 23%, 0.815);
+}
+
+.cancel-button {
+  border: none;
+  cursor: pointer;
+  background-color: darkgrey;
+  color: white;
+  border-radius: 3px;
+}
+
+.cancel-button:hover {
+  background-color: hsl(0, 0%, 40%);
+}

@@ -3,12 +3,18 @@
   display: grid;
   grid-auto-flow: row;
   border-right: hsl(0, 0%, 50%) solid 2px;
-  max-height: 100px;
   padding-right: 1rem;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0px;
+  max-height: 95vh;
 }
 
 .navlist {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .navlink {

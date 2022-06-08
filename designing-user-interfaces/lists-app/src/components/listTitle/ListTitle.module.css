@@ -4,4 +4,22 @@
   word-break: break-all;
   margin: 0.5rem;
   font-size: large;
+  min-height: 1.5rem;
+}
+
+.button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: hsl(0, 0%, 40%);
+  transform: scale(1.5);
+}
+
+.button:hover {
+  color: hsl(0, 0%, 20%);
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
 }
