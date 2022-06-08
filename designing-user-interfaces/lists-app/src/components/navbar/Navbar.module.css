@@ -2,7 +2,7 @@
   height: 95%;
   display: grid;
   grid-auto-flow: row;
-  border-right: hsl(0, 0%, 50%) solid 2px;
+  border-right: hsl(40, 75%, 60%) solid 2px;
   padding-right: 1rem;
   font-size: 1.5rem;
   position: sticky;
@@ -28,7 +28,7 @@
 
 .navlink--active {
   text-decoration: none;
-  border-left: 4px solid lightblue;
+  border-left: 4px solid hsl(40, 75%, 60%);
   color: black;
   padding-left: 0.5rem;
 }
