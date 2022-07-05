@@ -13,7 +13,7 @@ graph: $(OBJ)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 TESTDIR := $(IDIR)/tests
-TESTS_ := test.o test-Graph.o
+TESTS_ := test-Graph.o
 TESTS := $(TESTS_:%=$(TESTDIR)/%)
 test: $(DEPS) $(OBJ) $(TESTS)
 	$(CXX) $(CXXFLAGS) -o $@ $^

@@ -1,5 +1,7 @@
-#include "../../lib/doctest.h"
+#include <unordered_set>
+
 #include "../Graph.hpp"
+#include "./test.cpp"
 
 TEST_CASE("Testing Graph") {
   AdjacencyMap adjacencyMap{{1, {2, 3}}, {2, {3}}, {3, {1}}};
@@ -38,5 +40,35 @@ TEST_CASE("Testing Graph") {
     CHECK_NOTHROW(g.removeEdge(3, 1));
     CHECK_EQ(std::unordered_set<int32_t>{}, g.getNode(3)->second);
     CHECK_EQ(std::unordered_set<int32_t>{2}, g.getNode(1)->second);
+  }
+
+  SUBCASE("putting a node adds a node") {
+    CHECK_NOTHROW(g.putNode(4));
+    std::vector<int> expectedNodes{1, 2, 3, 4};
+    std::vector<int> difference;
+    auto nodes = g.listNodes();
+    std::sort(nodes.begin(), nodes.end());
+    std::set_difference(expectedNodes.begin(), expectedNodes.end(), nodes.begin(), nodes.end(),
+                        std::back_inserter(difference));
+    CHECK(difference.size() == 0);
+  }
+
+  SUBCASE("putting a node is idempotent") {
+    CHECK_NOTHROW(g.putNode(4));
+    std::vector<int> expectedNodes{1, 2, 3, 4};
+    std::vector<int> difference;
+    auto nodes = g.listNodes();
+    std::sort(nodes.begin(), nodes.end());
+    std::set_difference(expectedNodes.begin(), expectedNodes.end(), nodes.begin(), nodes.end(),
+                        std::back_inserter(difference));
+    CHECK(difference.size() == 0);
+
+    CHECK_NOTHROW(g.putNode(4));
+    difference.clear();
+    nodes = g.listNodes();
+    std::sort(nodes.begin(), nodes.end());
+    std::set_difference(expectedNodes.begin(), expectedNodes.end(), nodes.begin(), nodes.end(),
+                        std::back_inserter(difference));
+    CHECK(difference.size() == 0);
   }
 }

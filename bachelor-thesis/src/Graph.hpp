@@ -19,8 +19,12 @@ class Graph {
   void print() const;
   void print(std::ostream& out) const;
   std::vector<int> listNodes() const;
+
+  GraphConstIterator putNode(const int32_t& node);
+
   void removeNode(const int32_t& node);
   void removeEdge(const int32_t& source, const int32_t& dest);
+
   GraphConstIterator getNode(const int32_t& node) const;
   GraphConstIterator begin() const;
   GraphConstIterator end() const;

@@ -18,6 +18,13 @@ std::vector<int32_t> Graph::listNodes() const {
   return nodes;
 }
 
+GraphConstIterator Graph::putNode(const int32_t& node) {
+  const auto& found = adjacencyMap.find(node);
+  if (found != this->end()) return found;
+  adjacencyMap.insert({node, {}});
+  return adjacencyMap.find(node);
+}
+
 void Graph::removeNode(const int32_t& node) {
   adjacencyMap.erase(node);
   for (auto& [key, edges] : adjacencyMap) edges.erase(node);
