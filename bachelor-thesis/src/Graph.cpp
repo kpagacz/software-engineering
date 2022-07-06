@@ -6,7 +6,7 @@ void Graph::print(std::ostream& out) const {
   out << "Graph:\n";
   for (const auto& [node, edges] : adjacencyMap) {
     out << "  Node: " << node << " Edges: ";
-    std::copy(edges.begin(), edges.end(), std::ostream_iterator<int>(out, " "));
+    for (const auto& [destination, weight] : edges) out << "->" << destination << " (" << weight << ") ";
     out << '\n';
   }
 }
@@ -18,7 +18,7 @@ std::vector<int32_t> Graph::listNodes() const {
   return nodes;
 }
 
-GraphConstIterator Graph::putNode(const int32_t& node) {
+Graph::ConstIterator Graph::putNode(const int32_t& node) {
   const auto& found = adjacencyMap.find(node);
   if (found != this->end()) return found;
   adjacencyMap.insert({node, {}});
@@ -38,6 +38,6 @@ void Graph::removeEdge(const int32_t& source, const int32_t& dest) {
   if (foundDest != this->end()) foundDest->second.erase(source);
 }
 
-GraphConstIterator Graph::getNode(const int32_t& node) const { return adjacencyMap.find(node); }
-GraphConstIterator Graph::begin() const { return adjacencyMap.begin(); }
-GraphConstIterator Graph::end() const { return adjacencyMap.end(); }
+Graph::ConstIterator Graph::getNode(const int32_t& node) const { return adjacencyMap.find(node); }
+Graph::ConstIterator Graph::begin() const { return adjacencyMap.begin(); }
+Graph::ConstIterator Graph::end() const { return adjacencyMap.end(); }

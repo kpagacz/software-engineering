@@ -1,10 +1,10 @@
 #include <unordered_set>
 
+#include "../../lib/doctest.h"
 #include "../Graph.hpp"
-#include "./test.cpp"
 
 TEST_CASE("Testing Graph") {
-  AdjacencyMap adjacencyMap{{1, {2, 3}}, {2, {3}}, {3, {1}}};
+  Graph::AdjacencyMap adjacencyMap{{1, {{2, 0}, {3, 0}}}, {2, {{3, 0}}}, {3, {{1, 0}}}};
   Graph g(adjacencyMap);
 
   SUBCASE("removing a node from a vector") {
@@ -12,7 +12,7 @@ TEST_CASE("Testing Graph") {
     CHECK_EQ(std::vector<int>{3, 2}, g.listNodes());
     CHECK_NOTHROW(g.removeNode(1));
     CHECK_EQ(std::vector<int>{3, 2}, g.listNodes());
-    CHECK_EQ(std::unordered_set<int32_t>{}, g.getNode(3)->second);
+    CHECK_EQ(Graph::Edges{}, g.getNode(3)->second);
     g.removeNode(3);
     CHECK_EQ(std::vector<int>{2}, g.listNodes());
   }
@@ -20,7 +20,7 @@ TEST_CASE("Testing Graph") {
   SUBCASE("getting a node") {
     const auto& node = g.getNode(3);
     CHECK_EQ(3, node->first);
-    CHECK_EQ(std::unordered_set<int32_t>{1}, node->second);
+    CHECK_EQ(Graph::Edges{{1, 0}}, node->second);
 
     const auto& node2 = g.getNode(4);
     CHECK_EQ(g.end(), node2);
@@ -29,17 +29,17 @@ TEST_CASE("Testing Graph") {
   SUBCASE("removing an edge") {
     const auto& node = g.getNode(3);
     CHECK_NOTHROW(g.removeEdge(3, 1));
-    CHECK_EQ(std::unordered_set<int32_t>{}, node->second);
-    CHECK_EQ(std::unordered_set<int32_t>{2}, g.getNode(1)->second);
+    CHECK_EQ(Graph::Edges{}, node->second);
+    CHECK_EQ(Graph::Edges{{2, 0}}, g.getNode(1)->second);
   }
 
   SUBCASE("removing an edge is idempotent") {
     CHECK_NOTHROW(g.removeEdge(3, 1));
-    CHECK_EQ(std::unordered_set<int32_t>{}, g.getNode(3)->second);
-    CHECK_EQ(std::unordered_set<int32_t>{2}, g.getNode(1)->second);
+    CHECK_EQ(Graph::Edges{}, g.getNode(3)->second);
+    CHECK_EQ(Graph::Edges{{2, 0}}, g.getNode(1)->second);
     CHECK_NOTHROW(g.removeEdge(3, 1));
-    CHECK_EQ(std::unordered_set<int32_t>{}, g.getNode(3)->second);
-    CHECK_EQ(std::unordered_set<int32_t>{2}, g.getNode(1)->second);
+    CHECK_EQ(Graph::Edges{}, g.getNode(3)->second);
+    CHECK_EQ(Graph::Edges{{2, 0}}, g.getNode(1)->second);
   }
 
   SUBCASE("putting a node adds a node") {

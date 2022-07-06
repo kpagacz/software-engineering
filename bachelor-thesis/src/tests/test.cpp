@@ -1,4 +1,3 @@
-#ifndef DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <iterator>
 #include <vector>
@@ -17,5 +16,3 @@ struct StringMaker<std::vector<T>> {
   }
 };
 }  // namespace doctest
-
-#endif
