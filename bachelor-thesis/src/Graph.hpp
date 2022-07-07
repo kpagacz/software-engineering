@@ -8,21 +8,24 @@
 #include <unordered_set>
 #include <vector>
 
-class Graph {
+#include "./STPDocument.hpp"
+
+class BiDirGraph {
  public:
   using Edges = std::unordered_map<int32_t, int32_t>;
-  using AdjacencyMap = std::unordered_map<int32_t, Graph::Edges>;
-  using ConstIterator = Graph::AdjacencyMap::const_iterator;
-  Graph(AdjacencyMap adjacencyMap) : adjacencyMap(adjacencyMap) {}
+  using AdjacencyMap = std::unordered_map<int32_t, BiDirGraph::Edges>;
+  using ConstIterator = BiDirGraph::AdjacencyMap::const_iterator;
+  BiDirGraph() = default;
+  BiDirGraph(AdjacencyMap adjacencyMap) : adjacencyMap(adjacencyMap) {}
+  BiDirGraph(const STPDocument& stdDocument);
   void print() const;
   void print(std::ostream& out) const;
-  std::vector<int> listNodes() const;
+  std::unordered_set<int> listNodes() const;
 
   ConstIterator putNode(const int32_t& node);
 
   void removeNode(const int32_t& node);
   void removeEdge(const int32_t& source, const int32_t& dest);
-  // TODO: implement addEdge
   void addEdge(const int32_t& source, const int32_t& destination, const int32_t& weight = 0);
 
   ConstIterator getNode(const int32_t& node) const;
