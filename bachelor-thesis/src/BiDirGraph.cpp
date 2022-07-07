@@ -1,4 +1,4 @@
-#include "Graph.hpp"
+#include "BiDirGraph.hpp"
 
 BiDirGraph::BiDirGraph(const STPDocument& stpDocument) {
   for (const auto& edge : stpDocument.edges) addEdge(std::get<0>(edge), std::get<1>(edge), std::get<2>(edge));

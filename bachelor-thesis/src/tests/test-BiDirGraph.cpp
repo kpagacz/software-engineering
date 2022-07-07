@@ -1,7 +1,7 @@
 #include <unordered_set>
 
 #include "../../lib/doctest.h"
-#include "../Graph.hpp"
+#include "../BiDirGraph.hpp"
 #include "../STPDocument.hpp"
 
 TEST_CASE("Testing BiDirGraph") {

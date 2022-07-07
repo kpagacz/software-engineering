@@ -1,9 +1,9 @@
 CXX := g++
 IDIR := ./src
 CXXFLAGS := -I$(IDIR) -std=c++2a
-DEPS_ := Graph.hpp STPInputReader.hpp STPDocument.hpp
+DEPS_ := BiDirGraph.hpp STPInputReader.hpp STPDocument.hpp SteinerTree.hpp SteinerTreeSolver.hpp
 DEPS := $(DEPS_:%=$(IDIR)/%)
-OBJ_ := Graph.o STPInputReader.o STPDocument.o
+OBJ_ := BiDirGraph.o STPInputReader.o STPDocument.o
 OBJ := $(OBJ_:%=$(IDIR)/%)
 
 graph: $(OBJ)
@@ -13,7 +13,7 @@ graph: $(OBJ)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 TESTDIR := $(IDIR)/tests
-TESTS_ := test.o test-Graph.o test-STPInputReader.o
+TESTS_ := test.o test-BiDirGraph.o test-STPInputReader.o test-SteinerTree.o
 TESTS := $(TESTS_:%=$(TESTDIR)/%)
 test: $(DEPS) $(OBJ) $(TESTS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
