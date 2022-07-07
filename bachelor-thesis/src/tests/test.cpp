@@ -15,4 +15,15 @@ struct StringMaker<std::vector<T>> {
     return oss.str().c_str();
   }
 };
+
+template <typename T>
+struct StringMaker<std::unordered_set<T>> {
+  static String convert(const std::unordered_set<T>& set) {
+    std::ostringstream oss;
+    oss << "{ ";
+    std::copy(set.begin(), set.end(), std::ostream_iterator<T>(oss, " "));
+    oss << "}";
+    return oss.str().c_str();
+  }
+};
 }  // namespace doctest

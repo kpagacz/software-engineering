@@ -5,15 +5,18 @@
 
 class SteinerTree : public BiDirGraph {
  private:
-  const std::unordered_set<int32_t> terminalNodes;
-  std::unordered_set<int32_t> steinerNodes;
+  std::unordered_set<int32_t> terminalNodes;
 
  public:
   SteinerTree(const BiDirGraph& graph, const std::unordered_set<int32_t>& terminalNodes)
+
       : BiDirGraph(graph), terminalNodes(terminalNodes) {}
 
-  // TODO implement removing and adding nodes
-  std::unordered_set<int32_t> getSteinerNodes() const { return steinerNodes; }
+  void removeNode(const int32_t& node) {
+    terminalNodes.erase(node);
+    BiDirGraph::removeNode(node);
+  }
+
   std::unordered_set<int32_t> getTerminalNodes() const { return terminalNodes; }
 };
 
